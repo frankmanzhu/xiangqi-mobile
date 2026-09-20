@@ -51,6 +51,9 @@ Home
 │           ├── Move history sheet
 │           ├── Game menu
 │           └── Result sheet
+├── Two players
+│   └── New game setup
+│       └── Game
 └── Settings
     ├── Appearance and theme
     ├── Board and notation
@@ -84,11 +87,11 @@ Layout, top to bottom:
    - “Your turn” or “Computer to move.” Search is stopped while Home is visible.
    - Opponent level, player side, and elapsed/remaining time.
    - Primary action: Continue.
-3. Primary action: Play computer.
+3. Primary actions: Play computer and Two players.
 4. Theme preview strip with three selectable swatches; this is a shortcut to Appearance.
 
 Empty-state copy should be brief. Avoid news, daily challenges, streaks, accounts, and promotional carousels in MVP.
-Do not show disabled or “coming soon” controls for local or online play.
+Do not show disabled or “coming soon” controls for online play.
 
 ### 4.2 New game setup
 

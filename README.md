@@ -1,12 +1,18 @@
 # Xiangqi Mobile
 
-Xiangqi Mobile is a planned native iPhone app for playing xiangqi against a bundled Pikafish engine. Release 1.0 is deliberately self-contained: it requires no account or network connection and includes its engine, NNUE, themes, help, localizations, and licenses in the app.
+Xiangqi Mobile is a native, offline SwiftUI app for playing xiangqi locally. It supports Player vs Computer and two-player hot-seat games, full move replay, atomic save/resume, clocks, undo, hints, three visual themes, and portable game sharing.
 
-## Current status
+The canonical game record is `starting FEN + ordered UCI moves + versioned rules policy`. Human-readable notation is derived from that record, so a game can be reconstructed independently of the UI and can form the payload for later online play.
 
-The repository is in the specification phase; application source has not been scaffolded yet. The 1.0 scope is locked to Player vs Computer. Local two-player follows after the offline core is proven, and online play is roadmap-only.
+## Build and test
 
-Start with the [specification index](docs/README.md):
+- Open `XiangqiMobile.xcodeproj` in Xcode and run the `XiangqiMobile` scheme.
+- Run domain tests with `swift test`.
+- Regenerate the checked-in Xcode project after adding source files with `ruby scripts/generate_project.rb`.
+
+The app performs no network requests and has no account or online-play code. The current computer player is a deterministic native search implementation behind an isolated interface; the pinned Pikafish source and NNUE described in the technical specification are not present in this repository and remain an engine-integration milestone.
+
+The product direction is documented in the [specification index](docs/README.md):
 
 - [Product specification](docs/product-spec.md)
 - [UX and visual specification](docs/ux-spec.md)

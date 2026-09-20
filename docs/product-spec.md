@@ -3,7 +3,7 @@
 Status: implementation-ready MVP specification  
 Owner: product and engineering  
 Target: native iPhone app; iPad layout is compatible but not an MVP release gate  
-Primary mode: Player vs Computer  
+Modes: Player vs Computer and local two-player
 Engine: Pikafish, pinned from the user's fork
 
 ## 1. Product summary
@@ -20,7 +20,7 @@ The product combines three qualities:
 
 ### MVP goals
 
-1. Deliver a complete Player vs Computer game from setup through result.
+1. Deliver complete Player vs Computer and local two-player games from setup through result.
 2. Make every legal board action comfortable with one hand on a small iPhone.
 3. Use Pikafish locally, with no account or network connection required.
 4. Provide hints that help a player decide, rather than automatically taking over.
@@ -40,12 +40,11 @@ The product combines three qualities:
 
 ### Immediately after MVP
 
-- Local two-player (hot-seat) using the same board and rules session.
 - Post-game analysis with a move-quality timeline.
 - Position setup and FEN import/export.
 - iPad-specific two-column analysis layout.
 
-The data model and coordinator represent Red and Black independently with `localHuman` and `computer` controllers. MVP exposes exactly one human and one computer. Local two-player can reuse the model in 1.1. A remote controller is added later through an explicit schema migration; it is not present in the 1.0 code or persisted data.
+The data model and coordinator represent Red and Black independently with `localHuman` and `computer` controllers. MVP exposes either one human and one computer or two local humans. A remote controller is added later through an explicit schema migration; it is not present in the 1.0 code or persisted data.
 
 ## 3. Intended players
 

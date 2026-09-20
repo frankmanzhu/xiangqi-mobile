@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DA3BE9B5BC2EA51BD05E282 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F227ACD14A8A570D9C872A /* SettingsView.swift */; };
+		28BDB9C91CB7D614F48E1E94 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256F372F9C27A214DE4B8DBE /* GameRepository.swift */; };
+		45BFE9F9D254470B3416C459 /* XiangqiMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90AFF54A516142BDE504163 /* XiangqiMobileApp.swift */; };
+		45EE75DC9A4CF4DFD7E09A14 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6378314F9BD500DFAC45CE3 /* GameView.swift */; };
+		4A359E310EC234F4BCCEC085 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3045AE2D1D569D587FD883 /* Foundation.framework */; };
+		4BB547411D642214D775E261 /* ComputerPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BC6A3BF029C12E2C1C7A40 /* ComputerPlayer.swift */; };
+		52723669C8848F5DD7355486 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BF0CEE945D86AF6B5B550 /* Theme.swift */; };
+		55158F6E08E9534467776F70 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4B90BD66DA637619161F9 /* Domain.swift */; };
+		565E1532055027032ED0D8A1 /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B2DBEEFC3175835D65404 /* NewGameView.swift */; };
+		6431DFCE36E91FFA1D3A519D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA6C3B3110BF3DE880BCB1 /* RootView.swift */; };
+		6453BC427BB0F8641A14972B /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141361426DF223F732A4316F /* AppModel.swift */; };
+		6FACCC5653E2903015C33575 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA14D5F839975BF8F4B085 /* Position.swift */; };
+		79F9AAE4D0CF1D9274572E79 /* Notation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251FD73650F76B940689E32 /* Notation.swift */; };
+		91CF5693A10815073F94C268 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3045AE2D1D569D587FD883 /* Foundation.framework */; };
+		9603EA9C70756377C6EE4F05 /* GameMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5917EC91E6D27C06DAD8DC /* GameMenuView.swift */; };
+		97DA5BDD79FFA0899A121F19 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F329707A4C36872839303E6F /* GameSession.swift */; };
+		A18F8FBEB87556C87ED1B6F6 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788205A9CD949030B67C582 /* Rules.swift */; };
+		A1E416D44C1277C0B9D2B60C /* MoveHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58C0804231ECDECC79491E /* MoveHistoryView.swift */; };
+		A69AE1AC0CBE765745D256FB /* SmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F30E03719B076459CC237 /* SmokeTests.swift */; };
+		AD44CFB9F5133C637D5E65E4 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708ECA8BFD5A3866CE62518A /* ResultView.swift */; };
+		BDC818BD3D143DFCD4FCC72E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C65DDDAB52E9BCA75E285 /* HomeView.swift */; };
+		F95B3CBA8BF5AF58D79B5213 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A7D47808D66E8C8415968 /* BoardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38EA438A99A1D119B8570FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE04B2616BD0CF2E7FE19547 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C78227BC69ABA2CFE54BAE20;
+			remoteInfo = XiangqiMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		141361426DF223F732A4316F /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		16B4B90BD66DA637619161F9 /* Domain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		256F372F9C27A214DE4B8DBE /* GameRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		43BA14D5F839975BF8F4B085 /* Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		5C58C0804231ECDECC79491E /* MoveHistoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MoveHistoryView.swift; sourceTree = "<group>"; };
+		68EA6C3B3110BF3DE880BCB1 /* RootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		708ECA8BFD5A3866CE62518A /* ResultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		90BC6A3BF029C12E2C1C7A40 /* ComputerPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComputerPlayer.swift; sourceTree = "<group>"; };
+		95F227ACD14A8A570D9C872A /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A788205A9CD949030B67C582 /* Rules.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		A81F30E03719B076459CC237 /* SmokeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SmokeTests.swift; sourceTree = "<group>"; };
+		AF3045AE2D1D569D587FD883 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		AF9C65DDDAB52E9BCA75E285 /* HomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B66B2DBEEFC3175835D65404 /* NewGameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
+		B71B2EB15236AB56AA940C80 /* XiangqiMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XiangqiMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C251FD73650F76B940689E32 /* Notation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Notation.swift; sourceTree = "<group>"; };
+		C316761FD47776A50408E71F /* XiangqiMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiangqiMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54BF0CEE945D86AF6B5B550 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C90AFF54A516142BDE504163 /* XiangqiMobileApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiMobileApp.swift; sourceTree = "<group>"; };
+		E6378314F9BD500DFAC45CE3 /* GameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		EB5917EC91E6D27C06DAD8DC /* GameMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
+		F329707A4C36872839303E6F /* GameSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		F70A7D47808D66E8C8415968 /* BoardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2277FA774D79CD0081046A87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A359E310EC234F4BCCEC085 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C598E38A3FEB26504964CD77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91CF5693A10815073F94C268 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BC1D69BF2AF0CE25A807E1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C316761FD47776A50408E71F /* XiangqiMobile.app */,
+				B71B2EB15236AB56AA940C80 /* XiangqiMobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C6ACD7609AEA250B3125F37 = {
+			isa = PBXGroup;
+			children = (
+				0BC1D69BF2AF0CE25A807E1A /* Products */,
+				FD1185DDA4A4A5C0922A53D5 /* Frameworks */,
+				21FD8628AF90085B19D8B441 /* XiangqiMobile */,
+				A12F91C403CB436D272D4FD9 /* Tests */,
+			);
+			sourceTree = "<group>";
+		};
+		21FD8628AF90085B19D8B441 /* XiangqiMobile */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDFDCE15D3552FC37D5CAA /* App */,
+				64BB4B492E9EA1D23DD68036 /* Core */,
+				E7CBB559D9043E93A160886E /* Features */,
+			);
+			name = XiangqiMobile;
+			path = XiangqiMobile;
+			sourceTree = "<group>";
+		};
+		3010DE3EA10EA056A53DD1D6 /* XiangqiMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A81F30E03719B076459CC237 /* SmokeTests.swift */,
+			);
+			name = XiangqiMobileUITests;
+			path = XiangqiMobileUITests;
+			sourceTree = "<group>";
+		};
+		3855F506D50ECBD3002C3009 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AF3045AE2D1D569D587FD883 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		64BB4B492E9EA1D23DD68036 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				90BC6A3BF029C12E2C1C7A40 /* ComputerPlayer.swift */,
+				16B4B90BD66DA637619161F9 /* Domain.swift */,
+				C251FD73650F76B940689E32 /* Notation.swift */,
+				43BA14D5F839975BF8F4B085 /* Position.swift */,
+				A788205A9CD949030B67C582 /* Rules.swift */,
+			);
+			name = Core;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A12F91C403CB436D272D4FD9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3010DE3EA10EA056A53DD1D6 /* XiangqiMobileUITests */,
+			);
+			name = Tests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E6EDFDCE15D3552FC37D5CAA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				141361426DF223F732A4316F /* AppModel.swift */,
+				256F372F9C27A214DE4B8DBE /* GameRepository.swift */,
+				F329707A4C36872839303E6F /* GameSession.swift */,
+				68EA6C3B3110BF3DE880BCB1 /* RootView.swift */,
+				C54BF0CEE945D86AF6B5B550 /* Theme.swift */,
+				C90AFF54A516142BDE504163 /* XiangqiMobileApp.swift */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		E7CBB559D9043E93A160886E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F70A7D47808D66E8C8415968 /* BoardView.swift */,
+				EB5917EC91E6D27C06DAD8DC /* GameMenuView.swift */,
+				E6378314F9BD500DFAC45CE3 /* GameView.swift */,
+				AF9C65DDDAB52E9BCA75E285 /* HomeView.swift */,
+				5C58C0804231ECDECC79491E /* MoveHistoryView.swift */,
+				B66B2DBEEFC3175835D65404 /* NewGameView.swift */,
+				708ECA8BFD5A3866CE62518A /* ResultView.swift */,
+				95F227ACD14A8A570D9C872A /* SettingsView.swift */,
+			);
+			name = Features;
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FD1185DDA4A4A5C0922A53D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3855F506D50ECBD3002C3009 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C78227BC69ABA2CFE54BAE20 /* XiangqiMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F57817EB8E8B5AD08EEF6B /* Build configuration list for PBXNativeTarget "XiangqiMobile" */;
+			buildPhases = (
+				626A67BD053D37EFC519179F /* Sources */,
+				C598E38A3FEB26504964CD77 /* Frameworks */,
+				74CE33042C4369F9FED9A37B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XiangqiMobile;
+			productName = XiangqiMobile;
+			productReference = C316761FD47776A50408E71F /* XiangqiMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D96253D0842A2A209ACC83E4 /* XiangqiMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE98233F13EFD26B7FC6C19C /* Build configuration list for PBXNativeTarget "XiangqiMobileUITests" */;
+			buildPhases = (
+				F775EFEEC42E35B2CA88436C /* Sources */,
+				2277FA774D79CD0081046A87 /* Frameworks */,
+				DAAFEB3CD096AE5689E6A4D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A5C617B6104399FA04B1363 /* PBXTargetDependency */,
+			);
+			name = XiangqiMobileUITests;
+			productName = XiangqiMobileUITests;
+			productReference = B71B2EB15236AB56AA940C80 /* XiangqiMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE04B2616BD0CF2E7FE19547 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = 5AB741B2E490161E527E2B40 /* Build configuration list for PBXProject "XiangqiMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1C6ACD7609AEA250B3125F37;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 100;
+			productRefGroup = 0BC1D69BF2AF0CE25A807E1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C78227BC69ABA2CFE54BAE20 /* XiangqiMobile */,
+				D96253D0842A2A209ACC83E4 /* XiangqiMobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74CE33042C4369F9FED9A37B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAFEB3CD096AE5689E6A4D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		626A67BD053D37EFC519179F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6453BC427BB0F8641A14972B /* AppModel.swift in Sources */,
+				28BDB9C91CB7D614F48E1E94 /* GameRepository.swift in Sources */,
+				97DA5BDD79FFA0899A121F19 /* GameSession.swift in Sources */,
+				6431DFCE36E91FFA1D3A519D /* RootView.swift in Sources */,
+				52723669C8848F5DD7355486 /* Theme.swift in Sources */,
+				45BFE9F9D254470B3416C459 /* XiangqiMobileApp.swift in Sources */,
+				4BB547411D642214D775E261 /* ComputerPlayer.swift in Sources */,
+				55158F6E08E9534467776F70 /* Domain.swift in Sources */,
+				79F9AAE4D0CF1D9274572E79 /* Notation.swift in Sources */,
+				6FACCC5653E2903015C33575 /* Position.swift in Sources */,
+				A18F8FBEB87556C87ED1B6F6 /* Rules.swift in Sources */,
+				F95B3CBA8BF5AF58D79B5213 /* BoardView.swift in Sources */,
+				9603EA9C70756377C6EE4F05 /* GameMenuView.swift in Sources */,
+				45EE75DC9A4CF4DFD7E09A14 /* GameView.swift in Sources */,
+				BDC818BD3D143DFCD4FCC72E /* HomeView.swift in Sources */,
+				A1E416D44C1277C0B9D2B60C /* MoveHistoryView.swift in Sources */,
+				565E1532055027032ED0D8A1 /* NewGameView.swift in Sources */,
+				AD44CFB9F5133C637D5E65E4 /* ResultView.swift in Sources */,
+				1DA3BE9B5BC2EA51BD05E282 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F775EFEEC42E35B2CA88436C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69AE1AC0CBE765745D256FB /* SmokeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A5C617B6104399FA04B1363 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XiangqiMobile;
+			target = C78227BC69ABA2CFE54BAE20 /* XiangqiMobile */;
+			targetProxy = 38EA438A99A1D119B8570FFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E9116D69E972D9F4E69048A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5B6C78572D75004BADA1FF41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile-uitests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = XiangqiMobile;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		764AECDB46AE1BCD4F557AFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		839537A1907EB767BD9965A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Xiangqi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1C425A1AC9D68B4B8C51D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile-uitests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = XiangqiMobile;
+			};
+			name = Debug;
+		};
+		C1B791C98C1963664CCA9FBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Xiangqi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AB741B2E490161E527E2B40 /* Build configuration list for PBXProject "XiangqiMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E9116D69E972D9F4E69048A /* Debug */,
+				764AECDB46AE1BCD4F557AFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE98233F13EFD26B7FC6C19C /* Build configuration list for PBXNativeTarget "XiangqiMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B6C78572D75004BADA1FF41 /* Release */,
+				B1C425A1AC9D68B4B8C51D7E /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5F57817EB8E8B5AD08EEF6B /* Build configuration list for PBXNativeTarget "XiangqiMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839537A1907EB767BD9965A2 /* Release */,
+				C1B791C98C1963664CCA9FBC /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE04B2616BD0CF2E7FE19547 /* Project object */;
+}

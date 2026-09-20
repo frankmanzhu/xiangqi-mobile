@@ -5,15 +5,15 @@ Last updated: 2026-09-20
 
 ## Product decision
 
-The first release is a fully offline, native iPhone xiangqi app focused on one complete experience: **Player vs Computer**, powered by a bundled Pikafish engine. It must feel like a polished board game rather than an engine console.
+The first release is a fully offline, native iPhone xiangqi app with two complete experiences: **Player vs Computer** and **local two-player hot-seat**. It must feel like a polished board game rather than an engine console.
 
 The UI is board-first and themeable. A theme can change the board, pieces, surfaces, typography accents, sound, and motion, but it cannot change board geometry, game state, rules, controls, accessibility labels, or engine behavior.
 
-“Offline” is a hard 1.0 boundary: a fresh install contains every gameplay resource, makes no network request, needs no account, and completes every release journey in airplane mode. Local two-player is the next mode after the Player vs Computer MVP. Online play is roadmap context only and must not add production code, schema cases, permissions, dependencies, settings, or placeholder controls to 1.0.
+“Offline” is a hard 1.0 boundary: a fresh install contains every gameplay resource, makes no network request, needs no account, and completes every release journey in airplane mode. Online play is roadmap context only and must not add production code, schema cases, permissions, dependencies, settings, or placeholder controls to 1.0.
 
 ## Release 1.0 scope lock
 
-- One mode: Player vs Computer.
+- Two modes: Player vs Computer and local two-player hot-seat.
 - Three time choices: Casual, 10 minutes, and 15 minutes per side.
 - One active saved game, read-only move replay, staged hints, five strengths, and three themes.
 - Bundled Pikafish source build and bundled NNUE; no downloads or remote configuration.
