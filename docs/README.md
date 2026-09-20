@@ -28,6 +28,7 @@ Feature-complete means the release acceptance criteria in `product-spec.md` pass
 - [Product specification](product-spec.md) — goals, release scope, player stories, functional requirements, acceptance criteria, and roadmap.
 - [UX and visual specification](ux-spec.md) — navigation, screens, board interactions, hints, themes, accessibility, and localization.
 - [Technical specification](technical-spec.md) — native architecture, Pikafish bridge, data models, concurrency, performance, persistence, licensing, and test strategy.
+- [Themes, localization, and learning plan](expansion-plan.md) — implementation sequence for complete theme packs, English/Chinese language selection, and licensed offline training content.
 
 ## Decision hierarchy
 
