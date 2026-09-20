@@ -5,11 +5,23 @@ Last updated: 2026-09-20
 
 ## Product decision
 
-The first release is an offline, native iPhone xiangqi app focused on one complete experience: **Player vs Computer**, powered by a bundled Pikafish engine. It must feel like a polished board game rather than an engine console.
+The first release is a fully offline, native iPhone xiangqi app focused on one complete experience: **Player vs Computer**, powered by a bundled Pikafish engine. It must feel like a polished board game rather than an engine console.
 
 The UI is board-first and themeable. A theme can change the board, pieces, surfaces, typography accents, sound, and motion, but it cannot change board geometry, game state, rules, controls, accessibility labels, or engine behavior.
 
-Local two-player is the next mode after the Player vs Computer MVP. Online play is intentionally deferred until the offline rules, persistence, clocks, and game-state model are proven.
+“Offline” is a hard 1.0 boundary: a fresh install contains every gameplay resource, makes no network request, needs no account, and completes every release journey in airplane mode. Local two-player is the next mode after the Player vs Computer MVP. Online play is roadmap context only and must not add production code, schema cases, permissions, dependencies, settings, or placeholder controls to 1.0.
+
+## Release 1.0 scope lock
+
+- One mode: Player vs Computer.
+- Three time choices: Casual, 10 minutes, and 15 minutes per side.
+- One active saved game, read-only move replay, staged hints, five strengths, and three themes.
+- Bundled Pikafish source build and bundled NNUE; no downloads or remote configuration.
+- English, Traditional Chinese, and Simplified Chinese localizations.
+- iPhone on iOS 18 or newer; iPad compatibility is welcome but not a release gate.
+- No “coming soon” controls for local or online modes.
+
+Feature-complete means the release acceptance criteria in `product-spec.md` pass. Engine budgets are calibration work rather than unresolved product behavior; iPhone XR is the performance/thermal baseline and iPhone SE (2nd generation) is the smallest-screen layout baseline.
 
 ## Documents
 
@@ -34,7 +46,6 @@ The concept images are moodboards, not pixel-perfect specifications. Their gener
 1. Build the rules/session bridge and validate legal moves against Pikafish.
 2. Implement a deterministic headless game coordinator with Player vs Computer tests.
 3. Build the accessible board and game screen with the Classic theme.
-4. Add save/resume, hints, results, and review.
+4. Add save/resume, hints, results, and read-only move replay.
 5. Add Tournament and Calm themes using the same view model and controls.
-6. Performance-test on the oldest supported iPhone before App Store work.
-
+6. Performance/thermal-test on iPhone XR and layout-test on iPhone SE (2nd generation) before App Store work.

@@ -6,7 +6,7 @@ Primary viewport: portrait iPhone, 390 × 844 points reference frame
 
 ## 1. Experience direction
 
-The app should feel like a beautifully made physical game interpreted through native iOS controls. The board is always the hero. Engine capability is present but quiet: the player sees “thinking,” “hint,” and optionally an evaluation, not a wall of diagnostics.
+The app should feel like a beautifully made physical game interpreted through native iOS controls. The board is always the hero. Engine capability is present but quiet: the player sees “thinking” and “hint,” not a wall of diagnostics.
 
 XiangqiAI provides useful interaction guidance:
 
@@ -16,7 +16,7 @@ XiangqiAI provides useful interaction guidance:
 - The move record, notes, engine output, and external database results are separate concepts.
 - Advanced controls such as “move now,” excluding a line, import, edit, and sharing belong outside the basic play path.
 
-The mobile app adapts these lessons rather than reproducing XiangqiAI's desktop workspace. In MVP, Play Red/Black moves into New Game setup; engine output becomes an optional sheet; advanced analysis controls are deferred.
+The mobile app adapts these lessons rather than reproducing XiangqiAI's desktop workspace. In MVP, Play Red/Black moves into New Game setup; engine output and advanced analysis controls are deferred.
 
 ### Reference boundary
 
@@ -51,7 +51,6 @@ Home
 │           ├── Move history sheet
 │           ├── Game menu
 │           └── Result sheet
-├── Play local (Coming soon until 1.1)
 └── Settings
     ├── Appearance and theme
     ├── Board and notation
@@ -68,7 +67,7 @@ Do not use a persistent tab bar in MVP. The product has one primary activity, an
 - Setup → game uses a short scale/fade that settles the board without moving pieces.
 - Game → move history and game menu use bottom sheets.
 - Game → result uses a non-dismissible-at-first result sheet; after presentation finishes, swipe-to-dismiss may return to the completed board.
-- Leaving an active game returns Home and keeps Continue game.
+- Leaving an active game returns Home, pauses a timed game, and keeps Continue game.
 - Starting a new game while one is active requires a confirmation sheet that explains the current game will be replaced. This is the only destructive game action in normal navigation.
 
 ## 4. Screen specifications
@@ -82,14 +81,14 @@ Layout, top to bottom:
 1. Compact wordmark/app name and Settings button.
 2. Continue game panel when an active game exists:
    - Mini board snapshot or last-move motif.
-   - “Your turn” or “Computer thinking.”
+   - “Your turn” or “Computer to move.” Search is stopped while Home is visible.
    - Opponent level, player side, and elapsed/remaining time.
    - Primary action: Continue.
 3. Primary action: Play computer.
-4. Secondary action: Play local, labeled “Coming in 1.1” until enabled.
-5. Theme preview strip with three selectable swatches; this is a shortcut to Appearance.
+4. Theme preview strip with three selectable swatches; this is a shortcut to Appearance.
 
 Empty-state copy should be brief. Avoid news, daily challenges, streaks, accounts, and promotional carousels in MVP.
+Do not show disabled or “coming soon” controls for local or online play.
 
 ### 4.2 New game setup
 
@@ -138,7 +137,7 @@ The board should not jump when a thinking indicator, check warning, hint, or clo
 
 | Action | Availability | Behavior |
 | --- | --- | --- |
-| Undo | Casual game, after at least one human move | Cancels search and reverts a full turn |
+| Undo | Casual game, after at least one human move | Cancels search and returns to before the latest human move |
 | Hint | Human turn, active game | Starts/reveals staged hint |
 | Flip | Always | Rotates presentation only |
 | Moves | After first move | Opens move history sheet |
@@ -160,16 +159,7 @@ Contents:
 
 In MVP replay preview is read-only. It must never change the committed game or launch the computer.
 
-### 4.5 Advanced evaluation sheet
-
-Visible only when Settings → Show advanced evaluation is enabled.
-
-- Opens from the turn-status area or a small evaluation affordance, not as a permanent game-screen panel.
-- Shows position evaluation from the side-to-move perspective, depth, and one principal variation by default.
-- A future Study release may show MultiPV and an evaluation graph.
-- Raw nodes, NPS, hash fullness, NNUE path, and engine logs are developer diagnostics, not player UI.
-
-### 4.6 Game menu
+### 4.5 Game menu
 
 Actions:
 
@@ -180,7 +170,7 @@ Actions:
 - Leave game (saves and returns Home).
 - New game (replaces the active game after confirmation).
 
-### 4.7 Result sheet
+### 4.6 Result sheet
 
 Order:
 
@@ -192,7 +182,7 @@ Order:
 
 Avoid confetti by default. A restrained piece-settle animation and success haptic are sufficient. Respect Reduce Motion.
 
-### 4.8 Settings
+### 4.7 Settings
 
 Use native grouped settings with previews where useful. Changing theme while a game is open should crossfade visual assets without reconstructing the board or losing selection. If a theme asset is unavailable, fall back to Classic and preserve the preference for a future retry.
 
@@ -213,6 +203,8 @@ Use native grouped settings with previews where useful. Changing theme while a g
 3. Tap a legal destination: commit or enter confirmation state, depending on setting.
 4. Tap an illegal destination: keep selection, play a soft rejection haptic, and do not show an error toast.
 5. Tap selected piece or non-actionable empty area: clear selection.
+
+When move confirmation is enabled, step 3 enters a fixed-height pending state that shows the proposed move and Confirm/Cancel buttons. Confirm commits the move; Cancel restores the prior selection. The clock continues to run while confirmation is pending.
 
 ### 5.3 Drag interaction
 
@@ -309,7 +301,6 @@ Concept reference: [Classic theme](assets/theme-classic-concept.png).
 
 - Deep graphite surfaces and a low-glare neutral board.
 - Controlled coral/red and cool secondary accent.
-- Optional compact evaluation affordance when advanced evaluation is enabled.
 - Signature detail: hairline grid, high-contrast outlined pieces, and restrained telemetry styling.
 - Best for focused, high-contrast play and later analysis.
 
@@ -406,7 +397,7 @@ Additional requirements:
 
 ## 10. Localization and notation
 
-Launch recommendation:
+Launch localizations:
 
 - Traditional Chinese.
 - Simplified Chinese.
@@ -423,10 +414,10 @@ Requirements:
 
 ## 11. Empty, loading, and error states
 
-- Engine startup: board remains usable only for viewing; Start game button shows “Preparing opponent” and is disabled.
-- Computer search longer than expected: “Still thinking…” plus optional “Move now” after the minimum useful search threshold. Move now tells the engine to stop and uses the best completed iteration.
+- Engine startup: setup remains visible; Start game changes to “Preparing opponent” and is disabled until the bundled engine and NNUE are ready. No playable board is created before readiness succeeds.
+- Computer search longer than expected: keep the reserved thinking state and change its label to “Still thinking…”. There is no “Move now” action in 1.0.
 - Engine initialization failure: explain that the bundled engine could not start, offer Retry, and keep diagnostics copyable. Never begin a game without a functioning opponent.
-- Save failure: keep the game in memory, show persistent but non-blocking “Game not saved,” retry on next state change, and prevent intentional app exit from implying success.
+- Save failure: keep the game in memory, show persistent “Game not saved,” retry on the next state change, and make Leave game confirm that unsaved progress may be lost. The app cannot prevent force-quit or termination.
 - Invalid restored game: preserve record and provide recovery/export path as specified in the product document.
 
 ## 12. Concept-image disclaimer
