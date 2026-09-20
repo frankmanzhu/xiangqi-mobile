@@ -131,7 +131,7 @@ struct GameView: View {
 
     private func label(for side: Side) -> String {
         if session.record.mode == .localTwoPlayer { return side.title }
-        return side == session.record.humanSide ? "You · \(side.title)" : "Computer · Level \(session.record.computerLevel)"
+        return side == session.record.humanSide ? "You · \(side.title)" : "Pikafish · Level \(session.record.computerLevel)"
     }
 
     private func clock(_ seconds: Int) -> String {

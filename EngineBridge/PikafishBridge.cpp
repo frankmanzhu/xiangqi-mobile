@@ -176,6 +176,7 @@ bool pf_engine_best_move(PFPikafishSession *session,
     try
     {
         Stockfish::Search::LimitsType limits;
+        limits.startTime = Stockfish::now();
         limits.movetime = std::max<int32_t>(move_time_ms, 1);
         limits.nodes    = node_limit;
         limits.depth    = std::max<int32_t>(depth_limit, 0);

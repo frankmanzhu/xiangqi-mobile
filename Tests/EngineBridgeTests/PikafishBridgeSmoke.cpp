@@ -16,7 +16,8 @@ int main(int argc, char **argv) {
 
     constexpr const char *start_fen =
       "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1";
-    if (!pf_engine_set_position(engine, start_fen, nullptr, 0, &error))
+    const char *first_history[] = {"a3a4"};
+    if (!pf_engine_set_position(engine, start_fen, first_history, 1, &error))
     {
         std::cerr << error.message << '\n';
         return 2;
@@ -29,7 +30,17 @@ int main(int argc, char **argv) {
         return 3;
     }
     assert(std::strlen(best_move) == 4);
-    std::cout << "Pikafish " << pf_engine_revision() << " bestmove " << best_move << '\n';
+    const char *second_history[] = {"a3a4", best_move};
+    char suggested_move[6]{};
+    if (!pf_engine_set_position(engine, start_fen, second_history, 2, &error)
+        || !pf_engine_best_move(engine, 100, 0, 0, suggested_move, &error))
+    {
+        std::cerr << error.message << '\n';
+        return 4;
+    }
+    assert(std::strlen(suggested_move) == 4);
+    std::cout << "Pikafish " << pf_engine_revision() << " opponent " << best_move
+              << " suggestion " << suggested_move << '\n';
     pf_engine_destroy(engine);
     return 0;
 }

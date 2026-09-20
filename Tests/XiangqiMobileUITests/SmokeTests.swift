@@ -42,4 +42,27 @@ final class SmokeTests: XCTestCase {
         app.buttons["Moves"].tap()
         XCTAssertTrue(app.staticTexts["a3a4"].waitForExistence(timeout: 2))
     }
+
+    func testSuggestedMoveComesFromRealEngineAndRevealsInStages() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-resetTestData"]
+        app.launch()
+
+        app.buttons["Play computer"].tap()
+        XCTAssertTrue(app.navigationBars["New game"].waitForExistence(timeout: 2))
+        app.buttons["Start game"].tap()
+        XCTAssertTrue(app.otherElements["Xiangqi board"].waitForExistence(timeout: 2))
+
+        app.buttons["Red Soldier, a3, selectable"].tap()
+        app.buttons["Empty a4"].tap()
+        XCTAssertTrue(app.staticTexts["Your move"].waitForExistence(timeout: 12))
+
+        app.buttons["Hint"].tap()
+        XCTAssertTrue(app.buttons["Show square"].waitForExistence(timeout: 12))
+        app.buttons["Show square"].tap()
+        XCTAssertTrue(app.buttons["Hint shown"].waitForExistence(timeout: 2))
+
+        XCTAssertTrue(app.buttons["Empty a3"].exists)
+        XCTAssertTrue(app.buttons["Moves"].isEnabled)
+    }
 }

@@ -64,7 +64,7 @@ final class GameSession: ObservableObject {
         }
         if isReplaying { return "Reviewing move \(replayPly ?? 0) of \(record.moves.count)" }
         if position.isInCheck(position.sideToMove) { return "Check · \(position.sideToMove.title) to move" }
-        if isThinking { return "Computer is thinking…" }
+        if isThinking { return "Pikafish is thinking…" }
         if record.mode == .localTwoPlayer { return "\(position.sideToMove.title) to move" }
         return isLocalTurn ? "Your move" : "Computer to move"
     }
