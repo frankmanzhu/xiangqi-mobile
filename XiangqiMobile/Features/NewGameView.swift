@@ -39,9 +39,8 @@ struct NewGameView: View {
                 }.pickerStyle(.segmented)
             }
             Section("Theme") {
-                Picker("Theme", selection: $themeRaw) {
-                    ForEach(ThemeID.allCases, id: \.rawValue) { Text($0.title).tag($0.rawValue) }
-                }
+                ThemeChoiceStrip(selection: $themeRaw)
+                    .padding(.vertical, 6)
             }
             Section {
                 Button {

@@ -50,6 +50,8 @@ pikafish_sources.each do |path|
 end
 
 resources_group = project.main_group.new_group("Resources", "Resources")
+assets = resources_group.new_file("Assets.xcassets")
+target.resources_build_phase.add_file_reference(assets)
 [
   ["Engine", "pikafish.nnue"],
   ["Licenses", "Pikafish-GPL-3.0.txt"],
@@ -94,13 +96,15 @@ target.build_configurations.each do |config|
   settings["INFOPLIST_KEY_UIApplicationSceneManifest_Generation"] = "YES"
   settings["INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents"] = "YES"
   settings["INFOPLIST_KEY_UILaunchScreen_Generation"] = "YES"
-  settings["TARGETED_DEVICE_FAMILY"] = "1,2"
+  settings["INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone"] = "UIInterfaceOrientationPortrait"
+  settings["TARGETED_DEVICE_FAMILY"] = "1"
   settings["IPHONEOS_DEPLOYMENT_TARGET"] = "18.0"
   settings["MARKETING_VERSION"] = "1.0"
   settings["CURRENT_PROJECT_VERSION"] = "1"
   settings["CODE_SIGN_STYLE"] = "Automatic"
   settings["DEVELOPMENT_TEAM"] = ""
-  settings["ASSETCATALOG_COMPILER_APPICON_NAME"] = ""
+  settings["ASSETCATALOG_COMPILER_APPICON_NAME"] = "AppIcon"
+  settings["ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME"] = "AccentColor"
 end
 
 

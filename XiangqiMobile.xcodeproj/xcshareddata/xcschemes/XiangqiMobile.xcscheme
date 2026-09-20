@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "36CE8E87D428057C494109E6"
+               BlueprintIdentifier = "F8E77C5E99024B9CF9943B20"
                BuildableName = "XiangqiMobile.app"
                BlueprintName = "XiangqiMobile"
                ReferencedContainer = "container:XiangqiMobile.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F37C2B26F29C6B18A71763DA"
+               BlueprintIdentifier = "34B46C58EA9B301537EF10F6"
                BuildableName = "XiangqiMobileUITests.xctest"
                BlueprintName = "XiangqiMobileUITests"
                ReferencedContainer = "container:XiangqiMobile.xcodeproj">

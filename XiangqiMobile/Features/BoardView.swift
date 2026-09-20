@@ -9,13 +9,17 @@ struct BoardView: View {
         GeometryReader { geometry in
             let metrics = Metrics(size: geometry.size)
             ZStack {
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
                     .fill(palette.board)
-                    .shadow(color: .black.opacity(0.14), radius: 8, y: 4)
+                    .shadow(color: .black.opacity(0.12), radius: 10, y: 5)
                 boardLines(metrics)
                 stateMarkers(metrics)
                 touchGrid(metrics)
                 pieces(metrics)
+            }
+            .overlay {
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .stroke(palette.line.opacity(0.2), lineWidth: 1)
             }
             .contentShape(Rectangle())
             .simultaneousGesture(dragGesture(metrics))

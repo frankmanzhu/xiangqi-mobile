@@ -66,18 +66,25 @@ struct GameView: View {
     }
 
     private func playerRail(side: Side, isOpponent: Bool) -> some View {
-        HStack {
+        let isActive = session.record.result == nil && session.position.sideToMove == side
+        return HStack {
             Circle().fill(side == .red ? palette.red : palette.black).frame(width: 10, height: 10)
             Text(label(for: side)).font(.subheadline.weight(.semibold))
             Spacer()
             if let seconds = side == .red ? session.record.redSecondsRemaining : session.record.blackSecondsRemaining {
                 Text(clock(seconds)).font(.system(.body, design: .monospaced).weight(.semibold))
             } else {
-                Text(isOpponent ? "OPPONENT" : "PLAYER").font(.caption2.weight(.bold)).foregroundStyle(.secondary)
+                Text(isActive ? "TO MOVE" : (isOpponent ? "OPPONENT" : "PLAYER"))
+                    .font(.caption2.weight(.bold))
+                    .foregroundStyle(isActive ? palette.accent : .secondary)
             }
         }
         .padding(.horizontal, 12).frame(height: 42)
-        .background(palette.surface.opacity(0.78), in: RoundedRectangle(cornerRadius: 14))
+        .background(palette.surface.opacity(0.82), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .stroke(isActive ? palette.accent.opacity(0.55) : palette.line.opacity(0.08), lineWidth: isActive ? 1.5 : 1)
+        }
     }
 
     private var actionDock: some View {

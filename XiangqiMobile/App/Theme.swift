@@ -49,3 +49,85 @@ extension Color {
         )
     }
 }
+
+struct ThemeChoiceStrip: View {
+    @Binding var selection: String
+
+    var body: some View {
+        HStack(spacing: 10) {
+            ForEach(ThemeID.allCases, id: \.self) { theme in
+                let palette = BoardPalette.palette(for: theme)
+                Button {
+                    selection = theme.rawValue
+                } label: {
+                    VStack(spacing: 8) {
+                        MiniBoardPreview(palette: palette, selected: selection == theme.rawValue)
+                        Text(theme.title)
+                            .font(.caption.weight(selection == theme.rawValue ? .semibold : .regular))
+                            .foregroundStyle(.primary)
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("\(theme.title) theme")
+                .accessibilityAddTraits(selection == theme.rawValue ? .isSelected : [])
+            }
+        }
+    }
+}
+
+private struct MiniBoardPreview: View {
+    let palette: BoardPalette
+    let selected: Bool
+
+    var body: some View {
+        GeometryReader { proxy in
+            let size = proxy.size
+            ZStack {
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(palette.board)
+
+                Canvas { context, _ in
+                    var path = Path()
+                    for fraction in [0.25, 0.5, 0.75] {
+                        path.move(to: CGPoint(x: size.width * fraction, y: 8))
+                        path.addLine(to: CGPoint(x: size.width * fraction, y: size.height - 8))
+                    }
+                    for fraction in [0.34, 0.66] {
+                        path.move(to: CGPoint(x: 8, y: size.height * fraction))
+                        path.addLine(to: CGPoint(x: size.width - 8, y: size.height * fraction))
+                    }
+                    context.stroke(path, with: .color(palette.line.opacity(0.45)), lineWidth: 0.75)
+                }
+
+                HStack(spacing: max(5, size.width * 0.05)) {
+                    previewPiece("車", color: palette.black)
+                    previewPiece("帥", color: palette.red)
+                    previewPiece("炮", color: palette.red)
+                }
+                .padding(.horizontal, 8)
+
+                if selected {
+                    Image(systemName: "checkmark.circle.fill")
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(.white, palette.accent)
+                        .padding(5)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                }
+            }
+            .overlay {
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .stroke(selected ? palette.accent : palette.line.opacity(0.16), lineWidth: selected ? 2.5 : 1)
+            }
+        }
+        .frame(height: 64)
+    }
+
+    private func previewPiece(_ glyph: String, color: Color) -> some View {
+        Circle()
+            .fill(palette.surface)
+            .overlay(Circle().stroke(color, lineWidth: 1.5))
+            .overlay(Text(glyph).font(.system(size: 13, weight: .bold, design: .serif)).foregroundStyle(color))
+            .aspectRatio(1, contentMode: .fit)
+    }
+}
