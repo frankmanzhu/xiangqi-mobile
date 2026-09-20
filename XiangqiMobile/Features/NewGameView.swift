@@ -68,8 +68,8 @@ struct NewGameView: View {
 
     private var levelDescription: String {
         switch level {
-        case 1: "Quick and forgiving; chooses among several sound moves."
-        case 2: "A friendly opponent with credible tactics."
+        case 1: "A quick Pikafish search for a more forgiving game."
+        case 2: "A responsive Pikafish opponent with credible tactics."
         case 3: "Consistent play for regular club players."
         case 4: "A focused opponent that looks further ahead."
         default: "The strongest built-in search setting."

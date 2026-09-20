@@ -36,7 +36,8 @@ struct SettingsView: View {
             }
             Section("About") {
                 LabeledContent("Version", value: "1.0")
-                Text("This build uses an offline native search player behind a replaceable engine interface. No account or network access is required.")
+                LabeledContent("Computer", value: "Pikafish")
+                Text("Computer play uses the bundled Pikafish engine and NNUE network entirely on-device. No account or network access is required.")
                     .font(.footnote).foregroundStyle(.secondary)
             }
         }

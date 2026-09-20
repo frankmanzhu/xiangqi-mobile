@@ -33,7 +33,7 @@ final class GameSession: ObservableObject {
     init(
         record: GameRecord,
         repository: GameRepository,
-        computer: any ComputerPlayerClient = NativeComputerClient()
+        computer: any ComputerPlayerClient = PikafishComputerClient()
     ) {
         self.record = record
         self.repository = repository
@@ -130,17 +130,24 @@ final class GameSession: ObservableObject {
         case .available:
             hintStage = .searching
             let snapshot = position
+            let moves = record.uciMoves
             let seed = seedForCurrentPosition(salt: 0x48494E54)
-            let move = await computer.chooseMove(
-                in: snapshot,
-                configuration: .init(level: 3, seed: seed)
-            )
-            guard snapshot.fen == position.fen, let move else {
+            do {
+                let move = try await computer.chooseMove(
+                    startingFEN: record.startingFEN,
+                    moves: moves,
+                    configuration: .init(level: 3, seed: seed)
+                )
+                guard snapshot.fen == position.fen else {
+                    hintStage = .available
+                    return
+                }
+                hintUsedForCurrentPly = true
+                hintStage = .source(move)
+            } catch {
                 hintStage = .available
-                return
+                message = error.localizedDescription
             }
-            hintUsedForCurrentPly = true
-            hintStage = .source(move)
         }
     }
 
@@ -194,6 +201,7 @@ final class GameSession: ObservableObject {
     func cancelSearch() {
         searchToken = UUID()
         isThinking = false
+        Task { await computer.stop() }
     }
 
     private func commit(_ move: Move, computerSeed: UInt64?) async {
@@ -243,17 +251,28 @@ final class GameSession: ObservableObject {
         searchToken = token
         let version = positionVersion
         let snapshot = position
+        let moves = record.uciMoves
         let level = record.computerLevel
         let seed = seedForCurrentPosition(salt: UInt64(record.moves.count))
         isThinking = true
-        let move = await computer.chooseMove(
-            in: snapshot,
-            configuration: .init(level: level, seed: seed)
-        )
-        guard searchToken == token, positionVersion == version, let move,
-              position.legalMoves().contains(move) else { return }
-        isThinking = false
-        await commit(move, computerSeed: seed)
+        do {
+            let move = try await computer.chooseMove(
+                startingFEN: record.startingFEN,
+                moves: moves,
+                configuration: .init(level: level, seed: seed)
+            )
+            guard searchToken == token, positionVersion == version else { return }
+            isThinking = false
+            guard snapshot.fen == position.fen, position.legalMoves().contains(move) else {
+                message = "Pikafish returned a move that does not match the current game."
+                return
+            }
+            await commit(move, computerSeed: nil)
+        } catch {
+            guard searchToken == token, positionVersion == version else { return }
+            isThinking = false
+            message = error.localizedDescription
+        }
     }
 
     private func persist() async {

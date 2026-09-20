@@ -2,23 +2,13 @@ import XCTest
 @testable import XiangqiCore
 
 final class ComputerPlayerTests: XCTestCase {
-    func testComputerAlwaysReturnsALegalMove() {
-        let position = Position.standard
-        let legal = Set(position.legalMoves())
-        for level in 1...5 {
-            let selected = NativeComputerPlayer.chooseMove(
-                in: position,
-                configuration: ComputerConfiguration(level: level, seed: 42)
-            )
-            XCTAssertNotNil(selected)
-            XCTAssertTrue(legal.contains(selected!))
-        }
+    func testComputerLevelIsClampedToSupportedRange() {
+        XCTAssertEqual(ComputerConfiguration(level: -1, seed: 1).level, 1)
+        XCTAssertEqual(ComputerConfiguration(level: 3, seed: 1).level, 3)
+        XCTAssertEqual(ComputerConfiguration(level: 99, seed: 1).level, 5)
     }
 
-    func testLowLevelChoiceIsDeterministicForSeed() {
-        let configuration = ComputerConfiguration(level: 1, seed: 12345)
-        let first = NativeComputerPlayer.chooseMove(in: .standard, configuration: configuration)
-        let second = NativeComputerPlayer.chooseMove(in: .standard, configuration: configuration)
-        XCTAssertEqual(first, second)
+    func testConfigurationPreservesSeedForRecordedPolicyMetadata() {
+        XCTAssertEqual(ComputerConfiguration(level: 2, seed: 12_345).seed, 12_345)
     }
 }

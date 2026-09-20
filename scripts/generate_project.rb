@@ -28,6 +28,38 @@ Dir.glob(File.join(root, "XiangqiMobile", "**", "*.swift")).sort.each do |path|
   target.source_build_phase.add_file_reference(reference)
 end
 
+bridge_group = project.main_group.new_group("EngineBridge", "EngineBridge")
+Dir.glob(File.join(root, "EngineBridge", "*"), File::FNM_DOTMATCH).sort.each do |path|
+  next unless File.file?(path)
+  reference = bridge_group.new_file(File.basename(path))
+  target.source_build_phase.add_file_reference(reference) if File.extname(path) == ".cpp"
+end
+
+pikafish_group = project.main_group.new_group("Pikafish", "Vendor/Pikafish/src")
+pikafish_sources = Dir.glob(File.join(root, "Vendor", "Pikafish", "src", "**", "*.cpp")).sort.reject do |path|
+  path.end_with?("/main.cpp") || path.include?("/universal/")
+end
+pikafish_sources.each do |path|
+  relative = path.delete_prefix(File.join(root, "Vendor", "Pikafish", "src") + "/")
+  components = relative.split("/")
+  filename = components.pop
+  group = components.reduce(pikafish_group) do |parent, name|
+    parent.groups.find { |child| child.display_name == name } || parent.new_group(name, name)
+  end
+  target.source_build_phase.add_file_reference(group.new_file(filename))
+end
+
+resources_group = project.main_group.new_group("Resources", "Resources")
+[
+  ["Engine", "pikafish.nnue"],
+  ["Licenses", "Pikafish-GPL-3.0.txt"],
+  ["Licenses", "Pikafish-AUTHORS.txt"]
+].each do |directory, filename|
+  group = resources_group.groups.find { |child| child.display_name == directory } ||
+          resources_group.new_group(directory, directory)
+  target.resources_build_phase.add_file_reference(group.new_file(filename))
+end
+
 tests_group = project.main_group.new_group("Tests", "Tests")
 ui_group = tests_group.new_group("XiangqiMobileUITests", "XiangqiMobileUITests")
 Dir.glob(File.join(root, "Tests", "XiangqiMobileUITests", "*.swift")).sort.each do |path|
@@ -41,6 +73,14 @@ target.build_configurations.each do |config|
   settings["PRODUCT_NAME"] = "$(TARGET_NAME)"
   settings["SWIFT_VERSION"] = "5.0"
   settings["SWIFT_STRICT_CONCURRENCY"] = "complete"
+  settings["SWIFT_OBJC_BRIDGING_HEADER"] = "EngineBridge/XiangqiMobile-Bridging-Header.h"
+  settings["CLANG_CXX_LANGUAGE_STANDARD"] = "c++17"
+  settings["CLANG_CXX_LIBRARY"] = "libc++"
+  # Pikafish's NNUE is unusably slow at Clang's Debug default (-O0), even
+  # though the surrounding Swift app should remain a normal debug build.
+  settings["GCC_OPTIMIZATION_LEVEL"] = "3"
+  settings["GCC_PREPROCESSOR_DEFINITIONS"] = ["$(inherited)", "IS_64BIT", "USE_NEON=8"]
+  settings["HEADER_SEARCH_PATHS"] = ["$(inherited)", "$(SRCROOT)/EngineBridge", "$(SRCROOT)/Vendor/Pikafish/src"]
   settings["GENERATE_INFOPLIST_FILE"] = "YES"
   settings["INFOPLIST_KEY_CFBundleDisplayName"] = "Xiangqi"
   settings["INFOPLIST_KEY_LSApplicationCategoryType"] = "public.app-category.board-games"

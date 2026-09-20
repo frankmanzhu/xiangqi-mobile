@@ -22,4 +22,24 @@ final class SmokeTests: XCTestCase {
         board.lifetime = .keepAlways
         add(board)
     }
+
+    func testComputerGameReceivesARealEngineReply() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-resetTestData"]
+        app.launch()
+
+        app.buttons["Play computer"].tap()
+        XCTAssertTrue(app.navigationBars["New game"].waitForExistence(timeout: 2))
+        app.buttons["Start game"].tap()
+
+        XCTAssertTrue(app.otherElements["Xiangqi board"].waitForExistence(timeout: 2))
+        app.buttons["Red Soldier, a3, selectable"].tap()
+        app.buttons["Empty a4"].tap()
+
+        let receivedReply = app.staticTexts["Your move"].waitForExistence(timeout: 12)
+        if !receivedReply { print(app.debugDescription) }
+        XCTAssertTrue(receivedReply)
+        app.buttons["Moves"].tap()
+        XCTAssertTrue(app.staticTexts["a3a4"].waitForExistence(timeout: 2))
+    }
 }
