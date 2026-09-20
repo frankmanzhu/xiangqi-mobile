@@ -1,6 +1,22 @@
+# macOS
 .DS_Store
-.build/
-.derived/
-DerivedData/
+
+# Swift Package Manager
+/.build/
+/.swiftpm/
+
+# Xcode build output
+/DerivedData/
+/.derived/
+/.derived-device/
+*.xcarchive
+*.dSYM
+*.dSYM.zip
+*.ipa
+
+# Xcode user-specific settings
 *.xcuserstate
-xcuserdata/
+**/xcuserdata/
+
+# JetBrains IDEs
+/.idea/

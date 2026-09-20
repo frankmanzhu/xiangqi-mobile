@@ -46,7 +46,6 @@ public enum NativeComputerPlayer {
         evaluated.sort { lhs, rhs in
             lhs.1 == rhs.1 ? lhs.0.uci < rhs.0.uci : lhs.1 > rhs.1
         }
-
         if configuration.level <= 2 {
             let spread = configuration.level == 1 ? 5 : 3
             let candidates = Array(evaluated.prefix(min(spread, evaluated.count)))
