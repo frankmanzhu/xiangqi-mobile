@@ -158,6 +158,7 @@ private struct PieceView: View {
     let piece: Piece
     let palette: BoardPalette
     let size: CGFloat
+    @AppStorage("pieceLabels") private var pieceLabels = "Traditional"
 
     var body: some View {
         Circle()
@@ -173,18 +174,33 @@ private struct PieceView: View {
     }
 
     private var glyph: String {
+        if pieceLabels == "Simplified" {
+            switch (piece.side, piece.kind) {
+            case (.red, .general): return "帅"
+            case (.black, .general): return "将"
+            case (.red, .advisor): return "仕"
+            case (.black, .advisor): return "士"
+            case (.red, .elephant): return "相"
+            case (.black, .elephant): return "象"
+            case (_, .horse): return "马"
+            case (_, .chariot): return "车"
+            case (_, .cannon): return "炮"
+            case (.red, .soldier): return "兵"
+            case (.black, .soldier): return "卒"
+            }
+        }
         switch (piece.side, piece.kind) {
-        case (.red, .general): "帥"
-        case (.black, .general): "將"
-        case (.red, .advisor): "仕"
-        case (.black, .advisor): "士"
-        case (.red, .elephant): "相"
-        case (.black, .elephant): "象"
-        case (_, .horse): "馬"
-        case (_, .chariot): "車"
-        case (_, .cannon): "炮"
-        case (.red, .soldier): "兵"
-        case (.black, .soldier): "卒"
+        case (.red, .general): return "帥"
+        case (.black, .general): return "將"
+        case (.red, .advisor): return "仕"
+        case (.black, .advisor): return "士"
+        case (.red, .elephant): return "相"
+        case (.black, .elephant): return "象"
+        case (_, .horse): return "馬"
+        case (_, .chariot): return "車"
+        case (_, .cannon): return "炮"
+        case (.red, .soldier): return "兵"
+        case (.black, .soldier): return "卒"
         }
     }
 }
@@ -220,5 +236,172 @@ private struct Metrics {
         return orientation == .red
             ? Square(file: column, rank: 9 - row)
             : Square(file: 8 - column, rank: row)
+    }
+}
+
+struct ReadOnlyBoardView: View {
+    let position: Position
+    let orientation: Side
+    let palette: BoardPalette
+    let lastMove: Move?
+
+    var body: some View {
+        GeometryReader { proxy in
+            let metrics = Metrics(size: proxy.size)
+            ZStack {
+                RoundedRectangle(cornerRadius: 16).fill(palette.board)
+                grid(metrics)
+                if let lastMove {
+                    studyMarker(at: lastMove.from, metrics: metrics, opacity: 0.28)
+                    studyMarker(at: lastMove.to, metrics: metrics, opacity: 0.5)
+                }
+                ForEach(position.pieces.sorted(by: { $0.key < $1.key }), id: \.value.id) { square, piece in
+                    PieceView(piece: piece, palette: palette, size: metrics.pieceSize)
+                        .position(metrics.point(for: square, orientation: orientation))
+                }
+            }
+        }
+        .aspectRatio(8.0 / 9.25, contentMode: .fit)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Study board")
+    }
+
+    private func grid(_ metrics: Metrics) -> some View {
+        Canvas { context, _ in
+            var path = Path()
+            for row in 0...9 {
+                path.move(to: metrics.point(column: 0, row: row))
+                path.addLine(to: metrics.point(column: 8, row: row))
+            }
+            for column in 0...8 {
+                if column == 0 || column == 8 {
+                    path.move(to: metrics.point(column: column, row: 0))
+                    path.addLine(to: metrics.point(column: column, row: 9))
+                } else {
+                    path.move(to: metrics.point(column: column, row: 0))
+                    path.addLine(to: metrics.point(column: column, row: 4))
+                    path.move(to: metrics.point(column: column, row: 5))
+                    path.addLine(to: metrics.point(column: column, row: 9))
+                }
+            }
+            path.move(to: metrics.point(column: 3, row: 0)); path.addLine(to: metrics.point(column: 5, row: 2))
+            path.move(to: metrics.point(column: 5, row: 0)); path.addLine(to: metrics.point(column: 3, row: 2))
+            path.move(to: metrics.point(column: 3, row: 7)); path.addLine(to: metrics.point(column: 5, row: 9))
+            path.move(to: metrics.point(column: 5, row: 7)); path.addLine(to: metrics.point(column: 3, row: 9))
+            context.stroke(path, with: .color(palette.line), lineWidth: 1.2)
+        }
+        .overlay(alignment: .center) {
+            HStack {
+                Text("楚 河")
+                Spacer()
+                Text("漢 界")
+            }
+            .font(.system(size: max(13, metrics.step * 0.28), weight: .semibold, design: .serif))
+            .foregroundStyle(palette.line.opacity(0.72))
+            .padding(.horizontal, metrics.inset + metrics.step * 0.8)
+        }
+    }
+
+    private func studyMarker(at square: Square, metrics: Metrics, opacity: Double) -> some View {
+        RoundedRectangle(cornerRadius: 7)
+            .stroke(palette.accent.opacity(opacity), lineWidth: 3)
+            .frame(width: metrics.pieceSize + 5, height: metrics.pieceSize + 5)
+            .position(metrics.point(for: square, orientation: orientation))
+    }
+}
+
+struct PracticeBoardView: View {
+    let position: Position
+    let orientation: Side
+    let palette: BoardPalette
+    let lastMove: Move?
+    let selectedSquare: Square?
+    let legalDestinations: Set<Square>
+    let onTap: (Square) -> Void
+
+    var body: some View {
+        GeometryReader { proxy in
+            let metrics = Metrics(size: proxy.size)
+            ZStack {
+                RoundedRectangle(cornerRadius: 16).fill(palette.board)
+                grid(metrics)
+                if let lastMove {
+                    marker(at: lastMove.from, metrics: metrics, color: palette.accent.opacity(0.28), ring: true)
+                    marker(at: lastMove.to, metrics: metrics, color: palette.accent.opacity(0.5), ring: true)
+                }
+                if let selectedSquare {
+                    marker(at: selectedSquare, metrics: metrics, color: palette.accent, ring: true)
+                }
+                ForEach(Array(legalDestinations).sorted(), id: \.self) { square in
+                    marker(
+                        at: square,
+                        metrics: metrics,
+                        color: palette.legal,
+                        ring: position.piece(at: square) != nil
+                    )
+                }
+                ForEach(position.pieces.sorted(by: { $0.key < $1.key }), id: \.value.id) { square, piece in
+                    PieceView(piece: piece, palette: palette, size: metrics.pieceSize)
+                        .position(metrics.point(for: square, orientation: orientation))
+                        .allowsHitTesting(false)
+                }
+                ForEach(0..<90, id: \.self) { index in
+                    let square = Square(file: index % 9, rank: index / 9)
+                    Button { onTap(square) } label: { Color.clear.contentShape(Rectangle()) }
+                        .frame(width: metrics.step, height: metrics.step)
+                        .position(metrics.point(for: square, orientation: orientation))
+                        .accessibilityLabel(square.uci)
+                }
+            }
+        }
+        .aspectRatio(8.0 / 9.25, contentMode: .fit)
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel("Practice board")
+    }
+
+    private func grid(_ metrics: Metrics) -> some View {
+        Canvas { context, _ in
+            var path = Path()
+            for row in 0...9 {
+                path.move(to: metrics.point(column: 0, row: row))
+                path.addLine(to: metrics.point(column: 8, row: row))
+            }
+            for column in 0...8 {
+                if column == 0 || column == 8 {
+                    path.move(to: metrics.point(column: column, row: 0))
+                    path.addLine(to: metrics.point(column: column, row: 9))
+                } else {
+                    path.move(to: metrics.point(column: column, row: 0))
+                    path.addLine(to: metrics.point(column: column, row: 4))
+                    path.move(to: metrics.point(column: column, row: 5))
+                    path.addLine(to: metrics.point(column: column, row: 9))
+                }
+            }
+            path.move(to: metrics.point(column: 3, row: 0)); path.addLine(to: metrics.point(column: 5, row: 2))
+            path.move(to: metrics.point(column: 5, row: 0)); path.addLine(to: metrics.point(column: 3, row: 2))
+            path.move(to: metrics.point(column: 3, row: 7)); path.addLine(to: metrics.point(column: 5, row: 9))
+            path.move(to: metrics.point(column: 5, row: 7)); path.addLine(to: metrics.point(column: 3, row: 9))
+            context.stroke(path, with: .color(palette.line), lineWidth: 1.2)
+        }
+        .overlay(alignment: .center) {
+            HStack { Text("楚 河"); Spacer(); Text("漢 界") }
+                .font(.system(size: max(13, metrics.step * 0.28), weight: .semibold, design: .serif))
+                .foregroundStyle(palette.line.opacity(0.72))
+                .padding(.horizontal, metrics.inset + metrics.step * 0.8)
+        }
+        .allowsHitTesting(false)
+    }
+
+    private func marker(at square: Square, metrics: Metrics, color: Color, ring: Bool) -> some View {
+        Group {
+            if ring {
+                Circle().stroke(color, lineWidth: 3)
+                    .frame(width: metrics.pieceSize + 6, height: metrics.pieceSize + 6)
+            } else {
+                Circle().fill(color).frame(width: metrics.step * 0.22, height: metrics.step * 0.22)
+            }
+        }
+        .position(metrics.point(for: square, orientation: orientation))
+        .allowsHitTesting(false)
     }
 }

@@ -1,0 +1,330 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ records" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@ 个棋谱" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "%@ 個棋譜" } }
+      }
+    },
+    "%lld plies" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%lld 回合步" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "%lld 回合步" } }
+      }
+    },
+    "App language" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "应用语言" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "應用程式語言" } }
+      }
+    },
+    "Black" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "黑方" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "黑方" } }
+      }
+    },
+    "Bookmark" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "收藏" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "收藏" } }
+      }
+    },
+    "Browse" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "浏览" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "瀏覽" } }
+      }
+    },
+    "Chinese Chess Practical Dataset" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "中国象棋实用数据集" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "中國象棋實用資料集" } }
+      }
+    },
+    "Could not load records" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法载入棋谱" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "無法載入棋譜" } }
+      }
+    },
+    "Could not open record" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法打开棋谱" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "無法開啟棋譜" } }
+      }
+    },
+    "Could not open practice" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法打开练习" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "無法開啟練習" } }
+      }
+    },
+    "Choose a destination." : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "请选择落点。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "請選擇落點。" } }
+      }
+    },
+    "Correct. The recorded reply has been played." : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正确。已自动走出棋谱中的应着。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "正確。已自動走出棋譜中的應著。" } }
+      }
+    },
+    "Dataset revision" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "数据集版本" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "資料集版本" } }
+      }
+    },
+    "ECCO" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "ECCO 编码" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "ECCO 編碼" } }
+      }
+    },
+    "Endgames" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "残局" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "殘局" } }
+      }
+    },
+    "English" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "English" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "English" } }
+      }
+    },
+    "Full-game tactics" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "全盘战术" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "全盤戰術" } }
+      }
+    },
+    "Find the best move." : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "找出最佳着法。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "找出最佳著法。" } }
+      }
+    },
+    "Games" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "对局" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "對局" } }
+      }
+    },
+    "Language" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "语言" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "語言" } }
+      }
+    },
+    "Hint" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "提示" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "提示" } }
+      }
+    },
+    "Hint: %@" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "提示：%@" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "提示：%@" } }
+      }
+    },
+    "Line complete. Well done." : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "棋路完成，做得好。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "棋路完成，做得好。" } }
+      }
+    },
+    "Learn" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "学习" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "學習" } }
+      }
+    },
+    "Learn and practice" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "学习与练习" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "學習與練習" } }
+      }
+    },
+    "Learning library unavailable" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "学习资料库不可用" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "學習資料庫無法使用" } }
+      }
+    },
+    "License" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "许可证" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "授權條款" } }
+      }
+    },
+    "Loading library…" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在载入资料库…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "正在載入資料庫…" } }
+      }
+    },
+    "Loading records…" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在载入棋谱…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "正在載入棋譜…" } }
+      }
+    },
+    "Mating practice" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "杀法练习" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "殺法練習" } }
+      }
+    },
+    "Middlegames" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "中局" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "中局" } }
+      }
+    },
+    "Mistakes: %lld" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "错误：%lld" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "錯誤：%lld" } }
+      }
+    },
+    "Move %lld of %lld" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "第 %1$lld / %2$lld 步" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "第 %1$lld / %2$lld 步" } }
+      }
+    },
+    "Moves" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "着法" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "著法" } }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "下一步" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "下一步" } }
+      }
+    },
+    "Not the recorded move. Try again." : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "这不是棋谱中的着法，请重试。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "這不是棋譜中的著法，請重試。" } }
+      }
+    },
+    "Opening record…" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在打开棋谱…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "正在開啟棋譜…" } }
+      }
+    },
+    "Opening practice…" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在打开练习…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "正在開啟練習…" } }
+      }
+    },
+    "Openings" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "开局" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "開局" } }
+      }
+    },
+    "Player, event, or ECCO" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "棋手、赛事或 ECCO" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "棋手、賽事或 ECCO" } }
+      }
+    },
+    "Previous" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "上一步" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "上一步" } }
+      }
+    },
+    "Practice" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "练习" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "練習" } }
+      }
+    },
+    "Red" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "红方" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "紅方" } }
+      }
+    },
+    "Remove bookmark" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "取消收藏" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "取消收藏" } }
+      }
+    },
+    "Result" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "结果" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "結果" } }
+      }
+    },
+    "Restart" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "重新开始" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "重新開始" } }
+      }
+    },
+    "Simplified Chinese" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "简体中文" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "簡體中文" } }
+      }
+    },
+    "Source" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "来源" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "來源" } }
+      }
+    },
+    "Study" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "研习" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "研習" } }
+      }
+    },
+    "Study line" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "研习棋路" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "研習棋路" } }
+      }
+    },
+    "Study master games, openings, middlegames, endgames, and tactical positions entirely offline." : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "完全离线研习大师对局、开局、中局、残局和战术局面。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "完全離線研習大師對局、開局、中局、殘局與戰術局面。" } }
+      }
+    },
+    "System Default" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "跟随系统" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "跟隨系統" } }
+      }
+    },
+    "Traditional Chinese" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "繁体中文" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "繁體中文" } }
+      }
+    },
+    "Validated records" : {
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已验证棋谱" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已驗證棋譜" } }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,12 @@
+{"category":"中局","reason":"Invalid FEN: expected one general per side","sourcePath":"中局/00002096.pgn"}
+{"category":"中局","reason":"Illegal move at ply 18, 士４進５: Unsupported Xiangqi notation: 士４進５; position 3ak1R2/9/4b4/p1p2P2p/9/2Pr5/P1R1c3P/B3C4/1r2A4/4KAB2 b - - 0 9","sourcePath":"中局/00002173.pgn"}
+{"category":"中局","reason":"Illegal move at ply 19, 馬６退７: Unsupported Xiangqi notation: 馬６退７; position 2b1ka1C1/4a4/4b4/R5N1p/c1p6/5n3/2P1P3P/1rNRBA1n1/7C1/2BAK3c b - - 8 10","sourcePath":"中局/00002680.pgn"}
+{"category":"對局","reason":"Illegal move at ply 70, 士６進５: Unsupported Xiangqi notation: 士６進５; position C2akab2/9/4b4/1r2p3p/5n3/9/4P1p1P/4B4/1C2A4/1R1AK4 b - - 1 35","sourcePath":"對局/大師對局/以賽事分類/其他/00000753.pgn"}
+{"category":"對局","reason":"Illegal move at ply 115, 帥五進一: Unsupported Xiangqi notation: 帥五進一; position 4kab2/4a4/4b4/9/4c1C2/6B2/9/3pp4/2n1K1p2/3A5 w - - 0 58","sourcePath":"對局/電腦對局/電腦對局競賽/00000011.pgn"}
+{"category":"對局","reason":"Illegal move at ply 72, 將５進１: Unsupported Xiangqi notation: 將５進１; position 4kn1NC/4R4/9/5N2p/9/2p6/P3P4/B3B4/4A4/3K5 b - - 0 36","sourcePath":"對局/電腦對局/電腦對局競賽/00000019.pgn"}
+{"category":"對局","reason":"Illegal move at ply 72, 將５平４: Unsupported Xiangqi notation: 將５平４; position 3a1ab2/9/1n1Pk4/p4Np1p/2b6/4C1P2/P3P3P/5C3/9/3A1K3 b - - 0 36","sourcePath":"對局/電腦對局/電腦對局競賽/00000048.pgn"}
+{"category":"開局","reason":"Invalid FEN: expected one general per side","sourcePath":"開局/00000068.pgn"}
+{"category":"開局","reason":"Invalid FEN: expected one general per side","sourcePath":"開局/00000100.pgn"}
+{"category":"開局","reason":"Invalid FEN: expected one general per side","sourcePath":"開局/00000207.pgn"}
+{"category":"開局","reason":"Invalid FEN: expected one general per side","sourcePath":"開局/00000226.pgn"}
+{"category":"開局","reason":"Invalid FEN: expected one general per side","sourcePath":"開局/00000240.pgn"}

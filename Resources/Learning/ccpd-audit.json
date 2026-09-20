@@ -1,0 +1,36 @@
+{
+  "attemptedFiles" : 58468,
+  "categoryDiscoveredCounts" : {
+    "中局" : 2807,
+    "全盤戰術" : 433,
+    "對局" : 53893,
+    "殘局" : 244,
+    "殺局_殺法_練習題" : 130,
+    "開局" : 961
+  },
+  "categoryImportedCounts" : {
+    "中局" : 2804,
+    "全盤戰術" : 433,
+    "對局" : 53889,
+    "殘局" : 244,
+    "殺局_殺法_練習題" : 130,
+    "開局" : 956
+  },
+  "discoveredFiles" : 58468,
+  "encodingCounts" : {
+    "big5" : 58454,
+    "big5HKSCS" : 2
+  },
+  "generatedAt" : "2026-09-20T16:16:57Z",
+  "importedFiles" : 58456,
+  "license" : "CC BY 4.0",
+  "quarantineReasonCounts" : {
+    "illegal_move" : 6,
+    "invalid_fen" : 6
+  },
+  "quarantinedFiles" : 12,
+  "schemaVersion" : 1,
+  "sourceName" : "Chinese Chess Practical Dataset (CCPD)",
+  "sourceRevision" : "368a47a947773dd8692c026e286dd19b6277b993",
+  "sourceURL" : "https://github.com/Yvonne761/Chinese-Chess-Practical-Dataset"
+}

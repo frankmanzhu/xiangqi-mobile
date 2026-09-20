@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "ccpd-2026",
+  "name": "Chinese Chess Practical Dataset (CCPD)",
+  "sourceURL": "https://github.com/Yvonne761/Chinese-Chess-Practical-Dataset",
+  "datasetPath": "Dataset",
+  "pinnedRevision": "368a47a947773dd8692c026e286dd19b6277b993",
+  "license": "CC BY 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "creators": [
+    "Yu-Han Tseng",
+    "Bo-Nian Chen"
+  ],
+  "citation": "Yu-Han Tseng and Bo-Nian Chen (2026). Chinese Chess Practical Dataset (CCPD).",
+  "expectedTreeCounts": {
+    "中局": 2807,
+    "全盤戰術": 433,
+    "對局": 53893,
+    "殘局": 244,
+    "殺局_殺法_練習題": 130,
+    "開局": 961
+  },
+  "expectedTotal": 58468,
+  "upstreamReadmeStatedTotal": 58528,
+  "validatedImport": {
+    "acceptedTotal": 58456,
+    "quarantinedTotal": 12,
+    "databaseSHA256": "7d258a7a4d3572c1c183ef39637af9fe879a193aec70bad86006e8c23c858fc8",
+    "acceptedCategoryCounts": {
+      "中局": 2804,
+      "全盤戰術": 433,
+      "對局": 53889,
+      "殘局": 244,
+      "殺局_殺法_練習題": 130,
+      "開局": 956
+    },
+    "quarantineReasons": {
+      "invalid_fen": 6,
+      "illegal_move": 6
+    }
+  },
+  "modifications": [
+    "Source text is decoded losslessly from Big5 where required.",
+    "Traditional Chinese move notation is normalized to canonical UCI moves.",
+    "Records are legality-validated and indexed for offline browsing, replay, and practice.",
+    "Move and tag payloads are losslessly compressed in the normalized SQLite database.",
+    "Invalid or ambiguous records are quarantined rather than silently repaired."
+  ]
+}

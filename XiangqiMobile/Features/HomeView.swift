@@ -70,6 +70,7 @@ struct HomeView: View {
         VStack(spacing: 12) {
             primaryButton("Play computer", icon: "cpu") { app.showSetup(.computer) }
             primaryButton("Two players", icon: "person.2.fill") { app.showSetup(.localTwoPlayer) }
+            primaryButton("Learn and practice", icon: "graduationcap.fill") { app.path.append(.learning) }
         }
     }
 

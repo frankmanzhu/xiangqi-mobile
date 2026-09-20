@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @AppStorage("appLanguage") private var languageRaw = AppLanguage.system.rawValue
     @AppStorage("theme") private var themeRaw = ThemeID.classic.rawValue
     @AppStorage("pieceLabels") private var pieceLabels = "Traditional"
     @AppStorage("coordinates") private var coordinates = "Red perspective"
@@ -10,6 +11,14 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
+            Section("Language") {
+                Picker("App language", selection: $languageRaw) {
+                    Text("System Default").tag(AppLanguage.system.rawValue)
+                    Text("English").tag(AppLanguage.english.rawValue)
+                    Text("Simplified Chinese").tag(AppLanguage.simplifiedChinese.rawValue)
+                    Text("Traditional Chinese").tag(AppLanguage.traditionalChinese.rawValue)
+                }
+            }
             Section("Appearance") {
                 Picker("Theme", selection: $themeRaw) {
                     ForEach(ThemeID.allCases, id: \.rawValue) { Text($0.title).tag($0.rawValue) }
@@ -37,11 +46,51 @@ struct SettingsView: View {
             Section("About") {
                 LabeledContent("Version", value: "1.0")
                 LabeledContent("Computer", value: "Pikafish")
+                NavigationLink("Open-source and content licenses") { LicensesView() }
                 Text("Computer play uses the bundled Pikafish engine and NNUE network entirely on-device. No account or network access is required.")
                     .font(.footnote).foregroundStyle(.secondary)
             }
         }
         .navigationTitle("Settings")
+    }
+}
+
+private struct LicensesView: View {
+    var body: some View {
+        List {
+            Section("Learning content") {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Chinese Chess Practical Dataset (CCPD)").font(.headline)
+                    Text("Yu-Han Tseng and Bo-Nian Chen (2026)")
+                    Text("Creative Commons Attribution 4.0 International")
+                        .foregroundStyle(.secondary)
+                    Text("Xiangqi Mobile decodes the source text, converts Chinese notation to UCI, validates move legality, and indexes accepted records for offline study. Invalid or ambiguous records are excluded.")
+                        .font(.footnote).foregroundStyle(.secondary)
+                    Link("Dataset source", destination: URL(string: "https://github.com/Yvonne761/Chinese-Chess-Practical-Dataset")!)
+                    Link("CC BY 4.0 license", destination: URL(string: "https://creativecommons.org/licenses/by/4.0/legalcode")!)
+                }
+                if let notice = bundledText(named: "CCPD-CC-BY-4.0") {
+                    DisclosureGroup("Bundled notice") {
+                        Text(notice).font(.caption.monospaced()).textSelection(.enabled)
+                    }
+                }
+            }
+            Section("Computer engine") {
+                Text("Pikafish is distributed under GNU GPL version 3. The bundled notice and authors list are included with the application.")
+                    .font(.footnote).foregroundStyle(.secondary)
+                if let license = bundledText(named: "Pikafish-GPL-3.0") {
+                    DisclosureGroup("GNU GPL v3") {
+                        Text(license).font(.caption.monospaced()).textSelection(.enabled)
+                    }
+                }
+            }
+        }
+        .navigationTitle("Licenses")
+    }
+
+    private func bundledText(named name: String) -> String? {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "txt") else { return nil }
+        return try? String(contentsOf: url, encoding: .utf8)
     }
 }
 

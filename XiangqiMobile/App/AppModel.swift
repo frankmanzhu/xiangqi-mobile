@@ -5,6 +5,10 @@ enum AppRoute: Hashable {
     case setup(GameMode)
     case game
     case settings
+    case learning
+    case learningCategory(String)
+    case studyRecord(String)
+    case practiceRecord(String)
 }
 
 @MainActor
@@ -15,6 +19,7 @@ final class AppModel: ObservableObject {
     @Published var recoveryMessage: String?
 
     let repository = GameRepository()
+    let learningProgress = LearningProgressStore()
 
     func loadSavedGame() async {
         do {

@@ -53,7 +53,13 @@ resources_group = project.main_group.new_group("Resources", "Resources")
 [
   ["Engine", "pikafish.nnue"],
   ["Licenses", "Pikafish-GPL-3.0.txt"],
-  ["Licenses", "Pikafish-AUTHORS.txt"]
+  ["Licenses", "Pikafish-AUTHORS.txt"],
+  ["Licenses", "CCPD-CC-BY-4.0.txt"],
+  ["Learning", "CCPD-source.json"],
+  ["Learning", "ccpd.sqlite3"],
+  ["Learning", "ccpd-audit.json"],
+  ["Learning", "ccpd-quarantine.jsonl"],
+  ["Localizations", "Localizable.xcstrings"]
 ].each do |directory, filename|
   group = resources_group.groups.find { |child| child.display_name == directory } ||
           resources_group.new_group(directory, directory)
@@ -81,6 +87,7 @@ target.build_configurations.each do |config|
   settings["GCC_OPTIMIZATION_LEVEL"] = "3"
   settings["GCC_PREPROCESSOR_DEFINITIONS"] = ["$(inherited)", "IS_64BIT", "USE_NEON=8"]
   settings["HEADER_SEARCH_PATHS"] = ["$(inherited)", "$(SRCROOT)/EngineBridge", "$(SRCROOT)/Vendor/Pikafish/src"]
+  settings["OTHER_LDFLAGS"] = ["$(inherited)", "-lsqlite3", "-lz"]
   settings["GENERATE_INFOPLIST_FILE"] = "YES"
   settings["INFOPLIST_KEY_CFBundleDisplayName"] = "Xiangqi"
   settings["INFOPLIST_KEY_LSApplicationCategoryType"] = "public.app-category.board-games"

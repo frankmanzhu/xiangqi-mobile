@@ -1,6 +1,25 @@
 import XCTest
 
 final class SmokeTests: XCTestCase {
+    func testBundledLearningLibraryOpensPracticeOffline() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-resetTestData", "-AppleLanguages", "(en)"]
+        app.launch()
+
+        app.buttons["Learn and practice"].tap()
+        XCTAssertTrue(app.navigationBars["Learn"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Chinese Chess Practical Dataset"].exists)
+        app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Mating practice,'")).firstMatch.tap()
+        XCTAssertTrue(app.navigationBars["Mating practice"].waitForExistence(timeout: 5))
+
+        let firstRecord = app.buttons.matching(
+            NSPredicate(format: "identifier BEGINSWITH 'ccpd-record-'")
+        ).firstMatch
+        XCTAssertTrue(firstRecord.waitForExistence(timeout: 5))
+        firstRecord.tap()
+        XCTAssertTrue(app.otherElements["Practice board"].waitForExistence(timeout: 5))
+    }
+
     func testTwoPlayerGameCanStartAndCommitARecordedMove() {
         let app = XCUIApplication()
         app.launchArguments = ["-resetTestData"]

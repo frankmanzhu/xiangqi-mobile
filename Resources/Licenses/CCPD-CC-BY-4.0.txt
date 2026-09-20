@@ -1,0 +1,28 @@
+Chinese Chess Practical Dataset (CCPD)
+
+Source: https://github.com/Yvonne761/Chinese-Chess-Practical-Dataset
+Pinned revision: 368a47a947773dd8692c026e286dd19b6277b993
+Creators: Yu-Han Tseng and Bo-Nian Chen
+Citation: Yu-Han Tseng and Bo-Nian Chen (2026). Chinese Chess Practical Dataset (CCPD).
+
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Yu-Han Tseng
+
+You are free to:
+
+- Share: copy and redistribute the material in any medium or format.
+- Adapt: remix, transform, and build upon the material for any purpose, even commercially.
+
+Under the following terms:
+
+- Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Xiangqi Mobile modifications:
+
+- Lossless Big5-to-Unicode decoding where required.
+- Conversion of Chinese move notation to canonical UCI moves.
+- Legality validation, deduplication, categorization, and indexed packaging.
+- Invalid or ambiguous records are excluded from the shipped library and listed in the generated audit report.

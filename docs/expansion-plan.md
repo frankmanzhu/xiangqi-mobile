@@ -1,8 +1,14 @@
 # Xiangqi Mobile — themes, localization, and learning plan
 
-Status: proposed implementation plan  
+Status: CCPD learning milestone implemented; broader theme/localization plan remains iterative
 Last updated: 2026-09-21  
 Scope: offline visual themes, English/Chinese localization, and an offline learning library
+
+## Implemented CCPD milestone
+
+The pinned CCPD corpus is now imported into a single read-only SQLite resource and exposed natively in the app. The delivered path includes strict UTF-8/Big5/Big5-HKSCS decoding, Chinese-notation-to-UCI normalization, per-ply legality validation, deterministic quarantine and audit output, category browsing, Traditional/Simplified Chinese-aware metadata search, annotated source-notation replay from arbitrary FENs, record practice with automatic source replies, bookmarks and durable progress, live English/Simplified Chinese/Traditional Chinese selection for learning flows, offline attribution, and regression coverage.
+
+The validated import accepts 58,456 of 58,468 source records. Six malformed FENs and six illegal continuations are quarantined. The database checksum, accepted category totals, and quarantine totals are pinned in `Resources/Learning/CCPD-source.json`; the complete machine-readable audit and quarantine files ship beside the database.
 
 ## 1. Outcome
 
@@ -223,7 +229,7 @@ Learning progress is separate from `active-game.json`:
 | --- | --- | --- |
 | [English Wikibooks Xiangqi book](https://en.wikibooks.org/wiki/Xiangqi) | terminology, rules, introductory strategy | Usable under [Wikibooks' CC BY-SA 4.0/GFDL terms](https://en.wikibooks.org/wiki/Wikibooks:Copyrights) with attribution and share-alike compliance. Prefer it as research and write original app lessons unless verbatim reuse is valuable. |
 | Chinese Wikisource historical manuals, including [《梅花谱》](https://zh.wikisource.org/wiki/%E6%A2%85%E8%8A%B1%E8%AD%9C) | classic openings, historical annotated lines | Underlying old works are public domain, but a copied transcription may carry site terms. Re-transcribe from a verified public-domain scan or comply with the transcription's license; write new modern explanations. |
-| [Chinese Chess Practical Dataset (CCPD)](https://github.com/Yvonne761/Chinese-Chess-Practical-Dataset) | master games, tactical and opening candidates | Repository declares CC BY 4.0. Pilot a small import only after checking provenance, exact file license coverage, parsing quality, duplicates, and move legality. Do not make it a launch dependency. |
+| [Chinese Chess Practical Dataset (CCPD)](https://github.com/Yvonne761/Chinese-Chess-Practical-Dataset) | master games, middlegames, endgames, tactical exercises, and openings | **Adopt as the primary external learning corpus.** The repository declares CC BY 4.0. Pin an audited commit, preserve attribution and modification notices, normalize every record, and expose the successfully validated corpus through native browsing, replay, and practice flows. |
 | [Wikimedia Commons xiangqi art](https://commons.wikimedia.org/wiki/Category:Xiangqi_pieces) | optional board/piece references | Some relevant files are CC0/public domain, but verify each file page individually. Procedural original art remains preferred. |
 | Community databases without an explicit data license | large game/puzzle collections | Do not bundle. A public repository or a “free” download is insufficient permission. |
 | Free federation PDFs or modern commercial books | learning reference | Link or cite only where permitted; do not copy text, diagrams, or annotations without an explicit compatible license. |
@@ -231,6 +237,45 @@ Learning progress is separate from `active-game.json`:
 For the initial learning release, author original bilingual lessons and 24–40 small puzzles, or derive them from clearly public-domain positions, then validate every line with the local rules implementation and Pikafish. This produces a coherent curriculum and a clean rights trail.
 
 Add an in-app **Content sources and licenses** screen. It must remain available offline and identify modified material. Keep software licenses and learning-content licenses as separate sections.
+
+### 5.1 CCPD native-support contract
+
+CCPD is a committed product source, not merely a future candidate. The first audit of repository commit `368a47a947773dd8692c026e286dd19b6277b993` found:
+
+- six top-level categories: middlegames, full-game tactics, games, endgames, mating/tactical exercises, and openings;
+- 58,468 `.pgn` files in the Git tree at that commit;
+- a 60-record mismatch with the README's stated total of 58,528, caused by the README reporting 53,953 games while the tree contains 53,893 under `Dataset/對局`;
+- Big5-encoded source text in sampled files, not UTF-8;
+- PGN-like headers including `Game`, `Event`, `Round`, `Date`, `Site`, `Red`, `Black`, `Result`, `ECCO`, and `FEN`;
+- Traditional Chinese, position-dependent move notation rather than UCI moves.
+
+The import pipeline must therefore support the source on its own terms:
+
+1. Fetch only a pinned commit and record its commit SHA, retrieval date, source URL, license, and unmodified archive hash.
+2. Preserve original source bytes and per-file hashes outside the app bundle so every normalized item is traceable.
+3. Decode strict UTF-8 when valid, otherwise decode the documented/sampled Big5 family explicitly. Never use lossy replacement characters.
+4. Parse tags, results, starting FEN, main-line moves, comments, and variations where present. Preserve unknown tags instead of discarding them.
+5. Convert Chinese notation to canonical UCI by resolving each move against the current position. Support Traditional/Simplified piece characters, Chinese and full-width Arabic file numbers, `進/进`, `退`, `平`, and `前/中/後/后` disambiguation.
+6. Validate every converted ply with `XiangqiCore` and, for disagreements, the pinned Pikafish bridge. Quarantine invalid or ambiguous records with a machine-readable reason; never repair them silently.
+7. Generate an audit report containing discovered counts, imported counts, quarantined counts by reason, duplicates, tag coverage, result mismatches, and source-statistic discrepancies.
+8. Normalize accepted records into one compact, indexed, read-only database. Do not add tens of thousands of individual files to the Xcode resource phase.
+9. Include original Chinese notation alongside canonical UCI so the study UI can display source notation, localized derived notation, or both.
+10. Generate the in-app attribution and change notice from the same import manifest used to build the database.
+
+Native app support means:
+
+- browse all successfully imported records by dataset category;
+- filter games by player, event, year, result, and ECCO/opening code when metadata exists;
+- open arbitrary records at their supplied FEN and replay every validated move;
+- practice middlegame, endgame, mating, tactical, and opening records through category-appropriate flows;
+- search Traditional and Simplified Chinese metadata using normalized search fields;
+- show source metadata and attribution for every item;
+- persist bookmarks, recent items, puzzle attempts, and completion independently of active games;
+- remain fully functional offline with no runtime dependency on GitHub.
+
+Use a reusable `XiangqiPGN` module for source decoding and parsing. The build-time importer and any future on-device file importer must share the same parser and fixtures. The shipped app reads only the normalized database, keeping startup and browsing predictable.
+
+The full validated corpus should be shipped if its generated database meets the release size and performance budgets. If it does not, ship a deterministic curated database in the app and make the full corpus a separately built distribution variant; do not introduce runtime downloading without a separate product decision.
 
 ## 6. Implementation sequence
 
@@ -275,15 +320,17 @@ Exit gate: all three themes render the same legal position and state overlays wi
 
 Exit gate: all content works in airplane mode, every line passes legality validation, progress survives termination, and switching language or theme preserves the current lesson/puzzle position.
 
-### Phase 4 — curated open content
+### Phase 4 — CCPD import and native library
 
-1. Run the rights/provenance checklist on each proposed source.
-2. Build source-specific importers outside the runtime app.
-3. Normalize imported notation to FEN plus UCI, deduplicate, and validate.
-4. Select and annotate a small pedagogical set; do not expose raw database dumps.
-5. Include exact attribution and license text in the app and repository.
+1. Pin the audited CCPD commit and check in its source manifest, CC BY 4.0 notice, citation, and archive checksum.
+2. Build the reusable Big5/UTF-8 Xiangqi PGN parser and Chinese-notation-to-UCI converter from representative fixtures.
+3. Run the full corpus through normalization, legality validation, deduplication, and quarantine reporting.
+4. Generate a compact indexed database plus deterministic manifest; regenerate it reproducibly in CI rather than hand-editing output.
+5. Build native category browsing, metadata filtering/search, bookmarks, replay, and category-appropriate practice flows.
+6. Curate guided learning collections on top of stable imported IDs while retaining access to all successfully validated records.
+7. Include exact attribution, modification notice, license text, pinned revision, and per-item source identity in the app and repository.
 
-Exit gate: every shipped item can be traced to a manifest entry and reproduced from a checked-in source/import step.
+Exit gate: every shipped item can be traced to the pinned source and reproduced by the importer; all accepted plies are legal; every rejection is explained in the audit report; corpus counts reconcile with the pinned Git tree; library search, replay, and practice meet size and performance budgets on the baseline device.
 
 ### Phase 5 — release QA
 
@@ -307,8 +354,9 @@ Keep changes reviewable and vertically testable:
 8. Learning schema, validator, and attribution screen.
 9. Basics lessons and demonstration board.
 10. Puzzle session, progress store, and starter tactics.
-11. Annotated study games and content import tooling.
-12. Accessibility, device matrix, license, and release QA.
+11. CCPD parser, encoding fixtures, Chinese notation conversion, and corpus audit CLI.
+12. CCPD normalized database generator, native library browsing, search, replay, and practice.
+13. Accessibility, device matrix, license, size/performance, and release QA.
 
 ## 8. Acceptance checklist
 
@@ -320,6 +368,9 @@ Keep changes reviewable and vertically testable:
 - Every theme supports selected, legal, capture, last move, hint, check, disabled, and terminal states.
 - Piece-label and coordinate settings visibly work in every theme and orientation.
 - Every lesson, puzzle, and study game works offline and passes deterministic content validation.
+- Every accepted CCPD record replays legally from its declared FEN; rejected records appear in a reproducible quarantine report.
+- CCPD category and total counts are reconciled against the pinned source tree, including documented upstream discrepancies.
+- The app browses and searches the normalized corpus without loading the complete database into memory.
 - Every imported text, image, sound, font, game collection, or transcription has traceable license metadata.
 - Learning progress is independent of the single active game and survives app termination.
 
