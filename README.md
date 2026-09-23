@@ -29,6 +29,13 @@ Views render strings through `\.l10n`, a `Localizer` that resolves against the
 number formatting but does not redirect string lookup, so the in-app language
 picker needs this explicit bundle to take effect without restarting the app.
 
+Because each view resolves its text while its body runs, changing that
+environment value is enough to re-render everything — the language modifier
+deliberately does *not* attach an `.id()`. Forcing a rebuild re-creates the
+`NavigationStack`, which resets its content to the top while the existing
+navigation bar keeps its collapsed state, leaving an inline title and an
+expanded large title drawn over the first row.
+
 Two things are deliberately *not* translated: `Side.recordName` and
 `PieceKind.recordName`, which build the portable game record. A saved or shared
 record must read the same in every language.

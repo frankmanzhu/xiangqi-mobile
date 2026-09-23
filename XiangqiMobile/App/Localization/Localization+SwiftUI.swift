@@ -9,12 +9,15 @@ extension EnvironmentValues {
 extension View {
     /// Installs `language` for both string lookup and locale-aware formatting.
     ///
-    /// The `id` forces SwiftUI to rebuild the hierarchy, which is what refreshes
-    /// navigation titles, toolbars, and other cached chrome on a language change.
+    /// Deliberately no `.id(language)`: every view resolves its text through
+    /// `\.l10n` while its body runs, so changing the environment value already
+    /// re-renders them. Forcing a rebuild instead re-creates the
+    /// `NavigationStack`, which resets its content to the top while the existing
+    /// navigation bar keeps its collapsed state — drawing an inline title and an
+    /// expanded large title at once, over the first row.
     func appLanguage(_ language: AppLanguage) -> some View {
         environment(\.l10n, Localizer(language: language))
             .environment(\.locale, language.locale)
-            .id(language)
     }
 }
 
