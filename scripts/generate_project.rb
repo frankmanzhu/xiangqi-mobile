@@ -115,7 +115,15 @@ target.build_configurations.each do |config|
   settings["INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents"] = "YES"
   settings["INFOPLIST_FILE"] = "Resources/Info.plist"
   settings["INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone"] = "UIInterfaceOrientationPortrait"
-  settings["TARGETED_DEVICE_FAMILY"] = "1"
+  # iPad is regularly propped up or rotated, unlike a phone held one-handed,
+  # so it gets all four orientations while iPhone stays portrait-only.
+  settings["INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad"] = [
+    "UIInterfaceOrientationPortrait",
+    "UIInterfaceOrientationPortraitUpsideDown",
+    "UIInterfaceOrientationLandscapeLeft",
+    "UIInterfaceOrientationLandscapeRight"
+  ]
+  settings["TARGETED_DEVICE_FAMILY"] = "1,2"
   settings["IPHONEOS_DEPLOYMENT_TARGET"] = "18.0"
   settings["MARKETING_VERSION"] = "1.0"
   settings["CURRENT_PROJECT_VERSION"] = "1"

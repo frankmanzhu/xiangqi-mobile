@@ -35,6 +35,7 @@ struct ResultView: View {
                 .buttonStyle(.bordered).controlSize(.large).frame(maxWidth: .infinity)
         }
         .padding(28)
+        .readableContentWidth()
         .interactiveDismissDisabled(false)
     }
 

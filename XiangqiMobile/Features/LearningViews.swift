@@ -156,6 +156,7 @@ struct LearningHomeView: View {
                 }
             }
         }
+        .readableContentWidth()
         .navigationTitle(l10n(L10n.Learn.title))
         .task { await load() }
     }
@@ -250,6 +251,7 @@ struct LearningLibraryView: View {
                 }
             }
         }
+        .readableContentWidth()
         .navigationTitle(CCPDCategory.title(category, l10n))
         .searchable(text: $query, prompt: l10n(L10n.Learn.searchPrompt))
         .task(id: "\(query)|\(subcategory.rawValue)") {
@@ -356,6 +358,7 @@ struct CCPDStudyView: View {
                 ProgressView(l10n(L10n.Study.opening))
             }
         }
+        .readableContentWidth()
         .navigationTitle(l10n(L10n.Study.title))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -521,6 +524,7 @@ struct CCPDPuzzleView: View {
                 ProgressView(l10n(L10n.Practice.opening))
             }
         }
+        .readableContentWidth()
         .navigationTitle(l10n(L10n.Practice.title))
         .navigationBarTitleDisplayMode(.inline)
         .onAppear { FeedbackPlayer.shared.prepare() }

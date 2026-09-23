@@ -23,6 +23,7 @@ struct MoveHistoryView: View {
                 }
                 replayControls
             }
+            .readableContentWidth()
             .navigationTitle(l10n(L10n.History.title, session.record.moves.count))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

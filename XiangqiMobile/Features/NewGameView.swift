@@ -70,6 +70,7 @@ struct NewGameView: View {
                 }
             }
         }
+        .readableContentWidth()
         .navigationTitle(l10n(L10n.NewGame.title))
         .navigationBarTitleDisplayMode(.inline)
         .confirmationDialog(

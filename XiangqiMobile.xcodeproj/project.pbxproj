@@ -7,560 +7,563 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01D1CF2E986575FA80E9E1F9 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EF53A4688A75A45096AFB3 /* Domain.swift */; };
-		0201AD19B0BF90C95579E94F /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCA746D22D6A8B7588B16D /* GameSession.swift */; };
-		020EF120AD1243E7ABEB72AC /* half_ka_v2_hm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 937A6302BF3C742DAFF084FC /* half_ka_v2_hm.cpp */; };
-		0C3105F54C3092F29DF0822B /* zstd_decompress_block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B3AF54DF5012EE608170B /* zstd_decompress_block.cpp */; };
-		0CA63FBFF66E27F23B34CCAD /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CF40718D4A753F8EEC245CC /* thread.cpp */; };
-		0CB57C6D76863ED0FC3CF7D1 /* uci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F061B0D2965AE1D505DBA423 /* uci.cpp */; };
-		113E953E1EBE3560F838F24A /* xxhash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B06C8BC86CD87B4EACF7390 /* xxhash.cpp */; };
-		139A594639CE769A54FCA44E /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC8133C3F780AECBAEE7902 /* Rules.swift */; };
-		1793EE3F41522BCC0C117B74 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16535604EE6A13D2A604CB37 /* ResultView.swift */; };
-		17EA2A4B351E8F4902EF0B82 /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F89A86D16D94FDD21E8041 /* NewGameView.swift */; };
-		1BA8BEDB522E407046623FD5 /* SoundSynthesis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156701BD71D933B1A349B941 /* SoundSynthesis.swift */; };
-		1C1DF8145446AC9F6125EF6E /* score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C692E8D0392126B45F799642 /* score.cpp */; };
-		21AFAD44B138BCFFECE36ECC /* Notation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D06C2AA4F9C4691271AF0B /* Notation.swift */; };
-		2246FFDD1FB01AD8F505C4F2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FA537FC05B40F31DC93B54 /* HomeView.swift */; };
-		23E4236B82264DAB17FC7DC2 /* huf_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A965A96D08C7997C098AA95 /* huf_decompress.cpp */; };
-		29EB677301E8EC90EC33FB6E /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB5F4548141393ED6F4F9D2 /* GameView.swift */; };
-		2CD98EEC7A5B21E5F2339A88 /* ucioption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A70F95E8F426400035D3EDA9 /* ucioption.cpp */; };
-		2E116BE2F0A10CD67DB203B7 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA185F6BA0AC5FFF9C715F58 /* position.cpp */; };
-		334A0F7F38BFD89D5928E310 /* bitboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE0F4723127B9CE21F7F1EE9 /* bitboard.cpp */; };
-		3359D0103CA2305E0D577D32 /* benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D463A1123B9282971644E7A /* benchmark.cpp */; };
-		363E4C9367A8FB4D1027A62F /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB474B870C6EFBDE804F4 /* AppLanguage.swift */; };
-		39BC1D96B6F07B159B6E614E /* pikafish.nnue in Resources */ = {isa = PBXBuildFile; fileRef = 6A4EBB017B053569A6FC319C /* pikafish.nnue */; };
-		42B221B3A3EF260523FBF901 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2FB732461B5454B5C90003E /* Foundation.framework */; };
-		459DA8D75556FDD4AC511161 /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17E10A9A63812F266C40BDF3 /* engine.cpp */; };
-		46B8CC087703152B19C5DD02 /* tt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C74E35D715F0035558219F61 /* tt.cpp */; };
-		4CC1442B3031EE65DED9D044 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D13B809482DFD11E23657C /* Theme.swift */; };
-		4E07072CDA9F9DE02FA0D908 /* memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 593881E167252AF9CE9A2FF1 /* memory.cpp */; };
-		50448480BE560C8044AF72D7 /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 328749CB40A37EF3B36B371A /* debug.cpp */; };
-		51B375ADA46A38E876609580 /* LearningProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68238ACFB8F56805CF48FD73 /* LearningProgress.swift */; };
-		5517DDA1F3EFBE2FFF463F6A /* CCPDLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFFC8E6DFFF59D3426DF772 /* CCPDLibrary.swift */; };
-		5ECC33C71ED9C3BA2A8375FF /* error_private.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21B204E91B7B5FD68BDA6140 /* error_private.cpp */; };
-		5FC539AD80824252FB4CA141 /* MoveHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3737329BF84C74CF6255BF /* MoveHistoryView.swift */; };
-		6224FCCAF19B7F014B9092C8 /* CCPDPuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF247662E91F84F59CAA0B7 /* CCPDPuzzle.swift */; };
-		62B04D0CB7F6CEAA10C3E0AE /* PikafishComputerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC491DBBB7A88B30B27A63 /* PikafishComputerClient.swift */; };
-		636AFF39E76E98D0731A84C6 /* zstd_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDF80AB258FE3AE4075D4CB0 /* zstd_common.cpp */; };
-		640CB80632FC469297E78A02 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0650A4E86C1030C1028BEF3D /* Position.swift */; };
-		67F599902E63CC14DFFD5560 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44B4B16AF9E3DD601498872 /* BoardView.swift */; };
-		6DFDED170BD92D53A8C605B7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D82CC585871B65B94913475 /* SettingsView.swift */; };
-		73B313FA85D2E5C0BAABD177 /* entropy_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 143A299119D0359F37CEBB42 /* entropy_common.cpp */; };
-		7517575821BD19281EF9C295 /* search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B364FB8DA9532976A815901 /* search.cpp */; };
-		753C0FF6680580EE8E843087 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 010223F27F8B975359F628B9 /* Localizable.strings */; };
-		768A3887F220C5499D55DB2B /* ThemeRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD964B965C8855F142332953 /* ThemeRegistry.swift */; };
-		781C42DCAE1E304528B4DB78 /* network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBFD9F9AC20BBEFA9037FEBD /* network.cpp */; };
-		7919E5464CA9BC983A8C7210 /* Localization+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4567781BD3E1A233F2125 /* Localization+SwiftUI.swift */; };
-		79FE6E0FB6E46C78E9BF96F0 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03805E614B74B194D1EC0E5F /* Tournament.swift */; };
-		7A325E87682BA2732B930E25 /* LocalizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D7E07D82288D06FAA703 /* LocalizedKey.swift */; };
-		815B46654415106F0343B7D8 /* pool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEB0443BE383FBE94C6D8AF0 /* pool.cpp */; };
-		898DB5B9A8730A17D5172038 /* ComputerPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF4269F66B7D2031BA9D49 /* ComputerPlayer.swift */; };
-		8C3B63B0BB962AFDF6A95A6B /* XiangqiMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8C0AE2AEE039E7504784F /* XiangqiMobileApp.swift */; };
-		8C67AEBEBE324C75D9CF3FAD /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE707B22CF9C603AA532383F /* AppModel.swift */; };
-		931ABDD6A86DF5A49844799F /* XiangqiPGN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D56DA2447A27F9561465BB /* XiangqiPGN.swift */; };
-		941A0529ADD8C212C2CB9A56 /* threading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFE5CC06C7598BDD6754605F /* threading.cpp */; };
-		9595D83DC873CF34220947B3 /* zstd_ddict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 725CADC8A02911BB2B6779BA /* zstd_ddict.cpp */; };
-		9AC843D09B2296AE5ABC49B5 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D62F4DB9D10D01E1D6AC42 /* ThemePicker.swift */; };
-		9CA5E7355FE54C4D5544E7A1 /* fse_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9342EA07473360A7324DCC03 /* fse_decompress.cpp */; };
-		9D9C02A0B55E06FE59A6660A /* Pikafish-AUTHORS.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF40F4794F290959CCAF5ADD /* Pikafish-AUTHORS.txt */; };
-		A0B05ACA38F9401DBC471834 /* LearningViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D2CEDF502E2E98F7E86A4B /* LearningViews.swift */; };
-		AB821C2387CD254D47ADE632 /* Pikafish-GPL-3.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99E8CF7327687C21C540B6D1 /* Pikafish-GPL-3.0.txt */; };
-		ABF68B33AF2281D5BBBD86AD /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A741E6F9FACCA1A3F662B4F5 /* GameRepository.swift */; };
-		ACD74480E1CFF515E003ABE0 /* SmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E64A252FF3ED7F44F932CB /* SmokeTests.swift */; };
-		AD9624F90CAE03D46C130301 /* Theme+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC1CEE09D57FD76F637E3F /* Theme+SwiftUI.swift */; };
-		B0C6A5F85C4E76F545C622CC /* Domain+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3170341D6901795396CA078 /* Domain+Localized.swift */; };
-		B1A2CFA3019512B3848CB920 /* GameMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77A02136933E4C915D021A5 /* GameMenuView.swift */; };
-		B329325E40063B7E73C18379 /* zstd_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F9BC0DB43E8A025DD340AF2 /* zstd_decompress.cpp */; };
-		B394CA80F5D7F6E386A2B8BA /* evaluate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1D5D018E0727C8E2479E76A /* evaluate.cpp */; };
-		BE59BF612C0A4FED90094472 /* Calm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC1F210AEC8013AEB219A04 /* Calm.swift */; };
-		BE87D691782E267558671875 /* CCPD-CC-BY-4.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 48C4B3231D3938601FD23DD1 /* CCPD-CC-BY-4.0.txt */; };
-		C00D8E7CF9E5C1134F969B7D /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E193200B1BDE9A89D06F4E /* Feedback.swift */; };
-		C0E8C536768BC8C1B01BD3F2 /* PikafishBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39958E2B4E8B9CC584F0840F /* PikafishBridge.cpp */; };
-		C16C3675FF5F53D363D718D0 /* timeman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDAEFB7126AD41A0BE2E371A /* timeman.cpp */; };
-		C24C0E4728C8397A45590776 /* CCPD-source.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A219D466D4D471AD2FE854E /* CCPD-source.json */; };
-		C5FEE8573F4F1FE5F84EBA7C /* ccpd-quarantine.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 3045DAE8505644DF4B4A43A9 /* ccpd-quarantine.jsonl */; };
-		C8BBB9FF0BBC8380D68AF0EF /* ccpd.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = D5A06F6DB2AB508454EEF1BC /* ccpd.sqlite3 */; };
-		CAFCE87F713E9942DD916594 /* nnue_accumulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F97860374DF6A77655DCD321 /* nnue_accumulator.cpp */; };
-		CB4C76F03DBBDC135F6993D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42832956FCED140C6346F3D6 /* Assets.xcassets */; };
-		CEB9EA6F9FF96084426041FF /* ccpd-audit.json in Resources */ = {isa = PBXBuildFile; fileRef = C85B2CDDFFAAA530807DC987 /* ccpd-audit.json */; };
-		CF30455AB7E3EDF7E231D82B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A142D37249AD10D922CA9 /* Preferences.swift */; };
-		CF6C17D2FE8441ACBD83D2D0 /* Classic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C4ACE6EE8404C15D3CB8C8 /* Classic.swift */; };
-		D20AE8B9910E0469C294BA79 /* UserFacingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE2131CA67F44DD1A5AA4E /* UserFacingError.swift */; };
-		D26B98F834B48EF5D6D4F6E2 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33470C4AE0ED131C480CF3F1 /* Strings+Generated.swift */; };
-		DB3C8DE5DE3E3EB08B713B7C /* full_threats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17571655D8C12EA10B297890 /* full_threats.cpp */; };
-		E56300F9740A51D01EBD5649 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F168593ECD78AD200F3E4318 /* Localizer.swift */; };
-		E716A0B4D8FEB53180C4D5BB /* misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A9F05D0AFB33B87BC53DFEF /* misc.cpp */; };
-		EB948F48B83389197683585C /* nnue_misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54781BEE7599E84F4EC595E5 /* nnue_misc.cpp */; };
-		F15F9FF5758F02D1248AD237 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6B44B439435CADD85C8F /* PrivacyInfo.xcprivacy */; };
-		F49B7366F128F472E1C67191 /* tune.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E87B1D802F5266188DFD8528 /* tune.cpp */; };
-		F6453C107018AC9E6913CB78 /* movegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59CA0D1622CF120DCF12280A /* movegen.cpp */; };
-		F6D95009FC11C0CAF0AC8C36 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF408B3B9B3A3F54960778B /* RootView.swift */; };
-		F9FB28BAFCF1EB5A29FD39DF /* movepick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86891C9D61627ADDF450ADCB /* movepick.cpp */; };
-		FCB0032E29B7FC98CD06408C /* attacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E2ED59C7F449C2B5BD9DF66 /* attacks.cpp */; };
-		FFEB79C38EB8172CF77F1DE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2FB732461B5454B5C90003E /* Foundation.framework */; };
+		033DF30AF71BA1FB3580DD43 /* ComputerPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57C2A73F8E2416D2CF7202 /* ComputerPlayer.swift */; };
+		03467CD3922067C7738DC23F /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E346A3C3ACCD4B03C9101C6 /* Preferences.swift */; };
+		0764AE46DF4FF1878739FED2 /* Pikafish-GPL-3.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9EEC10858990944384E219 /* Pikafish-GPL-3.0.txt */; };
+		08CA37170460F38087BE4116 /* GameMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12E499F70F6944B110CC20B /* GameMenuView.swift */; };
+		08EF0EC8A67E2237CE0011F8 /* Calm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F0E51C755B326690FA51A9 /* Calm.swift */; };
+		09F50C4F22727F0A94C51FFA /* CCPD-CC-BY-4.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82101E85C8D162D2DA6AFE2C /* CCPD-CC-BY-4.0.txt */; };
+		14DF82B4D548771A8E33503B /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2774ED13D76681ECA583E99 /* Position.swift */; };
+		163FC375588F2ECF8C44B9E9 /* xxhash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C53191F9306A3EA09C8F1C69 /* xxhash.cpp */; };
+		165410D78E54313FA0D5BE4D /* LocalizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C9A54F2960C2B4FDE2933 /* LocalizedKey.swift */; };
+		1686C5C1295AEF203761741F /* PikafishBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AB064383830C4A26E88CF8A /* PikafishBridge.cpp */; };
+		19F34964930B2D30C6D2DF67 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906D4FD5F721D4966A055C70 /* ResultView.swift */; };
+		1B9EA93BD27F62FA977E1C03 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38557797476C7B657535677B /* Strings+Generated.swift */; };
+		1CF5F4F3DA0E5E454440880C /* uci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BB6C0799292D4A21808B135 /* uci.cpp */; };
+		1E28DCC56B4B44F8A78D33AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939574D673F84E6E4FDC06C2 /* Foundation.framework */; };
+		225FE7AEF92FB3CB96E2C387 /* CCPD-source.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AB54B56472BD173941E7BC9 /* CCPD-source.json */; };
+		22B6D3B8300F1D14E76FE77B /* tt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D7B3880E1BDF3FF25D2A48 /* tt.cpp */; };
+		287EE5AC20771512F19CABFC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1359EB0061D47B275F4B25 /* RootView.swift */; };
+		295956433F17B7E26E4D89CB /* entropy_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7705245C4ADE3588C1C6857 /* entropy_common.cpp */; };
+		29E1F99EFD8EC06F01B4AEF3 /* SmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1CE58BBE565B160166CF /* SmokeTests.swift */; };
+		2A5A5DF90AB95454079C97F0 /* misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140ADBF1139AA503E302FE38 /* misc.cpp */; };
+		2B58D191607F98DF07F8C6CF /* ucioption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A205064A6C6BEB69BC86A49 /* ucioption.cpp */; };
+		313ECD790594E94D3DC933CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D01E487DA92271D781F7925 /* HomeView.swift */; };
+		3600315DED976F6FDC59DE51 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B443E5FFC9E0BE4021A3CADC /* position.cpp */; };
+		36117CA96AE76A24A11DBEAF /* zstd_decompress_block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30BC5FA9BECA80ED3B7BF8C7 /* zstd_decompress_block.cpp */; };
+		3C534458B0C882DA9A71C27D /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA25765874A65AEEEE3E35 /* Tournament.swift */; };
+		47531D2021A6EB52D8C0477E /* zstd_ddict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0FCCC6908AF654C7FB33A /* zstd_ddict.cpp */; };
+		4DD84F2C2AF85DA4C054F54E /* nnue_misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D75A52248BABC4F76B0FBC2F /* nnue_misc.cpp */; };
+		5126B4AECD64F6D129AF913F /* benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 404F96E82B9E46BF27EE198F /* benchmark.cpp */; };
+		570018DF05A43482E54151EC /* timeman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAE842FE99E75C1E5E9C90 /* timeman.cpp */; };
+		59EF196AFC695A37B4A952FC /* SoundSynthesis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D6AB4E145257489B944ED1 /* SoundSynthesis.swift */; };
+		5D602F906835ED16CAACF709 /* search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 960D3B811DD51EBDD26F8186 /* search.cpp */; };
+		608DB182CD5C3CCE68695E8B /* tune.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D8F515C42961BD00591EC /* tune.cpp */; };
+		60C4CDA62D734EC5954D1E95 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C846417F026BD0EE50EDD /* Rules.swift */; };
+		63A8E997ED274033FCA0DFF8 /* pikafish.nnue in Resources */ = {isa = PBXBuildFile; fileRef = 6130F6D8FE13FA4F68D81D04 /* pikafish.nnue */; };
+		650C6F86C378AB3E6C9D9AD3 /* CCPDLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687C2BD797AF4C44B72FE2E /* CCPDLibrary.swift */; };
+		692F6CE4DE99829E18B1AAD5 /* Pikafish-AUTHORS.txt in Resources */ = {isa = PBXBuildFile; fileRef = CA6CFF55396C5E2D0C5999ED /* Pikafish-AUTHORS.txt */; };
+		6E2D9618A78E40A81F801D52 /* huf_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4E2B6ADBFBC3E9D1DCE4E19 /* huf_decompress.cpp */; };
+		6FA796520AF8FA4F8CD7435A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D345472C3BE78191DFE43988 /* GameView.swift */; };
+		7552146029C1A49533D23C4B /* Classic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60C15DFE5C39FEDF24FDDB /* Classic.swift */; };
+		7564DA3528AEF945FEA733EB /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652390F61934CC176B46B28 /* GameRepository.swift */; };
+		7B5E28D515181BB4FA5997B3 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925DC8AFA1066FF0211ADDC /* AppModel.swift */; };
+		7B644D8F6F9D16F9E01A9F39 /* fse_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EC7E713906EDF0B58A720 /* fse_decompress.cpp */; };
+		7CF55594643E2ABBD909044F /* memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 563BF3198E4A49E3B996CE8C /* memory.cpp */; };
+		7D471AD3447A4C9413A3BA28 /* LearningProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BF19E3033022C5222C086E /* LearningProgress.swift */; };
+		7E15309A5D6CEA50B4A4B466 /* movepick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7883C33D71177753E090D7E7 /* movepick.cpp */; };
+		7EB31EE2BF0CD43BA4BB5A44 /* zstd_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22AF2F23ACEACF3AF7FA3AEE /* zstd_common.cpp */; };
+		7FE07899276287C154264EB4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6750E24F30240C736EFD8F5 /* Localizable.strings */; };
+		88D7806C43B096BCDF4CDE47 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D185DAAC44577A68786262 /* Localizer.swift */; };
+		8F05BE79ACC01EDDE405E59C /* threading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5E23A52E06588C54E1CA6 /* threading.cpp */; };
+		919F0530421355C273E8A150 /* bitboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E54E46A569A4E7F7882541E2 /* bitboard.cpp */; };
+		91A31D8AE85F157A4BD28B7C /* Theme+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C725AF7D0563C700714FF415 /* Theme+SwiftUI.swift */; };
+		9221F4E9979C9A817FD7398D /* nnue_accumulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 755FE2B1103039BF700EDB31 /* nnue_accumulator.cpp */; };
+		94F017BD1823B4E6D0ABF44A /* error_private.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 169898BF58A0BDD4AE9720ED /* error_private.cpp */; };
+		95179AAC37A55996F86B7045 /* ccpd.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 38286E2DED2B34847885C658 /* ccpd.sqlite3 */; };
+		95F7B875EC0678EAE0ED43CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939574D673F84E6E4FDC06C2 /* Foundation.framework */; };
+		965E597AAACE36551BBF3A75 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F61A17AB1A5BB67D2ED68C /* Layout.swift */; };
+		9995F39EDCB7ED841888D5A5 /* LearningViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843746DD051AAD61A3DD2D6 /* LearningViews.swift */; };
+		9FD3F7F0A1DDA64C0724E1F7 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ACD54333AAD3992F28AA5C /* GameSession.swift */; };
+		A23924AE840E047118075C0E /* XiangqiMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE4F95876917703A1F4C138 /* XiangqiMobileApp.swift */; };
+		A3FA455B55365BCCB5E8D575 /* ThemeRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814F8509544F4C6D214A197 /* ThemeRegistry.swift */; };
+		A76B0FE80B382E7E903BEF3D /* pool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B556FD7D689FC929BDBDBCF /* pool.cpp */; };
+		A8496C92558415061A02CEBD /* UserFacingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B5227CC933C68961DF824D /* UserFacingError.swift */; };
+		A863CA3EF7747A762828188D /* ccpd-audit.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B9319AC340071628CE6A7A1 /* ccpd-audit.json */; };
+		A8ADA65BD633358BC260F00C /* movegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 981CDA8537EDBC9D1B9B1AA5 /* movegen.cpp */; };
+		AB2E4FEA3BED5346050EE32A /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC0EC2088D574F3D7642C35 /* Feedback.swift */; };
+		AE9F27E8EDE3026CE7B86EAB /* XiangqiPGN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D2E0517DEE8DA5274BEC9E /* XiangqiPGN.swift */; };
+		B240A9F99772C64D3DA1B0AC /* Localization+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F277B9AD5C0ECBE5BCAB3E /* Localization+SwiftUI.swift */; };
+		B3BB4250EAFB057E75C741ED /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F7AA9B7A016C714173AFAE /* SettingsView.swift */; };
+		B43D1BE4B1BC6D3B97F3FEFC /* MoveHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DF5941FAED81BC985851E /* MoveHistoryView.swift */; };
+		B6BCF84C8921368B3358748B /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA853D66D0C0C45702F128C0 /* NewGameView.swift */; };
+		B79E8E97B4B95A3B5C1AA946 /* attacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FE36075DC1F5257C95270FD /* attacks.cpp */; };
+		CC95575ED22EB718656FF43C /* Notation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A645E65029019E74891C36 /* Notation.swift */; };
+		CDD4DEF0BE70A54C1E57C868 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1324AA2E6A30CDC7F1780D77 /* Assets.xcassets */; };
+		D414DFF33AF055995979FF92 /* evaluate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD7D8E4B7B4B4C681AE660C3 /* evaluate.cpp */; };
+		D6C3429DA9712649D6C5517B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE4EB5DD3C5CFF36A0CC63C /* Theme.swift */; };
+		DB05BF1A764957D2D3388E10 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A165375C97C1B046284EC60B /* ThemePicker.swift */; };
+		DC2E6FF143480F48644C594B /* PikafishComputerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EE948D79746CC57A7A7B6 /* PikafishComputerClient.swift */; };
+		E233AE2527033520C62A508A /* half_ka_v2_hm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A27992F963BE18327019B472 /* half_ka_v2_hm.cpp */; };
+		E6D4B95542B21C75D8178381 /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C05EE768F7A4027CF9A9F0A5 /* engine.cpp */; };
+		E749DA8F70D0A1D99123B6DC /* score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3983A52DFCD7A71F3B6C9E06 /* score.cpp */; };
+		EA8E1B8DD73E7848C345F735 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C50D5272A5B7A2D1C82F0A /* BoardView.swift */; };
+		EB62D6A310A42A0D587CDE6D /* network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD4C527A9B17293B7DBBF49F /* network.cpp */; };
+		EDA02F006CA94047EA47A477 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F04C3936DA3AAB0970142729 /* thread.cpp */; };
+		F152DAF9BABB3495260F657C /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 178C098238A74184EA63F70C /* debug.cpp */; };
+		F15ECCF21A3A5FAA6A77906E /* Domain+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E6ABCD194B6F3F241379 /* Domain+Localized.swift */; };
+		F3F8E0B592C56CF1D392C749 /* zstd_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCB7EF2FC31984D8373EF944 /* zstd_decompress.cpp */; };
+		F44DC5234D818EF244657514 /* ccpd-quarantine.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 70CF70D010A8F561F00DF834 /* ccpd-quarantine.jsonl */; };
+		F463C115B7C13C509512A937 /* full_threats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0568FF064E7A575B443C8A9F /* full_threats.cpp */; };
+		F69504AE6B444D0EFFC485D8 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7CB703E79278E9E875842 /* PrivacyInfo.xcprivacy */; };
+		F6D174AF6D8371F75F583EE1 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E851A37807460949AAAB2 /* AppLanguage.swift */; };
+		FA0F4AB3998775EEBEAA1F1E /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA4A2DD6A6B48F3B34C715C /* Domain.swift */; };
+		FBE697BD77B40852AC4F6B55 /* CCPDPuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA244FE9D86B1670F6BC10 /* CCPDPuzzle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E97A59224AF73013D03E6A77 /* PBXContainerItemProxy */ = {
+		2AEFFB3A525792EE8903A688 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA63A743EC926AA56E1E907B /* Project object */;
+			containerPortal = 7FC51325F7B8189745006C62 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D5305DFFA658A29103DC9D5D;
+			remoteGlobalIDString = E9A21FD8C97C5E7D8B11D3AC;
 			remoteInfo = XiangqiMobile;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03805E614B74B194D1EC0E5F /* Tournament.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
-		04EE2131CA67F44DD1A5AA4E /* UserFacingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserFacingError.swift; sourceTree = "<group>"; };
-		0650A4E86C1030C1028BEF3D /* Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
-		0B364FB8DA9532976A815901 /* search.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = search.cpp; sourceTree = "<group>"; };
-		0CF40718D4A753F8EEC245CC /* thread.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
-		0E2ED59C7F449C2B5BD9DF66 /* attacks.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = attacks.cpp; sourceTree = "<group>"; };
-		13EF53A4688A75A45096AFB3 /* Domain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
-		140A22A87DAB9BA978A0A02F /* zh-Hant */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		143A299119D0359F37CEBB42 /* entropy_common.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = entropy_common.cpp; sourceTree = "<group>"; };
-		156701BD71D933B1A349B941 /* SoundSynthesis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundSynthesis.swift; sourceTree = "<group>"; };
-		16535604EE6A13D2A604CB37 /* ResultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		17571655D8C12EA10B297890 /* full_threats.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = full_threats.cpp; sourceTree = "<group>"; };
-		17E10A9A63812F266C40BDF3 /* engine.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = engine.cpp; sourceTree = "<group>"; };
-		1CC1F210AEC8013AEB219A04 /* Calm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Calm.swift; sourceTree = "<group>"; };
-		1CCC491DBBB7A88B30B27A63 /* PikafishComputerClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PikafishComputerClient.swift; sourceTree = "<group>"; };
-		1F9BC0DB43E8A025DD340AF2 /* zstd_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_decompress.cpp; sourceTree = "<group>"; };
-		21B204E91B7B5FD68BDA6140 /* error_private.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = error_private.cpp; sourceTree = "<group>"; };
-		25D2CEDF502E2E98F7E86A4B /* LearningViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearningViews.swift; sourceTree = "<group>"; };
-		28BF4269F66B7D2031BA9D49 /* ComputerPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComputerPlayer.swift; sourceTree = "<group>"; };
-		28C6D7E07D82288D06FAA703 /* LocalizedKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalizedKey.swift; sourceTree = "<group>"; };
-		2A965A96D08C7997C098AA95 /* huf_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = huf_decompress.cpp; sourceTree = "<group>"; };
-		2F3737329BF84C74CF6255BF /* MoveHistoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MoveHistoryView.swift; sourceTree = "<group>"; };
-		3045DAE8505644DF4B4A43A9 /* ccpd-quarantine.jsonl */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-quarantine.jsonl"; sourceTree = "<group>"; };
-		328749CB40A37EF3B36B371A /* debug.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = debug.cpp; sourceTree = "<group>"; };
-		33470C4AE0ED131C480CF3F1 /* Strings+Generated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
-		34D56DA2447A27F9561465BB /* XiangqiPGN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiPGN.swift; sourceTree = "<group>"; };
-		39958E2B4E8B9CC584F0840F /* PikafishBridge.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = PikafishBridge.cpp; sourceTree = "<group>"; };
-		3A219D466D4D471AD2FE854E /* CCPD-source.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-source.json"; sourceTree = "<group>"; };
-		3A8B3AF54DF5012EE608170B /* zstd_decompress_block.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_decompress_block.cpp; sourceTree = "<group>"; };
-		3EF408B3B9B3A3F54960778B /* RootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		42832956FCED140C6346F3D6 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		47FA537FC05B40F31DC93B54 /* HomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		48C4B3231D3938601FD23DD1 /* CCPD-CC-BY-4.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-CC-BY-4.0.txt"; sourceTree = "<group>"; };
-		50DCA746D22D6A8B7588B16D /* GameSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
-		54781BEE7599E84F4EC595E5 /* nnue_misc.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = nnue_misc.cpp; sourceTree = "<group>"; };
-		593881E167252AF9CE9A2FF1 /* memory.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = memory.cpp; sourceTree = "<group>"; };
-		59CA0D1622CF120DCF12280A /* movegen.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movegen.cpp; sourceTree = "<group>"; };
-		64B0C30B7812C5ABAB2B447F /* en */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		68238ACFB8F56805CF48FD73 /* LearningProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearningProgress.swift; sourceTree = "<group>"; };
-		69C4ACE6EE8404C15D3CB8C8 /* Classic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Classic.swift; sourceTree = "<group>"; };
-		6A4EBB017B053569A6FC319C /* pikafish.nnue */ = {isa = PBXFileReference; includeInIndex = 1; path = pikafish.nnue; sourceTree = "<group>"; };
-		6D463A1123B9282971644E7A /* benchmark.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = benchmark.cpp; sourceTree = "<group>"; };
-		6D82CC585871B65B94913475 /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		6EC8133C3F780AECBAEE7902 /* Rules.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
-		70E64A252FF3ED7F44F932CB /* SmokeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SmokeTests.swift; sourceTree = "<group>"; };
-		725CADC8A02911BB2B6779BA /* zstd_ddict.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_ddict.cpp; sourceTree = "<group>"; };
-		73D06C2AA4F9C4691271AF0B /* Notation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Notation.swift; sourceTree = "<group>"; };
-		77F89A86D16D94FDD21E8041 /* NewGameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
-		7AB5F4548141393ED6F4F9D2 /* GameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		84A25C394388FAE84087516C /* PikafishBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PikafishBridge.h; sourceTree = "<group>"; };
-		86891C9D61627ADDF450ADCB /* movepick.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movepick.cpp; sourceTree = "<group>"; };
-		87CC5BA6BC260C1B1D84945C /* zh-Hans */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		8B06C8BC86CD87B4EACF7390 /* xxhash.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = xxhash.cpp; sourceTree = "<group>"; };
-		8DFFC8E6DFFF59D3426DF772 /* CCPDLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CCPDLibrary.swift; sourceTree = "<group>"; };
-		9342EA07473360A7324DCC03 /* fse_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = fse_decompress.cpp; sourceTree = "<group>"; };
-		937A6302BF3C742DAFF084FC /* half_ka_v2_hm.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = half_ka_v2_hm.cpp; sourceTree = "<group>"; };
-		97C61172ECA19B7D44A6F635 /* XiangqiMobile-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XiangqiMobile-Bridging-Header.h"; sourceTree = "<group>"; };
-		99E8CF7327687C21C540B6D1 /* Pikafish-GPL-3.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-GPL-3.0.txt"; sourceTree = "<group>"; };
-		9A2C251FE7F40C51E9FD24B7 /* XiangqiMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XiangqiMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A9F05D0AFB33B87BC53DFEF /* misc.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
-		A6D62F4DB9D10D01E1D6AC42 /* ThemePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
-		A70F95E8F426400035D3EDA9 /* ucioption.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ucioption.cpp; sourceTree = "<group>"; };
-		A741E6F9FACCA1A3F662B4F5 /* GameRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
-		A82EB474B870C6EFBDE804F4 /* AppLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
-		AA185F6BA0AC5FFF9C715F58 /* position.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
-		AD964B965C8855F142332953 /* ThemeRegistry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeRegistry.swift; sourceTree = "<group>"; };
-		AF40F4794F290959CCAF5ADD /* Pikafish-AUTHORS.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-AUTHORS.txt"; sourceTree = "<group>"; };
-		B1D5D018E0727C8E2479E76A /* evaluate.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = evaluate.cpp; sourceTree = "<group>"; };
-		B3170341D6901795396CA078 /* Domain+Localized.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Domain+Localized.swift"; sourceTree = "<group>"; };
-		B8BC1CEE09D57FD76F637E3F /* Theme+SwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Theme+SwiftUI.swift"; sourceTree = "<group>"; };
-		BBF247662E91F84F59CAA0B7 /* CCPDPuzzle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CCPDPuzzle.swift; sourceTree = "<group>"; };
-		C3D13B809482DFD11E23657C /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		C692E8D0392126B45F799642 /* score.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = score.cpp; sourceTree = "<group>"; };
-		C74E35D715F0035558219F61 /* tt.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tt.cpp; sourceTree = "<group>"; };
-		C85B2CDDFFAAA530807DC987 /* ccpd-audit.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-audit.json"; sourceTree = "<group>"; };
-		CBFD9F9AC20BBEFA9037FEBD /* network.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = network.cpp; sourceTree = "<group>"; };
-		CDF80AB258FE3AE4075D4CB0 /* zstd_common.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_common.cpp; sourceTree = "<group>"; };
-		CEE8C0AE2AEE039E7504784F /* XiangqiMobileApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiMobileApp.swift; sourceTree = "<group>"; };
-		CFE5CC06C7598BDD6754605F /* threading.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = threading.cpp; sourceTree = "<group>"; };
-		D2FB732461B5454B5C90003E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D3E193200B1BDE9A89D06F4E /* Feedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
-		D5A06F6DB2AB508454EEF1BC /* ccpd.sqlite3 */ = {isa = PBXFileReference; includeInIndex = 1; path = ccpd.sqlite3; sourceTree = "<group>"; };
-		D77A02136933E4C915D021A5 /* GameMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
-		E2E4567781BD3E1A233F2125 /* Localization+SwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Localization+SwiftUI.swift"; sourceTree = "<group>"; };
-		E44B4B16AF9E3DD601498872 /* BoardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
-		E87B1D802F5266188DFD8528 /* tune.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tune.cpp; sourceTree = "<group>"; };
-		EDAEFB7126AD41A0BE2E371A /* timeman.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = timeman.cpp; sourceTree = "<group>"; };
-		EE707B22CF9C603AA532383F /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
-		F061B0D2965AE1D505DBA423 /* uci.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = uci.cpp; sourceTree = "<group>"; };
-		F168593ECD78AD200F3E4318 /* Localizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
-		F383918F89C427B32A9BF659 /* XiangqiMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiangqiMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F73A142D37249AD10D922CA9 /* Preferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
-		F97860374DF6A77655DCD321 /* nnue_accumulator.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = nnue_accumulator.cpp; sourceTree = "<group>"; };
-		FD3B6B44B439435CADD85C8F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		FE0F4723127B9CE21F7F1EE9 /* bitboard.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = bitboard.cpp; sourceTree = "<group>"; };
-		FEB0443BE383FBE94C6D8AF0 /* pool.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = pool.cpp; sourceTree = "<group>"; };
+		01F0E51C755B326690FA51A9 /* Calm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Calm.swift; sourceTree = "<group>"; };
+		0568FF064E7A575B443C8A9F /* full_threats.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = full_threats.cpp; sourceTree = "<group>"; };
+		0652390F61934CC176B46B28 /* GameRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		0DA3EF92F3AC081DA3DD9CB7 /* zh-Hant */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0FEAE842FE99E75C1E5E9C90 /* timeman.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = timeman.cpp; sourceTree = "<group>"; };
+		1324AA2E6A30CDC7F1780D77 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		140ADBF1139AA503E302FE38 /* misc.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
+		15D185DAAC44577A68786262 /* Localizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
+		169898BF58A0BDD4AE9720ED /* error_private.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = error_private.cpp; sourceTree = "<group>"; };
+		1764E6ABCD194B6F3F241379 /* Domain+Localized.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Domain+Localized.swift"; sourceTree = "<group>"; };
+		178C098238A74184EA63F70C /* debug.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = debug.cpp; sourceTree = "<group>"; };
+		1814F8509544F4C6D214A197 /* ThemeRegistry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeRegistry.swift; sourceTree = "<group>"; };
+		1AB064383830C4A26E88CF8A /* PikafishBridge.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = PikafishBridge.cpp; sourceTree = "<group>"; };
+		1B556FD7D689FC929BDBDBCF /* pool.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = pool.cpp; sourceTree = "<group>"; };
+		202B8984A4219B534AA5FCB0 /* PikafishBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PikafishBridge.h; sourceTree = "<group>"; };
+		217D1CE58BBE565B160166CF /* SmokeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SmokeTests.swift; sourceTree = "<group>"; };
+		22AF2F23ACEACF3AF7FA3AEE /* zstd_common.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_common.cpp; sourceTree = "<group>"; };
+		29B5227CC933C68961DF824D /* UserFacingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserFacingError.swift; sourceTree = "<group>"; };
+		30BC5FA9BECA80ED3B7BF8C7 /* zstd_decompress_block.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_decompress_block.cpp; sourceTree = "<group>"; };
+		33F277B9AD5C0ECBE5BCAB3E /* Localization+SwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Localization+SwiftUI.swift"; sourceTree = "<group>"; };
+		38286E2DED2B34847885C658 /* ccpd.sqlite3 */ = {isa = PBXFileReference; includeInIndex = 1; path = ccpd.sqlite3; sourceTree = "<group>"; };
+		38557797476C7B657535677B /* Strings+Generated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		390C9A54F2960C2B4FDE2933 /* LocalizedKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalizedKey.swift; sourceTree = "<group>"; };
+		3983A52DFCD7A71F3B6C9E06 /* score.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = score.cpp; sourceTree = "<group>"; };
+		39D2E0517DEE8DA5274BEC9E /* XiangqiPGN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiPGN.swift; sourceTree = "<group>"; };
+		3A205064A6C6BEB69BC86A49 /* ucioption.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ucioption.cpp; sourceTree = "<group>"; };
+		3AB54B56472BD173941E7BC9 /* CCPD-source.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-source.json"; sourceTree = "<group>"; };
+		3B5C846417F026BD0EE50EDD /* Rules.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		3C2EC7E713906EDF0B58A720 /* fse_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = fse_decompress.cpp; sourceTree = "<group>"; };
+		3FE36075DC1F5257C95270FD /* attacks.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = attacks.cpp; sourceTree = "<group>"; };
+		404F96E82B9E46BF27EE198F /* benchmark.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = benchmark.cpp; sourceTree = "<group>"; };
+		41FA25765874A65AEEEE3E35 /* Tournament.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
+		45A645E65029019E74891C36 /* Notation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Notation.swift; sourceTree = "<group>"; };
+		4A6D8F515C42961BD00591EC /* tune.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tune.cpp; sourceTree = "<group>"; };
+		4D01E487DA92271D781F7925 /* HomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		510EE948D79746CC57A7A7B6 /* PikafishComputerClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PikafishComputerClient.swift; sourceTree = "<group>"; };
+		563BF3198E4A49E3B996CE8C /* memory.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = memory.cpp; sourceTree = "<group>"; };
+		5A8D33CDDFDEC217A05078F6 /* XiangqiMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XiangqiMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9319AC340071628CE6A7A1 /* ccpd-audit.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-audit.json"; sourceTree = "<group>"; };
+		6130F6D8FE13FA4F68D81D04 /* pikafish.nnue */ = {isa = PBXFileReference; includeInIndex = 1; path = pikafish.nnue; sourceTree = "<group>"; };
+		63ACD54333AAD3992F28AA5C /* GameSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		63BA244FE9D86B1670F6BC10 /* CCPDPuzzle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CCPDPuzzle.swift; sourceTree = "<group>"; };
+		6FC0EC2088D574F3D7642C35 /* Feedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		70CF70D010A8F561F00DF834 /* ccpd-quarantine.jsonl */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-quarantine.jsonl"; sourceTree = "<group>"; };
+		755FE2B1103039BF700EDB31 /* nnue_accumulator.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = nnue_accumulator.cpp; sourceTree = "<group>"; };
+		77F7AA9B7A016C714173AFAE /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7883C33D71177753E090D7E7 /* movepick.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movepick.cpp; sourceTree = "<group>"; };
+		79BF19E3033022C5222C086E /* LearningProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearningProgress.swift; sourceTree = "<group>"; };
+		7BC5E23A52E06588C54E1CA6 /* threading.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = threading.cpp; sourceTree = "<group>"; };
+		7CE4EB5DD3C5CFF36A0CC63C /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		7CE4F95876917703A1F4C138 /* XiangqiMobileApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiMobileApp.swift; sourceTree = "<group>"; };
+		7E346A3C3ACCD4B03C9101C6 /* Preferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		81F61A17AB1A5BB67D2ED68C /* Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		82101E85C8D162D2DA6AFE2C /* CCPD-CC-BY-4.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-CC-BY-4.0.txt"; sourceTree = "<group>"; };
+		8E962614C5DBAD56A0C3DAC7 /* XiangqiMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiangqiMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		906D4FD5F721D4966A055C70 /* ResultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		926E1ACAE69626F3F501CDF9 /* en */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		939574D673F84E6E4FDC06C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		960D3B811DD51EBDD26F8186 /* search.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = search.cpp; sourceTree = "<group>"; };
+		9687C2BD797AF4C44B72FE2E /* CCPDLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CCPDLibrary.swift; sourceTree = "<group>"; };
+		981CDA8537EDBC9D1B9B1AA5 /* movegen.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movegen.cpp; sourceTree = "<group>"; };
+		9AE7CB703E79278E9E875842 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		9BB6C0799292D4A21808B135 /* uci.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = uci.cpp; sourceTree = "<group>"; };
+		9E48EA48DA085D8284B7ABCF /* zh-Hans */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		9EE0FCCC6908AF654C7FB33A /* zstd_ddict.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_ddict.cpp; sourceTree = "<group>"; };
+		A165375C97C1B046284EC60B /* ThemePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		A16BEC9D8D476F5EAB83B7EE /* XiangqiMobile-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XiangqiMobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		A27992F963BE18327019B472 /* half_ka_v2_hm.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = half_ka_v2_hm.cpp; sourceTree = "<group>"; };
+		A5D7B3880E1BDF3FF25D2A48 /* tt.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tt.cpp; sourceTree = "<group>"; };
+		A7705245C4ADE3588C1C6857 /* entropy_common.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = entropy_common.cpp; sourceTree = "<group>"; };
+		A843746DD051AAD61A3DD2D6 /* LearningViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearningViews.swift; sourceTree = "<group>"; };
+		AE9EEC10858990944384E219 /* Pikafish-GPL-3.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-GPL-3.0.txt"; sourceTree = "<group>"; };
+		B12E499F70F6944B110CC20B /* GameMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
+		B443E5FFC9E0BE4021A3CADC /* position.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
+		C05EE768F7A4027CF9A9F0A5 /* engine.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = engine.cpp; sourceTree = "<group>"; };
+		C1C50D5272A5B7A2D1C82F0A /* BoardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		C2774ED13D76681ECA583E99 /* Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		C4E2B6ADBFBC3E9D1DCE4E19 /* huf_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = huf_decompress.cpp; sourceTree = "<group>"; };
+		C53191F9306A3EA09C8F1C69 /* xxhash.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = xxhash.cpp; sourceTree = "<group>"; };
+		C725AF7D0563C700714FF415 /* Theme+SwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Theme+SwiftUI.swift"; sourceTree = "<group>"; };
+		CA6CFF55396C5E2D0C5999ED /* Pikafish-AUTHORS.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-AUTHORS.txt"; sourceTree = "<group>"; };
+		CCB7EF2FC31984D8373EF944 /* zstd_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_decompress.cpp; sourceTree = "<group>"; };
+		CD4C527A9B17293B7DBBF49F /* network.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = network.cpp; sourceTree = "<group>"; };
+		D345472C3BE78191DFE43988 /* GameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		D49DF5941FAED81BC985851E /* MoveHistoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MoveHistoryView.swift; sourceTree = "<group>"; };
+		D75A52248BABC4F76B0FBC2F /* nnue_misc.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = nnue_misc.cpp; sourceTree = "<group>"; };
+		D7D6AB4E145257489B944ED1 /* SoundSynthesis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundSynthesis.swift; sourceTree = "<group>"; };
+		D925DC8AFA1066FF0211ADDC /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		DA853D66D0C0C45702F128C0 /* NewGameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
+		DCA4A2DD6A6B48F3B34C715C /* Domain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		DD7D8E4B7B4B4C681AE660C3 /* evaluate.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = evaluate.cpp; sourceTree = "<group>"; };
+		DE1359EB0061D47B275F4B25 /* RootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		E54E46A569A4E7F7882541E2 /* bitboard.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = bitboard.cpp; sourceTree = "<group>"; };
+		EB57C2A73F8E2416D2CF7202 /* ComputerPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComputerPlayer.swift; sourceTree = "<group>"; };
+		EB60C15DFE5C39FEDF24FDDB /* Classic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Classic.swift; sourceTree = "<group>"; };
+		F04C3936DA3AAB0970142729 /* thread.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
+		FA8E851A37807460949AAAB2 /* AppLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4CF17190D5BAC9F294B9F87D /* Frameworks */ = {
+		725C3623C6F0A596B92923E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B221B3A3EF260523FBF901 /* Foundation.framework in Frameworks */,
+				1E28DCC56B4B44F8A78D33AA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDD45DEF543ED1F0694DF4A9 /* Frameworks */ = {
+		BA9A603B3CB05A9F5BA1AF5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFEB79C38EB8172CF77F1DE1 /* Foundation.framework in Frameworks */,
+				95F7B875EC0678EAE0ED43CC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		030A282ABFBB439BFD1186E8 /* App */ = {
+		045D5688FB1809CDCA63D03A /* features */ = {
 			isa = PBXGroup;
 			children = (
-				A82EB474B870C6EFBDE804F4 /* AppLanguage.swift */,
-				EE707B22CF9C603AA532383F /* AppModel.swift */,
-				D3E193200B1BDE9A89D06F4E /* Feedback.swift */,
-				A741E6F9FACCA1A3F662B4F5 /* GameRepository.swift */,
-				50DCA746D22D6A8B7588B16D /* GameSession.swift */,
-				3FAA42B6E807E680DABBD67B /* Localization */,
-				1CCC491DBBB7A88B30B27A63 /* PikafishComputerClient.swift */,
-				F73A142D37249AD10D922CA9 /* Preferences.swift */,
-				3EF408B3B9B3A3F54960778B /* RootView.swift */,
-				4B43A3BAC6EF7C967E64F2B4 /* Theming */,
-				CEE8C0AE2AEE039E7504784F /* XiangqiMobileApp.swift */,
-			);
-			name = App;
-			path = App;
-			sourceTree = "<group>";
-		};
-		14838128BBCF0A1A764E0A4A /* nnue */ = {
-			isa = PBXGroup;
-			children = (
-				27CBF620CA75A0A1C0E302E3 /* features */,
-				CBFD9F9AC20BBEFA9037FEBD /* network.cpp */,
-				F97860374DF6A77655DCD321 /* nnue_accumulator.cpp */,
-				54781BEE7599E84F4EC595E5 /* nnue_misc.cpp */,
-			);
-			name = nnue;
-			path = nnue;
-			sourceTree = "<group>";
-		};
-		1B05B2A87001DEE93AD9DA80 /* XiangqiMobileUITests */ = {
-			isa = PBXGroup;
-			children = (
-				70E64A252FF3ED7F44F932CB /* SmokeTests.swift */,
-			);
-			name = XiangqiMobileUITests;
-			path = XiangqiMobileUITests;
-			sourceTree = "<group>";
-		};
-		1F7C1E9118489276FA27F39E = {
-			isa = PBXGroup;
-			children = (
-				C5523BF20079B0DF0BB3E4B7 /* Products */,
-				97BDB7E0F98A3D52C578BD2A /* Frameworks */,
-				8157F85B35CFE036CB83C8F2 /* XiangqiMobile */,
-				8D19816731B2D29A0153F70C /* EngineBridge */,
-				EB85643558B5194C121F6061 /* Pikafish */,
-				9A9A7D36E073986712EADC94 /* Resources */,
-				D7085DD205260B2F4E6D89FB /* Tests */,
-			);
-			sourceTree = "<group>";
-		};
-		262341BF8B0AB2194F426C0B /* Learning */ = {
-			isa = PBXGroup;
-			children = (
-				3A219D466D4D471AD2FE854E /* CCPD-source.json */,
-				D5A06F6DB2AB508454EEF1BC /* ccpd.sqlite3 */,
-				C85B2CDDFFAAA530807DC987 /* ccpd-audit.json */,
-				3045DAE8505644DF4B4A43A9 /* ccpd-quarantine.jsonl */,
-			);
-			name = Learning;
-			path = Learning;
-			sourceTree = "<group>";
-		};
-		27CBF620CA75A0A1C0E302E3 /* features */ = {
-			isa = PBXGroup;
-			children = (
-				17571655D8C12EA10B297890 /* full_threats.cpp */,
-				937A6302BF3C742DAFF084FC /* half_ka_v2_hm.cpp */,
+				0568FF064E7A575B443C8A9F /* full_threats.cpp */,
+				A27992F963BE18327019B472 /* half_ka_v2_hm.cpp */,
 			);
 			name = features;
 			path = features;
 			sourceTree = "<group>";
 		};
-		3FAA42B6E807E680DABBD67B /* Localization */ = {
+		08F1F098C57E6C070EA5BDA9 /* decompress */ = {
 			isa = PBXGroup;
 			children = (
-				B3170341D6901795396CA078 /* Domain+Localized.swift */,
-				E2E4567781BD3E1A233F2125 /* Localization+SwiftUI.swift */,
-				28C6D7E07D82288D06FAA703 /* LocalizedKey.swift */,
-				F168593ECD78AD200F3E4318 /* Localizer.swift */,
-				33470C4AE0ED131C480CF3F1 /* Strings+Generated.swift */,
-				04EE2131CA67F44DD1A5AA4E /* UserFacingError.swift */,
-			);
-			name = Localization;
-			path = Localization;
-			sourceTree = "<group>";
-		};
-		4B43A3BAC6EF7C967E64F2B4 /* Theming */ = {
-			isa = PBXGroup;
-			children = (
-				1CC1F210AEC8013AEB219A04 /* Calm.swift */,
-				69C4ACE6EE8404C15D3CB8C8 /* Classic.swift */,
-				B8BC1CEE09D57FD76F637E3F /* Theme+SwiftUI.swift */,
-				C3D13B809482DFD11E23657C /* Theme.swift */,
-				A6D62F4DB9D10D01E1D6AC42 /* ThemePicker.swift */,
-				AD964B965C8855F142332953 /* ThemeRegistry.swift */,
-				03805E614B74B194D1EC0E5F /* Tournament.swift */,
-			);
-			name = Theming;
-			path = Theming;
-			sourceTree = "<group>";
-		};
-		8157F85B35CFE036CB83C8F2 /* XiangqiMobile */ = {
-			isa = PBXGroup;
-			children = (
-				030A282ABFBB439BFD1186E8 /* App */,
-				A746F9DDE605B5A96FA56853 /* Core */,
-				B34FDB3E44162FE46A7FCDD7 /* Features */,
-			);
-			name = XiangqiMobile;
-			path = XiangqiMobile;
-			sourceTree = "<group>";
-		};
-		8D19816731B2D29A0153F70C /* EngineBridge */ = {
-			isa = PBXGroup;
-			children = (
-				39958E2B4E8B9CC584F0840F /* PikafishBridge.cpp */,
-				84A25C394388FAE84087516C /* PikafishBridge.h */,
-				97C61172ECA19B7D44A6F635 /* XiangqiMobile-Bridging-Header.h */,
-			);
-			name = EngineBridge;
-			path = EngineBridge;
-			sourceTree = "<group>";
-		};
-		97BDB7E0F98A3D52C578BD2A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9DD7779315F834E324F9E8CE /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		97F772122C98C6A7D1C88B20 /* external */ = {
-			isa = PBXGroup;
-			children = (
-				9F86BBCC98431BF9307F0529 /* common */,
-				EAB6CB487FC4D63F0519B907 /* decompress */,
-			);
-			name = external;
-			path = external;
-			sourceTree = "<group>";
-		};
-		9A9A7D36E073986712EADC94 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				42832956FCED140C6346F3D6 /* Assets.xcassets */,
-				FD3B6B44B439435CADD85C8F /* PrivacyInfo.xcprivacy */,
-				AD8D2CBBB19F975F73A600DB /* Engine */,
-				C14AFBE5F9ED79801C02062B /* Licenses */,
-				262341BF8B0AB2194F426C0B /* Learning */,
-				F19EF07C05AA93A7777BE08E /* Localizations */,
-			);
-			name = Resources;
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		9DD7779315F834E324F9E8CE /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D2FB732461B5454B5C90003E /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		9F86BBCC98431BF9307F0529 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				328749CB40A37EF3B36B371A /* debug.cpp */,
-				143A299119D0359F37CEBB42 /* entropy_common.cpp */,
-				21B204E91B7B5FD68BDA6140 /* error_private.cpp */,
-				9342EA07473360A7324DCC03 /* fse_decompress.cpp */,
-				FEB0443BE383FBE94C6D8AF0 /* pool.cpp */,
-				CFE5CC06C7598BDD6754605F /* threading.cpp */,
-				8B06C8BC86CD87B4EACF7390 /* xxhash.cpp */,
-				CDF80AB258FE3AE4075D4CB0 /* zstd_common.cpp */,
-			);
-			name = common;
-			path = common;
-			sourceTree = "<group>";
-		};
-		A746F9DDE605B5A96FA56853 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				8DFFC8E6DFFF59D3426DF772 /* CCPDLibrary.swift */,
-				BBF247662E91F84F59CAA0B7 /* CCPDPuzzle.swift */,
-				28BF4269F66B7D2031BA9D49 /* ComputerPlayer.swift */,
-				13EF53A4688A75A45096AFB3 /* Domain.swift */,
-				68238ACFB8F56805CF48FD73 /* LearningProgress.swift */,
-				73D06C2AA4F9C4691271AF0B /* Notation.swift */,
-				0650A4E86C1030C1028BEF3D /* Position.swift */,
-				6EC8133C3F780AECBAEE7902 /* Rules.swift */,
-				156701BD71D933B1A349B941 /* SoundSynthesis.swift */,
-				34D56DA2447A27F9561465BB /* XiangqiPGN.swift */,
-			);
-			name = Core;
-			path = Core;
-			sourceTree = "<group>";
-		};
-		AD8D2CBBB19F975F73A600DB /* Engine */ = {
-			isa = PBXGroup;
-			children = (
-				6A4EBB017B053569A6FC319C /* pikafish.nnue */,
-			);
-			name = Engine;
-			path = Engine;
-			sourceTree = "<group>";
-		};
-		B34FDB3E44162FE46A7FCDD7 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				E44B4B16AF9E3DD601498872 /* BoardView.swift */,
-				D77A02136933E4C915D021A5 /* GameMenuView.swift */,
-				7AB5F4548141393ED6F4F9D2 /* GameView.swift */,
-				47FA537FC05B40F31DC93B54 /* HomeView.swift */,
-				25D2CEDF502E2E98F7E86A4B /* LearningViews.swift */,
-				2F3737329BF84C74CF6255BF /* MoveHistoryView.swift */,
-				77F89A86D16D94FDD21E8041 /* NewGameView.swift */,
-				16535604EE6A13D2A604CB37 /* ResultView.swift */,
-				6D82CC585871B65B94913475 /* SettingsView.swift */,
-			);
-			name = Features;
-			path = Features;
-			sourceTree = "<group>";
-		};
-		C14AFBE5F9ED79801C02062B /* Licenses */ = {
-			isa = PBXGroup;
-			children = (
-				99E8CF7327687C21C540B6D1 /* Pikafish-GPL-3.0.txt */,
-				AF40F4794F290959CCAF5ADD /* Pikafish-AUTHORS.txt */,
-				48C4B3231D3938601FD23DD1 /* CCPD-CC-BY-4.0.txt */,
-			);
-			name = Licenses;
-			path = Licenses;
-			sourceTree = "<group>";
-		};
-		C5523BF20079B0DF0BB3E4B7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F383918F89C427B32A9BF659 /* XiangqiMobile.app */,
-				9A2C251FE7F40C51E9FD24B7 /* XiangqiMobileUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D7085DD205260B2F4E6D89FB /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				1B05B2A87001DEE93AD9DA80 /* XiangqiMobileUITests */,
-			);
-			name = Tests;
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		EAB6CB487FC4D63F0519B907 /* decompress */ = {
-			isa = PBXGroup;
-			children = (
-				2A965A96D08C7997C098AA95 /* huf_decompress.cpp */,
-				725CADC8A02911BB2B6779BA /* zstd_ddict.cpp */,
-				1F9BC0DB43E8A025DD340AF2 /* zstd_decompress.cpp */,
-				3A8B3AF54DF5012EE608170B /* zstd_decompress_block.cpp */,
+				C4E2B6ADBFBC3E9D1DCE4E19 /* huf_decompress.cpp */,
+				9EE0FCCC6908AF654C7FB33A /* zstd_ddict.cpp */,
+				CCB7EF2FC31984D8373EF944 /* zstd_decompress.cpp */,
+				30BC5FA9BECA80ED3B7BF8C7 /* zstd_decompress_block.cpp */,
 			);
 			name = decompress;
 			path = decompress;
 			sourceTree = "<group>";
 		};
-		EB85643558B5194C121F6061 /* Pikafish */ = {
+		1EFB843856A4B7979D44E127 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				0E2ED59C7F449C2B5BD9DF66 /* attacks.cpp */,
-				6D463A1123B9282971644E7A /* benchmark.cpp */,
-				FE0F4723127B9CE21F7F1EE9 /* bitboard.cpp */,
-				17E10A9A63812F266C40BDF3 /* engine.cpp */,
-				B1D5D018E0727C8E2479E76A /* evaluate.cpp */,
-				97F772122C98C6A7D1C88B20 /* external */,
-				593881E167252AF9CE9A2FF1 /* memory.cpp */,
-				9A9F05D0AFB33B87BC53DFEF /* misc.cpp */,
-				59CA0D1622CF120DCF12280A /* movegen.cpp */,
-				86891C9D61627ADDF450ADCB /* movepick.cpp */,
-				14838128BBCF0A1A764E0A4A /* nnue */,
-				AA185F6BA0AC5FFF9C715F58 /* position.cpp */,
-				C692E8D0392126B45F799642 /* score.cpp */,
-				0B364FB8DA9532976A815901 /* search.cpp */,
-				0CF40718D4A753F8EEC245CC /* thread.cpp */,
-				EDAEFB7126AD41A0BE2E371A /* timeman.cpp */,
-				C74E35D715F0035558219F61 /* tt.cpp */,
-				E87B1D802F5266188DFD8528 /* tune.cpp */,
-				F061B0D2965AE1D505DBA423 /* uci.cpp */,
-				A70F95E8F426400035D3EDA9 /* ucioption.cpp */,
+				C1C50D5272A5B7A2D1C82F0A /* BoardView.swift */,
+				B12E499F70F6944B110CC20B /* GameMenuView.swift */,
+				D345472C3BE78191DFE43988 /* GameView.swift */,
+				4D01E487DA92271D781F7925 /* HomeView.swift */,
+				A843746DD051AAD61A3DD2D6 /* LearningViews.swift */,
+				D49DF5941FAED81BC985851E /* MoveHistoryView.swift */,
+				DA853D66D0C0C45702F128C0 /* NewGameView.swift */,
+				906D4FD5F721D4966A055C70 /* ResultView.swift */,
+				77F7AA9B7A016C714173AFAE /* SettingsView.swift */,
+			);
+			name = Features;
+			path = Features;
+			sourceTree = "<group>";
+		};
+		26D3E4F693FC7494862ED1A1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9687C2BD797AF4C44B72FE2E /* CCPDLibrary.swift */,
+				63BA244FE9D86B1670F6BC10 /* CCPDPuzzle.swift */,
+				EB57C2A73F8E2416D2CF7202 /* ComputerPlayer.swift */,
+				DCA4A2DD6A6B48F3B34C715C /* Domain.swift */,
+				79BF19E3033022C5222C086E /* LearningProgress.swift */,
+				45A645E65029019E74891C36 /* Notation.swift */,
+				C2774ED13D76681ECA583E99 /* Position.swift */,
+				3B5C846417F026BD0EE50EDD /* Rules.swift */,
+				D7D6AB4E145257489B944ED1 /* SoundSynthesis.swift */,
+				39D2E0517DEE8DA5274BEC9E /* XiangqiPGN.swift */,
+			);
+			name = Core;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2ACDC4A60D00BC0CE3437E69 /* XiangqiMobile */ = {
+			isa = PBXGroup;
+			children = (
+				9120921F0AED2EEC83928CEC /* App */,
+				26D3E4F693FC7494862ED1A1 /* Core */,
+				1EFB843856A4B7979D44E127 /* Features */,
+			);
+			name = XiangqiMobile;
+			path = XiangqiMobile;
+			sourceTree = "<group>";
+		};
+		3367B23394C37390E31DF91F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F80EB66BC707697054FE89C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		376F96CA21BE7B835B3754D7 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				6130F6D8FE13FA4F68D81D04 /* pikafish.nnue */,
+			);
+			name = Engine;
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		4198EC3EF2C97142FE32C105 /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				AE9EEC10858990944384E219 /* Pikafish-GPL-3.0.txt */,
+				CA6CFF55396C5E2D0C5999ED /* Pikafish-AUTHORS.txt */,
+				82101E85C8D162D2DA6AFE2C /* CCPD-CC-BY-4.0.txt */,
+			);
+			name = Licenses;
+			path = Licenses;
+			sourceTree = "<group>";
+		};
+		42614072B6CFC1006ED00A72 = {
+			isa = PBXGroup;
+			children = (
+				8105A3620F5764FB287CF540 /* Products */,
+				3367B23394C37390E31DF91F /* Frameworks */,
+				2ACDC4A60D00BC0CE3437E69 /* XiangqiMobile */,
+				78A9DCF7E6A30737F6DD1DD6 /* EngineBridge */,
+				60DC3203BD46918CCA22C0F9 /* Pikafish */,
+				4E038BC13D0E3DE787B72165 /* Resources */,
+				F2A6B21D98CCC09CFEA11D5A /* Tests */,
+			);
+			sourceTree = "<group>";
+		};
+		4E038BC13D0E3DE787B72165 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1324AA2E6A30CDC7F1780D77 /* Assets.xcassets */,
+				9AE7CB703E79278E9E875842 /* PrivacyInfo.xcprivacy */,
+				376F96CA21BE7B835B3754D7 /* Engine */,
+				4198EC3EF2C97142FE32C105 /* Licenses */,
+				D839B8433B2502A18B057A2E /* Learning */,
+				AD067F6AC69B26BDE397333E /* Localizations */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5438FDAB7AEED443C8A3FB16 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA49574F7DA8ABCF4548B1 /* common */,
+				08F1F098C57E6C070EA5BDA9 /* decompress */,
+			);
+			name = external;
+			path = external;
+			sourceTree = "<group>";
+		};
+		60DC3203BD46918CCA22C0F9 /* Pikafish */ = {
+			isa = PBXGroup;
+			children = (
+				3FE36075DC1F5257C95270FD /* attacks.cpp */,
+				404F96E82B9E46BF27EE198F /* benchmark.cpp */,
+				E54E46A569A4E7F7882541E2 /* bitboard.cpp */,
+				C05EE768F7A4027CF9A9F0A5 /* engine.cpp */,
+				DD7D8E4B7B4B4C681AE660C3 /* evaluate.cpp */,
+				5438FDAB7AEED443C8A3FB16 /* external */,
+				563BF3198E4A49E3B996CE8C /* memory.cpp */,
+				140ADBF1139AA503E302FE38 /* misc.cpp */,
+				981CDA8537EDBC9D1B9B1AA5 /* movegen.cpp */,
+				7883C33D71177753E090D7E7 /* movepick.cpp */,
+				B6282BBD586C19F204E2358A /* nnue */,
+				B443E5FFC9E0BE4021A3CADC /* position.cpp */,
+				3983A52DFCD7A71F3B6C9E06 /* score.cpp */,
+				960D3B811DD51EBDD26F8186 /* search.cpp */,
+				F04C3936DA3AAB0970142729 /* thread.cpp */,
+				0FEAE842FE99E75C1E5E9C90 /* timeman.cpp */,
+				A5D7B3880E1BDF3FF25D2A48 /* tt.cpp */,
+				4A6D8F515C42961BD00591EC /* tune.cpp */,
+				9BB6C0799292D4A21808B135 /* uci.cpp */,
+				3A205064A6C6BEB69BC86A49 /* ucioption.cpp */,
 			);
 			name = Pikafish;
 			path = Vendor/Pikafish/src;
 			sourceTree = "<group>";
 		};
-		F19EF07C05AA93A7777BE08E /* Localizations */ = {
+		6441242434F4B855AD1A5B46 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				010223F27F8B975359F628B9 /* Localizable.strings */,
+				1764E6ABCD194B6F3F241379 /* Domain+Localized.swift */,
+				33F277B9AD5C0ECBE5BCAB3E /* Localization+SwiftUI.swift */,
+				390C9A54F2960C2B4FDE2933 /* LocalizedKey.swift */,
+				15D185DAAC44577A68786262 /* Localizer.swift */,
+				38557797476C7B657535677B /* Strings+Generated.swift */,
+				29B5227CC933C68961DF824D /* UserFacingError.swift */,
+			);
+			name = Localization;
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		6F80EB66BC707697054FE89C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				939574D673F84E6E4FDC06C2 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		78A9DCF7E6A30737F6DD1DD6 /* EngineBridge */ = {
+			isa = PBXGroup;
+			children = (
+				1AB064383830C4A26E88CF8A /* PikafishBridge.cpp */,
+				202B8984A4219B534AA5FCB0 /* PikafishBridge.h */,
+				A16BEC9D8D476F5EAB83B7EE /* XiangqiMobile-Bridging-Header.h */,
+			);
+			name = EngineBridge;
+			path = EngineBridge;
+			sourceTree = "<group>";
+		};
+		8105A3620F5764FB287CF540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E962614C5DBAD56A0C3DAC7 /* XiangqiMobile.app */,
+				5A8D33CDDFDEC217A05078F6 /* XiangqiMobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9120921F0AED2EEC83928CEC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA8E851A37807460949AAAB2 /* AppLanguage.swift */,
+				D925DC8AFA1066FF0211ADDC /* AppModel.swift */,
+				6FC0EC2088D574F3D7642C35 /* Feedback.swift */,
+				0652390F61934CC176B46B28 /* GameRepository.swift */,
+				63ACD54333AAD3992F28AA5C /* GameSession.swift */,
+				81F61A17AB1A5BB67D2ED68C /* Layout.swift */,
+				6441242434F4B855AD1A5B46 /* Localization */,
+				510EE948D79746CC57A7A7B6 /* PikafishComputerClient.swift */,
+				7E346A3C3ACCD4B03C9101C6 /* Preferences.swift */,
+				DE1359EB0061D47B275F4B25 /* RootView.swift */,
+				96BB731CF048606A75123CC2 /* Theming */,
+				7CE4F95876917703A1F4C138 /* XiangqiMobileApp.swift */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		96BB731CF048606A75123CC2 /* Theming */ = {
+			isa = PBXGroup;
+			children = (
+				01F0E51C755B326690FA51A9 /* Calm.swift */,
+				EB60C15DFE5C39FEDF24FDDB /* Classic.swift */,
+				C725AF7D0563C700714FF415 /* Theme+SwiftUI.swift */,
+				7CE4EB5DD3C5CFF36A0CC63C /* Theme.swift */,
+				A165375C97C1B046284EC60B /* ThemePicker.swift */,
+				1814F8509544F4C6D214A197 /* ThemeRegistry.swift */,
+				41FA25765874A65AEEEE3E35 /* Tournament.swift */,
+			);
+			name = Theming;
+			path = Theming;
+			sourceTree = "<group>";
+		};
+		AD067F6AC69B26BDE397333E /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				D6750E24F30240C736EFD8F5 /* Localizable.strings */,
 			);
 			name = Localizations;
 			path = Localizations;
 			sourceTree = "<group>";
 		};
+		B2AA49574F7DA8ABCF4548B1 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				178C098238A74184EA63F70C /* debug.cpp */,
+				A7705245C4ADE3588C1C6857 /* entropy_common.cpp */,
+				169898BF58A0BDD4AE9720ED /* error_private.cpp */,
+				3C2EC7E713906EDF0B58A720 /* fse_decompress.cpp */,
+				1B556FD7D689FC929BDBDBCF /* pool.cpp */,
+				7BC5E23A52E06588C54E1CA6 /* threading.cpp */,
+				C53191F9306A3EA09C8F1C69 /* xxhash.cpp */,
+				22AF2F23ACEACF3AF7FA3AEE /* zstd_common.cpp */,
+			);
+			name = common;
+			path = common;
+			sourceTree = "<group>";
+		};
+		B6282BBD586C19F204E2358A /* nnue */ = {
+			isa = PBXGroup;
+			children = (
+				045D5688FB1809CDCA63D03A /* features */,
+				CD4C527A9B17293B7DBBF49F /* network.cpp */,
+				755FE2B1103039BF700EDB31 /* nnue_accumulator.cpp */,
+				D75A52248BABC4F76B0FBC2F /* nnue_misc.cpp */,
+			);
+			name = nnue;
+			path = nnue;
+			sourceTree = "<group>";
+		};
+		D839B8433B2502A18B057A2E /* Learning */ = {
+			isa = PBXGroup;
+			children = (
+				3AB54B56472BD173941E7BC9 /* CCPD-source.json */,
+				38286E2DED2B34847885C658 /* ccpd.sqlite3 */,
+				5B9319AC340071628CE6A7A1 /* ccpd-audit.json */,
+				70CF70D010A8F561F00DF834 /* ccpd-quarantine.jsonl */,
+			);
+			name = Learning;
+			path = Learning;
+			sourceTree = "<group>";
+		};
+		F2A6B21D98CCC09CFEA11D5A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB597869833DC58D7D97FD /* XiangqiMobileUITests */,
+			);
+			name = Tests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		FDAB597869833DC58D7D97FD /* XiangqiMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				217D1CE58BBE565B160166CF /* SmokeTests.swift */,
+			);
+			name = XiangqiMobileUITests;
+			path = XiangqiMobileUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		73C023F3152C4B6737CD840E /* XiangqiMobileUITests */ = {
+		8DB008401595AC91E2432922 /* XiangqiMobileUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4FF7CF294D19C1113B095E3 /* Build configuration list for PBXNativeTarget "XiangqiMobileUITests" */;
+			buildConfigurationList = E33060AE1EE1CF5D245978F9 /* Build configuration list for PBXNativeTarget "XiangqiMobileUITests" */;
 			buildPhases = (
-				BA8D13FDA31E56D04D678CE3 /* Sources */,
-				BDD45DEF543ED1F0694DF4A9 /* Frameworks */,
-				D62FB5438788DDAB63EFB5B5 /* Resources */,
+				F94C02B64E54C1E4E8D6A168 /* Sources */,
+				725C3623C6F0A596B92923E9 /* Frameworks */,
+				DBA16770751E8E09F3AEA64C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C3CB9A8729A3BCA155D0452C /* PBXTargetDependency */,
+				C60D5B2F454EDD4CAB805980 /* PBXTargetDependency */,
 			);
 			name = XiangqiMobileUITests;
 			productName = XiangqiMobileUITests;
-			productReference = 9A2C251FE7F40C51E9FD24B7 /* XiangqiMobileUITests.xctest */;
+			productReference = 5A8D33CDDFDEC217A05078F6 /* XiangqiMobileUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		D5305DFFA658A29103DC9D5D /* XiangqiMobile */ = {
+		E9A21FD8C97C5E7D8B11D3AC /* XiangqiMobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 960DB845BA54E13F566A2835 /* Build configuration list for PBXNativeTarget "XiangqiMobile" */;
+			buildConfigurationList = EEED9F8C7E3EF3C1A406BBED /* Build configuration list for PBXNativeTarget "XiangqiMobile" */;
 			buildPhases = (
-				8D058953559DE524D5F78522 /* Sources */,
-				4CF17190D5BAC9F294B9F87D /* Frameworks */,
-				3F01584B418A6022763F5EDA /* Resources */,
+				17735893406D95D14B35C420 /* Sources */,
+				BA9A603B3CB05A9F5BA1AF5A /* Frameworks */,
+				AF091AA14988C4CB3FEE0B28 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -568,19 +571,19 @@
 			);
 			name = XiangqiMobile;
 			productName = XiangqiMobile;
-			productReference = F383918F89C427B32A9BF659 /* XiangqiMobile.app */;
+			productReference = 8E962614C5DBAD56A0C3DAC7 /* XiangqiMobile.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FA63A743EC926AA56E1E907B /* Project object */ = {
+		7FC51325F7B8189745006C62 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 2700;
 				LastUpgradeCheck = 2700;
 			};
-			buildConfigurationList = FEDE8DB2BE492FB29033468C /* Build configuration list for PBXProject "XiangqiMobile" */;
+			buildConfigurationList = 077FE70D59720B32B8662EA4 /* Build configuration list for PBXProject "XiangqiMobile" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -590,39 +593,39 @@
 				"zh-Hans",
 				"zh-Hant",
 			);
-			mainGroup = 1F7C1E9118489276FA27F39E;
+			mainGroup = 42614072B6CFC1006ED00A72;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 100;
-			productRefGroup = C5523BF20079B0DF0BB3E4B7 /* Products */;
+			productRefGroup = 8105A3620F5764FB287CF540 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5305DFFA658A29103DC9D5D /* XiangqiMobile */,
-				73C023F3152C4B6737CD840E /* XiangqiMobileUITests */,
+				E9A21FD8C97C5E7D8B11D3AC /* XiangqiMobile */,
+				8DB008401595AC91E2432922 /* XiangqiMobileUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3F01584B418A6022763F5EDA /* Resources */ = {
+		AF091AA14988C4CB3FEE0B28 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB4C76F03DBBDC135F6993D4 /* Assets.xcassets in Resources */,
-				F15F9FF5758F02D1248AD237 /* PrivacyInfo.xcprivacy in Resources */,
-				39BC1D96B6F07B159B6E614E /* pikafish.nnue in Resources */,
-				AB821C2387CD254D47ADE632 /* Pikafish-GPL-3.0.txt in Resources */,
-				9D9C02A0B55E06FE59A6660A /* Pikafish-AUTHORS.txt in Resources */,
-				BE87D691782E267558671875 /* CCPD-CC-BY-4.0.txt in Resources */,
-				C24C0E4728C8397A45590776 /* CCPD-source.json in Resources */,
-				C8BBB9FF0BBC8380D68AF0EF /* ccpd.sqlite3 in Resources */,
-				CEB9EA6F9FF96084426041FF /* ccpd-audit.json in Resources */,
-				C5FEE8573F4F1FE5F84EBA7C /* ccpd-quarantine.jsonl in Resources */,
-				753C0FF6680580EE8E843087 /* Localizable.strings in Resources */,
+				CDD4DEF0BE70A54C1E57C868 /* Assets.xcassets in Resources */,
+				F69504AE6B444D0EFFC485D8 /* PrivacyInfo.xcprivacy in Resources */,
+				63A8E997ED274033FCA0DFF8 /* pikafish.nnue in Resources */,
+				0764AE46DF4FF1878739FED2 /* Pikafish-GPL-3.0.txt in Resources */,
+				692F6CE4DE99829E18B1AAD5 /* Pikafish-AUTHORS.txt in Resources */,
+				09F50C4F22727F0A94C51FFA /* CCPD-CC-BY-4.0.txt in Resources */,
+				225FE7AEF92FB3CB96E2C387 /* CCPD-source.json in Resources */,
+				95179AAC37A55996F86B7045 /* ccpd.sqlite3 in Resources */,
+				A863CA3EF7747A762828188D /* ccpd-audit.json in Resources */,
+				F44DC5234D818EF244657514 /* ccpd-quarantine.jsonl in Resources */,
+				7FE07899276287C154264EB4 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D62FB5438788DDAB63EFB5B5 /* Resources */ = {
+		DBA16770751E8E09F3AEA64C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -632,116 +635,117 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8D058953559DE524D5F78522 /* Sources */ = {
+		17735893406D95D14B35C420 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				363E4C9367A8FB4D1027A62F /* AppLanguage.swift in Sources */,
-				8C67AEBEBE324C75D9CF3FAD /* AppModel.swift in Sources */,
-				C00D8E7CF9E5C1134F969B7D /* Feedback.swift in Sources */,
-				ABF68B33AF2281D5BBBD86AD /* GameRepository.swift in Sources */,
-				0201AD19B0BF90C95579E94F /* GameSession.swift in Sources */,
-				B0C6A5F85C4E76F545C622CC /* Domain+Localized.swift in Sources */,
-				7919E5464CA9BC983A8C7210 /* Localization+SwiftUI.swift in Sources */,
-				7A325E87682BA2732B930E25 /* LocalizedKey.swift in Sources */,
-				E56300F9740A51D01EBD5649 /* Localizer.swift in Sources */,
-				D26B98F834B48EF5D6D4F6E2 /* Strings+Generated.swift in Sources */,
-				D20AE8B9910E0469C294BA79 /* UserFacingError.swift in Sources */,
-				62B04D0CB7F6CEAA10C3E0AE /* PikafishComputerClient.swift in Sources */,
-				CF30455AB7E3EDF7E231D82B /* Preferences.swift in Sources */,
-				F6D95009FC11C0CAF0AC8C36 /* RootView.swift in Sources */,
-				BE59BF612C0A4FED90094472 /* Calm.swift in Sources */,
-				CF6C17D2FE8441ACBD83D2D0 /* Classic.swift in Sources */,
-				AD9624F90CAE03D46C130301 /* Theme+SwiftUI.swift in Sources */,
-				4CC1442B3031EE65DED9D044 /* Theme.swift in Sources */,
-				9AC843D09B2296AE5ABC49B5 /* ThemePicker.swift in Sources */,
-				768A3887F220C5499D55DB2B /* ThemeRegistry.swift in Sources */,
-				79FE6E0FB6E46C78E9BF96F0 /* Tournament.swift in Sources */,
-				8C3B63B0BB962AFDF6A95A6B /* XiangqiMobileApp.swift in Sources */,
-				5517DDA1F3EFBE2FFF463F6A /* CCPDLibrary.swift in Sources */,
-				6224FCCAF19B7F014B9092C8 /* CCPDPuzzle.swift in Sources */,
-				898DB5B9A8730A17D5172038 /* ComputerPlayer.swift in Sources */,
-				01D1CF2E986575FA80E9E1F9 /* Domain.swift in Sources */,
-				51B375ADA46A38E876609580 /* LearningProgress.swift in Sources */,
-				21AFAD44B138BCFFECE36ECC /* Notation.swift in Sources */,
-				640CB80632FC469297E78A02 /* Position.swift in Sources */,
-				139A594639CE769A54FCA44E /* Rules.swift in Sources */,
-				1BA8BEDB522E407046623FD5 /* SoundSynthesis.swift in Sources */,
-				931ABDD6A86DF5A49844799F /* XiangqiPGN.swift in Sources */,
-				67F599902E63CC14DFFD5560 /* BoardView.swift in Sources */,
-				B1A2CFA3019512B3848CB920 /* GameMenuView.swift in Sources */,
-				29EB677301E8EC90EC33FB6E /* GameView.swift in Sources */,
-				2246FFDD1FB01AD8F505C4F2 /* HomeView.swift in Sources */,
-				A0B05ACA38F9401DBC471834 /* LearningViews.swift in Sources */,
-				5FC539AD80824252FB4CA141 /* MoveHistoryView.swift in Sources */,
-				17EA2A4B351E8F4902EF0B82 /* NewGameView.swift in Sources */,
-				1793EE3F41522BCC0C117B74 /* ResultView.swift in Sources */,
-				6DFDED170BD92D53A8C605B7 /* SettingsView.swift in Sources */,
-				C0E8C536768BC8C1B01BD3F2 /* PikafishBridge.cpp in Sources */,
-				FCB0032E29B7FC98CD06408C /* attacks.cpp in Sources */,
-				3359D0103CA2305E0D577D32 /* benchmark.cpp in Sources */,
-				334A0F7F38BFD89D5928E310 /* bitboard.cpp in Sources */,
-				459DA8D75556FDD4AC511161 /* engine.cpp in Sources */,
-				B394CA80F5D7F6E386A2B8BA /* evaluate.cpp in Sources */,
-				50448480BE560C8044AF72D7 /* debug.cpp in Sources */,
-				73B313FA85D2E5C0BAABD177 /* entropy_common.cpp in Sources */,
-				5ECC33C71ED9C3BA2A8375FF /* error_private.cpp in Sources */,
-				9CA5E7355FE54C4D5544E7A1 /* fse_decompress.cpp in Sources */,
-				815B46654415106F0343B7D8 /* pool.cpp in Sources */,
-				941A0529ADD8C212C2CB9A56 /* threading.cpp in Sources */,
-				113E953E1EBE3560F838F24A /* xxhash.cpp in Sources */,
-				636AFF39E76E98D0731A84C6 /* zstd_common.cpp in Sources */,
-				23E4236B82264DAB17FC7DC2 /* huf_decompress.cpp in Sources */,
-				9595D83DC873CF34220947B3 /* zstd_ddict.cpp in Sources */,
-				B329325E40063B7E73C18379 /* zstd_decompress.cpp in Sources */,
-				0C3105F54C3092F29DF0822B /* zstd_decompress_block.cpp in Sources */,
-				4E07072CDA9F9DE02FA0D908 /* memory.cpp in Sources */,
-				E716A0B4D8FEB53180C4D5BB /* misc.cpp in Sources */,
-				F6453C107018AC9E6913CB78 /* movegen.cpp in Sources */,
-				F9FB28BAFCF1EB5A29FD39DF /* movepick.cpp in Sources */,
-				DB3C8DE5DE3E3EB08B713B7C /* full_threats.cpp in Sources */,
-				020EF120AD1243E7ABEB72AC /* half_ka_v2_hm.cpp in Sources */,
-				781C42DCAE1E304528B4DB78 /* network.cpp in Sources */,
-				CAFCE87F713E9942DD916594 /* nnue_accumulator.cpp in Sources */,
-				EB948F48B83389197683585C /* nnue_misc.cpp in Sources */,
-				2E116BE2F0A10CD67DB203B7 /* position.cpp in Sources */,
-				1C1DF8145446AC9F6125EF6E /* score.cpp in Sources */,
-				7517575821BD19281EF9C295 /* search.cpp in Sources */,
-				0CA63FBFF66E27F23B34CCAD /* thread.cpp in Sources */,
-				C16C3675FF5F53D363D718D0 /* timeman.cpp in Sources */,
-				46B8CC087703152B19C5DD02 /* tt.cpp in Sources */,
-				F49B7366F128F472E1C67191 /* tune.cpp in Sources */,
-				0CB57C6D76863ED0FC3CF7D1 /* uci.cpp in Sources */,
-				2CD98EEC7A5B21E5F2339A88 /* ucioption.cpp in Sources */,
+				F6D174AF6D8371F75F583EE1 /* AppLanguage.swift in Sources */,
+				7B5E28D515181BB4FA5997B3 /* AppModel.swift in Sources */,
+				AB2E4FEA3BED5346050EE32A /* Feedback.swift in Sources */,
+				7564DA3528AEF945FEA733EB /* GameRepository.swift in Sources */,
+				9FD3F7F0A1DDA64C0724E1F7 /* GameSession.swift in Sources */,
+				965E597AAACE36551BBF3A75 /* Layout.swift in Sources */,
+				F15ECCF21A3A5FAA6A77906E /* Domain+Localized.swift in Sources */,
+				B240A9F99772C64D3DA1B0AC /* Localization+SwiftUI.swift in Sources */,
+				165410D78E54313FA0D5BE4D /* LocalizedKey.swift in Sources */,
+				88D7806C43B096BCDF4CDE47 /* Localizer.swift in Sources */,
+				1B9EA93BD27F62FA977E1C03 /* Strings+Generated.swift in Sources */,
+				A8496C92558415061A02CEBD /* UserFacingError.swift in Sources */,
+				DC2E6FF143480F48644C594B /* PikafishComputerClient.swift in Sources */,
+				03467CD3922067C7738DC23F /* Preferences.swift in Sources */,
+				287EE5AC20771512F19CABFC /* RootView.swift in Sources */,
+				08EF0EC8A67E2237CE0011F8 /* Calm.swift in Sources */,
+				7552146029C1A49533D23C4B /* Classic.swift in Sources */,
+				91A31D8AE85F157A4BD28B7C /* Theme+SwiftUI.swift in Sources */,
+				D6C3429DA9712649D6C5517B /* Theme.swift in Sources */,
+				DB05BF1A764957D2D3388E10 /* ThemePicker.swift in Sources */,
+				A3FA455B55365BCCB5E8D575 /* ThemeRegistry.swift in Sources */,
+				3C534458B0C882DA9A71C27D /* Tournament.swift in Sources */,
+				A23924AE840E047118075C0E /* XiangqiMobileApp.swift in Sources */,
+				650C6F86C378AB3E6C9D9AD3 /* CCPDLibrary.swift in Sources */,
+				FBE697BD77B40852AC4F6B55 /* CCPDPuzzle.swift in Sources */,
+				033DF30AF71BA1FB3580DD43 /* ComputerPlayer.swift in Sources */,
+				FA0F4AB3998775EEBEAA1F1E /* Domain.swift in Sources */,
+				7D471AD3447A4C9413A3BA28 /* LearningProgress.swift in Sources */,
+				CC95575ED22EB718656FF43C /* Notation.swift in Sources */,
+				14DF82B4D548771A8E33503B /* Position.swift in Sources */,
+				60C4CDA62D734EC5954D1E95 /* Rules.swift in Sources */,
+				59EF196AFC695A37B4A952FC /* SoundSynthesis.swift in Sources */,
+				AE9F27E8EDE3026CE7B86EAB /* XiangqiPGN.swift in Sources */,
+				EA8E1B8DD73E7848C345F735 /* BoardView.swift in Sources */,
+				08CA37170460F38087BE4116 /* GameMenuView.swift in Sources */,
+				6FA796520AF8FA4F8CD7435A /* GameView.swift in Sources */,
+				313ECD790594E94D3DC933CC /* HomeView.swift in Sources */,
+				9995F39EDCB7ED841888D5A5 /* LearningViews.swift in Sources */,
+				B43D1BE4B1BC6D3B97F3FEFC /* MoveHistoryView.swift in Sources */,
+				B6BCF84C8921368B3358748B /* NewGameView.swift in Sources */,
+				19F34964930B2D30C6D2DF67 /* ResultView.swift in Sources */,
+				B3BB4250EAFB057E75C741ED /* SettingsView.swift in Sources */,
+				1686C5C1295AEF203761741F /* PikafishBridge.cpp in Sources */,
+				B79E8E97B4B95A3B5C1AA946 /* attacks.cpp in Sources */,
+				5126B4AECD64F6D129AF913F /* benchmark.cpp in Sources */,
+				919F0530421355C273E8A150 /* bitboard.cpp in Sources */,
+				E6D4B95542B21C75D8178381 /* engine.cpp in Sources */,
+				D414DFF33AF055995979FF92 /* evaluate.cpp in Sources */,
+				F152DAF9BABB3495260F657C /* debug.cpp in Sources */,
+				295956433F17B7E26E4D89CB /* entropy_common.cpp in Sources */,
+				94F017BD1823B4E6D0ABF44A /* error_private.cpp in Sources */,
+				7B644D8F6F9D16F9E01A9F39 /* fse_decompress.cpp in Sources */,
+				A76B0FE80B382E7E903BEF3D /* pool.cpp in Sources */,
+				8F05BE79ACC01EDDE405E59C /* threading.cpp in Sources */,
+				163FC375588F2ECF8C44B9E9 /* xxhash.cpp in Sources */,
+				7EB31EE2BF0CD43BA4BB5A44 /* zstd_common.cpp in Sources */,
+				6E2D9618A78E40A81F801D52 /* huf_decompress.cpp in Sources */,
+				47531D2021A6EB52D8C0477E /* zstd_ddict.cpp in Sources */,
+				F3F8E0B592C56CF1D392C749 /* zstd_decompress.cpp in Sources */,
+				36117CA96AE76A24A11DBEAF /* zstd_decompress_block.cpp in Sources */,
+				7CF55594643E2ABBD909044F /* memory.cpp in Sources */,
+				2A5A5DF90AB95454079C97F0 /* misc.cpp in Sources */,
+				A8ADA65BD633358BC260F00C /* movegen.cpp in Sources */,
+				7E15309A5D6CEA50B4A4B466 /* movepick.cpp in Sources */,
+				F463C115B7C13C509512A937 /* full_threats.cpp in Sources */,
+				E233AE2527033520C62A508A /* half_ka_v2_hm.cpp in Sources */,
+				EB62D6A310A42A0D587CDE6D /* network.cpp in Sources */,
+				9221F4E9979C9A817FD7398D /* nnue_accumulator.cpp in Sources */,
+				4DD84F2C2AF85DA4C054F54E /* nnue_misc.cpp in Sources */,
+				3600315DED976F6FDC59DE51 /* position.cpp in Sources */,
+				E749DA8F70D0A1D99123B6DC /* score.cpp in Sources */,
+				5D602F906835ED16CAACF709 /* search.cpp in Sources */,
+				EDA02F006CA94047EA47A477 /* thread.cpp in Sources */,
+				570018DF05A43482E54151EC /* timeman.cpp in Sources */,
+				22B6D3B8300F1D14E76FE77B /* tt.cpp in Sources */,
+				608DB182CD5C3CCE68695E8B /* tune.cpp in Sources */,
+				1CF5F4F3DA0E5E454440880C /* uci.cpp in Sources */,
+				2B58D191607F98DF07F8C6CF /* ucioption.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BA8D13FDA31E56D04D678CE3 /* Sources */ = {
+		F94C02B64E54C1E4E8D6A168 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD74480E1CFF515E003ABE0 /* SmokeTests.swift in Sources */,
+				29E1F99EFD8EC06F01B4AEF3 /* SmokeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C3CB9A8729A3BCA155D0452C /* PBXTargetDependency */ = {
+		C60D5B2F454EDD4CAB805980 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XiangqiMobile;
-			target = D5305DFFA658A29103DC9D5D /* XiangqiMobile */;
-			targetProxy = E97A59224AF73013D03E6A77 /* PBXContainerItemProxy */;
+			target = E9A21FD8C97C5E7D8B11D3AC /* XiangqiMobile */;
+			targetProxy = 2AEFFB3A525792EE8903A688 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		010223F27F8B975359F628B9 /* Localizable.strings */ = {
+		D6750E24F30240C736EFD8F5 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				64B0C30B7812C5ABAB2B447F /* en */,
-				87CC5BA6BC260C1B1D84945C /* zh-Hans */,
-				140A22A87DAB9BA978A0A02F /* zh-Hant */,
+				926E1ACAE69626F3F501CDF9 /* en */,
+				9E48EA48DA085D8284B7ABCF /* zh-Hans */,
+				0DA3EF92F3AC081DA3DD9CB7 /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -749,118 +753,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1AA47D7BD2846BFF02C8D384 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					IS_64BIT,
-					"USE_NEON=8",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/EngineBridge",
-					"$(SRCROOT)/Vendor/Pikafish/src",
-				);
-				INFOPLIST_FILE = Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Xiangqi;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-lsqlite3",
-					"-lz",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "EngineBridge/XiangqiMobile-Bridging-Header.h";
-				SWIFT_STRICT_CONCURRENCY = complete;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		2AE7055193175914A6F7B8EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					IS_64BIT,
-					"USE_NEON=8",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/EngineBridge",
-					"$(SRCROOT)/Vendor/Pikafish/src",
-				);
-				INFOPLIST_FILE = Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Xiangqi;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-lsqlite3",
-					"-lz",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "EngineBridge/XiangqiMobile-Bridging-Header.h";
-				SWIFT_STRICT_CONCURRENCY = complete;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2CADB03D2737598DCE9B9851 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile-uitests";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = XiangqiMobile;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2DC5E4E8AE0D97EFC82F1A0D /* Debug */ = {
+		1ABD180BFEF9F79E67F780D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -921,7 +814,7 @@
 			};
 			name = Debug;
 		};
-		4D1219507EF5E26D81C8F33A /* Debug */ = {
+		226C17512288486765F24D5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -933,10 +826,11 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = XiangqiMobile;
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		BBC0E78A97C54B8DA85B4619 /* Release */ = {
+		3B93C5A6DA84385A5D0B34F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -990,37 +884,149 @@
 			};
 			name = Release;
 		};
+		3BFEC28332F6540E283E3A96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile-uitests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = XiangqiMobile;
+			};
+			name = Debug;
+		};
+		5C80CCAD99EA0B871998A34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					IS_64BIT,
+					"USE_NEON=8",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/EngineBridge",
+					"$(SRCROOT)/Vendor/Pikafish/src",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Xiangqi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lsqlite3",
+					"-lz",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "EngineBridge/XiangqiMobile-Bridging-Header.h";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A4ED342644C5F9CEDFFBEC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					IS_64BIT,
+					"USE_NEON=8",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/EngineBridge",
+					"$(SRCROOT)/Vendor/Pikafish/src",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Xiangqi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lsqlite3",
+					"-lz",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "EngineBridge/XiangqiMobile-Bridging-Header.h";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		960DB845BA54E13F566A2835 /* Build configuration list for PBXNativeTarget "XiangqiMobile" */ = {
+		077FE70D59720B32B8662EA4 /* Build configuration list for PBXProject "XiangqiMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2AE7055193175914A6F7B8EA /* Release */,
-				1AA47D7BD2846BFF02C8D384 /* Debug */,
+				1ABD180BFEF9F79E67F780D4 /* Debug */,
+				3B93C5A6DA84385A5D0B34F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4FF7CF294D19C1113B095E3 /* Build configuration list for PBXNativeTarget "XiangqiMobileUITests" */ = {
+		E33060AE1EE1CF5D245978F9 /* Build configuration list for PBXNativeTarget "XiangqiMobileUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2CADB03D2737598DCE9B9851 /* Release */,
-				4D1219507EF5E26D81C8F33A /* Debug */,
+				226C17512288486765F24D5E /* Release */,
+				3BFEC28332F6540E283E3A96 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FEDE8DB2BE492FB29033468C /* Build configuration list for PBXProject "XiangqiMobile" */ = {
+		EEED9F8C7E3EF3C1A406BBED /* Build configuration list for PBXNativeTarget "XiangqiMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2DC5E4E8AE0D97EFC82F1A0D /* Debug */,
-				BBC0E78A97C54B8DA85B4619 /* Release */,
+				9A4ED342644C5F9CEDFFBEC3 /* Release */,
+				5C80CCAD99EA0B871998A34E /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FA63A743EC926AA56E1E907B /* Project object */;
+	rootObject = 7FC51325F7B8189745006C62 /* Project object */;
 }

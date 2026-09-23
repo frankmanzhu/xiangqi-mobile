@@ -70,6 +70,7 @@ struct SettingsView: View {
                     .font(.footnote).foregroundStyle(.secondary)
             }
         }
+        .readableContentWidth()
         .navigationTitle(l10n(L10n.Settings.title))
     }
 }
@@ -112,6 +113,7 @@ private struct LicensesView: View {
                 }
             }
         }
+        .readableContentWidth()
         .navigationTitle(l10n(L10n.Licenses.title))
     }
 
@@ -142,6 +144,7 @@ private struct RulesHelpView: View {
                 Text(L10n.Rules.notation, l10n)
             }
         }
+        .readableContentWidth()
         .navigationTitle(l10n(L10n.Rules.title))
     }
 
