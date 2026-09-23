@@ -75,6 +75,27 @@ For every distributed version, the complete corresponding source is available fr
 
 To rebuild a modified iOS app, check out the matching source tag, open `XiangqiMobile.xcodeproj` in Xcode, select your own development team, change the bundle identifier if required by your provisioning profile, and build/sign/install the app on your device. The App Store binary is not the only permitted form of the software; GPL rights to modify and redistribute the source remain available.
 
+### Rebuild and install a modified copy
+
+The following procedure is the supported path for building a modified copy on a physical iPhone:
+
+1. Install Xcode on a Mac and sign in with an Apple Developer account that can provision the target device. This project targets iOS 18.0 or later.
+2. Clone the repository at the release tag or commit corresponding to the app version, then initialize the exact Pikafish source revision:
+
+   ```sh
+   git clone https://github.com/frankmanzhu/xiangqi-mobile.git
+   cd xiangqi-mobile
+   git checkout <release-tag-or-commit>
+   git submodule update --init --recursive
+   ```
+
+3. Open `XiangqiMobile.xcodeproj` in Xcode and select the `XiangqiMobile` scheme.
+4. In the target's **Signing & Capabilities** settings, select the user's own development team. If the bundle identifier is already registered to another team, replace `com.frankzhu.xiangqi-mobile` with a unique identifier owned by that team.
+5. Connect the iPhone, select it as the run destination, and allow Xcode to register or provision the device. If iOS requests it, enable Developer Mode and trust the developer profile on the device.
+6. Build and run. Xcode signs the modified app with the user's own account; no Xiangqi Mobile signing certificate or private key is required.
+
+The source checkout must retain the bundled NNUE network, CCPD learning resources, license notices, and the Pikafish submodule revision used by the release. A modified build can use a different bundle identifier and can be installed separately from the App Store build.
+
 Pikafish's GPL license cannot be removed by changing this README, changing the link mode, or changing the project's license label. Avoiding GPL obligations would require replacing Pikafish or obtaining relicensing permission from the relevant Pikafish copyright holders.
 
 The bundled CCPD learning corpus is separate data, not software. The database and CCPD-derived exports remain available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), with attribution and modification notices in `Resources/Learning/CCPD-source.json` and `Resources/Licenses/CCPD-CC-BY-4.0.txt`.
