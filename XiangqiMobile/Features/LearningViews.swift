@@ -37,14 +37,21 @@ enum CCPDCategory {
     static let matingPracticeID = "殺局_殺法_練習題"
 }
 
-private enum BundledCCPDLibrary {
-    static func load() throws -> CCPDLibrary {
+private enum LearningLibraryProvider {
+    static func load() throws -> LearningLibraryStore {
         guard let url = Bundle.main.url(forResource: "ccpd", withExtension: "sqlite3") else {
             throw CCPDLibraryError.databaseUnavailable("The bundled learning library is missing.")
         }
-        let library = CCPDLibrary(databaseURL: url)
-        try library.validate()
-        return library
+        guard let applicationSupport = FileManager.default.urls(
+            for: .applicationSupportDirectory,
+            in: .userDomainMask
+        ).first else {
+            throw CCPDLibraryError.databaseUnavailable("The user learning library location is unavailable.")
+        }
+        let userURL = applicationSupport
+            .appendingPathComponent("XiangqiMobile", isDirectory: true)
+            .appendingPathComponent("user-games.sqlite3")
+        return try LearningLibraryStore(bundledDatabaseURL: url, userDatabaseURL: userURL)
     }
 }
 
@@ -127,7 +134,7 @@ struct LearningHomeView: View {
         isLoading = true
         defer { isLoading = false }
         do {
-            let library = try BundledCCPDLibrary.load()
+            let library = try LearningLibraryProvider.load()
             async let loadedCategories = Task.detached { try library.categories() }.value
             async let loadedMetadata = Task.detached { try library.metadata() }.value
             categories = try await loadedCategories
@@ -207,7 +214,7 @@ struct LearningLibraryView: View {
         isLoading = true
         defer { isLoading = false }
         do {
-            let library = try BundledCCPDLibrary.load()
+            let library = try LearningLibraryProvider.load()
             let category = category
             let query = query
             records = try await Task.detached {
@@ -344,7 +351,7 @@ struct CCPDStudyView: View {
 
     private func load() async {
         do {
-            let library = try BundledCCPDLibrary.load()
+            let library = try LearningLibraryProvider.load()
             let id = recordID
             record = try await Task.detached { try library.record(id: id) }.value
             if let record {
@@ -526,7 +533,7 @@ struct CCPDPuzzleView: View {
 
     private func load() async {
         do {
-            let library = try BundledCCPDLibrary.load()
+            let library = try LearningLibraryProvider.load()
             let id = recordID
             guard let loaded = try await Task.detached(operation: { try library.record(id: id) }).value else {
                 errorMessage = UserFacingError(L10n.Study.recordMissing)

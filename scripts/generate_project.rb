@@ -65,13 +65,24 @@ target.resources_build_phase.add_file_reference(assets)
   ["Learning", "CCPD-source.json"],
   ["Learning", "ccpd.sqlite3"],
   ["Learning", "ccpd-audit.json"],
-  ["Learning", "ccpd-quarantine.jsonl"],
-  ["Localizations", "Localizable.xcstrings"]
+  ["Learning", "ccpd-quarantine.jsonl"]
 ].each do |directory, filename|
   group = resources_group.groups.find { |child| child.display_name == directory } ||
           resources_group.new_group(directory, directory)
   target.resources_build_phase.add_file_reference(group.new_file(filename))
 end
+
+# One Localizable.strings per language (Resources/Localizations/<lang>.lproj/),
+# so translating one language never touches another's file. Xcode groups them
+# as a single variant group in the navigator.
+localizations_group = resources_group.groups.find { |child| child.display_name == "Localizations" } ||
+                       resources_group.new_group("Localizations", "Localizations")
+variant_group = localizations_group.new_variant_group("Localizable.strings")
+%w[en zh-Hans zh-Hant].each do |language|
+  file_ref = variant_group.new_file("#{language}.lproj/Localizable.strings")
+  file_ref.name = language
+end
+target.resources_build_phase.add_file_reference(variant_group)
 
 tests_group = project.main_group.new_group("Tests", "Tests")
 ui_group = tests_group.new_group("XiangqiMobileUITests", "XiangqiMobileUITests")

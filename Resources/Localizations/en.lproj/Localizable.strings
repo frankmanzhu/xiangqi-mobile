@@ -1,0 +1,494 @@
+"app.recovery.message" = "The saved game could not be validated. Its file has been preserved.";
+
+"app.recovery.title" = "Saved game";
+
+"board.label" = "Xiangqi board";
+
+"board.legalDestination" = "Legal destination";
+
+"board.practice" = "Practice board";
+
+/* River text, left half */
+"board.river.left" = "楚 河";
+
+/* River text, right half */
+"board.river.right" = "漢 界";
+
+"board.square.empty" = "Empty %@";
+
+/* Side, piece, square, state */
+"board.square.occupied" = "%1$@ %2$@, %3$@, %4$@";
+
+"board.state.occupied" = "occupied";
+
+"board.state.selectable" = "selectable";
+
+"board.study" = "Study board";
+
+"common.always" = "Always";
+
+"common.cancel" = "Cancel";
+
+"common.confirm" = "Confirm";
+
+"common.done" = "Done";
+
+/* Placeholder for a missing value */
+"common.emptyValue" = "—";
+
+"common.hint" = "Hint";
+
+"common.home" = "Home";
+
+"common.moves" = "Moves";
+
+/* Separator between two player names */
+"common.nameSeparator" = "–";
+
+"common.next" = "Next";
+
+"common.off" = "Off";
+
+"common.ok" = "OK";
+
+"common.previous" = "Previous";
+
+"common.random" = "Random";
+
+"common.restart" = "Restart";
+
+"common.result" = "Result";
+
+"common.resume" = "Resume";
+
+"common.settings" = "Settings";
+
+"common.source" = "Source";
+
+"error.engine.invalidMove" = "The computer opponent returned a move that is not valid here.";
+
+"error.engine.networkInvalid" = "The computer opponent's neural network failed its integrity check.";
+
+"error.engine.networkMissing" = "The computer opponent's neural network is missing from this build.";
+
+"error.engine.unavailable" = "The computer opponent could not finish its move.";
+
+"error.generic" = "Something went wrong.";
+
+"error.library.corruptRecord" = "This record could not be read.";
+
+"error.library.unavailable" = "The learning library could not be opened.";
+
+"error.library.unsupportedSchema" = "This learning library was built for a different version of the app.";
+
+"error.position.invalid" = "This position could not be read.";
+
+"error.progress.unsupportedSchema" = "Your saved progress was written by a newer version of the app.";
+
+"game.confirmMove" = "Confirm move";
+
+"game.flip" = "Flip";
+
+"game.hint.available" = "Hint";
+
+"game.hint.destination" = "Hint shown";
+
+"game.hint.searching" = "Finding";
+
+"game.hint.source" = "Show square";
+
+"game.leave" = "Leave game";
+
+"game.menu" = "Game menu";
+
+"game.message.engineMismatch" = "Pikafish returned a move that does not match the current game.";
+
+"game.message.notSaved" = "Game not saved";
+
+"game.movesAction" = "Moves";
+
+"game.rail.engine" = "Pikafish · Level %lld";
+
+"game.rail.opponent" = "OPPONENT";
+
+"game.rail.player" = "PLAYER";
+
+"game.rail.toMove" = "TO MOVE";
+
+"game.rail.you" = "You · %@";
+
+"game.status.check" = "Check · %@ to move";
+
+"game.status.computerToMove" = "Computer to move";
+
+"game.status.draw" = "Draw · %@";
+
+"game.status.reviewing" = "Reviewing move %1$lld of %2$lld";
+
+"game.status.sideToMove" = "%@ to move";
+
+"game.status.thinking" = "Pikafish is thinking…";
+
+"game.status.wins" = "%1$@ wins · %2$@";
+
+"game.status.yourMove" = "Your move";
+
+"game.unavailable" = "Game unavailable";
+
+"game.undo" = "Undo";
+
+"gameMenu.formatNote" = "The saved record uses the starting FEN and ordered UCI moves. Display notation is derived, so games can be replayed and exchanged without depending on the visual theme.";
+
+"gameMenu.movesValue" = "UCI coordinates";
+
+"gameMenu.newGame" = "New game";
+
+"gameMenu.resign" = "Resign";
+
+"gameMenu.resignConfirm" = "Resign this game?";
+
+"gameMenu.rules" = "Rules";
+
+"gameMenu.saveAndLeave" = "Save and leave";
+
+"gameMenu.section.format" = "Record format";
+
+"gameMenu.section.game" = "Game";
+
+"gameMenu.share" = "Share game record";
+
+"history.livePosition" = "Live position";
+
+/* Move pair number followed by a period */
+"history.moveNumber" = "%lld.";
+
+"history.returnToLive" = "Return to live";
+
+"history.title" = "Moves · %lld";
+
+"home.continue.hint" = "Returns to the saved position";
+
+"home.continue.subtitle" = "%1$@ · %2$lld moves";
+
+"home.continue.title" = "Continue game";
+
+"home.hero.subtitle" = "Play, study, and sharpen your game—entirely offline.";
+
+"home.hero.title" = "The board is ready.";
+
+"home.mode.computer.subtitle" = "Challenge Pikafish offline";
+
+"home.mode.learn.subtitle" = "Puzzles and master games";
+
+"home.mode.learn.title" = "Learn and practice";
+
+"home.mode.twoPlayer.subtitle" = "Share this iPhone";
+
+"home.section.mode" = "CHOOSE A MODE";
+
+"home.section.theme" = "BOARD THEME";
+
+/* App wordmark, Chinese */
+"home.title" = "象棋";
+
+/* App wordmark, Latin */
+"home.wordmark" = "XIANGQI";
+
+"learn.category.endgames" = "Endgames";
+
+"learn.category.fullGameTactics" = "Full-game tactics";
+
+"learn.category.games" = "Games";
+
+"learn.category.matingPractice" = "Mating practice";
+
+"learn.category.middlegames" = "Middlegames";
+
+"learn.category.openings" = "Openings";
+
+"learn.couldNotLoadRecords" = "Could not load records";
+
+"learn.dataset.note" = "Dataset by Yu-Han Tseng and Bo-Nian Chen. Source records are decoded, converted to UCI, and legality-validated; ambiguous or invalid records are excluded.";
+
+"learn.dataset.subtitle" = "Study master games, openings, middlegames, endgames, and tactical positions entirely offline.";
+
+"learn.dataset.title" = "Chinese Chess Practical Dataset";
+
+"learn.datasetRevision" = "Dataset revision";
+
+"learn.ecco" = "ECCO";
+
+"learn.libraryUnavailable" = "Learning library unavailable";
+
+"learn.license" = "License";
+
+"learn.loadingLibrary" = "Loading library…";
+
+"learn.loadingRecords" = "Loading records…";
+
+"learn.plyCount" = "%lld plies";
+
+"learn.recordCount" = "%@ records";
+
+"learn.searchPrompt" = "Player, event, or ECCO";
+
+"learn.section.browse" = "Browse";
+
+"learn.title" = "Learn";
+
+"learn.validatedRecords" = "Validated records";
+
+"licenses.bundledNotice" = "Bundled notice";
+
+"licenses.ccpd.authors" = "Yu-Han Tseng and Bo-Nian Chen (2026)";
+
+"licenses.ccpd.license" = "Creative Commons Attribution 4.0 International";
+
+"licenses.ccpd.licenseLink" = "CC BY 4.0 license";
+
+"licenses.ccpd.name" = "Chinese Chess Practical Dataset (CCPD)";
+
+"licenses.ccpd.note" = "Xiangqi Mobile decodes the source text, converts Chinese notation to UCI, validates move legality, and indexes accepted records for offline study. Invalid or ambiguous records are excluded.";
+
+"licenses.ccpd.sourceLink" = "Dataset source";
+
+"licenses.engine.note" = "Pikafish is distributed under GNU GPL version 3. The bundled notice and authors list are included with the application.";
+
+"licenses.gpl" = "GNU GPL v3";
+
+"licenses.section.engine" = "Computer engine";
+
+"licenses.section.learning" = "Learning content";
+
+"licenses.title" = "Licenses";
+
+"mode.computer" = "Play Computer";
+
+"mode.localTwoPlayer" = "Two Players";
+
+"newGame.level" = "Level";
+
+"newGame.levelDetail.1" = "A quick Pikafish search for a more forgiving game.";
+
+"newGame.levelDetail.2" = "A responsive Pikafish opponent with credible tactics.";
+
+"newGame.levelDetail.3" = "Consistent play for regular club players.";
+
+"newGame.levelDetail.4" = "A focused opponent that looks further ahead.";
+
+"newGame.levelDetail.5" = "The strongest built-in search setting.";
+
+"newGame.levelName.1" = "Beginner";
+
+"newGame.levelName.2" = "Club learner";
+
+"newGame.levelName.3" = "Club player";
+
+"newGame.levelName.4" = "Expert";
+
+"newGame.levelName.5" = "Master";
+
+"newGame.mode" = "Mode";
+
+"newGame.redMovesFirst" = "Red moves first.";
+
+"newGame.replace.confirm" = "Replace and start";
+
+"newGame.replace.message" = "The current unfinished game will be replaced by this new game.";
+
+"newGame.replace.title" = "Replace the saved game?";
+
+"newGame.section.side" = "Your side";
+
+"newGame.section.strength" = "Computer strength";
+
+"newGame.section.theme" = "Theme";
+
+"newGame.section.time" = "Time";
+
+"newGame.start" = "Start game";
+
+"newGame.title" = "New game";
+
+"piece.advisor" = "Advisor";
+
+"piece.cannon" = "Cannon";
+
+"piece.chariot" = "Chariot";
+
+"piece.elephant" = "Elephant";
+
+"piece.general" = "General";
+
+"piece.horse" = "Horse";
+
+"piece.soldier" = "Soldier";
+
+"practice.chooseDestination" = "Choose a destination.";
+
+"practice.completed" = "Line complete. Well done.";
+
+"practice.correct" = "Correct. The recorded reply has been played.";
+
+"practice.couldNotOpen" = "Could not open practice";
+
+"practice.findBestMove" = "Find the best move.";
+
+"practice.hintFormat" = "Hint: %@";
+
+"practice.incorrect" = "Not the recorded move. Try again.";
+
+"practice.mistakes" = "Mistakes: %lld";
+
+"practice.moveProgress" = "Move %1$lld of %2$lld";
+
+"practice.opening" = "Opening practice…";
+
+"practice.studyLine" = "Study line";
+
+"practice.title" = "Practice";
+
+"reason.checkmate" = "Checkmate";
+
+"reason.repetition" = "Repetition";
+
+"reason.resignation" = "Resignation";
+
+"reason.stalemate" = "Stalemate";
+
+"reason.timeLoss" = "Time loss";
+
+"result.complete" = "Game complete";
+
+"result.draw" = "Draw";
+
+"result.review" = "Review moves";
+
+"result.summary.hints" = "Hints";
+
+"result.summary.moves" = "Moves";
+
+"result.summary.time" = "Time";
+
+"result.wins" = "%@ wins";
+
+"rules.advisor" = "Moves one point diagonally inside the palace.";
+
+"rules.cannon" = "Moves like a chariot, but captures by jumping exactly one intervening piece.";
+
+"rules.chariot" = "Moves any distance along a clear file or rank.";
+
+"rules.elephant" = "Moves two points diagonally, cannot jump, and cannot cross the river.";
+
+"rules.general" = "Moves one point orthogonally inside the palace. The generals may not face on an open file.";
+
+"rules.goal" = "Checkmate the opposing general. Red moves first. A side with no legal move loses.";
+
+"rules.horse" = "Moves one orthogonal step then one diagonal step; the first step cannot be blocked.";
+
+"rules.notation" = "Files are a–i and ranks are 0–9. A move such as b2e2 records its source and destination. The game stores the starting FEN plus this ordered move list for reliable replay and sharing.";
+
+"rules.section.goal" = "Goal";
+
+"rules.section.notation" = "Notation";
+
+"rules.section.pieces" = "Pieces";
+
+"rules.soldier" = "Moves forward one point. After crossing the river it may also move sideways, never backward.";
+
+"rules.title" = "Rules";
+
+"settings.appLanguage" = "App language";
+
+"settings.computer" = "Computer";
+
+"settings.confirmMoves" = "Confirm moves";
+
+"settings.coordinates" = "Coordinates";
+
+"settings.coordinatesOption.redPerspective" = "Red perspective";
+
+"settings.engineNote" = "Computer play uses the bundled Pikafish engine and NNUE network entirely on-device. No account or network access is required.";
+
+"settings.haptics" = "Haptics";
+
+"settings.howToPlay" = "How to play";
+
+"settings.language.english" = "English";
+
+"settings.language.simplifiedChinese" = "Simplified Chinese";
+
+"settings.language.system" = "System Default";
+
+"settings.language.traditionalChinese" = "Traditional Chinese";
+
+"settings.licenses" = "Open-source and content licenses";
+
+"settings.moveRecord" = "Move record";
+
+"settings.pieceLabels" = "Piece labels";
+
+"settings.pieceLabelsOption.simplified" = "Simplified Chinese";
+
+"settings.pieceLabelsOption.traditional" = "Traditional Chinese";
+
+"settings.rulesPolicy" = "Rules policy";
+
+"settings.section.about" = "About";
+
+"settings.section.appearance" = "Appearance";
+
+"settings.section.interaction" = "Interaction";
+
+"settings.section.language" = "Language";
+
+"settings.section.rules" = "Rules and records";
+
+"settings.sounds" = "Sound effects";
+
+"settings.soundsPreviewHint" = "Turning this on plays a sample.";
+
+"settings.theme" = "Theme";
+
+"settings.title" = "Settings";
+
+"settings.version" = "Version";
+
+"side.black" = "Black";
+
+"side.red" = "Red";
+
+"study.attribution" = "CCPD · CC BY 4.0 · Modified by decoding, notation normalization, and legality validation.";
+
+"study.bookmark" = "Bookmark";
+
+"study.couldNotOpen" = "Could not open record";
+
+"study.moveNumber" = "%lld.";
+
+"study.opening" = "Opening record…";
+
+"study.plyProgress" = "%1$lld / %2$lld";
+
+"study.practice" = "Practice";
+
+"study.recordMissing" = "The record is not present in this library.";
+
+"study.removeBookmark" = "Remove bookmark";
+
+"study.title" = "Study";
+
+/* Accessibility label for a theme swatch */
+"theme.accessibilityLabel" = "%@ theme";
+
+"theme.calm" = "Calm";
+
+"theme.classic" = "Classic";
+
+"theme.tournament" = "Tournament";
+
+"timeControl.casual" = "Casual";
+
+"timeControl.fifteenMinutes" = "15 min";
+
+"timeControl.tenMinutes" = "10 min";

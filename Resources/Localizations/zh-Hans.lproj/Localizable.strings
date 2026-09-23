@@ -1,0 +1,494 @@
+"app.recovery.message" = "无法验证已保存的对局，其文件已保留。";
+
+"app.recovery.title" = "已保存的对局";
+
+"board.label" = "象棋棋盘";
+
+"board.legalDestination" = "合法落点";
+
+"board.practice" = "练习棋盘";
+
+/* River text, left half */
+"board.river.left" = "楚 河";
+
+/* River text, right half */
+"board.river.right" = "漢 界";
+
+"board.square.empty" = "空位 %@";
+
+/* Side, piece, square, state */
+"board.square.occupied" = "%1$@%2$@，%3$@，%4$@";
+
+"board.state.occupied" = "已占";
+
+"board.state.selectable" = "可选";
+
+"board.study" = "研习棋盘";
+
+"common.always" = "始终";
+
+"common.cancel" = "取消";
+
+"common.confirm" = "确认";
+
+"common.done" = "完成";
+
+/* Placeholder for a missing value */
+"common.emptyValue" = "—";
+
+"common.hint" = "提示";
+
+"common.home" = "主页";
+
+"common.moves" = "着法";
+
+/* Separator between two player names */
+"common.nameSeparator" = "–";
+
+"common.next" = "下一步";
+
+"common.off" = "关闭";
+
+"common.ok" = "好";
+
+"common.previous" = "上一步";
+
+"common.random" = "随机";
+
+"common.restart" = "重新开始";
+
+"common.result" = "结果";
+
+"common.resume" = "继续";
+
+"common.settings" = "设置";
+
+"common.source" = "来源";
+
+"error.engine.invalidMove" = "电脑对手返回的着法在此局面不合法。";
+
+"error.engine.networkInvalid" = "电脑对手的神经网络未通过完整性校验。";
+
+"error.engine.networkMissing" = "此版本缺少电脑对手的神经网络文件。";
+
+"error.engine.unavailable" = "电脑对手未能完成走子。";
+
+"error.generic" = "出了点问题。";
+
+"error.library.corruptRecord" = "无法读取此棋谱。";
+
+"error.library.unavailable" = "无法打开学习资料库。";
+
+"error.library.unsupportedSchema" = "此学习资料库与当前应用版本不匹配。";
+
+"error.position.invalid" = "无法读取此局面。";
+
+"error.progress.unsupportedSchema" = "你的学习进度由更新版本的应用保存。";
+
+"game.confirmMove" = "确认着法";
+
+"game.flip" = "翻转";
+
+"game.hint.available" = "提示";
+
+"game.hint.destination" = "已显示提示";
+
+"game.hint.searching" = "搜索中";
+
+"game.hint.source" = "显示落点";
+
+"game.leave" = "离开对局";
+
+"game.menu" = "对局菜单";
+
+"game.message.engineMismatch" = "Pikafish 返回的着法与当前对局不符。";
+
+"game.message.notSaved" = "对局未保存";
+
+"game.movesAction" = "棋谱";
+
+"game.rail.engine" = "Pikafish · 第 %lld 级";
+
+"game.rail.opponent" = "对手";
+
+"game.rail.player" = "棋手";
+
+"game.rail.toMove" = "轮走";
+
+"game.rail.you" = "你 · %@";
+
+"game.status.check" = "将军 · 轮到%@走";
+
+"game.status.computerToMove" = "轮到电脑走";
+
+"game.status.draw" = "和棋 · %@";
+
+"game.status.reviewing" = "正在回看第 %1$lld / %2$lld 着";
+
+"game.status.sideToMove" = "轮到%@走";
+
+"game.status.thinking" = "Pikafish 正在思考…";
+
+"game.status.wins" = "%1$@ 胜 · %2$@";
+
+"game.status.yourMove" = "轮到你走";
+
+"game.unavailable" = "对局不可用";
+
+"game.undo" = "悔棋";
+
+"gameMenu.formatNote" = "保存的棋谱使用起始 FEN 加有序 UCI 着法，显示用的记谱由此推导，因此对局可以重演和交换，不依赖于视觉主题。";
+
+"gameMenu.movesValue" = "UCI 坐标";
+
+"gameMenu.newGame" = "新对局";
+
+"gameMenu.resign" = "认输";
+
+"gameMenu.resignConfirm" = "确定认输吗？";
+
+"gameMenu.rules" = "规则";
+
+"gameMenu.saveAndLeave" = "保存并离开";
+
+"gameMenu.section.format" = "棋谱格式";
+
+"gameMenu.section.game" = "对局";
+
+"gameMenu.share" = "分享棋谱";
+
+"history.livePosition" = "当前局面";
+
+/* Move pair number followed by a period */
+"history.moveNumber" = "%lld.";
+
+"history.returnToLive" = "回到当前局面";
+
+"history.title" = "棋谱 · %lld";
+
+"home.continue.hint" = "回到已保存的局面";
+
+"home.continue.subtitle" = "%1$@ · %2$lld 着";
+
+"home.continue.title" = "继续对局";
+
+"home.hero.subtitle" = "对弈、研习、精进棋艺——完全离线。";
+
+"home.hero.title" = "棋盘已就绪。";
+
+"home.mode.computer.subtitle" = "离线挑战 Pikafish";
+
+"home.mode.learn.subtitle" = "残局题与大师对局";
+
+"home.mode.learn.title" = "学习与练习";
+
+"home.mode.twoPlayer.subtitle" = "共用这台 iPhone";
+
+"home.section.mode" = "选择模式";
+
+"home.section.theme" = "棋盘主题";
+
+/* App wordmark, Chinese */
+"home.title" = "象棋";
+
+/* App wordmark, Latin */
+"home.wordmark" = "XIANGQI";
+
+"learn.category.endgames" = "残局";
+
+"learn.category.fullGameTactics" = "全盘战术";
+
+"learn.category.games" = "对局";
+
+"learn.category.matingPractice" = "杀法练习";
+
+"learn.category.middlegames" = "中局";
+
+"learn.category.openings" = "开局";
+
+"learn.couldNotLoadRecords" = "无法载入棋谱";
+
+"learn.dataset.note" = "数据集由曾昱翰与陈柏年制作。原始棋谱经解码、转换为 UCI 并校验合法性；有歧义或无效的棋谱已被排除。";
+
+"learn.dataset.subtitle" = "完全离线研习大师对局、开局、中局、残局和战术局面。";
+
+"learn.dataset.title" = "中国象棋实用数据集";
+
+"learn.datasetRevision" = "数据集版本";
+
+"learn.ecco" = "ECCO 编码";
+
+"learn.libraryUnavailable" = "学习资料库不可用";
+
+"learn.license" = "许可证";
+
+"learn.loadingLibrary" = "正在载入资料库…";
+
+"learn.loadingRecords" = "正在载入棋谱…";
+
+"learn.plyCount" = "%lld 回合步";
+
+"learn.recordCount" = "%@ 个棋谱";
+
+"learn.searchPrompt" = "棋手、赛事或 ECCO";
+
+"learn.section.browse" = "浏览";
+
+"learn.title" = "学习";
+
+"learn.validatedRecords" = "已验证棋谱";
+
+"licenses.bundledNotice" = "随附声明";
+
+"licenses.ccpd.authors" = "曾昱翰、陈柏年（2026）";
+
+"licenses.ccpd.license" = "知识共享署名 4.0 国际";
+
+"licenses.ccpd.licenseLink" = "CC BY 4.0 许可";
+
+"licenses.ccpd.name" = "中国象棋实用数据集（CCPD）";
+
+"licenses.ccpd.note" = "Xiangqi Mobile 解码源文本，将中文记谱转换为 UCI，校验着法合法性，并为离线研习建立索引。无效或有歧义的棋谱已被排除。";
+
+"licenses.ccpd.sourceLink" = "数据集来源";
+
+"licenses.engine.note" = "Pikafish 以 GNU GPL v3 发布。随附的声明与作者名单已包含在应用中。";
+
+"licenses.gpl" = "GNU GPL v3";
+
+"licenses.section.engine" = "对弈引擎";
+
+"licenses.section.learning" = "学习内容";
+
+"licenses.title" = "许可";
+
+"mode.computer" = "人机对弈";
+
+"mode.localTwoPlayer" = "双人对弈";
+
+"newGame.level" = "级别";
+
+"newGame.levelDetail.1" = "Pikafish 快速搜索，对局较为宽松。";
+
+"newGame.levelDetail.2" = "反应迅速的 Pikafish 对手，战术可信。";
+
+"newGame.levelDetail.3" = "稳定的棋力，适合常规棋社棋手。";
+
+"newGame.levelDetail.4" = "算度更深的专注对手。";
+
+"newGame.levelDetail.5" = "内置最强的搜索设置。";
+
+"newGame.levelName.1" = "入门";
+
+"newGame.levelName.2" = "棋社新手";
+
+"newGame.levelName.3" = "棋社棋手";
+
+"newGame.levelName.4" = "高手";
+
+"newGame.levelName.5" = "大师";
+
+"newGame.mode" = "模式";
+
+"newGame.redMovesFirst" = "红先走。";
+
+"newGame.replace.confirm" = "替换并开始";
+
+"newGame.replace.message" = "当前未完成的对局将被这局新棋替换。";
+
+"newGame.replace.title" = "要替换已保存的对局吗？";
+
+"newGame.section.side" = "你执的一方";
+
+"newGame.section.strength" = "电脑棋力";
+
+"newGame.section.theme" = "主题";
+
+"newGame.section.time" = "时间";
+
+"newGame.start" = "开始对局";
+
+"newGame.title" = "新对局";
+
+"piece.advisor" = "士仕";
+
+"piece.cannon" = "炮";
+
+"piece.chariot" = "车";
+
+"piece.elephant" = "象相";
+
+"piece.general" = "将帅";
+
+"piece.horse" = "马";
+
+"piece.soldier" = "兵卒";
+
+"practice.chooseDestination" = "请选择落点。";
+
+"practice.completed" = "棋路完成，做得好。";
+
+"practice.correct" = "正确。已自动走出棋谱中的应着。";
+
+"practice.couldNotOpen" = "无法打开练习";
+
+"practice.findBestMove" = "找出最佳着法。";
+
+"practice.hintFormat" = "提示：%@";
+
+"practice.incorrect" = "这不是棋谱中的着法，请重试。";
+
+"practice.mistakes" = "错误：%lld";
+
+"practice.moveProgress" = "第 %1$lld / %2$lld 步";
+
+"practice.opening" = "正在打开练习…";
+
+"practice.studyLine" = "研习棋路";
+
+"practice.title" = "练习";
+
+"reason.checkmate" = "将死";
+
+"reason.repetition" = "重复局面";
+
+"reason.resignation" = "认输";
+
+"reason.stalemate" = "困毙";
+
+"reason.timeLoss" = "超时";
+
+"result.complete" = "对局结束";
+
+"result.draw" = "和棋";
+
+"result.review" = "回看棋谱";
+
+"result.summary.hints" = "提示";
+
+"result.summary.moves" = "着数";
+
+"result.summary.time" = "用时";
+
+"result.wins" = "%@ 胜";
+
+"rules.advisor" = "在九宫内斜走一格。";
+
+"rules.cannon" = "走法同车，吃子时必须隔一个棋子跳过。";
+
+"rules.chariot" = "沿无阻挡的直线或横线任意距离移动。";
+
+"rules.elephant" = "斜走两格，不可越子，不可过河。";
+
+"rules.general" = "在九宫内直走一格。两将不可在同一直线上照面。";
+
+"rules.goal" = "将死对方的将帅。红先走。无合法着法的一方判负。";
+
+"rules.horse" = "先直行一格再斜行一格；第一格不可被蹩马腿。";
+
+"rules.notation" = "纵线为 a–i，横线为 0–9。像 b2e2 这样的着法记录起点与终点。对局保存起始 FEN 加上这份有序着法表，以便可靠地重演与分享。";
+
+"rules.section.goal" = "目标";
+
+"rules.section.notation" = "记谱";
+
+"rules.section.pieces" = "棋子";
+
+"rules.soldier" = "向前走一格。过河后可以横走，但始终不能后退。";
+
+"rules.title" = "规则";
+
+"settings.appLanguage" = "应用语言";
+
+"settings.computer" = "电脑对手";
+
+"settings.confirmMoves" = "落子需确认";
+
+"settings.coordinates" = "坐标";
+
+"settings.coordinatesOption.redPerspective" = "红方视角";
+
+"settings.engineNote" = "人机对弈完全在本机运行，使用内置的 Pikafish 引擎与 NNUE 网络，无需账号或网络连接。";
+
+"settings.haptics" = "触感反馈";
+
+"settings.howToPlay" = "怎样下棋";
+
+"settings.language.english" = "English";
+
+"settings.language.simplifiedChinese" = "简体中文";
+
+"settings.language.system" = "跟随系统";
+
+"settings.language.traditionalChinese" = "繁体中文";
+
+"settings.licenses" = "开源与内容许可";
+
+"settings.moveRecord" = "棋谱格式";
+
+"settings.pieceLabels" = "棋子字体";
+
+"settings.pieceLabelsOption.simplified" = "简体中文";
+
+"settings.pieceLabelsOption.traditional" = "繁体中文";
+
+"settings.rulesPolicy" = "规则版本";
+
+"settings.section.about" = "关于";
+
+"settings.section.appearance" = "外观";
+
+"settings.section.interaction" = "操作";
+
+"settings.section.language" = "语言";
+
+"settings.section.rules" = "规则与棋谱";
+
+"settings.sounds" = "音效";
+
+"settings.soundsPreviewHint" = "打开时会播放示例音效。";
+
+"settings.theme" = "主题";
+
+"settings.title" = "设置";
+
+"settings.version" = "版本";
+
+"side.black" = "黑方";
+
+"side.red" = "红方";
+
+"study.attribution" = "CCPD · CC BY 4.0 · 经解码、记谱规范化与合法性校验修改。";
+
+"study.bookmark" = "收藏";
+
+"study.couldNotOpen" = "无法打开棋谱";
+
+"study.moveNumber" = "%lld.";
+
+"study.opening" = "正在打开棋谱…";
+
+"study.plyProgress" = "%1$lld / %2$lld";
+
+"study.practice" = "练习";
+
+"study.recordMissing" = "该棋谱不在此资料库中。";
+
+"study.removeBookmark" = "取消收藏";
+
+"study.title" = "研习";
+
+/* Accessibility label for a theme swatch */
+"theme.accessibilityLabel" = "%@ 主题";
+
+"theme.calm" = "静雅";
+
+"theme.classic" = "经典";
+
+"theme.tournament" = "赛场";
+
+"timeControl.casual" = "不限时";
+
+"timeControl.fifteenMinutes" = "15 分钟";
+
+"timeControl.tenMinutes" = "10 分钟";

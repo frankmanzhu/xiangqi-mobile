@@ -10,19 +10,22 @@ The canonical game record is `starting FEN + ordered UCI moves + versioned rules
 - Run domain tests with `swift test`.
 - Run the real-engine bridge smoke test with `scripts/test_pikafish_bridge.sh`.
 - Regenerate the checked-in Xcode project after adding source files with `ruby scripts/generate_project.rb`.
-- Regenerate the typed string keys after editing the String Catalog with `python3 scripts/l10n.py generate`.
+- Regenerate the typed string keys after editing a `Localizable.strings` file with `python3 scripts/l10n.py generate`.
 
 ## Localization
 
-`Resources/Localizations/Localizable.xcstrings` is the single source of truth for
-every user-facing string, in English, Simplified Chinese, and Traditional Chinese.
-It is editable in Xcode's String Catalog editor.
+Each language has its own file: `Resources/Localizations/en.lproj/Localizable.strings`,
+`zh-Hans.lproj/Localizable.strings`, and `zh-Hant.lproj/Localizable.strings`. A
+contributor translating one language only ever touches their own file. `en.lproj`
+is the source of truth for the key set — adding or renaming a key happens there
+first, then the same key is added to the other two files.
 
 `scripts/l10n.py generate` derives `XiangqiMobile/App/Localization/Strings+Generated.swift`
-from it, giving each key a typed constant such as `L10n.Home.Hero.title`. Views
-reference those constants, so a key can never drift from the catalog.
+from the English file, giving each key a typed constant such as `L10n.Home.Hero.title`.
+Views reference those constants, so a key can never drift from the source file.
 `scripts/l10n.py check` fails when the generated file is stale, a translation is
-missing, or a key is no longer referenced by any view — run it in CI.
+missing from `zh-Hans`/`zh-Hant`, or a key is no longer referenced by any view —
+run it in CI.
 
 Views render strings through `\.l10n`, a `Localizer` that resolves against the
 `.lproj` bundle for the selected language. SwiftUI's `\.locale` drives date and
@@ -98,7 +101,41 @@ swift run -c release ccpd-import \
 
 Generated files are the indexed native library `ccpd.sqlite3`, `ccpd-quarantine.jsonl`, and `ccpd-audit.json`. Omit `--database-only` when a portable `ccpd-records.jsonl` export is also needed. Source identity, expected category counts, attribution, and modification notices are recorded in `Resources/Learning/CCPD-source.json`; the bundled license notice is under `Resources/Licenses`.
 
-The bundled database was generated from pinned commit `368a47a947773dd8692c026e286dd19b6277b993`. It contains 58,456 legality-validated records; 12 source files are excluded in the bundled quarantine report (6 invalid FENs and 6 illegal move sequences). Its SHA-256 is `7d258a7a4d3572c1c183ef39637af9fe879a193aec70bad86006e8c23c858fc8`.
+The original CCPD import was generated from pinned commit `368a47a947773dd8692c026e286dd19b6277b993` and contains 58,456 legality-validated records. The shipped database is now a merged, legality-validated corpus of 145,065 records. It retains the original CCPD records and adds unique games transformed from the public WXF and Dongping ICCS collections. The shipped database SHA-256 is `86779b0419a1bf058ab211046418333fb89cd0f5172681523016bd246f345358`.
+
+### Validating ICCS game collections
+
+`iccs-validate` is the batch checker for downloaded ICCS `.pgn`/`.pgns` collections. It replays every move from the tagged FEN, distributes games across worker processes/threads, canonicalizes each replayable game as `FEN + UCI moves`, and removes exact duplicates across all input files. It keeps the raw downloads unchanged and writes:
+
+- `Processed/unique-games.jsonl` — replayable, unique games.
+- `Duplicates/duplicate-games.jsonl` — replayable games whose canonical sequence already appeared.
+- `Failed/invalid-games.jsonl` — games with malformed structure, unknown tokens, invalid FENs, or an illegal move, including the failing ply and position.
+- `manifest.json` — counts, worker count, source names, and warning totals.
+
+Run it against local downloads with:
+
+```sh
+swift run -c release iccs-validate tempData tempData/Validation --workers 8
+```
+
+The whole `tempData/` directory is ignored by Git, so downloaded source archives and generated validation output are not committed accidentally. The WXF and Dongping game files were downloaded from publicly available online locations, replay-validated, deduplicated, and transformed from ICCS into the normalized SQLite format for offline learning and replay. The source manifest records the known provenance and the remaining source-license uncertainty; public availability alone is not presented as a separate license grant.
+
+To build a staged merged database without changing the bundled app resource:
+
+```sh
+swift run -c release ccpd-merge \
+  Resources/Learning/ccpd.sqlite3 \
+  tempData/Validation \
+  tempData/Merge
+```
+
+The merger backs up the current database, skips canonical duplicates, preserves original ICCS notation alongside UCI moves, and writes the candidate database plus `merge-report.json`, `verification-report.json`, and `source-manifest.json` under `tempData/Merge`. The checked-in seed was produced from that candidate after replay, uniqueness, storage, and schema verification.
+
+### Shipped library and user game library
+
+`Resources/Learning/ccpd.sqlite3` is the read-only shipped seed. The app opens it without write access and replaces it only when a new app version is installed. On first use, the app creates a separate writable `user-games.sqlite3` in its Application Support directory. Learning screens read both databases as one library, while app updates leave user-imported games untouched. Future import tools should write only to the user database and use IDs in the `user:` namespace so they cannot collide with shipped records.
+
+The shipped seed is for human learning, browsing, and replay. These game records are not used to train Pikafish or to generate engine hints.
 
 The app performs no network requests and has no account or online-play code. Computer play uses Pikafish compiled in-process from submodule revision `6a59ee2f7b105bff64d9efc2692591107787e2b1`, plus the bundled `pikafish.nnue` network with SHA-256 `7d13d73569a9b571ba0eb20cf1596247bc2a42738967e61afef6482b231e900e`. There is no alternate or fallback computer player. The engine receives the canonical starting FEN and complete ordered UCI move history for every search.
 
@@ -135,7 +172,7 @@ The source checkout must retain the bundled NNUE network, CCPD learning resource
 
 Pikafish's GPL license cannot be removed by changing this README, changing the link mode, or changing the project's license label. Avoiding GPL obligations would require replacing Pikafish or obtaining relicensing permission from the relevant Pikafish copyright holders.
 
-The bundled CCPD learning corpus is separate data, not software. The database and CCPD-derived exports remain available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), with attribution and modification notices in `Resources/Learning/CCPD-source.json` and `Resources/Licenses/CCPD-CC-BY-4.0.txt`.
+The learning corpus is separate data, not software. The original CCPD portion is available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), with attribution and modification notices in `Resources/Learning/CCPD-source.json` and `Resources/Licenses/CCPD-CC-BY-4.0.txt`. The added public ICCS collections are described in [`Resources/Learning/CCPD-merged-sources.json`](Resources/Learning/CCPD-merged-sources.json); the app does not claim that GPL-3.0-or-later relicenses the underlying game data.
 
 The product direction is documented in the [specification index](docs/README.md):
 

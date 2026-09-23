@@ -156,6 +156,65 @@ public struct CCPDLibrary: Sendable {
         self.databaseURL = databaseURL
     }
 
+    /// Creates the writable database used for user-imported games.
+    ///
+    /// The app opens both this database and the shipped database through
+    /// `CCPDLibrary`, which is intentionally read-only. A future importer can
+    /// write records to this file while keeping the bundled seed immutable.
+    public static func createEmptyDatabaseIfNeeded(at url: URL) throws {
+        guard !FileManager.default.fileExists(atPath: url.path) else { return }
+        try FileManager.default.createDirectory(
+            at: url.deletingLastPathComponent(),
+            withIntermediateDirectories: true
+        )
+
+        var database: OpaquePointer?
+        guard sqlite3_open_v2(
+            url.path,
+            &database,
+            SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE,
+            nil
+        ) == SQLITE_OK, let database else {
+            let message = database.flatMap(sqlite3_errmsg).map(String.init(cString:)) ?? url.path
+            sqlite3_close(database)
+            throw CCPDLibraryError.databaseUnavailable(message)
+        }
+        defer { sqlite3_close(database) }
+
+        let schema = """
+            PRAGMA user_version = 2;
+            CREATE TABLE IF NOT EXISTS metadata (
+                key TEXT PRIMARY KEY NOT NULL,
+                value TEXT NOT NULL
+            );
+            CREATE TABLE IF NOT EXISTS records (
+                id TEXT PRIMARY KEY NOT NULL,
+                category TEXT NOT NULL,
+                source_path TEXT NOT NULL,
+                source_encoding TEXT NOT NULL,
+                event TEXT,
+                date_text TEXT,
+                site TEXT,
+                red TEXT,
+                black TEXT,
+                result TEXT,
+                ecco TEXT,
+                starting_fen TEXT NOT NULL,
+                move_count INTEGER NOT NULL,
+                uci_moves BLOB NOT NULL,
+                source_moves BLOB NOT NULL,
+                tags_json BLOB NOT NULL
+            );
+            CREATE INDEX IF NOT EXISTS records_category_idx ON records(category);
+            INSERT OR IGNORE INTO metadata (key, value) VALUES ('schema_version', '2');
+            INSERT OR IGNORE INTO metadata (key, value) VALUES ('source_name', 'User-imported games');
+            INSERT OR IGNORE INTO metadata (key, value) VALUES ('license', 'User-managed records');
+            """
+        guard sqlite3_exec(database, schema, nil, nil, nil) == SQLITE_OK else {
+            throw CCPDLibraryError.databaseUnavailable(String(cString: sqlite3_errmsg(database)))
+        }
+    }
+
     public func validate() throws {
         let metadata = try metadata()
         guard metadata["schema_version"] == "2" else {
@@ -381,5 +440,76 @@ public struct CCPDLibrary: Sendable {
             start = end
         }
         return moves
+    }
+}
+
+/// Presents the immutable shipped corpus and the user's writable corpus as
+/// one learning library. Updates replace only the bundled database; the user
+/// database lives in Application Support and is never overwritten by an app
+/// update.
+public struct LearningLibraryStore: Sendable {
+    public let bundled: CCPDLibrary
+    public let user: CCPDLibrary
+
+    public init(bundledDatabaseURL: URL, userDatabaseURL: URL) throws {
+        try CCPDLibrary.createEmptyDatabaseIfNeeded(at: userDatabaseURL)
+
+        let bundled = CCPDLibrary(databaseURL: bundledDatabaseURL)
+        let user = CCPDLibrary(databaseURL: userDatabaseURL)
+        try bundled.validate()
+        try user.validate()
+        self.bundled = bundled
+        self.user = user
+    }
+
+    public func metadata() throws -> [String: String] {
+        var result = try bundled.metadata()
+        result["user_database"] = user.databaseURL.lastPathComponent
+        result["user_record_count"] = String(try user.categories().reduce(0) { $0 + $1.recordCount })
+        return result
+    }
+
+    public func categories() throws -> [CCPDCategorySummary] {
+        let summaries = try bundled.categories() + user.categories()
+        var counts: [String: Int] = [:]
+        for summary in summaries {
+            counts[summary.id, default: 0] += summary.recordCount
+        }
+        return counts.keys.sorted().map { .init(id: $0, recordCount: counts[$0] ?? 0) }
+    }
+
+    public func records(
+        category: String? = nil,
+        matching query: String? = nil,
+        limit: Int = 100,
+        offset: Int = 0
+    ) throws -> [CCPDRecordSummary] {
+        let requestedLimit = min(max(limit, 1), 500)
+        let requestedOffset = max(offset, 0)
+        let perDatabaseLimit = min(requestedLimit + requestedOffset, 500)
+        let combined = try bundled.records(
+            category: category,
+            matching: query,
+            limit: perDatabaseLimit,
+            offset: 0
+        ) + user.records(
+            category: category,
+            matching: query,
+            limit: perDatabaseLimit,
+            offset: 0
+        )
+
+        let ordered = combined.sorted { lhs, rhs in
+            let lhsDate = lhs.dateText ?? ""
+            let rhsDate = rhs.dateText ?? ""
+            if lhsDate != rhsDate { return lhsDate > rhsDate }
+            return lhs.sourcePath < rhs.sourcePath
+        }
+        return Array(ordered.dropFirst(requestedOffset).prefix(requestedLimit))
+    }
+
+    public func record(id: String) throws -> CCPDRecord? {
+        if id.hasPrefix("user:") { return try user.record(id: id) }
+        return try bundled.record(id: id) ?? user.record(id: id)
     }
 }

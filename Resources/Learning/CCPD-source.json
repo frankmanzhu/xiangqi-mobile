@@ -39,11 +39,39 @@
       "illegal_move": 6
     }
   },
+  "bundledDatabase": {
+    "recordCount": 145065,
+    "databaseSHA256": "86779b0419a1bf058ab211046418333fb89cd0f5172681523016bd246f345358",
+    "sources": [
+      {
+        "name": "CCPD",
+        "license": "CC BY 4.0",
+        "records": 58456
+      },
+      {
+        "name": "WXF ICCS games",
+        "license": "Public online collection; source license not recorded in local download metadata",
+        "records": 14386
+      },
+      {
+        "name": "Dongping ICCS games",
+        "license": "Public online collection; source license not recorded in local download metadata",
+        "records": 72223
+      }
+    ],
+    "merge": {
+      "inputReplayableRecords": 109543,
+      "skippedExistingDuplicates": 22934,
+      "insertedRecords": 86609,
+      "totalRecordsAfterMerge": 145065
+    }
+  },
   "modifications": [
     "Source text is decoded losslessly from Big5 where required.",
     "Traditional Chinese move notation is normalized to canonical UCI moves.",
     "Records are legality-validated and indexed for offline browsing, replay, and practice.",
     "Move and tag payloads are losslessly compressed in the normalized SQLite database.",
-    "Invalid or ambiguous records are quarantined rather than silently repaired."
+    "Invalid or ambiguous records are quarantined rather than silently repaired.",
+    "Public ICCS game collections are replay-validated, deduplicated, and transformed into the normalized SQLite format for offline learning and replay."
   ]
 }

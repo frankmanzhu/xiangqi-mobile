@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-23",
+  "purpose": "Provenance for the merged offline learning database",
+  "databaseSHA256": "86779b0419a1bf058ab211046418333fb89cd0f5172681523016bd246f345358",
+  "recordCount": 145065,
+  "entries": [
+    {
+      "id": "ccpd",
+      "name": "Chinese Chess Practical Dataset (CCPD)",
+      "sourceURL": "https://github.com/Yvonne761/Chinese-Chess-Practical-Dataset",
+      "pinnedRevision": "368a47a947773dd8692c026e286dd19b6277b993",
+      "license": "CC BY 4.0",
+      "records": 58456,
+      "notes": [
+        "Records were decoded, legality-validated, normalized, and indexed for offline learning."
+      ]
+    },
+    {
+      "id": "wxf",
+      "name": "WXF ICCS games",
+      "referenceURL": "https://github.com/CGLemon/chinese-chess-PGN",
+      "license": "Public online collection; source license not recorded in local download metadata",
+      "records": 14386,
+      "notes": [
+        "Downloaded from a publicly available online location.",
+        "Replay-validated, deduplicated, and transformed from ICCS into the normalized SQLite format for offline learning and replay.",
+        "The reference URL identifies the collection context; it is not asserted as the original download URL."
+      ]
+    },
+    {
+      "id": "dongping",
+      "name": "Dongping ICCS games",
+      "referenceURL": "https://github.com/CGLemon/chinese-chess-PGN",
+      "license": "Public online collection; source license not recorded in local download metadata",
+      "records": 72223,
+      "notes": [
+        "Downloaded from a publicly available online location.",
+        "Replay-validated, deduplicated, and transformed from ICCS into the normalized SQLite format for offline learning and replay.",
+        "The reference URL identifies the collection context; it is not asserted as the original download URL."
+      ]
+    }
+  ],
+  "merge": {
+    "inputReplayableRecords": 109543,
+    "skippedExistingDuplicates": 22934,
+    "insertedRecords": 86609,
+    "deduplicationKey": "starting FEN plus ordered UCI move sequence"
+  }
+}

@@ -49,6 +49,19 @@ final class CCPDLibraryTests: XCTestCase {
         XCTAssertNil(try CCPDLibrary(databaseURL: databaseURL).record(id: "missing"))
     }
 
+    func testLearningStoreCreatesSeparateUserDatabaseAndCombinesLibraries() throws {
+        let userURL = temporaryDirectory.appendingPathComponent("user-games.sqlite3")
+        let store = try LearningLibraryStore(
+            bundledDatabaseURL: databaseURL,
+            userDatabaseURL: userURL
+        )
+
+        XCTAssertTrue(FileManager.default.fileExists(atPath: userURL.path))
+        XCTAssertEqual(try store.categories(), [.init(id: "開局", recordCount: 1)])
+        XCTAssertEqual(try store.records(category: "開局", matching: "測試").map(\.id), ["ccpd:開局/fixture"])
+        XCTAssertEqual(try store.record(id: "ccpd:開局/fixture")?.summary.id, "ccpd:開局/fixture")
+    }
+
     func testCompressedPayloadRoundTripsUnicodeAndEmptyData() throws {
         for original in [Data(), Data("炮二平五\u{001F}馬８進７".utf8)] {
             XCTAssertEqual(try CCPDCompression.decompress(CCPDCompression.compress(original)), original)
@@ -68,7 +81,7 @@ final class CCPDLibraryTests: XCTestCase {
         let library = CCPDLibrary(databaseURL: url)
         try library.validate()
         XCTAssertEqual(try library.metadata()["source_revision"], "368a47a947773dd8692c026e286dd19b6277b993")
-        XCTAssertEqual(try library.categories().reduce(0) { $0 + $1.recordCount }, 58_456)
+        XCTAssertEqual(try library.categories().reduce(0) { $0 + $1.recordCount }, 145_065)
         XCTAssertFalse(try library.records(matching: "刘").isEmpty)
 
         let summary = try XCTUnwrap(library.records(category: "殺局_殺法_練習題", limit: 1).first)
