@@ -10,6 +10,7 @@
 /.derived/
 /.derived-device/
 /.derived-device-build.log
+/.local-deploy/
 *.xcarchive
 *.dSYM
 *.dSYM.zip
@@ -24,3 +25,7 @@
 
 # Local dataset downloads used for validation; never commit these archives.
 /tempData/
+
+# Personal device deployment helper and local signing overrides.
+/scripts/deploy-local.sh
+/scripts/deploy-local.env

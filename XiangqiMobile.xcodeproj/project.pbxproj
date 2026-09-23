@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -114,7 +114,7 @@
 		00E1F5C1003087BF66ABA8A9 /* PikafishBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PikafishBridge.h; sourceTree = "<group>"; };
 		00E2F0E4338F89AFE6697CF4 /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		05E69DBFCE2F2A41F2A5B790 /* search.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = search.cpp; sourceTree = "<group>"; };
-		0B89DB04F2C0F5C956F811B4 /* Pikafish-GPL-3.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-GPL-3.0.txt"; sourceTree = "<group>"; };
+		0B89DB04F2C0F5C956F811B4 /* Pikafish-GPL-3.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pikafish-GPL-3.0.txt"; sourceTree = "<group>"; };
 		0DF9072BB82E5DDB62E65C3E /* Preferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		0EB795151935EBD103F2B7CD /* GameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		0EBE91AB59E625D3C0AD3739 /* position.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
@@ -139,10 +139,10 @@
 		51054CE3BE187FBF346DFA43 /* XiangqiPGN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiPGN.swift; sourceTree = "<group>"; };
 		54E7AD2005AF4C9BA958EA62 /* misc.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
 		56745BC728486CFF64CEBAA4 /* half_ka_v2_hm.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = half_ka_v2_hm.cpp; sourceTree = "<group>"; };
-		5AB2A7EC9E4C8D446C115A53 /* CCPD-source.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-source.json"; sourceTree = "<group>"; };
+		5AB2A7EC9E4C8D446C115A53 /* CCPD-source.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "CCPD-source.json"; sourceTree = "<group>"; };
 		5DAA500C04A20CEE613AC7B6 /* PikafishBridge.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = PikafishBridge.cpp; sourceTree = "<group>"; };
 		5FD414BCC5EB2C6BE4139B47 /* ResultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		61C1A46536F07082BF9D74AF /* Pikafish-AUTHORS.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-AUTHORS.txt"; sourceTree = "<group>"; };
+		61C1A46536F07082BF9D74AF /* Pikafish-AUTHORS.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pikafish-AUTHORS.txt"; sourceTree = "<group>"; };
 		61DEDD8A54642FBF147FAEE0 /* thread.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
 		6797480AFD4CBE0E2A5E20C8 /* timeman.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = timeman.cpp; sourceTree = "<group>"; };
 		7095314D9F05B98DDC4FC021 /* Notation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Notation.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		8355C8619A70A1C11866B196 /* benchmark.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = benchmark.cpp; sourceTree = "<group>"; };
 		846E0A51CF4D13796C1C4B1B /* error_private.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = error_private.cpp; sourceTree = "<group>"; };
 		851442E11A44C215AFA5D312 /* ComputerPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComputerPlayer.swift; sourceTree = "<group>"; };
-		886BEA650137F497044A385C /* ccpd.sqlite3 */ = {isa = PBXFileReference; includeInIndex = 1; path = ccpd.sqlite3; sourceTree = "<group>"; };
+		886BEA650137F497044A385C /* ccpd.sqlite3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = ccpd.sqlite3; sourceTree = "<group>"; };
 		8A92F05079D2DC96397B7DF9 /* ThemePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 		8AE0020811D885F0999D0492 /* RootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8F538F29662527C76F128E08 /* movegen.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movegen.cpp; sourceTree = "<group>"; };
@@ -171,8 +171,8 @@
 		999ED47DBA68BED1582B2668 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9BA964F3A36328957D18E6BB /* fse_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = fse_decompress.cpp; sourceTree = "<group>"; };
 		9E679CEDD7148E4ED7D4A403 /* attacks.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = attacks.cpp; sourceTree = "<group>"; };
-		A0B53D5CBE7052FCE0040A63 /* pikafish.nnue */ = {isa = PBXFileReference; includeInIndex = 1; path = pikafish.nnue; sourceTree = "<group>"; };
-		A31BFFD84E37966B66B1D54A /* ccpd-audit.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-audit.json"; sourceTree = "<group>"; };
+		A0B53D5CBE7052FCE0040A63 /* pikafish.nnue */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = pikafish.nnue; sourceTree = "<group>"; };
+		A31BFFD84E37966B66B1D54A /* ccpd-audit.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "ccpd-audit.json"; sourceTree = "<group>"; };
 		A52B873466FA6631FC52AE06 /* AppLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		A7F970A0C48C70775AA24545 /* tt.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tt.cpp; sourceTree = "<group>"; };
 		A93BBDD180599E1A083E3281 /* bitboard.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = bitboard.cpp; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 		D2DC7D58BCBDCA0BF0865C10 /* Classic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Classic.swift; sourceTree = "<group>"; };
 		D35C0A4FA3551FCF7B8E3FA5 /* Tournament.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		D3D2F72DB307631B824E9D2A /* entropy_common.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = entropy_common.cpp; sourceTree = "<group>"; };
-		D532076E86D5E991269D7AF7 /* CCPD-CC-BY-4.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-CC-BY-4.0.txt"; sourceTree = "<group>"; };
+		D532076E86D5E991269D7AF7 /* CCPD-CC-BY-4.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "CCPD-CC-BY-4.0.txt"; sourceTree = "<group>"; };
 		DBD81712CB6E63EC9C3569CD /* Domain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		DD49C5E2C832F2CE51E7969C /* XiangqiMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiangqiMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67C2D0C68EE418B4AED5A29 /* NewGameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		F92F7A5565973AB6913A0DF1 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		FC3BAEAF8482C3B5A44C4294 /* UserFacingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserFacingError.swift; sourceTree = "<group>"; };
 		FCC05AF9C04D466176D57C50 /* en */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		FCF7AC6B0BDDD8CE8977891B /* ccpd-quarantine.jsonl */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-quarantine.jsonl"; sourceTree = "<group>"; };
+		FCF7AC6B0BDDD8CE8977891B /* ccpd-quarantine.jsonl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "ccpd-quarantine.jsonl"; sourceTree = "<group>"; };
 		FDB5543123297A35A9342C45 /* GameMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
 		FF8FB5E88973523F2CB46EA4 /* MoveHistoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MoveHistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,7 +235,6 @@
 				C404173AB8753A6C65157E1D /* zstd_decompress.cpp */,
 				746053AE37C33D5192715CF3 /* zstd_decompress_block.cpp */,
 			);
-			name = decompress;
 			path = decompress;
 			sourceTree = "<group>";
 		};
@@ -248,7 +247,6 @@
 				FCC789A852956CBD728A41A1 /* Learning */,
 				8AD03507D4C96E53433B09C9 /* Localizations */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -257,7 +255,6 @@
 			children = (
 				261D8F5D8B38B021DC1A0D94 /* XiangqiMobileUITests */,
 			);
-			name = Tests;
 			path = Tests;
 			sourceTree = "<group>";
 		};
@@ -266,7 +263,6 @@
 			children = (
 				A0B53D5CBE7052FCE0040A63 /* pikafish.nnue */,
 			);
-			name = Engine;
 			path = Engine;
 			sourceTree = "<group>";
 		};
@@ -275,7 +271,6 @@
 			children = (
 				D246F215FF0795CA72EC9CCE /* SmokeTests.swift */,
 			);
-			name = XiangqiMobileUITests;
 			path = XiangqiMobileUITests;
 			sourceTree = "<group>";
 		};
@@ -292,7 +287,6 @@
 				5FD414BCC5EB2C6BE4139B47 /* ResultView.swift */,
 				EF02E97FDBA08CA1942EFF55 /* SettingsView.swift */,
 			);
-			name = Features;
 			path = Features;
 			sourceTree = "<group>";
 		};
@@ -302,7 +296,6 @@
 				5A50AC039EF93EB680E9021C /* common */,
 				01669E3DAFBB062F7C7BD5A9 /* decompress */,
 			);
-			name = external;
 			path = external;
 			sourceTree = "<group>";
 		};
@@ -321,7 +314,6 @@
 				C2633E5903C4BEEAA6556FD8 /* Theming */,
 				18D9C2131A7DCEE0CECF2910 /* XiangqiMobileApp.swift */,
 			);
-			name = App;
 			path = App;
 			sourceTree = "<group>";
 		};
@@ -332,7 +324,6 @@
 				4B81B67B84A501FCBDEF1888 /* Core */,
 				2C0BBD7D202766D32A0831DF /* Features */,
 			);
-			name = XiangqiMobile;
 			path = XiangqiMobile;
 			sourceTree = "<group>";
 		};
@@ -350,7 +341,6 @@
 				29CDE3966400A225887554C2 /* SoundSynthesis.swift */,
 				51054CE3BE187FBF346DFA43 /* XiangqiPGN.swift */,
 			);
-			name = Core;
 			path = Core;
 			sourceTree = "<group>";
 		};
@@ -362,7 +352,6 @@
 				7E58077B7BAE7E162B56AC19 /* nnue_accumulator.cpp */,
 				94C2EA63581FB06C9BAFF7CF /* nnue_misc.cpp */,
 			);
-			name = nnue;
 			path = nnue;
 			sourceTree = "<group>";
 		};
@@ -391,7 +380,6 @@
 				F0EE331CF00273CB469814C5 /* xxhash.cpp */,
 				3A03AC0196250493BCE47AF4 /* zstd_common.cpp */,
 			);
-			name = common;
 			path = common;
 			sourceTree = "<group>";
 		};
@@ -410,7 +398,6 @@
 				61C1A46536F07082BF9D74AF /* Pikafish-AUTHORS.txt */,
 				D532076E86D5E991269D7AF7 /* CCPD-CC-BY-4.0.txt */,
 			);
-			name = Licenses;
 			path = Licenses;
 			sourceTree = "<group>";
 		};
@@ -428,7 +415,6 @@
 			children = (
 				68D6C377F24EAEA4F4898E20 /* Localizable.strings */,
 			);
-			name = Localizations;
 			path = Localizations;
 			sourceTree = "<group>";
 		};
@@ -438,7 +424,6 @@
 				2A0C7E40A61CAA95C0CE1289 /* full_threats.cpp */,
 				56745BC728486CFF64CEBAA4 /* half_ka_v2_hm.cpp */,
 			);
-			name = features;
 			path = features;
 			sourceTree = "<group>";
 		};
@@ -489,7 +474,6 @@
 				715AD7D955EBC0163F914E2B /* ThemeRegistry.swift */,
 				D35C0A4FA3551FCF7B8E3FA5 /* Tournament.swift */,
 			);
-			name = Theming;
 			path = Theming;
 			sourceTree = "<group>";
 		};
@@ -503,7 +487,6 @@
 				43D56047BDFFB0A2836C757B /* Strings+Generated.swift */,
 				FC3BAEAF8482C3B5A44C4294 /* UserFacingError.swift */,
 			);
-			name = Localization;
 			path = Localization;
 			sourceTree = "<group>";
 		};
@@ -514,7 +497,6 @@
 				00E1F5C1003087BF66ABA8A9 /* PikafishBridge.h */,
 				7CC3E9DBF9584262871CC281 /* XiangqiMobile-Bridging-Header.h */,
 			);
-			name = EngineBridge;
 			path = EngineBridge;
 			sourceTree = "<group>";
 		};
@@ -526,7 +508,6 @@
 				A31BFFD84E37966B66B1D54A /* ccpd-audit.json */,
 				FCF7AC6B0BDDD8CE8977891B /* ccpd-quarantine.jsonl */,
 			);
-			name = Learning;
 			path = Learning;
 			sourceTree = "<group>";
 		};
@@ -574,6 +555,7 @@
 		1998C3669A5C8863FEB23AFB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 2700;
 				LastUpgradeCheck = 2700;
 			};
@@ -588,8 +570,6 @@
 				"zh-Hant",
 			);
 			mainGroup = 5959D8FA81EA566D557BFC5D;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 100;
 			productRefGroup = 7A0BA4314DB94DC54CAB115A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -775,7 +755,10 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -797,6 +780,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -827,9 +811,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -848,6 +834,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -884,7 +871,10 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -936,6 +926,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -966,9 +957,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -980,6 +973,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
