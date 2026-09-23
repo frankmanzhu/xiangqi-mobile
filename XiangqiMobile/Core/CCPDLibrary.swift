@@ -253,6 +253,7 @@ public struct CCPDLibrary: Sendable {
     public func records(
         category: String? = nil,
         matching query: String? = nil,
+        sourcePrefix: String? = nil,
         limit: Int = 100,
         offset: Int = 0
     ) throws -> [CCPDRecordSummary] {
@@ -263,8 +264,12 @@ public struct CCPDLibrary: Sendable {
                 predicates.append("category = ?")
                 bindings.append(category)
             }
+            if let sourcePrefix, !sourcePrefix.isEmpty {
+                predicates.append("source_path LIKE ? ESCAPE '\\'")
+                bindings.append("\(escapedLikePattern(sourcePrefix))%")
+            }
             if let query = query?.trimmingCharacters(in: .whitespacesAndNewlines), !query.isEmpty {
-                let columns = ["event", "red", "black", "ecco", "date_text", "result"]
+                let columns = ["event", "red", "black", "ecco", "date_text", "result", "source_path"]
                 let variants = chineseSearchVariants(query)
                 let clauses = variants.map { _ in
                     "(" + columns.map { "\($0) LIKE ? ESCAPE '\\'" }.joined(separator: " OR ") + ")"
@@ -481,6 +486,7 @@ public struct LearningLibraryStore: Sendable {
     public func records(
         category: String? = nil,
         matching query: String? = nil,
+        sourcePrefix: String? = nil,
         limit: Int = 100,
         offset: Int = 0
     ) throws -> [CCPDRecordSummary] {
@@ -490,11 +496,13 @@ public struct LearningLibraryStore: Sendable {
         let combined = try bundled.records(
             category: category,
             matching: query,
+            sourcePrefix: sourcePrefix,
             limit: perDatabaseLimit,
             offset: 0
         ) + user.records(
             category: category,
             matching: query,
+            sourcePrefix: sourcePrefix,
             limit: perDatabaseLimit,
             offset: 0
         )

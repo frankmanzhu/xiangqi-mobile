@@ -37,6 +37,36 @@ enum CCPDCategory {
     static let matingPracticeID = "殺局_殺法_練習題"
 }
 
+private enum LearningMatchSubcategory: String, CaseIterable, Identifiable {
+    case all
+    case ccpdMaster
+    case ccpdComputer
+    case wxf
+    case dongping
+
+    var id: String { rawValue }
+
+    var sourcePrefix: String? {
+        switch self {
+        case .all: nil
+        case .ccpdMaster: "對局/大師對局/"
+        case .ccpdComputer: "對局/電腦對局/"
+        case .wxf: "ICCS/WXF/"
+        case .dongping: "ICCS/Dongping/"
+        }
+    }
+
+    var titleKey: LocalizedKey {
+        switch self {
+        case .all: L10n.Learn.Subcategory.allMatches
+        case .ccpdMaster: L10n.Learn.Subcategory.ccpdMasterMatches
+        case .ccpdComputer: L10n.Learn.Subcategory.ccpdComputerMatches
+        case .wxf: L10n.Learn.Subcategory.wxfMatches
+        case .dongping: L10n.Learn.Subcategory.dongpingMatches
+        }
+    }
+}
+
 private enum LearningLibraryProvider {
     static func load() throws -> LearningLibraryStore {
         guard let url = Bundle.main.url(forResource: "ccpd", withExtension: "sqlite3") else {
@@ -152,6 +182,7 @@ struct LearningLibraryView: View {
     let category: String
     @State private var records: [CCPDRecordSummary] = []
     @State private var query = ""
+    @State private var subcategory: LearningMatchSubcategory = .all
     @State private var errorMessage: UserFacingError?
     @State private var isLoading = true
 
@@ -165,45 +196,63 @@ struct LearningLibraryView: View {
                     systemImage: "exclamationmark.triangle",
                     description: Text(verbatim: errorMessage.text(l10n))
                 )
-            } else if records.isEmpty {
-                ContentUnavailableView.search(text: query)
             } else {
-                List(records) { record in
-                    Button {
-                        app.path.append(
-                            category == CCPDCategory.matingPracticeID
-                                ? .practiceRecord(record.id)
-                                : .studyRecord(record.id)
-                        )
-                    } label: {
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text(verbatim: record.event.nilIfEmpty ?? record.sourcePath)
-                                .font(.headline).foregroundStyle(.primary).lineLimit(2)
-                            HStack(spacing: 6) {
-                                if let red = record.red.nilIfEmpty { Text(verbatim: red) }
-                                if record.red.nilIfEmpty != nil || record.black.nilIfEmpty != nil {
-                                    Text(L10n.Common.nameSeparator, l10n)
+                List {
+                    if category == "對局" {
+                        Section {
+                            Picker(l10n(L10n.Learn.Subcategory.title), selection: $subcategory) {
+                                ForEach(LearningMatchSubcategory.allCases) { option in
+                                    Text(option.titleKey, l10n)
+                                        .tag(option)
                                 }
-                                if let black = record.black.nilIfEmpty { Text(verbatim: black) }
                             }
-                            .font(.subheadline).foregroundStyle(.secondary).lineLimit(1)
-                            HStack {
-                                if let date = record.dateText.nilIfEmpty { Text(verbatim: date) }
-                                if let ecco = record.ecco.nilIfEmpty { Text(verbatim: ecco) }
-                                Text(L10n.Learn.plyCount, l10n, record.moveCount)
-                            }
-                            .font(.caption).foregroundStyle(.tertiary)
+                            .pickerStyle(.menu)
+                        } header: {
+                            Text(L10n.Learn.Subcategory.title, l10n)
                         }
-                        .padding(.vertical, 4)
                     }
-                    .buttonStyle(.plain)
-                    .accessibilityIdentifier("ccpd-record-\(record.id)")
+
+                    if records.isEmpty {
+                        ContentUnavailableView.search(text: query)
+                    } else {
+                        ForEach(records) { record in
+                            Button {
+                                app.path.append(
+                                    category == CCPDCategory.matingPracticeID
+                                        ? .practiceRecord(record.id)
+                                        : .studyRecord(record.id)
+                                )
+                            } label: {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text(verbatim: record.event.nilIfEmpty ?? record.sourcePath)
+                                        .font(.headline).foregroundStyle(.primary).lineLimit(2)
+                                    HStack(spacing: 6) {
+                                        if let red = record.red.nilIfEmpty { Text(verbatim: red) }
+                                        if record.red.nilIfEmpty != nil || record.black.nilIfEmpty != nil {
+                                            Text(L10n.Common.nameSeparator, l10n)
+                                        }
+                                        if let black = record.black.nilIfEmpty { Text(verbatim: black) }
+                                    }
+                                    .font(.subheadline).foregroundStyle(.secondary).lineLimit(1)
+                                    HStack {
+                                        if let date = record.dateText.nilIfEmpty { Text(verbatim: date) }
+                                        if let ecco = record.ecco.nilIfEmpty { Text(verbatim: ecco) }
+                                        Text(L10n.Learn.plyCount, l10n, record.moveCount)
+                                    }
+                                    .font(.caption).foregroundStyle(.tertiary)
+                                }
+                                .padding(.vertical, 4)
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityIdentifier("ccpd-record-\(record.id)")
+                        }
+                    }
                 }
             }
         }
         .navigationTitle(CCPDCategory.title(category, l10n))
         .searchable(text: $query, prompt: l10n(L10n.Learn.searchPrompt))
-        .task(id: query) {
+        .task(id: "\(query)|\(subcategory.rawValue)") {
             try? await Task.sleep(for: .milliseconds(query.isEmpty ? 0 : 250))
             guard !Task.isCancelled else { return }
             await load()
@@ -217,8 +266,14 @@ struct LearningLibraryView: View {
             let library = try LearningLibraryProvider.load()
             let category = category
             let query = query
+            let sourcePrefix = subcategory.sourcePrefix
             records = try await Task.detached {
-                try library.records(category: category, matching: query, limit: 200)
+                try library.records(
+                    category: category,
+                    matching: query,
+                    sourcePrefix: sourcePrefix,
+                    limit: 200
+                )
             }.value
             errorMessage = nil
         } catch {

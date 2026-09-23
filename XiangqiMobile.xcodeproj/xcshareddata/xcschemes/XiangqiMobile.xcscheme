@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "2700"
+   LastUpgradeVersion = "1600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F24A03D1B54660CF2AA406F"
+               BlueprintIdentifier = "D5305DFFA658A29103DC9D5D"
                BuildableName = "XiangqiMobile.app"
                BlueprintName = "XiangqiMobile"
                ReferencedContainer = "container:XiangqiMobile.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9EF80F22F14CDB3099F80549"
+               BlueprintIdentifier = "73C023F3152C4B6737CD840E"
                BuildableName = "XiangqiMobileUITests.xctest"
                BlueprintName = "XiangqiMobileUITests"
                ReferencedContainer = "container:XiangqiMobile.xcodeproj">

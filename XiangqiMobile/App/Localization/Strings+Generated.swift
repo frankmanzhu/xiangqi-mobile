@@ -324,11 +324,26 @@ public enum L10n {
         public static let plyCount = LocalizedKey("learn.plyCount", en: "%lld plies", arguments: 1)
         /// English: "%@ records"
         public static let recordCount = LocalizedKey("learn.recordCount", en: "%@ records", arguments: 1)
-        /// English: "Player, event, or ECCO"
-        public static let searchPrompt = LocalizedKey("learn.searchPrompt", en: "Player, event, or ECCO")
+        /// English: "Player, tournament, opening, or year"
+        public static let searchPrompt = LocalizedKey("learn.searchPrompt", en: "Player, tournament, opening, or year")
         public enum Section {
             /// English: "Browse"
             public static let browse = LocalizedKey("learn.section.browse", en: "Browse")
+        }
+
+        public enum Subcategory {
+            /// English: "All matches"
+            public static let allMatches = LocalizedKey("learn.subcategory.allMatches", en: "All matches")
+            /// English: "CCPD · Computer matches"
+            public static let ccpdComputerMatches = LocalizedKey("learn.subcategory.ccpdComputerMatches", en: "CCPD · Computer matches")
+            /// English: "CCPD · Master matches"
+            public static let ccpdMasterMatches = LocalizedKey("learn.subcategory.ccpdMasterMatches", en: "CCPD · Master matches")
+            /// English: "Dongping ICCS matches"
+            public static let dongpingMatches = LocalizedKey("learn.subcategory.dongpingMatches", en: "Dongping ICCS matches")
+            /// English: "Match collection"
+            public static let title = LocalizedKey("learn.subcategory.title", en: "Match collection")
+            /// English: "WXF ICCS matches"
+            public static let wxfMatches = LocalizedKey("learn.subcategory.wxfMatches", en: "WXF ICCS matches")
         }
 
         /// English: "Learn"

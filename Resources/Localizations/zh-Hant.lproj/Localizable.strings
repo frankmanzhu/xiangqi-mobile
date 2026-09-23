@@ -206,6 +206,18 @@
 
 "learn.category.openings" = "開局";
 
+"learn.subcategory.allMatches" = "全部對局";
+
+"learn.subcategory.ccpdComputerMatches" = "CCPD · 電腦對局";
+
+"learn.subcategory.ccpdMasterMatches" = "CCPD · 大師對局";
+
+"learn.subcategory.dongpingMatches" = "Dongping ICCS 對局";
+
+"learn.subcategory.title" = "對局資料庫";
+
+"learn.subcategory.wxfMatches" = "WXF ICCS 對局";
+
 "learn.couldNotLoadRecords" = "無法載入棋譜";
 
 "learn.dataset.note" = "資料集由曾昱翰與陳柏年製作。原始棋譜經解碼、轉換為 UCI 並驗證合法性；有歧義或無效的棋譜已被排除。";
@@ -230,7 +242,7 @@
 
 "learn.recordCount" = "%@ 個棋譜";
 
-"learn.searchPrompt" = "棋手、賽事或 ECCO";
+"learn.searchPrompt" = "棋手、賽事、開局或年份";
 
 "learn.section.browse" = "瀏覽";
 

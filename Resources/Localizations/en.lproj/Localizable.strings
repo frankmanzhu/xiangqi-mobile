@@ -206,6 +206,18 @@
 
 "learn.category.openings" = "Openings";
 
+"learn.subcategory.allMatches" = "All matches";
+
+"learn.subcategory.ccpdComputerMatches" = "CCPD · Computer matches";
+
+"learn.subcategory.ccpdMasterMatches" = "CCPD · Master matches";
+
+"learn.subcategory.dongpingMatches" = "Dongping ICCS matches";
+
+"learn.subcategory.title" = "Match collection";
+
+"learn.subcategory.wxfMatches" = "WXF ICCS matches";
+
 "learn.couldNotLoadRecords" = "Could not load records";
 
 "learn.dataset.note" = "Dataset by Yu-Han Tseng and Bo-Nian Chen. Source records are decoded, converted to UCI, and legality-validated; ambiguous or invalid records are excluded.";
@@ -230,7 +242,7 @@
 
 "learn.recordCount" = "%@ records";
 
-"learn.searchPrompt" = "Player, event, or ECCO";
+"learn.searchPrompt" = "Player, tournament, opening, or year";
 
 "learn.section.browse" = "Browse";
 

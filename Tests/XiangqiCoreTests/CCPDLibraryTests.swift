@@ -45,6 +45,12 @@ final class CCPDLibraryTests: XCTestCase {
         XCTAssertEqual(try library.records(matching: "*").map(\.id), ["ccpd:開局/fixture"])
     }
 
+    func testFiltersRecordsBySourcePrefix() throws {
+        let library = CCPDLibrary(databaseURL: databaseURL)
+        XCTAssertEqual(try library.records(sourcePrefix: "開局/").map(\.id), ["ccpd:開局/fixture"])
+        XCTAssertTrue(try library.records(sourcePrefix: "對局/").isEmpty)
+    }
+
     func testReturnsNilForUnknownRecord() throws {
         XCTAssertNil(try CCPDLibrary(databaseURL: databaseURL).record(id: "missing"))
     }

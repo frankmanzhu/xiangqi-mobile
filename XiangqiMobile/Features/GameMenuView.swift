@@ -40,6 +40,7 @@ struct GameMenuView: View {
                         .font(.footnote).foregroundStyle(.secondary)
                 }
             }
+            .tint(.primary)
             .navigationTitle(l10n(L10n.Game.menu))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

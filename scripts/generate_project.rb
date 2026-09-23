@@ -57,6 +57,8 @@ end
 resources_group = project.main_group.new_group("Resources", "Resources")
 assets = resources_group.new_file("Assets.xcassets")
 target.resources_build_phase.add_file_reference(assets)
+privacy_manifest = resources_group.new_file("PrivacyInfo.xcprivacy")
+target.resources_build_phase.add_file_reference(privacy_manifest)
 [
   ["Engine", "pikafish.nnue"],
   ["Licenses", "Pikafish-GPL-3.0.txt"],
@@ -111,7 +113,7 @@ target.build_configurations.each do |config|
   settings["INFOPLIST_KEY_LSApplicationCategoryType"] = "public.app-category.board-games"
   settings["INFOPLIST_KEY_UIApplicationSceneManifest_Generation"] = "YES"
   settings["INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents"] = "YES"
-  settings["INFOPLIST_KEY_UILaunchScreen_Generation"] = "YES"
+  settings["INFOPLIST_FILE"] = "Resources/Info.plist"
   settings["INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone"] = "UIInterfaceOrientationPortrait"
   settings["TARGETED_DEVICE_FAMILY"] = "1"
   settings["IPHONEOS_DEPLOYMENT_TARGET"] = "18.0"

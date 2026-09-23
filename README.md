@@ -137,6 +137,8 @@ The merger backs up the current database, skips canonical duplicates, preserves 
 
 The shipped seed is for human learning, browsing, and replay. These game records are not used to train Pikafish or to generate engine hints.
 
+In the Learning screen, the `對局` (Matches) category can be narrowed by collection: CCPD master matches, CCPD computer matches, WXF ICCS matches, or Dongping ICCS matches. The search field searches the imported metadata for player names, events or tournaments, ECCO/opening codes, dates or years, and results. The original CCPD master collection preserves its player-organized source paths; tournament, opening, and year discovery is provided through the searchable metadata.
+
 The app performs no network requests and has no account or online-play code. Computer play uses Pikafish compiled in-process from submodule revision `6a59ee2f7b105bff64d9efc2692591107787e2b1`, plus the bundled `pikafish.nnue` network with SHA-256 `7d13d73569a9b571ba0eb20cf1596247bc2a42738967e61afef6482b231e900e`. There is no alternate or fallback computer player. The engine receives the canonical starting FEN and complete ordered UCI move history for every search.
 
 ## Licensing and source availability
