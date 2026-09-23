@@ -4,6 +4,10 @@ import SwiftUI
 struct XiangqiMobileApp: App {
     @StateObject private var appModel = AppModel()
 
+    init() {
+        PreferenceMigration.run()
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()

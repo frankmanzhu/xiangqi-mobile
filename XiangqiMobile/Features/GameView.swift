@@ -56,7 +56,10 @@ struct GameView: View {
             if phase != .active { Task { await session.pause() } }
             else { Task { await session.startIfNeeded() } }
         }
-        .onAppear { Task { await session.startIfNeeded() } }
+        .onAppear {
+            FeedbackPlayer.shared.prepare()
+            Task { await session.startIfNeeded() }
+        }
         .onDisappear { Task { await session.pause() } }
     }
 

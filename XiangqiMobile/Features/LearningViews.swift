@@ -461,6 +461,7 @@ struct CCPDPuzzleView: View {
         }
         .navigationTitle(l10n(L10n.Practice.title))
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear { FeedbackPlayer.shared.prepare() }
         .task { await load() }
     }
 
@@ -474,10 +475,13 @@ struct CCPDPuzzleView: View {
                 switch result {
                 case .incorrect:
                     feedback = .incorrect
+                    FeedbackPlayer.shared.play(.invalidAttempt)
                 case .correct:
                     feedback = .correct
+                    FeedbackPlayer.shared.play(.move)
                 case .completed:
                     feedback = .completed
+                    FeedbackPlayer.shared.play(.gameEnd)
                     if !recordedCompletion {
                         recordedCompletion = true
                         Task { try? await app.learningProgress.recordCompletion(for: recordID, finalPly: current.currentPly) }
@@ -492,6 +496,7 @@ struct CCPDPuzzleView: View {
         if let piece = current.position.piece(at: square), piece.side == current.position.sideToMove {
             selectedSquare = square
             feedback = .chooseDestination
+            FeedbackPlayer.shared.play(.pieceSelected)
         } else {
             selectedSquare = nil
         }

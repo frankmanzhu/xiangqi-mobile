@@ -120,6 +120,7 @@ final class GameSession: ObservableObject {
             let moves = position.legalMoves(from: square)
             selectedSquare = square
             legalDestinations = Set(moves.map(\.to))
+            FeedbackPlayer.shared.play(.pieceSelected)
         } else {
             clearSelection()
         }
@@ -195,6 +196,7 @@ final class GameSession: ObservableObject {
         record.result = GameResult(winner: winner, reason: .resignation)
         record.updatedAt = Date()
         showResult = true
+        FeedbackPlayer.shared.play(.gameEnd)
         await persist()
     }
 
@@ -252,6 +254,14 @@ final class GameSession: ObservableObject {
             record.result = result
             showResult = true
         }
+        // One cue per move, so a capture that gives check does not fire twice.
+        if record.result != nil {
+            FeedbackPlayer.shared.play(.gameEnd)
+        } else if position.isInCheck(position.sideToMove) {
+            FeedbackPlayer.shared.play(.check)
+        } else {
+            FeedbackPlayer.shared.play(captured == nil ? .move : .capture)
+        }
         await persist()
 
         if record.mode == .computer && !isLocalTurn && record.isActive {
@@ -260,7 +270,7 @@ final class GameSession: ObservableObject {
     }
 
     private func proposeOrCommit(_ move: Move) async {
-        if UserDefaults.standard.bool(forKey: "confirmMoves") {
+        if GamePreference.confirmMoves.value {
             pendingMove = move
         } else {
             await commit(move, computerSeed: nil)
@@ -370,6 +380,7 @@ final class GameSession: ObservableObject {
         record.result = GameResult(winner: loser.opponent, reason: .timeLoss)
         record.updatedAt = Date()
         showResult = true
+        FeedbackPlayer.shared.play(.gameEnd)
         Task { await persist() }
     }
 }

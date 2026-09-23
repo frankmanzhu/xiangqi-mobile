@@ -37,6 +37,31 @@ The project's `knownRegions` must list every shipped language. Xcode silently
 drops translations for regions missing from it; `scripts/generate_project.rb`
 sets them.
 
+## Settings behaviour
+
+Every toggle in Settings drives something:
+
+- **Coordinates** labels the board's files (a–i) and ranks (0–9), matching the
+  move record. `Red perspective` shows them only while the board is viewed from
+  red's side; `Always` keeps them through a flip, where they run the other way.
+  Showing them widens the board's leading margin so the digits sit clear of the
+  edge pieces.
+- **Sound effects** plays a cue for a move, a capture, check, the end of a game,
+  and a wrong move in practice. The cues are synthesized at runtime from
+  `GameSoundRecipe` rather than bundled as audio, which keeps the app asset-free
+  and the sounds testable — see `SoundSynthesisTests`. To retune one, change the
+  numbers in the recipe. The audio session is `.ambient`, so the game mixes with
+  whatever is already playing and the ring switch silences it.
+- **Haptics** pairs each of those events with a matching impact or notification.
+
+Audio work runs on its own queue. Activating a session or building an
+`AVAudioPlayer` blocks on the audio server, and on the main thread that trips
+UIKit's hang-risk check and can stall the tap that caused the sound.
+
+Settings whose stored vocabulary changed are normalized once at launch by
+`PreferenceMigration`, so a value written by an older build still selects the
+right option instead of leaving the picker blank.
+
 ## Theming
 
 A theme is a `Theme` value — semantic colours, shape metrics, and a preferred

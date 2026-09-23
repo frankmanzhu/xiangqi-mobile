@@ -1,22 +1,32 @@
 import SwiftUI
 
 /// Point geometry for a 9x10 xiangqi grid inside a given size.
+///
+/// When coordinates are shown the left margin widens to hold the rank digits,
+/// so the labels sit clear of the edge pieces instead of underneath them.
 struct BoardGeometry {
     let size: CGSize
+    /// Top and trailing margin.
     let inset: CGFloat
+    /// Leading margin, widened to make room for rank digits.
+    let leadingInset: CGFloat
     let step: CGFloat
     let pieceSize: CGFloat
+    let showsCoordinates: Bool
 
-    init(size: CGSize, pieceScale: CGFloat) {
+    init(size: CGSize, pieceScale: CGFloat, showsCoordinates: Bool = false) {
         self.size = size
+        self.showsCoordinates = showsCoordinates
         let safeWidth = size.width.isFinite ? max(size.width, 80) : 80
-        self.inset = min(22, max(8, safeWidth * 0.055))
-        self.step = max(1, (safeWidth - inset * 2) / 8)
+        let base = min(22, max(8, safeWidth * 0.055))
+        self.inset = base
+        self.leadingInset = base + (showsCoordinates ? max(12, safeWidth * 0.038) : 0)
+        self.step = max(1, (safeWidth - leadingInset - base) / 8)
         self.pieceSize = max(1, min(44, step * pieceScale))
     }
 
     func point(column: Int, row: Int) -> CGPoint {
-        CGPoint(x: inset + CGFloat(column) * step, y: inset + CGFloat(row) * step)
+        CGPoint(x: leadingInset + CGFloat(column) * step, y: inset + CGFloat(row) * step)
     }
 
     func point(for square: Square, orientation: Side) -> CGPoint {
@@ -26,16 +36,32 @@ struct BoardGeometry {
     }
 
     func square(at point: CGPoint, orientation: Side) -> Square? {
-        let column = Int(((point.x - inset) / step).rounded())
+        let column = Int(((point.x - leadingInset) / step).rounded())
         let row = Int(((point.y - inset) / step).rounded())
         guard (0...8).contains(column), (0...9).contains(row) else { return nil }
         return orientation == .red
             ? Square(file: column, rank: 9 - row)
             : Square(file: 8 - column, rank: row)
     }
+
+    var coordinateFontSize: CGFloat { max(9, step * 0.26) }
+
+    /// Baseline for the file letters: below the last rank's pieces, and never
+    /// past the bottom edge on a board too short to clear them.
+    var fileLabelY: CGFloat {
+        let lastRow = point(column: 0, row: 9).y
+        let clear = lastRow + pieceSize / 2 + coordinateFontSize * 0.85
+        let limit = max(size.height, lastRow) - coordinateFontSize * 0.6
+        return min(clear, limit)
+    }
+
+    /// Centre line for the rank digits, between the view edge and the pieces.
+    var rankLabelX: CGFloat {
+        max(coordinateFontSize * 0.62, (leadingInset - pieceSize / 2) / 2)
+    }
 }
 
-/// The board lines, palace diagonals, and river text.
+/// The board lines, palace diagonals, river text, and coordinate labels.
 ///
 /// Every board in the app draws through this one view, so a theme's line
 /// weight and river colour apply everywhere without being restated.
@@ -43,6 +69,7 @@ struct BoardGrid: View {
     @Environment(\.theme) private var theme
     @Environment(\.l10n) private var l10n
     let geometry: BoardGeometry
+    let orientation: Side
 
     var body: some View {
         Canvas { context, _ in
@@ -82,9 +109,40 @@ struct BoardGrid: View {
             }
             .font(.system(size: max(13, geometry.step * 0.28), weight: .semibold, design: .serif))
             .foregroundStyle(theme.colors.river)
-            .padding(.horizontal, geometry.inset + geometry.step * 0.8)
+            .padding(.leading, geometry.leadingInset + geometry.step * 0.8)
+            .padding(.trailing, geometry.inset + geometry.step * 0.8)
+        }
+        .overlay {
+            if geometry.showsCoordinates { coordinates }
         }
         .allowsHitTesting(false)
+    }
+
+    /// File letters below the board and rank digits down its leading margin,
+    /// naming each line the way the move record does.
+    private var coordinates: some View {
+        ZStack {
+            ForEach(0...8, id: \.self) { column in
+                let file = orientation == .red ? column : 8 - column
+                Text(verbatim: Square(file: file, rank: 0).uci.prefix(1).uppercased())
+                    .position(
+                        x: geometry.point(column: column, row: 0).x,
+                        y: geometry.fileLabelY
+                    )
+            }
+            ForEach(0...9, id: \.self) { row in
+                let rank = orientation == .red ? 9 - row : row
+                Text(verbatim: "\(rank)")
+                    .position(
+                        x: geometry.rankLabelX,
+                        y: geometry.point(column: 0, row: row).y
+                    )
+            }
+        }
+        .font(.system(size: geometry.coordinateFontSize, weight: .semibold, design: .rounded))
+        .monospacedDigit()
+        .foregroundStyle(theme.colors.line.opacity(0.55))
+        .accessibilityHidden(true)
     }
 }
 
@@ -151,16 +209,27 @@ struct BoardView: View {
     @ObservedObject var session: GameSession
     @Environment(\.theme) private var theme
     @Environment(\.l10n) private var l10n
+    @AppStorage(CoordinateDisplay.storageKey)
+    private var coordinatesRaw = CoordinateDisplay.redPerspective.rawValue
     @State private var dragStart: Square?
+
+    private var showsCoordinates: Bool {
+        CoordinateDisplay(storedValue: coordinatesRaw)
+            .isVisible(orientation: session.record.orientation)
+    }
 
     var body: some View {
         GeometryReader { proxy in
-            let geometry = BoardGeometry(size: proxy.size, pieceScale: theme.metrics.pieceScale)
+            let geometry = BoardGeometry(
+                size: proxy.size,
+                pieceScale: theme.metrics.pieceScale,
+                showsCoordinates: showsCoordinates
+            )
             ZStack {
                 theme.boardShape
                     .fill(theme.colors.board)
                     .shadow(color: .black.opacity(0.12), radius: 10, y: 5)
-                BoardGrid(geometry: geometry)
+                BoardGrid(geometry: geometry, orientation: session.record.orientation)
                 stateMarkers(geometry)
                 touchGrid(geometry)
                 pieces(geometry)
@@ -275,16 +344,26 @@ struct BoardView: View {
 struct ReadOnlyBoardView: View {
     @Environment(\.theme) private var theme
     @Environment(\.l10n) private var l10n
+    @AppStorage(CoordinateDisplay.storageKey)
+    private var coordinatesRaw = CoordinateDisplay.redPerspective.rawValue
     let position: Position
     let orientation: Side
     let lastMove: Move?
 
+    private var showsCoordinates: Bool {
+        CoordinateDisplay(storedValue: coordinatesRaw).isVisible(orientation: orientation)
+    }
+
     var body: some View {
         GeometryReader { proxy in
-            let geometry = BoardGeometry(size: proxy.size, pieceScale: theme.metrics.pieceScale)
+            let geometry = BoardGeometry(
+                size: proxy.size,
+                pieceScale: theme.metrics.pieceScale,
+                showsCoordinates: showsCoordinates
+            )
             ZStack {
                 theme.boardShape.fill(theme.colors.board)
-                BoardGrid(geometry: geometry)
+                BoardGrid(geometry: geometry, orientation: orientation)
                 if let lastMove {
                     marker(lastMove.from, geometry, opacity: 0.28)
                     marker(lastMove.to, geometry, opacity: 0.5)
@@ -312,6 +391,8 @@ struct ReadOnlyBoardView: View {
 struct PracticeBoardView: View {
     @Environment(\.theme) private var theme
     @Environment(\.l10n) private var l10n
+    @AppStorage(CoordinateDisplay.storageKey)
+    private var coordinatesRaw = CoordinateDisplay.redPerspective.rawValue
     let position: Position
     let orientation: Side
     let lastMove: Move?
@@ -319,12 +400,20 @@ struct PracticeBoardView: View {
     let legalDestinations: Set<Square>
     let onTap: (Square) -> Void
 
+    private var showsCoordinates: Bool {
+        CoordinateDisplay(storedValue: coordinatesRaw).isVisible(orientation: orientation)
+    }
+
     var body: some View {
         GeometryReader { proxy in
-            let geometry = BoardGeometry(size: proxy.size, pieceScale: theme.metrics.pieceScale)
+            let geometry = BoardGeometry(
+                size: proxy.size,
+                pieceScale: theme.metrics.pieceScale,
+                showsCoordinates: showsCoordinates
+            )
             ZStack {
                 theme.boardShape.fill(theme.colors.board)
-                BoardGrid(geometry: geometry)
+                BoardGrid(geometry: geometry, orientation: orientation)
                 if let lastMove {
                     marker(lastMove.from, geometry, theme.colors.accent.opacity(0.28), .ring)
                     marker(lastMove.to, geometry, theme.colors.accent.opacity(0.5), .ring)
