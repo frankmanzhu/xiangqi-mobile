@@ -67,6 +67,8 @@ The app performs no network requests and has no account or online-play code. Com
 
 ## Licensing and source availability
 
+Copyright (c) 2026 Frank Zhu
+
 Xiangqi Mobile is licensed under the GNU General Public License, version 3 or any later version (GPL-3.0-or-later). The app embeds Pikafish in-process, so the distributed application and its corresponding source are provided under GPL-compatible terms. The root [`LICENSE`](LICENSE) file identifies the project license; the complete GPL text, Pikafish attribution, and authors list are bundled under `Resources/Licenses`.
 
 For every distributed version, the complete corresponding source is available from the matching release tag or commit in the [Xiangqi Mobile repository](https://github.com/frankmanzhu/xiangqi-mobile). This includes the Swift application and GUI source, the Pikafish submodule at the exact revision used for the build, the C/C++ bridge, the Xcode project, build scripts, and required resources. Users may rebuild, modify, and sign the app with their own Apple Developer account. They do not need this project's signing credentials, and submitting a pull request is not required to exercise those rights.
