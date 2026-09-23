@@ -1,6 +1,28 @@
 import Combine
 import Foundation
 
+/// What the status line should say, as a value rather than a sentence.
+///
+/// Keeping this semantic lets the view render it in the selected language;
+/// a session that formatted English here could not be translated.
+enum GameStatus: Equatable {
+    case win(Side, GameResultReason)
+    case draw(GameResultReason)
+    case reviewing(ply: Int, total: Int)
+    case check(Side)
+    case thinking
+    case sideToMove(Side)
+    case yourMove
+    case computerToMove
+}
+
+/// A transient banner shown over the board.
+enum GameMessage: Equatable {
+    case engineMismatch
+    case notSaved
+    case failure(String)
+}
+
 enum HintStage: Equatable {
     case available
     case searching
@@ -21,7 +43,7 @@ final class GameSession: ObservableObject {
     @Published var showHistory = false
     @Published var showMenu = false
     @Published var showResult = false
-    @Published var message: String?
+    @Published var message: GameMessage?
 
     private let repository: GameRepository
     private let computer: any ComputerPlayerClient
@@ -57,16 +79,16 @@ final class GameSession: ObservableObject {
     }
     var lastMove: Move? { record.moves.last.flatMap { Move(uci: $0.uci) } }
 
-    var statusText: String {
+    var status: GameStatus {
         if let result = record.result {
-            if let winner = result.winner { return "\(winner.title) wins · \(result.reason.rawValue.spaced)" }
-            return "Draw · \(result.reason.rawValue.spaced)"
+            guard let winner = result.winner else { return .draw(result.reason) }
+            return .win(winner, result.reason)
         }
-        if isReplaying { return "Reviewing move \(replayPly ?? 0) of \(record.moves.count)" }
-        if position.isInCheck(position.sideToMove) { return "Check · \(position.sideToMove.title) to move" }
-        if isThinking { return "Pikafish is thinking…" }
-        if record.mode == .localTwoPlayer { return "\(position.sideToMove.title) to move" }
-        return isLocalTurn ? "Your move" : "Computer to move"
+        if isReplaying { return .reviewing(ply: replayPly ?? 0, total: record.moves.count) }
+        if position.isInCheck(position.sideToMove) { return .check(position.sideToMove) }
+        if isThinking { return .thinking }
+        if record.mode == .localTwoPlayer { return .sideToMove(position.sideToMove) }
+        return isLocalTurn ? .yourMove : .computerToMove
     }
 
     func startIfNeeded() async {
@@ -146,7 +168,7 @@ final class GameSession: ObservableObject {
                 hintStage = .source(move)
             } catch {
                 hintStage = .available
-                message = error.localizedDescription
+                message = .failure(error.localizedDescription)
             }
         }
     }
@@ -264,14 +286,14 @@ final class GameSession: ObservableObject {
             guard searchToken == token, positionVersion == version else { return }
             isThinking = false
             guard snapshot.fen == position.fen, position.legalMoves().contains(move) else {
-                message = "Pikafish returned a move that does not match the current game."
+                message = .engineMismatch
                 return
             }
             await commit(move, computerSeed: nil)
         } catch {
             guard searchToken == token, positionVersion == version else { return }
             isThinking = false
-            message = error.localizedDescription
+            message = .failure(error.localizedDescription)
         }
     }
 
@@ -280,7 +302,7 @@ final class GameSession: ObservableObject {
             try await repository.save(record)
             message = nil
         } catch {
-            message = "Game not saved"
+            message = .notSaved
         }
     }
 
@@ -349,14 +371,5 @@ final class GameSession: ObservableObject {
         record.updatedAt = Date()
         showResult = true
         Task { await persist() }
-    }
-}
-
-private extension String {
-    var spaced: String {
-        unicodeScalars.reduce(into: "") { result, scalar in
-            if CharacterSet.uppercaseLetters.contains(scalar), !result.isEmpty { result.append(" ") }
-            result.append(Character(scalar))
-        }.lowercased()
     }
 }

@@ -6,13 +6,18 @@ public enum Side: String, Codable, CaseIterable, Sendable {
 
     public var opponent: Side { self == .red ? .black : .red }
     public var forward: Int { self == .red ? 1 : -1 }
-    public var title: String { self == .red ? "Red" : "Black" }
+
+    /// Name used inside the portable game record. Deliberately not localized:
+    /// a saved or shared record must read the same in every language.
+    public var recordName: String { self == .red ? "Red" : "Black" }
 }
 
 public enum PieceKind: String, Codable, CaseIterable, Sendable {
     case general, advisor, elephant, horse, chariot, cannon, soldier
 
-    public var englishName: String { rawValue.capitalized }
+    /// Name used inside the portable game record. Deliberately not localized:
+    /// a saved or shared record must read the same in every language.
+    public var recordName: String { rawValue.capitalized }
     public var value: Int {
         switch self {
         case .general: 10_000
@@ -90,12 +95,6 @@ public enum GameMode: String, Codable, CaseIterable, Sendable {
     case computer
     case localTwoPlayer
 
-    public var title: String {
-        switch self {
-        case .computer: "Play Computer"
-        case .localTwoPlayer: "Two Players"
-        }
-    }
 }
 
 public enum TimeControl: String, Codable, CaseIterable, Sendable {
@@ -111,18 +110,33 @@ public enum TimeControl: String, Codable, CaseIterable, Sendable {
         }
     }
 
-    public var title: String {
-        switch self {
-        case .casual: "Casual"
-        case .tenMinutes: "10 min"
-        case .fifteenMinutes: "15 min"
-        }
-    }
 }
 
-public enum ThemeID: String, Codable, CaseIterable, Sendable {
-    case classic, tournament, calm
-    public var title: String { rawValue.capitalized }
+/// Identifies a theme without enumerating which themes exist.
+///
+/// An open identifier is what makes the theme set extensible: a build can add
+/// or drop a theme without changing this type, and a saved record naming an
+/// unknown theme still decodes (the registry substitutes its fallback).
+public struct ThemeID: RawRepresentable, Codable, Hashable, Sendable {
+    public let rawValue: String
+
+    public init(rawValue: String) { self.rawValue = rawValue }
+    public init(_ rawValue: String) { self.rawValue = rawValue }
+
+    public init(from decoder: any Decoder) throws {
+        rawValue = try decoder.singleValueContainer().decode(String.self)
+    }
+
+    public func encode(to encoder: any Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(rawValue)
+    }
+
+    public static let storageKey = "theme"
+
+    public static let classic = ThemeID("classic")
+    public static let tournament = ThemeID("tournament")
+    public static let calm = ThemeID("calm")
 }
 
 public enum GameResultReason: String, Codable, Sendable {

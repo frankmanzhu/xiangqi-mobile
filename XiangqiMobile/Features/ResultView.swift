@@ -4,26 +4,34 @@ struct ResultView: View {
     @EnvironmentObject private var app: AppModel
     @ObservedObject var session: GameSession
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.l10n) private var l10n
 
     var body: some View {
         VStack(spacing: 22) {
             Spacer()
-            Image(systemName: session.record.result?.winner == nil ? "equal.circle.fill" : "flag.checkered.circle.fill")
-                .font(.system(size: 64)).foregroundStyle(.tint)
-            Text(resultTitle).font(.largeTitle.bold()).multilineTextAlignment(.center)
-            Text(resultReason).font(.title3).foregroundStyle(.secondary)
+            Image(
+                systemName: session.record.result?.winner == nil
+                    ? "equal.circle.fill"
+                    : "flag.checkered.circle.fill"
+            )
+            .font(.system(size: 64)).foregroundStyle(.tint)
+            Text(verbatim: resultTitle).font(.largeTitle.bold()).multilineTextAlignment(.center)
+            Text(verbatim: resultReason).font(.title3).foregroundStyle(.secondary)
             HStack(spacing: 24) {
-                summary("Moves", "\(session.record.moves.count)")
-                summary("Time", duration(session.record.elapsedSeconds))
-                summary("Hints", "\(session.record.moves.filter(\.hintUsed).count)")
+                summary(L10n.Result.Summary.moves, "\(session.record.moves.count)")
+                summary(L10n.Result.Summary.time, duration(session.record.elapsedSeconds))
+                summary(
+                    L10n.Result.Summary.hints,
+                    "\(session.record.moves.filter(\.hintUsed).count)"
+                )
             }
             .padding().background(.thinMaterial, in: RoundedRectangle(cornerRadius: 18))
             Spacer()
-            Button("Review moves") {
+            Button(l10n(L10n.Result.review)) {
                 dismiss(); session.showHistory = true
             }
             .buttonStyle(.borderedProminent).controlSize(.large).frame(maxWidth: .infinity)
-            Button("Home") { dismiss(); app.leaveGame() }
+            Button(l10n(L10n.Common.home)) { dismiss(); app.leaveGame() }
                 .buttonStyle(.bordered).controlSize(.large).frame(maxWidth: .infinity)
         }
         .padding(28)
@@ -31,13 +39,24 @@ struct ResultView: View {
     }
 
     private var resultTitle: String {
-        guard let result = session.record.result else { return "Game complete" }
-        if let winner = result.winner { return "\(winner.title) wins" }
-        return "Draw"
+        guard let result = session.record.result else { return l10n(L10n.Result.complete) }
+        guard let winner = result.winner else { return l10n(L10n.Result.draw) }
+        return l10n(L10n.Result.wins, l10n(winner.titleKey))
     }
-    private var resultReason: String { session.record.result?.reason.rawValue.capitalized ?? "" }
-    private func summary(_ title: String, _ value: String) -> some View {
-        VStack(spacing: 4) { Text(value).font(.headline); Text(title).font(.caption).foregroundStyle(.secondary) }
+
+    private var resultReason: String {
+        guard let reason = session.record.result?.reason else { return "" }
+        return l10n(reason.titleKey)
     }
-    private func duration(_ seconds: Int) -> String { String(format: "%d:%02d", seconds / 60, seconds % 60) }
+
+    private func summary(_ title: LocalizedKey, _ value: String) -> some View {
+        VStack(spacing: 4) {
+            Text(verbatim: value).font(.headline)
+            Text(title, l10n).font(.caption).foregroundStyle(.secondary)
+        }
+    }
+
+    private func duration(_ seconds: Int) -> String {
+        String(format: "%d:%02d", seconds / 60, seconds % 60)
+    }
 }

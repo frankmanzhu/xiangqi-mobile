@@ -16,7 +16,8 @@ final class AppModel: ObservableObject {
     @Published var path: [AppRoute] = []
     @Published var resumableRecord: GameRecord?
     @Published var session: GameSession?
-    @Published var recoveryMessage: String?
+    /// Set when a saved game failed validation on launch; the alert text lives in the view.
+    @Published var showRecoveryAlert = false
 
     let repository = GameRepository()
     let learningProgress = LearningProgressStore()
@@ -29,7 +30,7 @@ final class AppModel: ObservableObject {
             let record = try await repository.load()
             resumableRecord = record?.isActive == true ? record : nil
         } catch {
-            recoveryMessage = "The saved game could not be validated. Its file has been preserved."
+            showRecoveryAlert = true
         }
     }
 

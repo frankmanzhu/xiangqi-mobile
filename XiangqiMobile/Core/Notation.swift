@@ -4,12 +4,12 @@ public enum MoveNotation {
     public static func display(move: Move, in position: Position) -> String {
         guard let piece = position.piece(at: move.from) else { return move.uci }
         let capture = position.piece(at: move.to) == nil ? "–" : "×"
-        return "\(piece.kind.englishName) \(move.from.uci)\(capture)\(move.to.uci)"
+        return "\(piece.kind.recordName) \(move.from.uci)\(capture)\(move.to.uci)"
     }
 
     public static func accessibility(move: Move, in position: Position) -> String {
         guard let piece = position.piece(at: move.from) else { return move.uci }
-        return "\(piece.side.title) \(piece.kind.englishName) from \(move.from.uci) to \(move.to.uci)"
+        return "\(piece.side.recordName) \(piece.kind.recordName) from \(move.from.uci) to \(move.to.uci)"
     }
 }
 

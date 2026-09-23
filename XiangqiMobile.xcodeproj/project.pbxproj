@@ -7,492 +7,519 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02A55F94FC5D3A5DD5FEF254 /* PikafishComputerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E99F24E44129D4C0A95BAB /* PikafishComputerClient.swift */; };
-		04E3D5AAE6CE31B7A657D419 /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81DE12ABD75BF5F8A0249F89 /* engine.cpp */; };
-		074AE18683E807B50F3C1603 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1FC2014DC96A9EEE01C1AD54 /* Localizable.xcstrings */; };
-		0B7BEB9C0C39C6F8131816AE /* nnue_misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25D3E2EAD30BC21B778BBD66 /* nnue_misc.cpp */; };
-		0D72147C3316C587DC6C3B5B /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C825D4CE82659B75A75DA /* GameRepository.swift */; };
-		0ECCB7A542C2E7F725D83C5D /* huf_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04CF226D5049475F3669D320 /* huf_decompress.cpp */; };
-		1BC0B406756658F9150A653D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97EF761476A7FA51D7DC469 /* RootView.swift */; };
-		1E19AC90F1519FF69E9BA87E /* Pikafish-AUTHORS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 86DE7AB0562D96A75CE357E8 /* Pikafish-AUTHORS.txt */; };
-		291890A510A86C04D7D4B0BF /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B2340973E0656415B65088 /* AppLanguage.swift */; };
-		2DBF6104BA1451C08FF22790 /* benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2566137C32D02E77F3A9E373 /* benchmark.cpp */; };
-		3350AB4F13388BF5F046314B /* entropy_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3997E5F80078B91C3966AEB9 /* entropy_common.cpp */; };
-		35D744FDAEEF36AF6819233B /* search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A2B47C98BBC3F7D138650 /* search.cpp */; };
-		35EF645C4549503E56C4C691 /* Pikafish-GPL-3.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8829B73CD205FF186A08B5C0 /* Pikafish-GPL-3.0.txt */; };
-		363A261FFF2813040BEF245D /* attacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57583ABF8977B29994F321D7 /* attacks.cpp */; };
-		3691195F5E2C681BBAD8C4C4 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741A686C4CA1476FEDEA2C55 /* GameView.swift */; };
-		394CFDF06CB487F544A9A6D2 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E501B220C55FC3046A270 /* GameSession.swift */; };
-		3C45A503E0262DBDE35E571A /* ccpd-quarantine.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = A6AB3B0A8B2760CB37D86291 /* ccpd-quarantine.jsonl */; };
-		40279048598536E4C5EE2EA2 /* error_private.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2642B940CC16455155634940 /* error_private.cpp */; };
-		44957D949D34D4C16624CD53 /* evaluate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0E57D976598D103AA39497 /* evaluate.cpp */; };
-		4A94BE3B9A931E549A4477A1 /* network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 035483E1216436B15838FA12 /* network.cpp */; };
-		4CF7427A443EA75C3C37662B /* ucioption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6857434BBC8012262E5ADED4 /* ucioption.cpp */; };
-		5476B32AC7315AAFA1C79055 /* uci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E6224F6A8E5B135DFCCFC /* uci.cpp */; };
-		5865667A21760842F879B747 /* memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34FA4FEA0E61DCF4D752D9B /* memory.cpp */; };
-		5A22462E95FE6F93049F4686 /* ccpd-audit.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DBA700CD62468985A4219D0 /* ccpd-audit.json */; };
-		5A65885DA959A75CD9CA68C7 /* ComputerPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808804A81AE9A14ED5320ABC /* ComputerPlayer.swift */; };
-		5B1B10DA8340D5077BAC70C7 /* PikafishBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F14861DD2E41E3A8F97CE5D /* PikafishBridge.cpp */; };
-		5D43137183F857FE57C862B5 /* CCPDPuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FEC9FFF61AE6DAF69344DA /* CCPDPuzzle.swift */; };
-		5E014AF534AFE2277D8BA56D /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F200112BD8BE45E59B2F0 /* BoardView.swift */; };
-		605A787ECB4A647B528EA783 /* CCPDLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3DEFD3495C5C51C1D8384D /* CCPDLibrary.swift */; };
-		61A688C4D8B581CF1102C2E0 /* zstd_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 919B17D17B8C4A5D220BCDAD /* zstd_decompress.cpp */; };
-		63981E4C65DD8B3A0A6395EE /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4D70CE3BC1AA4190CD6E5 /* ResultView.swift */; };
-		64AE5986DF3BF02267AB2C90 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835ADDE609BC5E3456C3398 /* AppModel.swift */; };
-		676821A322F7242F1602AEC7 /* xxhash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A02BAC2AE503480F8B6D8AF0 /* xxhash.cpp */; };
-		7416FD6631AFF8E4D2D4D26F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5762B935C088EFCF6DFDC1 /* Foundation.framework */; };
-		74652F44CCC6698131B584EC /* zstd_decompress_block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CA89167AAAAE6A0CAAAC58A /* zstd_decompress_block.cpp */; };
-		74AB89CC631221BF3B3E487E /* pool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81792BD046DAF22F7852AA11 /* pool.cpp */; };
-		75A7516222BAFE362CE52437 /* movegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F144F92DDD9CE26C5B277F /* movegen.cpp */; };
-		764BAC5E81FC91948CFC0D62 /* timeman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DAE3FFAAD389C1FEFB7D8951 /* timeman.cpp */; };
-		799D155EA20FE182AC2E12E6 /* tt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB16FF2EDE8DBEACB401FD8 /* tt.cpp */; };
-		79A737014E11FEA93D22ACDA /* nnue_accumulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E45216288C8D396B4E6DDF00 /* nnue_accumulator.cpp */; };
-		7B3AB6A94A9BEA4FDBC2B14D /* MoveHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EC166274675B139FEF2C85 /* MoveHistoryView.swift */; };
-		7B5DA32BCFCCE1A5A18DFAD5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5FC56C8E1CC87B3A49A2C /* HomeView.swift */; };
-		7C7756E76B12E562C1BCA262 /* fse_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A14C76B998B59EC44ACAE /* fse_decompress.cpp */; };
-		8AF2C23D32FBC172589D9607 /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97A92962C4856ED34E5383D /* NewGameView.swift */; };
-		8BCD53B5A9F4DD63CCADE04B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73370943C05234490F3B875 /* Theme.swift */; };
-		8BF0F60B6441E216C783736F /* tune.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DACEC109EFECE6450681A740 /* tune.cpp */; };
-		9135AC7864268704875EE55E /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A35CB5B5C5DAF3D482D908B6 /* debug.cpp */; };
-		955E1C13C66E245E0B703D40 /* zstd_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFBB3D0BCF514AB260192124 /* zstd_common.cpp */; };
-		97D55B5634FC6F59613DAE9F /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62F3115E995D76B0FE0F9296 /* position.cpp */; };
-		9AD43C1ECB69E18F80BB5298 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95ECDD31687B09C91046A9 /* Rules.swift */; };
-		9B195C00BF9A6484946C637C /* pikafish.nnue in Resources */ = {isa = PBXBuildFile; fileRef = 6AF203BCA21894F797A0A24B /* pikafish.nnue */; };
-		9C5D4998887BD1104C14A6F6 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FF8B07B2BF5A233166BA882 /* thread.cpp */; };
-		A02B7E312868449A5C4FB602 /* XiangqiPGN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A62CAD86F50CD40626580D /* XiangqiPGN.swift */; };
-		A31B2E26E60F8B0494B24158 /* misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50ADA5D2281BB395D71AA907 /* misc.cpp */; };
-		A8C577CED8B3D34A5B2C7E61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5762B935C088EFCF6DFDC1 /* Foundation.framework */; };
-		AC1D8A33A3CF33BC437143DE /* Notation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E003114FADD73F85A7BBEE00 /* Notation.swift */; };
-		B0A30AE3D3FB211609A181D9 /* movepick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28A89DBA3C10C7522157BB11 /* movepick.cpp */; };
-		B7C3867D8F8ED45168DF4793 /* CCPD-source.json in Resources */ = {isa = PBXBuildFile; fileRef = B383455528E049BD0A510846 /* CCPD-source.json */; };
-		BA27FC6384F87BF5A675052D /* ccpd.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EB71351DD350C78F5C0AD18 /* ccpd.sqlite3 */; };
-		BC322321F3CF6B464FC8472E /* LearningProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE350DCFB059198910280DC /* LearningProgress.swift */; };
-		C723C8CEA69C414797134843 /* bitboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B28A3FF9215498C93D441DAD /* bitboard.cpp */; };
-		CAA6EFB4B31615410793088A /* full_threats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4F7EB51E50EDD3F9591707C /* full_threats.cpp */; };
-		CAD7B50763B6312EA4DB79E1 /* score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DE09DB2B62E6B77F4F95219 /* score.cpp */; };
-		CBF9F818C0EE33C28551E4F4 /* zstd_ddict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CD17D844AED87252F2EBF71 /* zstd_ddict.cpp */; };
-		CD1A34BF41E29FE3C483592C /* GameMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660660CCEBFEE5333A3FF3C /* GameMenuView.swift */; };
-		D0BFB6DD2077E43971D8586A /* XiangqiMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5C1B413D07010F5E3850D /* XiangqiMobileApp.swift */; };
-		D2A50DA32041CE5F6A55DB88 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E5D36060195E7EDEAB86BB /* Position.swift */; };
-		D715FAB970F83D8F253B9799 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EECE957BC6EF8DC858269A8 /* SettingsView.swift */; };
-		D80E958BA5E8600890C8103B /* LearningViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFAF28D32AA6C52B89643B4 /* LearningViews.swift */; };
-		DF15E7BDAE8EFA15C104EA3A /* half_ka_v2_hm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17550808F74C97CBE3812D83 /* half_ka_v2_hm.cpp */; };
-		E1A4DAC0E9D927E3AEB8A0E5 /* SmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6051F157F1F8192E3F8A19 /* SmokeTests.swift */; };
-		ECE6B25D637701156D4BD355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2D93C85F2519F56EB4B4E3 /* Assets.xcassets */; };
-		F115742627F875944DDBF794 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C168A72080B5A781395DA /* Domain.swift */; };
-		F329EB941D8401274FFD65D0 /* CCPD-CC-BY-4.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED89C6C24178284F8E994AE8 /* CCPD-CC-BY-4.0.txt */; };
-		F69D43F449A0010016CCD5BB /* threading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8587F56F28BA3332CF7D984A /* threading.cpp */; };
+		03AA78849EFD8B1D2B4BB41F /* SmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24070928DACA2316EC18021 /* SmokeTests.swift */; };
+		04A66C3E0C16CCAC208842E8 /* Pikafish-AUTHORS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C1B99DED4441C66E96EAE9C /* Pikafish-AUTHORS.txt */; };
+		05381B2C22325C0A0B680E86 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CEFB8B0AD2C51566EC3F4 /* AppLanguage.swift */; };
+		05662B3B6A76EB2C47F63824 /* CCPDLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE944B161118EF18A5CC016 /* CCPDLibrary.swift */; };
+		0AD9EEAE5C831AD58DAAA26D /* XiangqiPGN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656A1868D92C3015C4125AF3 /* XiangqiPGN.swift */; };
+		121DCFED283E0C5C20A316E5 /* xxhash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68D2D0987B80F2FF5587C0BA /* xxhash.cpp */; };
+		17D8A322502C9121A3BAB5F8 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D643C5FB6AF1CA5C00B39224 /* position.cpp */; };
+		20867E3551DBB9219E60839E /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D3F070082333F30B28B714 /* Localizer.swift */; };
+		22301F0B5C3346CBE6BE96D9 /* misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50291E08E37C1D2387F62F66 /* misc.cpp */; };
+		229052A879B194E02D5ED735 /* timeman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E840265474CDD85E617B3E0 /* timeman.cpp */; };
+		24702A145C6B04C941EC3F99 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A581A9F4FF0FA010BF4AD3C /* GameView.swift */; };
+		276BB7BE71121AC89F977683 /* tune.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 057C756410E91B9618066C22 /* tune.cpp */; };
+		2E49EB275E67071333675258 /* entropy_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF59A8CF3DF43D886DDC16A7 /* entropy_common.cpp */; };
+		2FDC49D72AA63613820F24DE /* LocalizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E1EA4594EC5A2FB3BAB430 /* LocalizedKey.swift */; };
+		30CF847BD3B3BD6D56F66989 /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41F7ABD03464B8938473AFB5 /* debug.cpp */; };
+		39A5CB1F4422FE1A8F586575 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDBB0608C4180F1C671B8A /* SettingsView.swift */; };
+		3A4DD5270F593DE014598CE3 /* score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75232731AFD81BCD539CEFAB /* score.cpp */; };
+		3B335DC5C1A5C95402850E96 /* Pikafish-GPL-3.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 374C45BC57A3B33B76D2B5D2 /* Pikafish-GPL-3.0.txt */; };
+		3D2FB00BC36551A47791863F /* tt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE477BCBAA0402E21D5372BB /* tt.cpp */; };
+		3F5D85DA8DDB3DD98B53204C /* fse_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89DC3400A337A55EA18A39A4 /* fse_decompress.cpp */; };
+		3FD664686EAD3FFC945C2F41 /* Domain+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5164E02421483089A16D8565 /* Domain+Localized.swift */; };
+		4147C4E8EFE0FC01073D311C /* benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBD02B91BA2EA9624DB93A67 /* benchmark.cpp */; };
+		422B38FE0450E7E5D7802451 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8B62518B8C0DBA17E8413 /* RootView.swift */; };
+		44EF79040F2AB4CAD64CD717 /* zstd_decompress_block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC901D83D1B9E466D3869BD6 /* zstd_decompress_block.cpp */; };
+		479400811EA167F31858713C /* CCPD-CC-BY-4.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4120EC050836C58AF992AFCF /* CCPD-CC-BY-4.0.txt */; };
+		48896E6F1D9AA32B8E509E34 /* evaluate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 309A804CEE634B0BC68A2E5E /* evaluate.cpp */; };
+		4C7DA1C5F43768B40D0684E5 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2843254DDB496DC8EA16E76 /* BoardView.swift */; };
+		4D34702F7B1C131197DD4C54 /* threading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117114F6190FF1042A507BCD /* threading.cpp */; };
+		4D8343C67D3AD7FEA710F2B6 /* ComputerPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EA8716F74AA5375E58EB4C /* ComputerPlayer.swift */; };
+		4EF5F70F14CC3E7DEEEB688D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8D4AD49C74DC419DD68EA3 /* Preferences.swift */; };
+		555F6C6551F5FF8B95ED11DB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 885EDDE07202DDE8B19D9A65 /* Localizable.xcstrings */; };
+		578362C98959E7315007CC5A /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50755E440368C2E5E4E339D /* Position.swift */; };
+		57F9C147AF8D212935653AE0 /* pool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C982E23E1F261CA99F3BF6D8 /* pool.cpp */; };
+		5A0C8EE13178FCA130B5F323 /* movegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF6121A98EDD530906A929 /* movegen.cpp */; };
+		5A799B3500B22558FD6E9C87 /* PikafishComputerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FBBAD580B3F992426F73B6 /* PikafishComputerClient.swift */; };
+		5D0B0ABD7535B6D4CDF255EC /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A432253E50881C8398A1323E /* Strings+Generated.swift */; };
+		5D9AD73245AC5ACA39B45A01 /* LearningProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91330507A2CE8B3ED859DC54 /* LearningProgress.swift */; };
+		5E2D34492A770BE2A1A68E7A /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E5D823286766E3B8C16E8 /* Domain.swift */; };
+		60A0A27CAE1643B28C5E0332 /* pikafish.nnue in Resources */ = {isa = PBXBuildFile; fileRef = 76A2055F734D4F57465734D5 /* pikafish.nnue */; };
+		623EFDED34C0A27F29F34A73 /* Theme+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A0C4635E8EA1A5D06D2B9 /* Theme+SwiftUI.swift */; };
+		666F1A01A07A76196EC20476 /* movepick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E364CE67352FE9383D8701CC /* movepick.cpp */; };
+		677B0F35E403387D929557AB /* bitboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6823655B14C3421008B420 /* bitboard.cpp */; };
+		76AFD16326B60E5DBABD98D8 /* CCPDPuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60036DE9B74BDB03EC86E6 /* CCPDPuzzle.swift */; };
+		793AD4F337B2BE7C51D9E426 /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C36DAE829494FDB60B514 /* NewGameView.swift */; };
+		7BB4A85EF0B3F019CB255250 /* zstd_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82D27110EFD9CB50AFA31CC3 /* zstd_common.cpp */; };
+		7E26359DEB1E11541FE3BA8B /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E20CB98DCCC3EB9C778CE2 /* GameRepository.swift */; };
+		7F5C60FD46350055EB6F3E9D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E3E2ADEA0CCCB49331AA9 /* AppModel.swift */; };
+		82F005A45971D45C17C8B375 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC5C4DA95F09D29BB8623E /* GameSession.swift */; };
+		830F81622AF7D693684F020F /* CCPD-source.json in Resources */ = {isa = PBXBuildFile; fileRef = C6D3619804987277B1FD89FC /* CCPD-source.json */; };
+		83AD54CB6E225F7360BB42D2 /* attacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16605E59B24949CA0A00D39 /* attacks.cpp */; };
+		8626B63C385C75AA0047C61B /* Localization+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402219624CF01C70C492F1F7 /* Localization+SwiftUI.swift */; };
+		86B343B97E8A382128C3F372 /* error_private.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A02E0D78A4ECCFEADF66F /* error_private.cpp */; };
+		86F777018F80A6823113252D /* ccpd-audit.json in Resources */ = {isa = PBXBuildFile; fileRef = ABD7616B74AB75B3D14C5985 /* ccpd-audit.json */; };
+		8803184BB576F9212A6D2A78 /* LearningViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE75B10833ECDFB49763A32 /* LearningViews.swift */; };
+		8981B681EDA9720D22A6E6F0 /* PikafishBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C68DC5C69A760E46DCCB5 /* PikafishBridge.cpp */; };
+		89D36033FAE3618C4248B847 /* network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 610AA693067ABDF622362D58 /* network.cpp */; };
+		8A9B735295D86BC7386626CB /* ccpd.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 152B831699C3D630529F7214 /* ccpd.sqlite3 */; };
+		8CDBD10964445EA7BA2E55C2 /* zstd_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F587AD7ABF7A59CB03233D7F /* zstd_decompress.cpp */; };
+		8DAD3C65A5BB2632E7F5FF4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC9727A3F503E7E089522B6 /* Assets.xcassets */; };
+		8DE244615CC60A894E1A10F9 /* MoveHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75159A8856984BA942D53FD8 /* MoveHistoryView.swift */; };
+		947BD8AC6003FBFF66E8884B /* nnue_misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 619115165F30464C55E29A0B /* nnue_misc.cpp */; };
+		9F6B50F252964CA32CB569A2 /* XiangqiMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07673FA2F71B9FBB346F29C3 /* XiangqiMobileApp.swift */; };
+		A17F0F8E502956E0527DED74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4430A0A6D6613EED82572C0B /* Foundation.framework */; };
+		A33B218730AEDC7F4E02039A /* huf_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6F79C37595959D4722B851A /* huf_decompress.cpp */; };
+		AF541F44D32234A833F5055C /* ThemeRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87245E1F9C0C742AC46E8EBA /* ThemeRegistry.swift */; };
+		B068C10C77747CC136C96611 /* nnue_accumulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6534A2054F03525B78A2C792 /* nnue_accumulator.cpp */; };
+		B20DA0FAC23A55FCBF14AF33 /* memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19FAA9C0EF24F1507D0E72A /* memory.cpp */; };
+		B29629A188ED7583C12E6C6B /* uci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C2B09FBA56D53363BC216 /* uci.cpp */; };
+		BC1E84D4DFA45B0C5F6EE145 /* GameMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D50A9899610EB6A727B7A /* GameMenuView.swift */; };
+		BDA62AB474B353EC31FE940E /* half_ka_v2_hm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A0006DB92252D12A801CD /* half_ka_v2_hm.cpp */; };
+		C116F1BF80D45FFBC842B8A7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30FCE9B94179975195B0F3 /* ResultView.swift */; };
+		C90960C0F751B2699064D526 /* Notation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1346AF53ACC5E5A466B33D0 /* Notation.swift */; };
+		CD4E571B35B910FB3F450985 /* full_threats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0824A30214FEC5E20BEB9EB8 /* full_threats.cpp */; };
+		E3390CE73EF0C167D9A6A2C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0B9AF36691050483156D1 /* HomeView.swift */; };
+		E62BB35DF23470DD482C0A12 /* ccpd-quarantine.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = AB93CE6C6A1BB4CE3D670C01 /* ccpd-quarantine.jsonl */; };
+		E8073F575680675994E30513 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168316D8A5E3CC531EAA50CA /* Theme.swift */; };
+		EA81D1C351285548205D9820 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02413EB3AACB6664CDCA8E6 /* Rules.swift */; };
+		EAE3B7D03871F588CA96F706 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E57133C90C0980D931D967 /* ThemePicker.swift */; };
+		EB7D8ABFA223E9102BEDE624 /* ucioption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FEC81FE579DD1A8134E632E /* ucioption.cpp */; };
+		ED4A95C9AFC628320EC4AE90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4430A0A6D6613EED82572C0B /* Foundation.framework */; };
+		F1A9AB12AD80AE47E2BBB1F9 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D432A0BD5690E4AED2B96210 /* thread.cpp */; };
+		F7334334CD1B10388E20CE01 /* zstd_ddict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 800132B0FB7E16E3D2A4604F /* zstd_ddict.cpp */; };
+		F8A70A3BFAF0626A5189DE82 /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10E56EED0D9A1F19A7FE7CDA /* engine.cpp */; };
+		F9F545D3C7C50B5B90887340 /* search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF1B4886DDB1F040753A1C9A /* search.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4B0482ABF7166D2986217F91 /* PBXContainerItemProxy */ = {
+		5A222E096450373C90FAE096 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C523619692F1DCBDC774AD01 /* Project object */;
+			containerPortal = 3F5396FD62DF421EF5A58688 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F8E77C5E99024B9CF9943B20;
+			remoteGlobalIDString = 420C59B45368A71E20CDA66A;
 			remoteInfo = XiangqiMobile;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		035483E1216436B15838FA12 /* network.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = network.cpp; sourceTree = "<group>"; };
-		04CF226D5049475F3669D320 /* huf_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = huf_decompress.cpp; sourceTree = "<group>"; };
-		07A62CAD86F50CD40626580D /* XiangqiPGN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiPGN.swift; sourceTree = "<group>"; };
-		0A0A2B47C98BBC3F7D138650 /* search.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = search.cpp; sourceTree = "<group>"; };
-		0CA89167AAAAE6A0CAAAC58A /* zstd_decompress_block.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_decompress_block.cpp; sourceTree = "<group>"; };
-		10690D81CAF927EBDDA1B6A1 /* PikafishBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PikafishBridge.h; sourceTree = "<group>"; };
-		12BF902396697155C79F7A22 /* XiangqiMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiangqiMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		12F5855AFBA3459E80B799EE /* XiangqiMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XiangqiMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1660660CCEBFEE5333A3FF3C /* GameMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
-		17550808F74C97CBE3812D83 /* half_ka_v2_hm.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = half_ka_v2_hm.cpp; sourceTree = "<group>"; };
-		1E95ECDD31687B09C91046A9 /* Rules.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
-		1FC2014DC96A9EEE01C1AD54 /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		2566137C32D02E77F3A9E373 /* benchmark.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = benchmark.cpp; sourceTree = "<group>"; };
-		25D3E2EAD30BC21B778BBD66 /* nnue_misc.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = nnue_misc.cpp; sourceTree = "<group>"; };
-		25E5D36060195E7EDEAB86BB /* Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
-		2642B940CC16455155634940 /* error_private.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = error_private.cpp; sourceTree = "<group>"; };
-		28A89DBA3C10C7522157BB11 /* movepick.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movepick.cpp; sourceTree = "<group>"; };
-		2F14861DD2E41E3A8F97CE5D /* PikafishBridge.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = PikafishBridge.cpp; sourceTree = "<group>"; };
-		3997E5F80078B91C3966AEB9 /* entropy_common.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = entropy_common.cpp; sourceTree = "<group>"; };
-		3EFAF28D32AA6C52B89643B4 /* LearningViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearningViews.swift; sourceTree = "<group>"; };
-		3F2D93C85F2519F56EB4B4E3 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4BB4D70CE3BC1AA4190CD6E5 /* ResultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		4D2F200112BD8BE45E59B2F0 /* BoardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
-		4FF8B07B2BF5A233166BA882 /* thread.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
-		50ADA5D2281BB395D71AA907 /* misc.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
-		57583ABF8977B29994F321D7 /* attacks.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = attacks.cpp; sourceTree = "<group>"; };
-		5E6051F157F1F8192E3F8A19 /* SmokeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SmokeTests.swift; sourceTree = "<group>"; };
-		62F3115E995D76B0FE0F9296 /* position.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
-		6857434BBC8012262E5ADED4 /* ucioption.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ucioption.cpp; sourceTree = "<group>"; };
-		68E99F24E44129D4C0A95BAB /* PikafishComputerClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PikafishComputerClient.swift; sourceTree = "<group>"; };
-		6AF203BCA21894F797A0A24B /* pikafish.nnue */ = {isa = PBXFileReference; includeInIndex = 1; path = pikafish.nnue; sourceTree = "<group>"; };
-		6CD17D844AED87252F2EBF71 /* zstd_ddict.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_ddict.cpp; sourceTree = "<group>"; };
-		6DE09DB2B62E6B77F4F95219 /* score.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = score.cpp; sourceTree = "<group>"; };
-		6EB71351DD350C78F5C0AD18 /* ccpd.sqlite3 */ = {isa = PBXFileReference; includeInIndex = 1; path = ccpd.sqlite3; sourceTree = "<group>"; };
-		741A686C4CA1476FEDEA2C55 /* GameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		7D53DD050940EDCCBA447A9C /* XiangqiMobile-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XiangqiMobile-Bridging-Header.h"; sourceTree = "<group>"; };
-		7DBA700CD62468985A4219D0 /* ccpd-audit.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-audit.json"; sourceTree = "<group>"; };
-		7F5E6224F6A8E5B135DFCCFC /* uci.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = uci.cpp; sourceTree = "<group>"; };
-		808804A81AE9A14ED5320ABC /* ComputerPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComputerPlayer.swift; sourceTree = "<group>"; };
-		81792BD046DAF22F7852AA11 /* pool.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = pool.cpp; sourceTree = "<group>"; };
-		81B2340973E0656415B65088 /* AppLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
-		81DE12ABD75BF5F8A0249F89 /* engine.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = engine.cpp; sourceTree = "<group>"; };
-		8587F56F28BA3332CF7D984A /* threading.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = threading.cpp; sourceTree = "<group>"; };
-		86DE7AB0562D96A75CE357E8 /* Pikafish-AUTHORS.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-AUTHORS.txt"; sourceTree = "<group>"; };
-		8829B73CD205FF186A08B5C0 /* Pikafish-GPL-3.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-GPL-3.0.txt"; sourceTree = "<group>"; };
-		8835ADDE609BC5E3456C3398 /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
-		8C9A14C76B998B59EC44ACAE /* fse_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = fse_decompress.cpp; sourceTree = "<group>"; };
-		8EECE957BC6EF8DC858269A8 /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		8F5762B935C088EFCF6DFDC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		900C168A72080B5A781395DA /* Domain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
-		919B17D17B8C4A5D220BCDAD /* zstd_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_decompress.cpp; sourceTree = "<group>"; };
-		93F144F92DDD9CE26C5B277F /* movegen.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movegen.cpp; sourceTree = "<group>"; };
-		94FEC9FFF61AE6DAF69344DA /* CCPDPuzzle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CCPDPuzzle.swift; sourceTree = "<group>"; };
-		A02BAC2AE503480F8B6D8AF0 /* xxhash.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = xxhash.cpp; sourceTree = "<group>"; };
-		A35CB5B5C5DAF3D482D908B6 /* debug.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = debug.cpp; sourceTree = "<group>"; };
-		A4F7EB51E50EDD3F9591707C /* full_threats.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = full_threats.cpp; sourceTree = "<group>"; };
-		A6AB3B0A8B2760CB37D86291 /* ccpd-quarantine.jsonl */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-quarantine.jsonl"; sourceTree = "<group>"; };
-		B28A3FF9215498C93D441DAD /* bitboard.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = bitboard.cpp; sourceTree = "<group>"; };
-		B383455528E049BD0A510846 /* CCPD-source.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-source.json"; sourceTree = "<group>"; };
-		B5B5FC56C8E1CC87B3A49A2C /* HomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		BE0E57D976598D103AA39497 /* evaluate.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = evaluate.cpp; sourceTree = "<group>"; };
-		BF3DEFD3495C5C51C1D8384D /* CCPDLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CCPDLibrary.swift; sourceTree = "<group>"; };
-		BFBB3D0BCF514AB260192124 /* zstd_common.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_common.cpp; sourceTree = "<group>"; };
-		C73370943C05234490F3B875 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		D34FA4FEA0E61DCF4D752D9B /* memory.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = memory.cpp; sourceTree = "<group>"; };
-		D48C825D4CE82659B75A75DA /* GameRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
-		D7EC166274675B139FEF2C85 /* MoveHistoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MoveHistoryView.swift; sourceTree = "<group>"; };
-		D8A5C1B413D07010F5E3850D /* XiangqiMobileApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiMobileApp.swift; sourceTree = "<group>"; };
-		D97A92962C4856ED34E5383D /* NewGameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
-		D97EF761476A7FA51D7DC469 /* RootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		DACEC109EFECE6450681A740 /* tune.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tune.cpp; sourceTree = "<group>"; };
-		DAE3FFAAD389C1FEFB7D8951 /* timeman.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = timeman.cpp; sourceTree = "<group>"; };
-		DCE350DCFB059198910280DC /* LearningProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearningProgress.swift; sourceTree = "<group>"; };
-		DD0E501B220C55FC3046A270 /* GameSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
-		E003114FADD73F85A7BBEE00 /* Notation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Notation.swift; sourceTree = "<group>"; };
-		E45216288C8D396B4E6DDF00 /* nnue_accumulator.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = nnue_accumulator.cpp; sourceTree = "<group>"; };
-		EAB16FF2EDE8DBEACB401FD8 /* tt.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tt.cpp; sourceTree = "<group>"; };
-		ED89C6C24178284F8E994AE8 /* CCPD-CC-BY-4.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-CC-BY-4.0.txt"; sourceTree = "<group>"; };
+		01CCABF2C1907600D1E3C036 /* XiangqiMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XiangqiMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		057C756410E91B9618066C22 /* tune.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tune.cpp; sourceTree = "<group>"; };
+		07673FA2F71B9FBB346F29C3 /* XiangqiMobileApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiMobileApp.swift; sourceTree = "<group>"; };
+		0824A30214FEC5E20BEB9EB8 /* full_threats.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = full_threats.cpp; sourceTree = "<group>"; };
+		0A581A9F4FF0FA010BF4AD3C /* GameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		0FC0B9AF36691050483156D1 /* HomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		10E56EED0D9A1F19A7FE7CDA /* engine.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = engine.cpp; sourceTree = "<group>"; };
+		117114F6190FF1042A507BCD /* threading.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = threading.cpp; sourceTree = "<group>"; };
+		152B831699C3D630529F7214 /* ccpd.sqlite3 */ = {isa = PBXFileReference; includeInIndex = 1; path = ccpd.sqlite3; sourceTree = "<group>"; };
+		168316D8A5E3CC531EAA50CA /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1B7A02E0D78A4ECCFEADF66F /* error_private.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = error_private.cpp; sourceTree = "<group>"; };
+		1C5C68DC5C69A760E46DCCB5 /* PikafishBridge.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = PikafishBridge.cpp; sourceTree = "<group>"; };
+		29D3F070082333F30B28B714 /* Localizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
+		29FBBAD580B3F992426F73B6 /* PikafishComputerClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PikafishComputerClient.swift; sourceTree = "<group>"; };
+		2C30FCE9B94179975195B0F3 /* ResultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		2FEC81FE579DD1A8134E632E /* ucioption.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ucioption.cpp; sourceTree = "<group>"; };
+		300A0C4635E8EA1A5D06D2B9 /* Theme+SwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Theme+SwiftUI.swift"; sourceTree = "<group>"; };
+		309A804CEE634B0BC68A2E5E /* evaluate.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = evaluate.cpp; sourceTree = "<group>"; };
+		35E57133C90C0980D931D967 /* ThemePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		374C45BC57A3B33B76D2B5D2 /* Pikafish-GPL-3.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-GPL-3.0.txt"; sourceTree = "<group>"; };
+		402219624CF01C70C492F1F7 /* Localization+SwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Localization+SwiftUI.swift"; sourceTree = "<group>"; };
+		4120EC050836C58AF992AFCF /* CCPD-CC-BY-4.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-CC-BY-4.0.txt"; sourceTree = "<group>"; };
+		41F7ABD03464B8938473AFB5 /* debug.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = debug.cpp; sourceTree = "<group>"; };
+		4430A0A6D6613EED82572C0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4F3E3E2ADEA0CCCB49331AA9 /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		50291E08E37C1D2387F62F66 /* misc.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
+		5164E02421483089A16D8565 /* Domain+Localized.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Domain+Localized.swift"; sourceTree = "<group>"; };
+		58EDBB0608C4180F1C671B8A /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		59E1EA4594EC5A2FB3BAB430 /* LocalizedKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalizedKey.swift; sourceTree = "<group>"; };
+		5C1B99DED4441C66E96EAE9C /* Pikafish-AUTHORS.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-AUTHORS.txt"; sourceTree = "<group>"; };
+		5EAF6121A98EDD530906A929 /* movegen.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movegen.cpp; sourceTree = "<group>"; };
+		610AA693067ABDF622362D58 /* network.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = network.cpp; sourceTree = "<group>"; };
+		619115165F30464C55E29A0B /* nnue_misc.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = nnue_misc.cpp; sourceTree = "<group>"; };
+		649D4BEDD1BB91772D93701E /* PikafishBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PikafishBridge.h; sourceTree = "<group>"; };
+		6534A2054F03525B78A2C792 /* nnue_accumulator.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = nnue_accumulator.cpp; sourceTree = "<group>"; };
+		656A1868D92C3015C4125AF3 /* XiangqiPGN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiPGN.swift; sourceTree = "<group>"; };
+		68D2D0987B80F2FF5587C0BA /* xxhash.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = xxhash.cpp; sourceTree = "<group>"; };
+		75159A8856984BA942D53FD8 /* MoveHistoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MoveHistoryView.swift; sourceTree = "<group>"; };
+		75232731AFD81BCD539CEFAB /* score.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = score.cpp; sourceTree = "<group>"; };
+		76A2055F734D4F57465734D5 /* pikafish.nnue */ = {isa = PBXFileReference; includeInIndex = 1; path = pikafish.nnue; sourceTree = "<group>"; };
+		78FC5C4DA95F09D29BB8623E /* GameSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		7B7A0006DB92252D12A801CD /* half_ka_v2_hm.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = half_ka_v2_hm.cpp; sourceTree = "<group>"; };
+		7C1C2B09FBA56D53363BC216 /* uci.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = uci.cpp; sourceTree = "<group>"; };
+		7C60036DE9B74BDB03EC86E6 /* CCPDPuzzle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CCPDPuzzle.swift; sourceTree = "<group>"; };
+		800132B0FB7E16E3D2A4604F /* zstd_ddict.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_ddict.cpp; sourceTree = "<group>"; };
+		82D27110EFD9CB50AFA31CC3 /* zstd_common.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_common.cpp; sourceTree = "<group>"; };
+		85EA8716F74AA5375E58EB4C /* ComputerPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComputerPlayer.swift; sourceTree = "<group>"; };
+		87245E1F9C0C742AC46E8EBA /* ThemeRegistry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeRegistry.swift; sourceTree = "<group>"; };
+		885EDDE07202DDE8B19D9A65 /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		89DC3400A337A55EA18A39A4 /* fse_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = fse_decompress.cpp; sourceTree = "<group>"; };
+		8AE75B10833ECDFB49763A32 /* LearningViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearningViews.swift; sourceTree = "<group>"; };
+		91330507A2CE8B3ED859DC54 /* LearningProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearningProgress.swift; sourceTree = "<group>"; };
+		9D6823655B14C3421008B420 /* bitboard.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = bitboard.cpp; sourceTree = "<group>"; };
+		9E840265474CDD85E617B3E0 /* timeman.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = timeman.cpp; sourceTree = "<group>"; };
+		A3E20CB98DCCC3EB9C778CE2 /* GameRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		A432253E50881C8398A1323E /* Strings+Generated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		AAC9727A3F503E7E089522B6 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB93CE6C6A1BB4CE3D670C01 /* ccpd-quarantine.jsonl */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-quarantine.jsonl"; sourceTree = "<group>"; };
+		ABD7616B74AB75B3D14C5985 /* ccpd-audit.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-audit.json"; sourceTree = "<group>"; };
+		B02413EB3AACB6664CDCA8E6 /* Rules.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		B16BBBE887B208E0375D3B49 /* XiangqiMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiangqiMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2843254DDB496DC8EA16E76 /* BoardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		BC901D83D1B9E466D3869BD6 /* zstd_decompress_block.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_decompress_block.cpp; sourceTree = "<group>"; };
+		BF1B4886DDB1F040753A1C9A /* search.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = search.cpp; sourceTree = "<group>"; };
+		C68C36DAE829494FDB60B514 /* NewGameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
+		C6D3619804987277B1FD89FC /* CCPD-source.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-source.json"; sourceTree = "<group>"; };
+		C72D50A9899610EB6A727B7A /* GameMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
+		C982E23E1F261CA99F3BF6D8 /* pool.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = pool.cpp; sourceTree = "<group>"; };
+		CAE944B161118EF18A5CC016 /* CCPDLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CCPDLibrary.swift; sourceTree = "<group>"; };
+		CBD02B91BA2EA9624DB93A67 /* benchmark.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = benchmark.cpp; sourceTree = "<group>"; };
+		CD6E5D823286766E3B8C16E8 /* Domain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		CE6565CE80BFD47B97193BFB /* XiangqiMobile-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XiangqiMobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		CF8D4AD49C74DC419DD68EA3 /* Preferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		D16605E59B24949CA0A00D39 /* attacks.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = attacks.cpp; sourceTree = "<group>"; };
+		D19FAA9C0EF24F1507D0E72A /* memory.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = memory.cpp; sourceTree = "<group>"; };
+		D24070928DACA2316EC18021 /* SmokeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SmokeTests.swift; sourceTree = "<group>"; };
+		D432A0BD5690E4AED2B96210 /* thread.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
+		D643C5FB6AF1CA5C00B39224 /* position.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
+		D6F79C37595959D4722B851A /* huf_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = huf_decompress.cpp; sourceTree = "<group>"; };
+		DAE8B62518B8C0DBA17E8413 /* RootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		DE477BCBAA0402E21D5372BB /* tt.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tt.cpp; sourceTree = "<group>"; };
+		E1346AF53ACC5E5A466B33D0 /* Notation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Notation.swift; sourceTree = "<group>"; };
+		E364CE67352FE9383D8701CC /* movepick.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movepick.cpp; sourceTree = "<group>"; };
+		E50755E440368C2E5E4E339D /* Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		EF59A8CF3DF43D886DDC16A7 /* entropy_common.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = entropy_common.cpp; sourceTree = "<group>"; };
+		F587AD7ABF7A59CB03233D7F /* zstd_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_decompress.cpp; sourceTree = "<group>"; };
+		FF5CEFB8B0AD2C51566EC3F4 /* AppLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5944DA9DEC5B0E7EBB37E39E /* Frameworks */ = {
+		6393915FFCD5E1FAED7AF975 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8C577CED8B3D34A5B2C7E61 /* Foundation.framework in Frameworks */,
+				A17F0F8E502956E0527DED74 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDD4A3BF5D7A28FF0605A5BE /* Frameworks */ = {
+		9F148FCD47693A1641BEB024 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7416FD6631AFF8E4D2D4D26F /* Foundation.framework in Frameworks */,
+				ED4A95C9AFC628320EC4AE90 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08D9B451B339F605FED3F13D /* App */ = {
+		04B97ABE0C87AEA83B50FFD6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81B2340973E0656415B65088 /* AppLanguage.swift */,
-				8835ADDE609BC5E3456C3398 /* AppModel.swift */,
-				D48C825D4CE82659B75A75DA /* GameRepository.swift */,
-				DD0E501B220C55FC3046A270 /* GameSession.swift */,
-				68E99F24E44129D4C0A95BAB /* PikafishComputerClient.swift */,
-				D97EF761476A7FA51D7DC469 /* RootView.swift */,
-				C73370943C05234490F3B875 /* Theme.swift */,
-				D8A5C1B413D07010F5E3850D /* XiangqiMobileApp.swift */,
-			);
-			name = App;
-			path = App;
-			sourceTree = "<group>";
-		};
-		0E51F0208CE68DB57E1BD878 /* XiangqiMobileUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5E6051F157F1F8192E3F8A19 /* SmokeTests.swift */,
-			);
-			name = XiangqiMobileUITests;
-			path = XiangqiMobileUITests;
-			sourceTree = "<group>";
-		};
-		1E7A882F2AD3DDC9677A5262 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				A35CB5B5C5DAF3D482D908B6 /* debug.cpp */,
-				3997E5F80078B91C3966AEB9 /* entropy_common.cpp */,
-				2642B940CC16455155634940 /* error_private.cpp */,
-				8C9A14C76B998B59EC44ACAE /* fse_decompress.cpp */,
-				81792BD046DAF22F7852AA11 /* pool.cpp */,
-				8587F56F28BA3332CF7D984A /* threading.cpp */,
-				A02BAC2AE503480F8B6D8AF0 /* xxhash.cpp */,
-				BFBB3D0BCF514AB260192124 /* zstd_common.cpp */,
-			);
-			name = common;
-			path = common;
-			sourceTree = "<group>";
-		};
-		228A7B45ADF865E1B126BEA9 /* XiangqiMobile */ = {
-			isa = PBXGroup;
-			children = (
-				08D9B451B339F605FED3F13D /* App */,
-				B4B1E86828EE3CE5E2DCAC0E /* Core */,
-				84A2B71C45084A3034B1B708 /* Features */,
-			);
-			name = XiangqiMobile;
-			path = XiangqiMobile;
-			sourceTree = "<group>";
-		};
-		37C2B56F1AEE2627B521CEFE /* Localizations */ = {
-			isa = PBXGroup;
-			children = (
-				1FC2014DC96A9EEE01C1AD54 /* Localizable.xcstrings */,
-			);
-			name = Localizations;
-			path = Localizations;
-			sourceTree = "<group>";
-		};
-		43AEA0996597706AE3F98AA7 /* Pikafish */ = {
-			isa = PBXGroup;
-			children = (
-				57583ABF8977B29994F321D7 /* attacks.cpp */,
-				2566137C32D02E77F3A9E373 /* benchmark.cpp */,
-				B28A3FF9215498C93D441DAD /* bitboard.cpp */,
-				81DE12ABD75BF5F8A0249F89 /* engine.cpp */,
-				BE0E57D976598D103AA39497 /* evaluate.cpp */,
-				FB40324FE0FD339292544138 /* external */,
-				D34FA4FEA0E61DCF4D752D9B /* memory.cpp */,
-				50ADA5D2281BB395D71AA907 /* misc.cpp */,
-				93F144F92DDD9CE26C5B277F /* movegen.cpp */,
-				28A89DBA3C10C7522157BB11 /* movepick.cpp */,
-				FFAE7F4901CB09F7341D65B4 /* nnue */,
-				62F3115E995D76B0FE0F9296 /* position.cpp */,
-				6DE09DB2B62E6B77F4F95219 /* score.cpp */,
-				0A0A2B47C98BBC3F7D138650 /* search.cpp */,
-				4FF8B07B2BF5A233166BA882 /* thread.cpp */,
-				DAE3FFAAD389C1FEFB7D8951 /* timeman.cpp */,
-				EAB16FF2EDE8DBEACB401FD8 /* tt.cpp */,
-				DACEC109EFECE6450681A740 /* tune.cpp */,
-				7F5E6224F6A8E5B135DFCCFC /* uci.cpp */,
-				6857434BBC8012262E5ADED4 /* ucioption.cpp */,
-			);
-			name = Pikafish;
-			path = Vendor/Pikafish/src;
-			sourceTree = "<group>";
-		};
-		4911090AA419812DF412091C /* Licenses */ = {
-			isa = PBXGroup;
-			children = (
-				8829B73CD205FF186A08B5C0 /* Pikafish-GPL-3.0.txt */,
-				86DE7AB0562D96A75CE357E8 /* Pikafish-AUTHORS.txt */,
-				ED89C6C24178284F8E994AE8 /* CCPD-CC-BY-4.0.txt */,
-			);
-			name = Licenses;
-			path = Licenses;
-			sourceTree = "<group>";
-		};
-		5E336D91378B0CDB1DC35AC8 /* Engine */ = {
-			isa = PBXGroup;
-			children = (
-				6AF203BCA21894F797A0A24B /* pikafish.nnue */,
-			);
-			name = Engine;
-			path = Engine;
-			sourceTree = "<group>";
-		};
-		690F49E682CBF490C4D577C6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				86EF7AD1E90CC29C2B3E2553 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		715CAEE79A932FF9C2A2C4A9 /* EngineBridge */ = {
-			isa = PBXGroup;
-			children = (
-				2F14861DD2E41E3A8F97CE5D /* PikafishBridge.cpp */,
-				10690D81CAF927EBDDA1B6A1 /* PikafishBridge.h */,
-				7D53DD050940EDCCBA447A9C /* XiangqiMobile-Bridging-Header.h */,
-			);
-			name = EngineBridge;
-			path = EngineBridge;
-			sourceTree = "<group>";
-		};
-		7FF4338C33E104AC9496A62B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				12BF902396697155C79F7A22 /* XiangqiMobile.app */,
-				12F5855AFBA3459E80B799EE /* XiangqiMobileUITests.xctest */,
+				B16BBBE887B208E0375D3B49 /* XiangqiMobile.app */,
+				01CCABF2C1907600D1E3C036 /* XiangqiMobileUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		84A2B71C45084A3034B1B708 /* Features */ = {
+		196318D2A3A2947658C439F3 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4D2F200112BD8BE45E59B2F0 /* BoardView.swift */,
-				1660660CCEBFEE5333A3FF3C /* GameMenuView.swift */,
-				741A686C4CA1476FEDEA2C55 /* GameView.swift */,
-				B5B5FC56C8E1CC87B3A49A2C /* HomeView.swift */,
-				3EFAF28D32AA6C52B89643B4 /* LearningViews.swift */,
-				D7EC166274675B139FEF2C85 /* MoveHistoryView.swift */,
-				D97A92962C4856ED34E5383D /* NewGameView.swift */,
-				4BB4D70CE3BC1AA4190CD6E5 /* ResultView.swift */,
-				8EECE957BC6EF8DC858269A8 /* SettingsView.swift */,
-			);
-			name = Features;
-			path = Features;
-			sourceTree = "<group>";
-		};
-		86EF7AD1E90CC29C2B3E2553 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				8F5762B935C088EFCF6DFDC1 /* Foundation.framework */,
+				4430A0A6D6613EED82572C0B /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		B4B1E86828EE3CE5E2DCAC0E /* Core */ = {
+		1E18DCD8A1D8DA3E6B5C5158 /* features */ = {
 			isa = PBXGroup;
 			children = (
-				BF3DEFD3495C5C51C1D8384D /* CCPDLibrary.swift */,
-				94FEC9FFF61AE6DAF69344DA /* CCPDPuzzle.swift */,
-				808804A81AE9A14ED5320ABC /* ComputerPlayer.swift */,
-				900C168A72080B5A781395DA /* Domain.swift */,
-				DCE350DCFB059198910280DC /* LearningProgress.swift */,
-				E003114FADD73F85A7BBEE00 /* Notation.swift */,
-				25E5D36060195E7EDEAB86BB /* Position.swift */,
-				1E95ECDD31687B09C91046A9 /* Rules.swift */,
-				07A62CAD86F50CD40626580D /* XiangqiPGN.swift */,
-			);
-			name = Core;
-			path = Core;
-			sourceTree = "<group>";
-		};
-		B6E367EEA7D8283A9E067698 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				0E51F0208CE68DB57E1BD878 /* XiangqiMobileUITests */,
-			);
-			name = Tests;
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		CBDC3586F9A4A9BA24D93C2E = {
-			isa = PBXGroup;
-			children = (
-				7FF4338C33E104AC9496A62B /* Products */,
-				690F49E682CBF490C4D577C6 /* Frameworks */,
-				228A7B45ADF865E1B126BEA9 /* XiangqiMobile */,
-				715CAEE79A932FF9C2A2C4A9 /* EngineBridge */,
-				43AEA0996597706AE3F98AA7 /* Pikafish */,
-				E6E23776843E2B52B66B94CB /* Resources */,
-				B6E367EEA7D8283A9E067698 /* Tests */,
-			);
-			sourceTree = "<group>";
-		};
-		D22DDFEB88AE374517A35926 /* Learning */ = {
-			isa = PBXGroup;
-			children = (
-				B383455528E049BD0A510846 /* CCPD-source.json */,
-				6EB71351DD350C78F5C0AD18 /* ccpd.sqlite3 */,
-				7DBA700CD62468985A4219D0 /* ccpd-audit.json */,
-				A6AB3B0A8B2760CB37D86291 /* ccpd-quarantine.jsonl */,
-			);
-			name = Learning;
-			path = Learning;
-			sourceTree = "<group>";
-		};
-		E6DBDAC11DA37AE9425A8385 /* decompress */ = {
-			isa = PBXGroup;
-			children = (
-				04CF226D5049475F3669D320 /* huf_decompress.cpp */,
-				6CD17D844AED87252F2EBF71 /* zstd_ddict.cpp */,
-				919B17D17B8C4A5D220BCDAD /* zstd_decompress.cpp */,
-				0CA89167AAAAE6A0CAAAC58A /* zstd_decompress_block.cpp */,
-			);
-			name = decompress;
-			path = decompress;
-			sourceTree = "<group>";
-		};
-		E6E23776843E2B52B66B94CB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				3F2D93C85F2519F56EB4B4E3 /* Assets.xcassets */,
-				5E336D91378B0CDB1DC35AC8 /* Engine */,
-				4911090AA419812DF412091C /* Licenses */,
-				D22DDFEB88AE374517A35926 /* Learning */,
-				37C2B56F1AEE2627B521CEFE /* Localizations */,
-			);
-			name = Resources;
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		F2902B6F0B3BE1ACDD95F06D /* features */ = {
-			isa = PBXGroup;
-			children = (
-				A4F7EB51E50EDD3F9591707C /* full_threats.cpp */,
-				17550808F74C97CBE3812D83 /* half_ka_v2_hm.cpp */,
+				0824A30214FEC5E20BEB9EB8 /* full_threats.cpp */,
+				7B7A0006DB92252D12A801CD /* half_ka_v2_hm.cpp */,
 			);
 			name = features;
 			path = features;
 			sourceTree = "<group>";
 		};
-		FB40324FE0FD339292544138 /* external */ = {
+		2A4A9037B3C03D2EA8248568 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				1E7A882F2AD3DDC9677A5262 /* common */,
-				E6DBDAC11DA37AE9425A8385 /* decompress */,
+				CAE944B161118EF18A5CC016 /* CCPDLibrary.swift */,
+				7C60036DE9B74BDB03EC86E6 /* CCPDPuzzle.swift */,
+				85EA8716F74AA5375E58EB4C /* ComputerPlayer.swift */,
+				CD6E5D823286766E3B8C16E8 /* Domain.swift */,
+				91330507A2CE8B3ED859DC54 /* LearningProgress.swift */,
+				E1346AF53ACC5E5A466B33D0 /* Notation.swift */,
+				E50755E440368C2E5E4E339D /* Position.swift */,
+				B02413EB3AACB6664CDCA8E6 /* Rules.swift */,
+				656A1868D92C3015C4125AF3 /* XiangqiPGN.swift */,
 			);
-			name = external;
-			path = external;
+			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		FFAE7F4901CB09F7341D65B4 /* nnue */ = {
+		2B27961E2B52AF91929EAFA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F2902B6F0B3BE1ACDD95F06D /* features */,
-				035483E1216436B15838FA12 /* network.cpp */,
-				E45216288C8D396B4E6DDF00 /* nnue_accumulator.cpp */,
-				25D3E2EAD30BC21B778BBD66 /* nnue_misc.cpp */,
+				AAC9727A3F503E7E089522B6 /* Assets.xcassets */,
+				C042742F4CC819D1FDFE6167 /* Engine */,
+				B7F9DBF61D034538836D12B1 /* Licenses */,
+				8F04C86D81208B5F3BBC9DED /* Learning */,
+				87D470977464829B58B61CF8 /* Localizations */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2CD843281027ADB86A1394A7 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				41F7ABD03464B8938473AFB5 /* debug.cpp */,
+				EF59A8CF3DF43D886DDC16A7 /* entropy_common.cpp */,
+				1B7A02E0D78A4ECCFEADF66F /* error_private.cpp */,
+				89DC3400A337A55EA18A39A4 /* fse_decompress.cpp */,
+				C982E23E1F261CA99F3BF6D8 /* pool.cpp */,
+				117114F6190FF1042A507BCD /* threading.cpp */,
+				68D2D0987B80F2FF5587C0BA /* xxhash.cpp */,
+				82D27110EFD9CB50AFA31CC3 /* zstd_common.cpp */,
+			);
+			name = common;
+			path = common;
+			sourceTree = "<group>";
+		};
+		38FFCFA436D97A64B394438D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B2843254DDB496DC8EA16E76 /* BoardView.swift */,
+				C72D50A9899610EB6A727B7A /* GameMenuView.swift */,
+				0A581A9F4FF0FA010BF4AD3C /* GameView.swift */,
+				0FC0B9AF36691050483156D1 /* HomeView.swift */,
+				8AE75B10833ECDFB49763A32 /* LearningViews.swift */,
+				75159A8856984BA942D53FD8 /* MoveHistoryView.swift */,
+				C68C36DAE829494FDB60B514 /* NewGameView.swift */,
+				2C30FCE9B94179975195B0F3 /* ResultView.swift */,
+				58EDBB0608C4180F1C671B8A /* SettingsView.swift */,
+			);
+			name = Features;
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4CD211FC4F2E166FE26E1237 /* XiangqiMobile */ = {
+			isa = PBXGroup;
+			children = (
+				CF1902912247DC43A5246EB8 /* App */,
+				2A4A9037B3C03D2EA8248568 /* Core */,
+				38FFCFA436D97A64B394438D /* Features */,
+			);
+			name = XiangqiMobile;
+			path = XiangqiMobile;
+			sourceTree = "<group>";
+		};
+		5595CE23EAF3C77209C60B56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				196318D2A3A2947658C439F3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87D470977464829B58B61CF8 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				885EDDE07202DDE8B19D9A65 /* Localizable.xcstrings */,
+			);
+			name = Localizations;
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		8F04C86D81208B5F3BBC9DED /* Learning */ = {
+			isa = PBXGroup;
+			children = (
+				C6D3619804987277B1FD89FC /* CCPD-source.json */,
+				152B831699C3D630529F7214 /* ccpd.sqlite3 */,
+				ABD7616B74AB75B3D14C5985 /* ccpd-audit.json */,
+				AB93CE6C6A1BB4CE3D670C01 /* ccpd-quarantine.jsonl */,
+			);
+			name = Learning;
+			path = Learning;
+			sourceTree = "<group>";
+		};
+		94B17030F4925441A450A85A /* nnue */ = {
+			isa = PBXGroup;
+			children = (
+				1E18DCD8A1D8DA3E6B5C5158 /* features */,
+				610AA693067ABDF622362D58 /* network.cpp */,
+				6534A2054F03525B78A2C792 /* nnue_accumulator.cpp */,
+				619115165F30464C55E29A0B /* nnue_misc.cpp */,
 			);
 			name = nnue;
 			path = nnue;
 			sourceTree = "<group>";
 		};
+		97BE8D7D0BF53B97E0BEBB97 = {
+			isa = PBXGroup;
+			children = (
+				04B97ABE0C87AEA83B50FFD6 /* Products */,
+				5595CE23EAF3C77209C60B56 /* Frameworks */,
+				4CD211FC4F2E166FE26E1237 /* XiangqiMobile */,
+				A076454B6F78A27704217DA3 /* EngineBridge */,
+				AFBBD0045E769AED5D03EB48 /* Pikafish */,
+				2B27961E2B52AF91929EAFA9 /* Resources */,
+				E942A4846A341DF9E542BB45 /* Tests */,
+			);
+			sourceTree = "<group>";
+		};
+		A076454B6F78A27704217DA3 /* EngineBridge */ = {
+			isa = PBXGroup;
+			children = (
+				1C5C68DC5C69A760E46DCCB5 /* PikafishBridge.cpp */,
+				649D4BEDD1BB91772D93701E /* PikafishBridge.h */,
+				CE6565CE80BFD47B97193BFB /* XiangqiMobile-Bridging-Header.h */,
+			);
+			name = EngineBridge;
+			path = EngineBridge;
+			sourceTree = "<group>";
+		};
+		AFBBD0045E769AED5D03EB48 /* Pikafish */ = {
+			isa = PBXGroup;
+			children = (
+				D16605E59B24949CA0A00D39 /* attacks.cpp */,
+				CBD02B91BA2EA9624DB93A67 /* benchmark.cpp */,
+				9D6823655B14C3421008B420 /* bitboard.cpp */,
+				10E56EED0D9A1F19A7FE7CDA /* engine.cpp */,
+				309A804CEE634B0BC68A2E5E /* evaluate.cpp */,
+				E00B53F7BCFC7BCBCA9D3115 /* external */,
+				D19FAA9C0EF24F1507D0E72A /* memory.cpp */,
+				50291E08E37C1D2387F62F66 /* misc.cpp */,
+				5EAF6121A98EDD530906A929 /* movegen.cpp */,
+				E364CE67352FE9383D8701CC /* movepick.cpp */,
+				94B17030F4925441A450A85A /* nnue */,
+				D643C5FB6AF1CA5C00B39224 /* position.cpp */,
+				75232731AFD81BCD539CEFAB /* score.cpp */,
+				BF1B4886DDB1F040753A1C9A /* search.cpp */,
+				D432A0BD5690E4AED2B96210 /* thread.cpp */,
+				9E840265474CDD85E617B3E0 /* timeman.cpp */,
+				DE477BCBAA0402E21D5372BB /* tt.cpp */,
+				057C756410E91B9618066C22 /* tune.cpp */,
+				7C1C2B09FBA56D53363BC216 /* uci.cpp */,
+				2FEC81FE579DD1A8134E632E /* ucioption.cpp */,
+			);
+			name = Pikafish;
+			path = Vendor/Pikafish/src;
+			sourceTree = "<group>";
+		};
+		B7F9DBF61D034538836D12B1 /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				374C45BC57A3B33B76D2B5D2 /* Pikafish-GPL-3.0.txt */,
+				5C1B99DED4441C66E96EAE9C /* Pikafish-AUTHORS.txt */,
+				4120EC050836C58AF992AFCF /* CCPD-CC-BY-4.0.txt */,
+			);
+			name = Licenses;
+			path = Licenses;
+			sourceTree = "<group>";
+		};
+		BA51982C486064C3C862E3EB /* Theming */ = {
+			isa = PBXGroup;
+			children = (
+				300A0C4635E8EA1A5D06D2B9 /* Theme+SwiftUI.swift */,
+				168316D8A5E3CC531EAA50CA /* Theme.swift */,
+				35E57133C90C0980D931D967 /* ThemePicker.swift */,
+				87245E1F9C0C742AC46E8EBA /* ThemeRegistry.swift */,
+			);
+			name = Theming;
+			path = Theming;
+			sourceTree = "<group>";
+		};
+		BD0C5182E079D1BED19E6D0B /* XiangqiMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D24070928DACA2316EC18021 /* SmokeTests.swift */,
+			);
+			name = XiangqiMobileUITests;
+			path = XiangqiMobileUITests;
+			sourceTree = "<group>";
+		};
+		C042742F4CC819D1FDFE6167 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				76A2055F734D4F57465734D5 /* pikafish.nnue */,
+			);
+			name = Engine;
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		CC6F01B3877999ABBED25230 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				5164E02421483089A16D8565 /* Domain+Localized.swift */,
+				402219624CF01C70C492F1F7 /* Localization+SwiftUI.swift */,
+				59E1EA4594EC5A2FB3BAB430 /* LocalizedKey.swift */,
+				29D3F070082333F30B28B714 /* Localizer.swift */,
+				A432253E50881C8398A1323E /* Strings+Generated.swift */,
+			);
+			name = Localization;
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		CF1902912247DC43A5246EB8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FF5CEFB8B0AD2C51566EC3F4 /* AppLanguage.swift */,
+				4F3E3E2ADEA0CCCB49331AA9 /* AppModel.swift */,
+				A3E20CB98DCCC3EB9C778CE2 /* GameRepository.swift */,
+				78FC5C4DA95F09D29BB8623E /* GameSession.swift */,
+				CC6F01B3877999ABBED25230 /* Localization */,
+				29FBBAD580B3F992426F73B6 /* PikafishComputerClient.swift */,
+				CF8D4AD49C74DC419DD68EA3 /* Preferences.swift */,
+				DAE8B62518B8C0DBA17E8413 /* RootView.swift */,
+				BA51982C486064C3C862E3EB /* Theming */,
+				07673FA2F71B9FBB346F29C3 /* XiangqiMobileApp.swift */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		E00B53F7BCFC7BCBCA9D3115 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				2CD843281027ADB86A1394A7 /* common */,
+				FDFBF65F2D9506A2CB763DEF /* decompress */,
+			);
+			name = external;
+			path = external;
+			sourceTree = "<group>";
+		};
+		E942A4846A341DF9E542BB45 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BD0C5182E079D1BED19E6D0B /* XiangqiMobileUITests */,
+			);
+			name = Tests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		FDFBF65F2D9506A2CB763DEF /* decompress */ = {
+			isa = PBXGroup;
+			children = (
+				D6F79C37595959D4722B851A /* huf_decompress.cpp */,
+				800132B0FB7E16E3D2A4604F /* zstd_ddict.cpp */,
+				F587AD7ABF7A59CB03233D7F /* zstd_decompress.cpp */,
+				BC901D83D1B9E466D3869BD6 /* zstd_decompress_block.cpp */,
+			);
+			name = decompress;
+			path = decompress;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		34B46C58EA9B301537EF10F6 /* XiangqiMobileUITests */ = {
+		420C59B45368A71E20CDA66A /* XiangqiMobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01D8E8DC9231302070197163 /* Build configuration list for PBXNativeTarget "XiangqiMobileUITests" */;
+			buildConfigurationList = F4BCFD12C1074B8B92F4BC83 /* Build configuration list for PBXNativeTarget "XiangqiMobile" */;
 			buildPhases = (
-				078A92BBA1DD0AAB454954F7 /* Sources */,
-				EDD4A3BF5D7A28FF0605A5BE /* Frameworks */,
-				2A652524F082A46583B058D6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6CF7150A2752A95C11E51256 /* PBXTargetDependency */,
-			);
-			name = XiangqiMobileUITests;
-			productName = XiangqiMobileUITests;
-			productReference = 12F5855AFBA3459E80B799EE /* XiangqiMobileUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		F8E77C5E99024B9CF9943B20 /* XiangqiMobile */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB1536B694C33F24E555FBA1 /* Build configuration list for PBXNativeTarget "XiangqiMobile" */;
-			buildPhases = (
-				90608454264A7CC61ABA68BD /* Sources */,
-				5944DA9DEC5B0E7EBB37E39E /* Frameworks */,
-				FE608171A4DCC9159492388C /* Resources */,
+				80EC6EF2FC96FB74150BB345 /* Sources */,
+				6393915FFCD5E1FAED7AF975 /* Frameworks */,
+				2F19D609C5139908ABA1FE3B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -500,157 +527,186 @@
 			);
 			name = XiangqiMobile;
 			productName = XiangqiMobile;
-			productReference = 12BF902396697155C79F7A22 /* XiangqiMobile.app */;
+			productReference = B16BBBE887B208E0375D3B49 /* XiangqiMobile.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EA8F3280FD398061DC1A44F1 /* XiangqiMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 348DCE7A4821C195C5278B4E /* Build configuration list for PBXNativeTarget "XiangqiMobileUITests" */;
+			buildPhases = (
+				00C671ACBC2EE4B0FE710512 /* Sources */,
+				9F148FCD47693A1641BEB024 /* Frameworks */,
+				400A09C00306832DC88B9C0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B85DD778B12B7E1CB2C593BB /* PBXTargetDependency */,
+			);
+			name = XiangqiMobileUITests;
+			productName = XiangqiMobileUITests;
+			productReference = 01CCABF2C1907600D1E3C036 /* XiangqiMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C523619692F1DCBDC774AD01 /* Project object */ = {
+		3F5396FD62DF421EF5A58688 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 2700;
 				LastUpgradeCheck = 2700;
 			};
-			buildConfigurationList = 13681F7CD980BF49C4A949F9 /* Build configuration list for PBXProject "XiangqiMobile" */;
+			buildConfigurationList = 83727735AF4548B036B396BF /* Build configuration list for PBXProject "XiangqiMobile" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
-			mainGroup = CBDC3586F9A4A9BA24D93C2E;
+			mainGroup = 97BE8D7D0BF53B97E0BEBB97;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 100;
-			productRefGroup = 7FF4338C33E104AC9496A62B /* Products */;
+			productRefGroup = 04B97ABE0C87AEA83B50FFD6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8E77C5E99024B9CF9943B20 /* XiangqiMobile */,
-				34B46C58EA9B301537EF10F6 /* XiangqiMobileUITests */,
+				420C59B45368A71E20CDA66A /* XiangqiMobile */,
+				EA8F3280FD398061DC1A44F1 /* XiangqiMobileUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2A652524F082A46583B058D6 /* Resources */ = {
+		2F19D609C5139908ABA1FE3B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DAD3C65A5BB2632E7F5FF4D /* Assets.xcassets in Resources */,
+				60A0A27CAE1643B28C5E0332 /* pikafish.nnue in Resources */,
+				3B335DC5C1A5C95402850E96 /* Pikafish-GPL-3.0.txt in Resources */,
+				04A66C3E0C16CCAC208842E8 /* Pikafish-AUTHORS.txt in Resources */,
+				479400811EA167F31858713C /* CCPD-CC-BY-4.0.txt in Resources */,
+				830F81622AF7D693684F020F /* CCPD-source.json in Resources */,
+				8A9B735295D86BC7386626CB /* ccpd.sqlite3 in Resources */,
+				86F777018F80A6823113252D /* ccpd-audit.json in Resources */,
+				E62BB35DF23470DD482C0A12 /* ccpd-quarantine.jsonl in Resources */,
+				555F6C6551F5FF8B95ED11DB /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE608171A4DCC9159492388C /* Resources */ = {
+		400A09C00306832DC88B9C0F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECE6B25D637701156D4BD355 /* Assets.xcassets in Resources */,
-				9B195C00BF9A6484946C637C /* pikafish.nnue in Resources */,
-				35EF645C4549503E56C4C691 /* Pikafish-GPL-3.0.txt in Resources */,
-				1E19AC90F1519FF69E9BA87E /* Pikafish-AUTHORS.txt in Resources */,
-				F329EB941D8401274FFD65D0 /* CCPD-CC-BY-4.0.txt in Resources */,
-				B7C3867D8F8ED45168DF4793 /* CCPD-source.json in Resources */,
-				BA27FC6384F87BF5A675052D /* ccpd.sqlite3 in Resources */,
-				5A22462E95FE6F93049F4686 /* ccpd-audit.json in Resources */,
-				3C45A503E0262DBDE35E571A /* ccpd-quarantine.jsonl in Resources */,
-				074AE18683E807B50F3C1603 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		078A92BBA1DD0AAB454954F7 /* Sources */ = {
+		00C671ACBC2EE4B0FE710512 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A4DAC0E9D927E3AEB8A0E5 /* SmokeTests.swift in Sources */,
+				03AA78849EFD8B1D2B4BB41F /* SmokeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90608454264A7CC61ABA68BD /* Sources */ = {
+		80EC6EF2FC96FB74150BB345 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				291890A510A86C04D7D4B0BF /* AppLanguage.swift in Sources */,
-				64AE5986DF3BF02267AB2C90 /* AppModel.swift in Sources */,
-				0D72147C3316C587DC6C3B5B /* GameRepository.swift in Sources */,
-				394CFDF06CB487F544A9A6D2 /* GameSession.swift in Sources */,
-				02A55F94FC5D3A5DD5FEF254 /* PikafishComputerClient.swift in Sources */,
-				1BC0B406756658F9150A653D /* RootView.swift in Sources */,
-				8BCD53B5A9F4DD63CCADE04B /* Theme.swift in Sources */,
-				D0BFB6DD2077E43971D8586A /* XiangqiMobileApp.swift in Sources */,
-				605A787ECB4A647B528EA783 /* CCPDLibrary.swift in Sources */,
-				5D43137183F857FE57C862B5 /* CCPDPuzzle.swift in Sources */,
-				5A65885DA959A75CD9CA68C7 /* ComputerPlayer.swift in Sources */,
-				F115742627F875944DDBF794 /* Domain.swift in Sources */,
-				BC322321F3CF6B464FC8472E /* LearningProgress.swift in Sources */,
-				AC1D8A33A3CF33BC437143DE /* Notation.swift in Sources */,
-				D2A50DA32041CE5F6A55DB88 /* Position.swift in Sources */,
-				9AD43C1ECB69E18F80BB5298 /* Rules.swift in Sources */,
-				A02B7E312868449A5C4FB602 /* XiangqiPGN.swift in Sources */,
-				5E014AF534AFE2277D8BA56D /* BoardView.swift in Sources */,
-				CD1A34BF41E29FE3C483592C /* GameMenuView.swift in Sources */,
-				3691195F5E2C681BBAD8C4C4 /* GameView.swift in Sources */,
-				7B5DA32BCFCCE1A5A18DFAD5 /* HomeView.swift in Sources */,
-				D80E958BA5E8600890C8103B /* LearningViews.swift in Sources */,
-				7B3AB6A94A9BEA4FDBC2B14D /* MoveHistoryView.swift in Sources */,
-				8AF2C23D32FBC172589D9607 /* NewGameView.swift in Sources */,
-				63981E4C65DD8B3A0A6395EE /* ResultView.swift in Sources */,
-				D715FAB970F83D8F253B9799 /* SettingsView.swift in Sources */,
-				5B1B10DA8340D5077BAC70C7 /* PikafishBridge.cpp in Sources */,
-				363A261FFF2813040BEF245D /* attacks.cpp in Sources */,
-				2DBF6104BA1451C08FF22790 /* benchmark.cpp in Sources */,
-				C723C8CEA69C414797134843 /* bitboard.cpp in Sources */,
-				04E3D5AAE6CE31B7A657D419 /* engine.cpp in Sources */,
-				44957D949D34D4C16624CD53 /* evaluate.cpp in Sources */,
-				9135AC7864268704875EE55E /* debug.cpp in Sources */,
-				3350AB4F13388BF5F046314B /* entropy_common.cpp in Sources */,
-				40279048598536E4C5EE2EA2 /* error_private.cpp in Sources */,
-				7C7756E76B12E562C1BCA262 /* fse_decompress.cpp in Sources */,
-				74AB89CC631221BF3B3E487E /* pool.cpp in Sources */,
-				F69D43F449A0010016CCD5BB /* threading.cpp in Sources */,
-				676821A322F7242F1602AEC7 /* xxhash.cpp in Sources */,
-				955E1C13C66E245E0B703D40 /* zstd_common.cpp in Sources */,
-				0ECCB7A542C2E7F725D83C5D /* huf_decompress.cpp in Sources */,
-				CBF9F818C0EE33C28551E4F4 /* zstd_ddict.cpp in Sources */,
-				61A688C4D8B581CF1102C2E0 /* zstd_decompress.cpp in Sources */,
-				74652F44CCC6698131B584EC /* zstd_decompress_block.cpp in Sources */,
-				5865667A21760842F879B747 /* memory.cpp in Sources */,
-				A31B2E26E60F8B0494B24158 /* misc.cpp in Sources */,
-				75A7516222BAFE362CE52437 /* movegen.cpp in Sources */,
-				B0A30AE3D3FB211609A181D9 /* movepick.cpp in Sources */,
-				CAA6EFB4B31615410793088A /* full_threats.cpp in Sources */,
-				DF15E7BDAE8EFA15C104EA3A /* half_ka_v2_hm.cpp in Sources */,
-				4A94BE3B9A931E549A4477A1 /* network.cpp in Sources */,
-				79A737014E11FEA93D22ACDA /* nnue_accumulator.cpp in Sources */,
-				0B7BEB9C0C39C6F8131816AE /* nnue_misc.cpp in Sources */,
-				97D55B5634FC6F59613DAE9F /* position.cpp in Sources */,
-				CAD7B50763B6312EA4DB79E1 /* score.cpp in Sources */,
-				35D744FDAEEF36AF6819233B /* search.cpp in Sources */,
-				9C5D4998887BD1104C14A6F6 /* thread.cpp in Sources */,
-				764BAC5E81FC91948CFC0D62 /* timeman.cpp in Sources */,
-				799D155EA20FE182AC2E12E6 /* tt.cpp in Sources */,
-				8BF0F60B6441E216C783736F /* tune.cpp in Sources */,
-				5476B32AC7315AAFA1C79055 /* uci.cpp in Sources */,
-				4CF7427A443EA75C3C37662B /* ucioption.cpp in Sources */,
+				05381B2C22325C0A0B680E86 /* AppLanguage.swift in Sources */,
+				7F5C60FD46350055EB6F3E9D /* AppModel.swift in Sources */,
+				7E26359DEB1E11541FE3BA8B /* GameRepository.swift in Sources */,
+				82F005A45971D45C17C8B375 /* GameSession.swift in Sources */,
+				3FD664686EAD3FFC945C2F41 /* Domain+Localized.swift in Sources */,
+				8626B63C385C75AA0047C61B /* Localization+SwiftUI.swift in Sources */,
+				2FDC49D72AA63613820F24DE /* LocalizedKey.swift in Sources */,
+				20867E3551DBB9219E60839E /* Localizer.swift in Sources */,
+				5D0B0ABD7535B6D4CDF255EC /* Strings+Generated.swift in Sources */,
+				5A799B3500B22558FD6E9C87 /* PikafishComputerClient.swift in Sources */,
+				4EF5F70F14CC3E7DEEEB688D /* Preferences.swift in Sources */,
+				422B38FE0450E7E5D7802451 /* RootView.swift in Sources */,
+				623EFDED34C0A27F29F34A73 /* Theme+SwiftUI.swift in Sources */,
+				E8073F575680675994E30513 /* Theme.swift in Sources */,
+				EAE3B7D03871F588CA96F706 /* ThemePicker.swift in Sources */,
+				AF541F44D32234A833F5055C /* ThemeRegistry.swift in Sources */,
+				9F6B50F252964CA32CB569A2 /* XiangqiMobileApp.swift in Sources */,
+				05662B3B6A76EB2C47F63824 /* CCPDLibrary.swift in Sources */,
+				76AFD16326B60E5DBABD98D8 /* CCPDPuzzle.swift in Sources */,
+				4D8343C67D3AD7FEA710F2B6 /* ComputerPlayer.swift in Sources */,
+				5E2D34492A770BE2A1A68E7A /* Domain.swift in Sources */,
+				5D9AD73245AC5ACA39B45A01 /* LearningProgress.swift in Sources */,
+				C90960C0F751B2699064D526 /* Notation.swift in Sources */,
+				578362C98959E7315007CC5A /* Position.swift in Sources */,
+				EA81D1C351285548205D9820 /* Rules.swift in Sources */,
+				0AD9EEAE5C831AD58DAAA26D /* XiangqiPGN.swift in Sources */,
+				4C7DA1C5F43768B40D0684E5 /* BoardView.swift in Sources */,
+				BC1E84D4DFA45B0C5F6EE145 /* GameMenuView.swift in Sources */,
+				24702A145C6B04C941EC3F99 /* GameView.swift in Sources */,
+				E3390CE73EF0C167D9A6A2C2 /* HomeView.swift in Sources */,
+				8803184BB576F9212A6D2A78 /* LearningViews.swift in Sources */,
+				8DE244615CC60A894E1A10F9 /* MoveHistoryView.swift in Sources */,
+				793AD4F337B2BE7C51D9E426 /* NewGameView.swift in Sources */,
+				C116F1BF80D45FFBC842B8A7 /* ResultView.swift in Sources */,
+				39A5CB1F4422FE1A8F586575 /* SettingsView.swift in Sources */,
+				8981B681EDA9720D22A6E6F0 /* PikafishBridge.cpp in Sources */,
+				83AD54CB6E225F7360BB42D2 /* attacks.cpp in Sources */,
+				4147C4E8EFE0FC01073D311C /* benchmark.cpp in Sources */,
+				677B0F35E403387D929557AB /* bitboard.cpp in Sources */,
+				F8A70A3BFAF0626A5189DE82 /* engine.cpp in Sources */,
+				48896E6F1D9AA32B8E509E34 /* evaluate.cpp in Sources */,
+				30CF847BD3B3BD6D56F66989 /* debug.cpp in Sources */,
+				2E49EB275E67071333675258 /* entropy_common.cpp in Sources */,
+				86B343B97E8A382128C3F372 /* error_private.cpp in Sources */,
+				3F5D85DA8DDB3DD98B53204C /* fse_decompress.cpp in Sources */,
+				57F9C147AF8D212935653AE0 /* pool.cpp in Sources */,
+				4D34702F7B1C131197DD4C54 /* threading.cpp in Sources */,
+				121DCFED283E0C5C20A316E5 /* xxhash.cpp in Sources */,
+				7BB4A85EF0B3F019CB255250 /* zstd_common.cpp in Sources */,
+				A33B218730AEDC7F4E02039A /* huf_decompress.cpp in Sources */,
+				F7334334CD1B10388E20CE01 /* zstd_ddict.cpp in Sources */,
+				8CDBD10964445EA7BA2E55C2 /* zstd_decompress.cpp in Sources */,
+				44EF79040F2AB4CAD64CD717 /* zstd_decompress_block.cpp in Sources */,
+				B20DA0FAC23A55FCBF14AF33 /* memory.cpp in Sources */,
+				22301F0B5C3346CBE6BE96D9 /* misc.cpp in Sources */,
+				5A0C8EE13178FCA130B5F323 /* movegen.cpp in Sources */,
+				666F1A01A07A76196EC20476 /* movepick.cpp in Sources */,
+				CD4E571B35B910FB3F450985 /* full_threats.cpp in Sources */,
+				BDA62AB474B353EC31FE940E /* half_ka_v2_hm.cpp in Sources */,
+				89D36033FAE3618C4248B847 /* network.cpp in Sources */,
+				B068C10C77747CC136C96611 /* nnue_accumulator.cpp in Sources */,
+				947BD8AC6003FBFF66E8884B /* nnue_misc.cpp in Sources */,
+				17D8A322502C9121A3BAB5F8 /* position.cpp in Sources */,
+				3A4DD5270F593DE014598CE3 /* score.cpp in Sources */,
+				F9F545D3C7C50B5B90887340 /* search.cpp in Sources */,
+				F1A9AB12AD80AE47E2BBB1F9 /* thread.cpp in Sources */,
+				229052A879B194E02D5ED735 /* timeman.cpp in Sources */,
+				3D2FB00BC36551A47791863F /* tt.cpp in Sources */,
+				276BB7BE71121AC89F977683 /* tune.cpp in Sources */,
+				B29629A188ED7583C12E6C6B /* uci.cpp in Sources */,
+				EB7D8ABFA223E9102BEDE624 /* ucioption.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6CF7150A2752A95C11E51256 /* PBXTargetDependency */ = {
+		B85DD778B12B7E1CB2C593BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XiangqiMobile;
-			target = F8E77C5E99024B9CF9943B20 /* XiangqiMobile */;
-			targetProxy = 4B0482ABF7166D2986217F91 /* PBXContainerItemProxy */;
+			target = 420C59B45368A71E20CDA66A /* XiangqiMobile */;
+			targetProxy = 5A222E096450373C90FAE096 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01E26377EEB40F31DEDACBD3 /* Release */ = {
+		161EB022DBCDA1DA5DD2795A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -694,65 +750,10 @@
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		1CEE70EE89128940DA50CCCF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		35C3792602A76CA7BCD5527C /* Debug */ = {
+		254E247CB3695EC2B11F7924 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -767,7 +768,7 @@
 			};
 			name = Debug;
 		};
-		461A0626A44F706A971E6BC9 /* Debug */ = {
+		28EC510470257057C48B6F93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -828,23 +829,7 @@
 			};
 			name = Debug;
 		};
-		4F55F69E4913623BC448F44E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile-uitests";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = XiangqiMobile;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FB1182D8734F8B9E16A1D02B /* Debug */ = {
+		B95B2548A0F9495075876F34 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -888,40 +873,111 @@
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
+		};
+		BD80694504D91F66BD9C54D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C89DA587CC6F97C73AF6B861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankzhu.xiangqi-mobile-uitests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = XiangqiMobile;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01D8E8DC9231302070197163 /* Build configuration list for PBXNativeTarget "XiangqiMobileUITests" */ = {
+		348DCE7A4821C195C5278B4E /* Build configuration list for PBXNativeTarget "XiangqiMobileUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F55F69E4913623BC448F44E /* Release */,
-				35C3792602A76CA7BCD5527C /* Debug */,
+				C89DA587CC6F97C73AF6B861 /* Release */,
+				254E247CB3695EC2B11F7924 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13681F7CD980BF49C4A949F9 /* Build configuration list for PBXProject "XiangqiMobile" */ = {
+		83727735AF4548B036B396BF /* Build configuration list for PBXProject "XiangqiMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				461A0626A44F706A971E6BC9 /* Debug */,
-				1CEE70EE89128940DA50CCCF /* Release */,
+				28EC510470257057C48B6F93 /* Debug */,
+				BD80694504D91F66BD9C54D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB1536B694C33F24E555FBA1 /* Build configuration list for PBXNativeTarget "XiangqiMobile" */ = {
+		F4BCFD12C1074B8B92F4BC83 /* Build configuration list for PBXNativeTarget "XiangqiMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				01E26377EEB40F31DEDACBD3 /* Release */,
-				FB1182D8734F8B9E16A1D02B /* Debug */,
+				B95B2548A0F9495075876F34 /* Release */,
+				161EB022DBCDA1DA5DD2795A /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C523619692F1DCBDC774AD01 /* Project object */;
+	rootObject = 3F5396FD62DF421EF5A58688 /* Project object */;
 }

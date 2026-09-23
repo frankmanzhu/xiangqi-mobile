@@ -1,91 +1,102 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("appLanguage") private var languageRaw = AppLanguage.system.rawValue
-    @AppStorage("theme") private var themeRaw = ThemeID.classic.rawValue
-    @AppStorage("pieceLabels") private var pieceLabels = "Traditional"
-    @AppStorage("coordinates") private var coordinates = "Red perspective"
+    @Environment(\.l10n) private var l10n
+    @AppStorage(AppLanguage.storageKey) private var languageRaw = AppLanguage.system.rawValue
+    @AppStorage(ThemeID.storageKey) private var themeRaw = ThemeID.classic.rawValue
+    @AppStorage(PieceGlyphSet.storageKey) private var pieceLabelsRaw = PieceGlyphSet.traditional.rawValue
+    @AppStorage(CoordinateDisplay.storageKey) private var coordinatesRaw = CoordinateDisplay.redPerspective.rawValue
     @AppStorage("confirmMoves") private var confirmMoves = false
     @AppStorage("sounds") private var sounds = true
     @AppStorage("haptics") private var haptics = true
 
     var body: some View {
         Form {
-            Section("Language") {
-                Picker("App language", selection: $languageRaw) {
-                    Text("System Default").tag(AppLanguage.system.rawValue)
-                    Text("English").tag(AppLanguage.english.rawValue)
-                    Text("Simplified Chinese").tag(AppLanguage.simplifiedChinese.rawValue)
-                    Text("Traditional Chinese").tag(AppLanguage.traditionalChinese.rawValue)
+            Section(l10n(L10n.Settings.Section.language)) {
+                Picker(l10n(L10n.Settings.appLanguage), selection: $languageRaw) {
+                    ForEach(AppLanguage.allCases, id: \.rawValue) { language in
+                        Text(language.titleKey, l10n).tag(language.rawValue)
+                    }
                 }
             }
-            Section("Appearance") {
-                Picker("Theme", selection: $themeRaw) {
-                    ForEach(ThemeID.allCases, id: \.rawValue) { Text($0.title).tag($0.rawValue) }
+            Section(l10n(L10n.Settings.Section.appearance)) {
+                Picker(l10n(L10n.Settings.theme), selection: $themeRaw) {
+                    ForEach(ThemeRegistry.themes) { theme in
+                        Text(theme.nameKey, l10n).tag(theme.id.rawValue)
+                    }
                 }
-                Picker("Piece labels", selection: $pieceLabels) {
-                    Text("Traditional Chinese").tag("Traditional")
-                    Text("Simplified Chinese").tag("Simplified")
+                Picker(l10n(L10n.Settings.pieceLabels), selection: $pieceLabelsRaw) {
+                    ForEach(PieceGlyphSet.allCases, id: \.rawValue) { option in
+                        Text(option.titleKey, l10n).tag(option.rawValue)
+                    }
                 }
-                Picker("Coordinates", selection: $coordinates) {
-                    Text("Off").tag("Off")
-                    Text("Red perspective").tag("Red perspective")
-                    Text("Always").tag("Always")
+                Picker(l10n(L10n.Settings.coordinates), selection: $coordinatesRaw) {
+                    ForEach(CoordinateDisplay.allCases, id: \.rawValue) { option in
+                        Text(option.titleKey, l10n).tag(option.rawValue)
+                    }
                 }
             }
-            Section("Interaction") {
-                Toggle("Confirm moves", isOn: $confirmMoves)
-                Toggle("Sound effects", isOn: $sounds)
-                Toggle("Haptics", isOn: $haptics)
+            Section(l10n(L10n.Settings.Section.interaction)) {
+                Toggle(l10n(L10n.Settings.confirmMoves), isOn: $confirmMoves)
+                Toggle(l10n(L10n.Settings.sounds), isOn: $sounds)
+                Toggle(l10n(L10n.Settings.haptics), isOn: $haptics)
             }
-            Section("Rules and records") {
-                NavigationLink("How to play") { RulesHelpView() }
-                LabeledContent("Move record", value: "UCI")
-                LabeledContent("Rules policy", value: GameRecord.rulesPolicyID)
+            Section(l10n(L10n.Settings.Section.rules)) {
+                NavigationLink(l10n(L10n.Settings.howToPlay)) { RulesHelpView() }
+                LabeledContent(l10n(L10n.Settings.moveRecord), value: "UCI")
+                LabeledContent(l10n(L10n.Settings.rulesPolicy), value: GameRecord.rulesPolicyID)
             }
-            Section("About") {
-                LabeledContent("Version", value: "1.0")
-                LabeledContent("Computer", value: "Pikafish")
-                NavigationLink("Open-source and content licenses") { LicensesView() }
-                Text("Computer play uses the bundled Pikafish engine and NNUE network entirely on-device. No account or network access is required.")
+            Section(l10n(L10n.Settings.Section.about)) {
+                LabeledContent(l10n(L10n.Settings.version), value: "1.0")
+                LabeledContent(l10n(L10n.Settings.computer), value: "Pikafish")
+                NavigationLink(l10n(L10n.Settings.licenses)) { LicensesView() }
+                Text(L10n.Settings.engineNote, l10n)
                     .font(.footnote).foregroundStyle(.secondary)
             }
         }
-        .navigationTitle("Settings")
+        .navigationTitle(l10n(L10n.Settings.title))
     }
 }
 
 private struct LicensesView: View {
+    @Environment(\.l10n) private var l10n
+
     var body: some View {
         List {
-            Section("Learning content") {
+            Section(l10n(L10n.Licenses.Section.learning)) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Chinese Chess Practical Dataset (CCPD)").font(.headline)
-                    Text("Yu-Han Tseng and Bo-Nian Chen (2026)")
-                    Text("Creative Commons Attribution 4.0 International")
+                    Text(L10n.Licenses.Ccpd.name, l10n).font(.headline)
+                    Text(L10n.Licenses.Ccpd.authors, l10n)
+                    Text(L10n.Licenses.Ccpd.license, l10n)
                         .foregroundStyle(.secondary)
-                    Text("Xiangqi Mobile decodes the source text, converts Chinese notation to UCI, validates move legality, and indexes accepted records for offline study. Invalid or ambiguous records are excluded.")
+                    Text(L10n.Licenses.Ccpd.note, l10n)
                         .font(.footnote).foregroundStyle(.secondary)
-                    Link("Dataset source", destination: URL(string: "https://github.com/Yvonne761/Chinese-Chess-Practical-Dataset")!)
-                    Link("CC BY 4.0 license", destination: URL(string: "https://creativecommons.org/licenses/by/4.0/legalcode")!)
+                    Link(
+                        l10n(L10n.Licenses.Ccpd.sourceLink),
+                        destination: URL(string: "https://github.com/Yvonne761/Chinese-Chess-Practical-Dataset")!
+                    )
+                    Link(
+                        l10n(L10n.Licenses.Ccpd.licenseLink),
+                        destination: URL(string: "https://creativecommons.org/licenses/by/4.0/legalcode")!
+                    )
                 }
                 if let notice = bundledText(named: "CCPD-CC-BY-4.0") {
-                    DisclosureGroup("Bundled notice") {
-                        Text(notice).font(.caption.monospaced()).textSelection(.enabled)
+                    DisclosureGroup(l10n(L10n.Licenses.bundledNotice)) {
+                        Text(verbatim: notice).font(.caption.monospaced()).textSelection(.enabled)
                     }
                 }
             }
-            Section("Computer engine") {
-                Text("Pikafish is distributed under GNU GPL version 3. The bundled notice and authors list are included with the application.")
+            Section(l10n(L10n.Licenses.Section.engine)) {
+                Text(L10n.Licenses.Engine.note, l10n)
                     .font(.footnote).foregroundStyle(.secondary)
                 if let license = bundledText(named: "Pikafish-GPL-3.0") {
-                    DisclosureGroup("GNU GPL v3") {
-                        Text(license).font(.caption.monospaced()).textSelection(.enabled)
+                    DisclosureGroup(l10n(L10n.Licenses.gpl)) {
+                        Text(verbatim: license).font(.caption.monospaced()).textSelection(.enabled)
                     }
                 }
             }
         }
-        .navigationTitle("Licenses")
+        .navigationTitle(l10n(L10n.Licenses.title))
     }
 
     private func bundledText(named name: String) -> String? {
@@ -95,28 +106,33 @@ private struct LicensesView: View {
 }
 
 private struct RulesHelpView: View {
+    @Environment(\.l10n) private var l10n
+
     var body: some View {
         List {
-            Section("Goal") {
-                Text("Checkmate the opposing general. Red moves first. A side with no legal move loses.")
+            Section(l10n(L10n.Rules.Section.goal)) {
+                Text(L10n.Rules.goal, l10n)
             }
-            Section("Pieces") {
-                rule("Chariot", "Moves any distance along a clear file or rank.")
-                rule("Horse", "Moves one orthogonal step then one diagonal step; the first step cannot be blocked.")
-                rule("Cannon", "Moves like a chariot, but captures by jumping exactly one intervening piece.")
-                rule("Elephant", "Moves two points diagonally, cannot jump, and cannot cross the river.")
-                rule("Advisor", "Moves one point diagonally inside the palace.")
-                rule("General", "Moves one point orthogonally inside the palace. The generals may not face on an open file.")
-                rule("Soldier", "Moves forward one point. After crossing the river it may also move sideways, never backward.")
+            Section(l10n(L10n.Rules.Section.pieces)) {
+                rule(L10n.Piece.chariot, L10n.Rules.chariot)
+                rule(L10n.Piece.horse, L10n.Rules.horse)
+                rule(L10n.Piece.cannon, L10n.Rules.cannon)
+                rule(L10n.Piece.elephant, L10n.Rules.elephant)
+                rule(L10n.Piece.advisor, L10n.Rules.advisor)
+                rule(L10n.Piece.general, L10n.Rules.general)
+                rule(L10n.Piece.soldier, L10n.Rules.soldier)
             }
-            Section("Notation") {
-                Text("Files are a–i and ranks are 0–9. A move such as b2e2 records its source and destination. The game stores the starting FEN plus this ordered move list for reliable replay and sharing.")
+            Section(l10n(L10n.Rules.Section.notation)) {
+                Text(L10n.Rules.notation, l10n)
             }
         }
-        .navigationTitle("Rules")
+        .navigationTitle(l10n(L10n.Rules.title))
     }
 
-    private func rule(_ name: String, _ text: String) -> some View {
-        VStack(alignment: .leading, spacing: 4) { Text(name).font(.headline); Text(text).foregroundStyle(.secondary) }
+    private func rule(_ name: LocalizedKey, _ text: LocalizedKey) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(name, l10n).font(.headline)
+            Text(text, l10n).foregroundStyle(.secondary)
+        }
     }
 }

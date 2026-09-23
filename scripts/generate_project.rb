@@ -12,6 +12,11 @@ project = Xcodeproj::Project.new(project_path)
 project.root_object.attributes["LastSwiftUpdateCheck"] = "2700"
 project.root_object.attributes["LastUpgradeCheck"] = "2700"
 
+# Xcode only compiles the String Catalog for regions listed here. Without the
+# Chinese regions the translations are silently dropped from the built app.
+project.root_object.development_region = "en"
+project.root_object.known_regions = %w[en Base zh-Hans zh-Hant]
+
 app_group = project.main_group.new_group("XiangqiMobile", "XiangqiMobile")
 target = project.new_target(:application, "XiangqiMobile", :ios, "18.0")
 ui_tests = project.new_target(:ui_test_bundle, "XiangqiMobileUITests", :ios, "18.0")

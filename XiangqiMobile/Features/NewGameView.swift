@@ -2,43 +2,62 @@ import SwiftUI
 
 struct NewGameView: View {
     @EnvironmentObject private var app: AppModel
+    @Environment(\.l10n) private var l10n
     let mode: GameMode
-    @State private var sideChoice = "red"
+    @State private var sideChoice = SideChoice.red
     @State private var level = 2
     @State private var timeControl = TimeControl.casual
     @State private var confirmReplacement = false
-    @AppStorage("theme") private var themeRaw = ThemeID.classic.rawValue
+    @AppStorage(ThemeID.storageKey) private var themeRaw = ThemeID.classic.rawValue
 
-    private let levelNames = ["Beginner", "Club learner", "Club player", "Expert", "Master"]
+    private enum SideChoice: String, CaseIterable {
+        case red, black, random
+
+        var titleKey: LocalizedKey {
+            switch self {
+            case .red: L10n.Side.red
+            case .black: L10n.Side.black
+            case .random: L10n.Common.random
+            }
+        }
+
+        var side: Side? {
+            switch self {
+            case .red: .red
+            case .black: .black
+            case .random: nil
+            }
+        }
+    }
 
     var body: some View {
         Form {
             Section {
-                LabeledContent("Mode", value: mode.title)
+                LabeledContent(l10n(L10n.NewGame.mode), value: l10n(mode.titleKey))
             }
             if mode == .computer {
-                Section("Your side") {
-                    Picker("Your side", selection: $sideChoice) {
-                        Text("Red").tag("red")
-                        Text("Black").tag("black")
-                        Text("Random").tag("random")
+                Section(l10n(L10n.NewGame.Section.side)) {
+                    Picker(l10n(L10n.NewGame.Section.side), selection: $sideChoice) {
+                        ForEach(SideChoice.allCases, id: \.self) { choice in
+                            Text(choice.titleKey, l10n).tag(choice)
+                        }
                     }.pickerStyle(.segmented)
-                    Text("Red moves first.").font(.footnote).foregroundStyle(.secondary)
+                    Text(L10n.NewGame.redMovesFirst, l10n).font(.footnote).foregroundStyle(.secondary)
                 }
-                Section("Computer strength") {
-                    Picker("Level", selection: $level) {
-                        ForEach(1...5, id: \.self) { Text("\($0)").tag($0) }
+                Section(l10n(L10n.NewGame.Section.strength)) {
+                    Picker(l10n(L10n.NewGame.level), selection: $level) {
+                        ForEach(1...5, id: \.self) { Text(verbatim: "\($0)").tag($0) }
                     }.pickerStyle(.segmented)
-                    Text(levelNames[level - 1]).font(.headline)
-                    Text(levelDescription).font(.footnote).foregroundStyle(.secondary)
+                    Text(levelName, l10n).font(.headline)
+                    Text(levelDetail, l10n).font(.footnote).foregroundStyle(.secondary)
                 }
             }
-            Section("Time") {
-                Picker("Time", selection: $timeControl) {
-                    ForEach(TimeControl.allCases, id: \.self) { Text($0.title).tag($0) }
+            Section(l10n(L10n.NewGame.Section.time)) {
+                Picker(l10n(L10n.NewGame.Section.time), selection: $timeControl) {
+                    ForEach(TimeControl.allCases, id: \.self) { Text($0.titleKey, l10n).tag($0) }
                 }.pickerStyle(.segmented)
             }
-            Section("Theme") {
+            Section(l10n(L10n.NewGame.Section.theme)) {
                 ThemeChoiceStrip(selection: $themeRaw)
                     .padding(.vertical, 6)
             }
@@ -47,31 +66,41 @@ struct NewGameView: View {
                     if app.resumableRecord != nil { confirmReplacement = true }
                     else { Task { await start() } }
                 } label: {
-                    Text("Start game").font(.headline).frame(maxWidth: .infinity)
+                    Text(L10n.NewGame.start, l10n).font(.headline).frame(maxWidth: .infinity)
                 }
             }
         }
-        .navigationTitle("New game")
+        .navigationTitle(l10n(L10n.NewGame.title))
         .navigationBarTitleDisplayMode(.inline)
         .confirmationDialog(
-            "Replace the saved game?",
+            l10n(L10n.NewGame.Replace.title),
             isPresented: $confirmReplacement,
             titleVisibility: .visible
         ) {
-            Button("Replace and start", role: .destructive) { Task { await start() } }
-            Button("Cancel", role: .cancel) { }
+            Button(l10n(L10n.NewGame.Replace.confirm), role: .destructive) { Task { await start() } }
+            Button(l10n(L10n.Common.cancel), role: .cancel) { }
         } message: {
-            Text("The current unfinished game will be replaced by this new game.")
+            Text(L10n.NewGame.Replace.message, l10n)
         }
     }
 
-    private var levelDescription: String {
+    private var levelName: LocalizedKey {
         switch level {
-        case 1: "A quick Pikafish search for a more forgiving game."
-        case 2: "A responsive Pikafish opponent with credible tactics."
-        case 3: "Consistent play for regular club players."
-        case 4: "A focused opponent that looks further ahead."
-        default: "The strongest built-in search setting."
+        case 1: L10n.NewGame.LevelName._1
+        case 2: L10n.NewGame.LevelName._2
+        case 3: L10n.NewGame.LevelName._3
+        case 4: L10n.NewGame.LevelName._4
+        default: L10n.NewGame.LevelName._5
+        }
+    }
+
+    private var levelDetail: LocalizedKey {
+        switch level {
+        case 1: L10n.NewGame.LevelDetail._1
+        case 2: L10n.NewGame.LevelDetail._2
+        case 3: L10n.NewGame.LevelDetail._3
+        case 4: L10n.NewGame.LevelDetail._4
+        default: L10n.NewGame.LevelDetail._5
         }
     }
 
@@ -79,16 +108,17 @@ struct NewGameView: View {
         let humanSide: Side?
         if mode == .localTwoPlayer {
             humanSide = nil
-        } else if sideChoice == "random" {
-            humanSide = Bool.random() ? .red : .black
         } else {
-            humanSide = sideChoice == "red" ? .red : .black
+            humanSide = sideChoice.side ?? (Bool.random() ? .red : .black)
         }
-        let selectedTheme = ThemeID(rawValue: themeRaw) ?? .classic
         let orientation = mode == .computer ? (humanSide ?? .red) : .red
         let record = GameRecord(
-            mode: mode, humanSide: humanSide, computerLevel: level,
-            timeControl: timeControl, orientation: orientation, theme: selectedTheme
+            mode: mode,
+            humanSide: humanSide,
+            computerLevel: level,
+            timeControl: timeControl,
+            orientation: orientation,
+            theme: ThemeID(themeRaw)
         )
         await app.start(record)
     }

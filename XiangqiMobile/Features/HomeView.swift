@@ -2,13 +2,15 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var app: AppModel
-    @AppStorage("theme") private var themeRaw = ThemeID.classic.rawValue
-    private var theme: ThemeID { ThemeID(rawValue: themeRaw) ?? .classic }
-    private var palette: BoardPalette { .palette(for: theme) }
+    @Environment(\.theme) private var theme
+    @Environment(\.l10n) private var l10n
+    @AppStorage(ThemeID.storageKey) private var themeRaw = ThemeID.classic.rawValue
+
+    private var colors: ThemeColors { theme.colors }
 
     var body: some View {
         ZStack {
-            palette.background.ignoresSafeArea()
+            colors.background.ignoresSafeArea()
             ScrollView {
                 VStack(alignment: .leading, spacing: 26) {
                     header
@@ -34,28 +36,29 @@ struct HomeView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
-                Text("象棋").font(.title.bold()).fontDesign(.serif)
-                Text("XIANGQI").font(.caption.weight(.semibold)).tracking(3).foregroundStyle(.secondary)
+                Text(L10n.Home.title, l10n).font(.title.bold()).fontDesign(.serif)
+                Text(L10n.Home.wordmark, l10n)
+                    .font(.caption.weight(.semibold)).tracking(3).foregroundStyle(.secondary)
             }
             Spacer()
             Button { app.path.append(.settings) } label: {
                 Image(systemName: "gearshape")
                     .font(.body.weight(.semibold))
-                    .foregroundStyle(palette.accent)
+                    .foregroundStyle(colors.accent)
                     .frame(width: 44, height: 44)
-                    .background(palette.surface, in: Circle())
+                    .background(colors.surface, in: Circle())
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Settings")
+            .accessibilityLabel(l10n(L10n.Common.settings))
         }
     }
 
     private var hero: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("The board is ready.")
+            Text(L10n.Home.Hero.title, l10n)
                 .font(.largeTitle.bold())
                 .fontDesign(.rounded)
-            Text("Play, study, and sharpen your game—entirely offline.")
+            Text(L10n.Home.Hero.subtitle, l10n)
                 .font(.body).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
         }
     }
@@ -64,45 +67,54 @@ struct HomeView: View {
         Button { Task { await app.continueGame() } } label: {
             HStack(spacing: 16) {
                 Image(systemName: "play.fill")
-                    .font(.title2).foregroundStyle(.white)
-                    .frame(width: 52, height: 52).background(palette.accent, in: Circle())
+                    .font(.title2).foregroundStyle(colors.onAccent)
+                    .frame(width: 52, height: 52).background(colors.accent, in: Circle())
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Continue game").font(.headline)
-                    Text("\(record.mode.title) · \(record.moves.count) moves")
-                        .font(.subheadline).foregroundStyle(.secondary)
+                    Text(L10n.Home.Continue.title, l10n).font(.headline)
+                    Text(
+                        L10n.Home.Continue.subtitle,
+                        l10n,
+                        l10n(record.mode.titleKey),
+                        record.moves.count
+                    )
+                    .font(.subheadline).foregroundStyle(.secondary)
                 }
                 Spacer()
                 Image(systemName: "chevron.right").foregroundStyle(.secondary)
             }
             .padding(18)
-            .background(palette.surface, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
-            .overlay {
-                RoundedRectangle(cornerRadius: 22, style: .continuous)
-                    .stroke(palette.line.opacity(0.1), lineWidth: 1)
-            }
+            .background(colors.surface, in: theme.cardShape(22))
+            .overlay { theme.cardShape(22).stroke(theme.border, lineWidth: 1) }
         }
         .buttonStyle(.plain)
-        .accessibilityHint("Returns to the saved position")
+        .accessibilityHint(l10n(L10n.Home.Continue.hint))
     }
 
     private var modeButtons: some View {
         VStack(alignment: .leading, spacing: 12) {
-            sectionLabel("CHOOSE A MODE")
-            modeButton("Play computer", subtitle: "Challenge Pikafish offline", icon: "cpu", prominent: true) {
-                app.showSetup(.computer)
-            }
-            modeButton("Two players", subtitle: "Share this iPhone", icon: "person.2.fill") {
-                app.showSetup(.localTwoPlayer)
-            }
-            modeButton("Learn and practice", subtitle: "Puzzles and master games", icon: "graduationcap.fill") {
-                app.path.append(.learning)
-            }
+            sectionLabel(L10n.Home.Section.mode)
+            modeButton(
+                L10n.Mode.computer,
+                subtitle: L10n.Home.Mode.Computer.subtitle,
+                icon: "cpu",
+                prominent: true
+            ) { app.showSetup(.computer) }
+            modeButton(
+                L10n.Mode.localTwoPlayer,
+                subtitle: L10n.Home.Mode.TwoPlayer.subtitle,
+                icon: "person.2.fill"
+            ) { app.showSetup(.localTwoPlayer) }
+            modeButton(
+                L10n.Home.Mode.Learn.title,
+                subtitle: L10n.Home.Mode.Learn.subtitle,
+                icon: "graduationcap.fill"
+            ) { app.path.append(.learning) }
         }
     }
 
     private func modeButton(
-        _ title: String,
-        subtitle: String,
+        _ title: LocalizedKey,
+        subtitle: LocalizedKey,
         icon: String,
         prominent: Bool = false,
         action: @escaping () -> Void
@@ -113,34 +125,33 @@ struct HomeView: View {
                     .font(.title3.weight(.semibold))
                     .frame(width: 30)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(title).font(.headline)
-                    Text(subtitle).font(.caption).opacity(0.78)
+                    Text(title, l10n).font(.headline)
+                    Text(subtitle, l10n).font(.caption).opacity(0.78)
                 }
                 Spacer()
                 Image(systemName: "chevron.right").font(.subheadline.weight(.semibold)).opacity(0.7)
             }
             .padding(.horizontal, 18)
             .frame(maxWidth: .infinity, minHeight: 64)
-            .foregroundStyle(prominent ? Color.white : palette.text)
-            .background(prominent ? palette.accent : palette.surface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+            .foregroundStyle(prominent ? colors.onAccent : colors.text)
+            .background(prominent ? colors.accent : colors.surface, in: theme.cardShape())
             .overlay {
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .stroke(prominent ? Color.clear : palette.line.opacity(0.1), lineWidth: 1)
+                theme.cardShape().stroke(prominent ? .clear : theme.border, lineWidth: 1)
             }
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(title)
-        .accessibilityHint(subtitle)
+        .accessibilityLabel(l10n(title))
+        .accessibilityHint(l10n(subtitle))
     }
 
     private var themeStrip: some View {
         VStack(alignment: .leading, spacing: 12) {
-            sectionLabel("BOARD THEME")
+            sectionLabel(L10n.Home.Section.theme)
             ThemeChoiceStrip(selection: $themeRaw)
         }
     }
 
-    private func sectionLabel(_ text: String) -> some View {
-        Text(text).font(.caption.weight(.bold)).foregroundStyle(.secondary).tracking(1.2)
+    private func sectionLabel(_ key: LocalizedKey) -> some View {
+        Text(key, l10n).font(.caption.weight(.bold)).foregroundStyle(.secondary).tracking(1.2)
     }
 }
