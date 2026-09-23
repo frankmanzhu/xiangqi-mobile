@@ -58,6 +58,11 @@ Audio work runs on its own queue. Activating a session or building an
 `AVAudioPlayer` blocks on the audio server, and on the main thread that trips
 UIKit's hang-risk check and can stall the tap that caused the sound.
 
+Failures reach the player as translated sentences, not Swift error dumps.
+`UserFacingError` maps each thrown error to a catalog key and writes the
+technical detail to the `com.frankzhu.xiangqi-mobile` log subsystem instead, so
+the screen stays readable without losing anything to debugging.
+
 Settings whose stored vocabulary changed are normalized once at launch by
 `PreferenceMigration`, so a value written by an older build still selects the
 right option instead of leaving the picker blank.

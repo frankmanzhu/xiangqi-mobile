@@ -91,6 +91,40 @@ public enum L10n {
         public static let source = LocalizedKey("common.source", en: "Source")
     }
 
+    public enum Error {
+        public enum Engine {
+            /// English: "The computer opponent returned a move that is not valid here."
+            public static let invalidMove = LocalizedKey("error.engine.invalidMove", en: "The computer opponent returned a move that is not valid here.")
+            /// English: "The computer opponent's neural network failed its integrity check."
+            public static let networkInvalid = LocalizedKey("error.engine.networkInvalid", en: "The computer opponent's neural network failed its integrity check.")
+            /// English: "The computer opponent's neural network is missing from this build."
+            public static let networkMissing = LocalizedKey("error.engine.networkMissing", en: "The computer opponent's neural network is missing from this build.")
+            /// English: "The computer opponent could not finish its move."
+            public static let unavailable = LocalizedKey("error.engine.unavailable", en: "The computer opponent could not finish its move.")
+        }
+
+        /// English: "Something went wrong."
+        public static let generic = LocalizedKey("error.generic", en: "Something went wrong.")
+        public enum Library {
+            /// English: "This record could not be read."
+            public static let corruptRecord = LocalizedKey("error.library.corruptRecord", en: "This record could not be read.")
+            /// English: "The learning library could not be opened."
+            public static let unavailable = LocalizedKey("error.library.unavailable", en: "The learning library could not be opened.")
+            /// English: "This learning library was built for a different version of the app."
+            public static let unsupportedSchema = LocalizedKey("error.library.unsupportedSchema", en: "This learning library was built for a different version of the app.")
+        }
+
+        public enum Position {
+            /// English: "This position could not be read."
+            public static let invalid = LocalizedKey("error.position.invalid", en: "This position could not be read.")
+        }
+
+        public enum Progress {
+            /// English: "Your saved progress was written by a newer version of the app."
+            public static let unsupportedSchema = LocalizedKey("error.progress.unsupportedSchema", en: "Your saved progress was written by a newer version of the app.")
+        }
+    }
+
     public enum Game {
         /// English: "Confirm move"
         public static let confirmMove = LocalizedKey("game.confirmMove", en: "Confirm move")
@@ -575,6 +609,8 @@ public enum L10n {
 
         /// English: "Sound effects"
         public static let sounds = LocalizedKey("settings.sounds", en: "Sound effects")
+        /// English: "Turning this on plays a sample."
+        public static let soundsPreviewHint = LocalizedKey("settings.soundsPreviewHint", en: "Turning this on plays a sample.")
         /// English: "Theme"
         public static let theme = LocalizedKey("settings.theme", en: "Theme")
         /// English: "Settings"

@@ -38,8 +38,24 @@ struct SettingsView: View {
             }
             Section(l10n(L10n.Settings.Section.interaction)) {
                 Toggle(l10n(L10n.Settings.confirmMoves), isOn: $confirmMoves)
-                Toggle(l10n(L10n.Settings.sounds), isOn: $sounds)
+                VStack(alignment: .leading, spacing: 4) {
+                    Toggle(l10n(L10n.Settings.sounds), isOn: $sounds)
+                    Text(L10n.Settings.soundsPreviewHint, l10n)
+                        .font(.caption).foregroundStyle(.secondary)
+                }
+                // Playing a cue on the way on lets the setting be judged here,
+                // rather than by starting a game to find out how it sounds.
+                .onChange(of: sounds) { _, isOn in
+                    guard isOn else { return }
+                    FeedbackPlayer.shared.prepare()
+                    FeedbackPlayer.shared.play(.move)
+                }
                 Toggle(l10n(L10n.Settings.haptics), isOn: $haptics)
+                    .onChange(of: haptics) { _, isOn in
+                        guard isOn else { return }
+                        FeedbackPlayer.shared.prepare()
+                        FeedbackPlayer.shared.play(.capture)
+                    }
             }
             Section(l10n(L10n.Settings.Section.rules)) {
                 NavigationLink(l10n(L10n.Settings.howToPlay)) { RulesHelpView() }

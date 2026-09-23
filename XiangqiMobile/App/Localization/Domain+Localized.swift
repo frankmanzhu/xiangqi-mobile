@@ -87,7 +87,7 @@ extension GameMessage {
         switch self {
         case .engineMismatch: l10n(L10n.Game.Message.engineMismatch)
         case .notSaved: l10n(L10n.Game.Message.notSaved)
-        case .failure(let description): description
+        case .failure(let failure): failure.text(l10n)
         }
     }
 }

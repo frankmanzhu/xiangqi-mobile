@@ -20,7 +20,7 @@ enum GameStatus: Equatable {
 enum GameMessage: Equatable {
     case engineMismatch
     case notSaved
-    case failure(String)
+    case failure(UserFacingError)
 }
 
 enum HintStage: Equatable {
@@ -169,7 +169,7 @@ final class GameSession: ObservableObject {
                 hintStage = .source(move)
             } catch {
                 hintStage = .available
-                message = .failure(error.localizedDescription)
+                message = .failure(UserFacingError(error))
             }
         }
     }
@@ -303,7 +303,7 @@ final class GameSession: ObservableObject {
         } catch {
             guard searchToken == token, positionVersion == version else { return }
             isThinking = false
-            message = .failure(error.localizedDescription)
+            message = .failure(UserFacingError(error))
         }
     }
 

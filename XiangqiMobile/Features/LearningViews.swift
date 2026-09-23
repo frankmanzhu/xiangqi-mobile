@@ -53,7 +53,7 @@ struct LearningHomeView: View {
     @Environment(\.l10n) private var l10n
     @State private var categories: [CCPDCategorySummary] = []
     @State private var metadata: [String: String] = [:]
-    @State private var errorMessage: String?
+    @State private var errorMessage: UserFacingError?
     @State private var isLoading = true
 
     var body: some View {
@@ -74,7 +74,7 @@ struct LearningHomeView: View {
                 ContentUnavailableView(
                     l10n(L10n.Learn.libraryUnavailable),
                     systemImage: "books.vertical",
-                    description: Text(verbatim: errorMessage)
+                    description: Text(verbatim: errorMessage.text(l10n))
                 )
             } else {
                 Section(l10n(L10n.Learn.Section.browse)) {
@@ -133,7 +133,7 @@ struct LearningHomeView: View {
             categories = try await loadedCategories
             metadata = try await loadedMetadata
         } catch {
-            errorMessage = String(describing: error)
+            errorMessage = UserFacingError(error)
         }
     }
 
@@ -145,7 +145,7 @@ struct LearningLibraryView: View {
     let category: String
     @State private var records: [CCPDRecordSummary] = []
     @State private var query = ""
-    @State private var errorMessage: String?
+    @State private var errorMessage: UserFacingError?
     @State private var isLoading = true
 
     var body: some View {
@@ -156,7 +156,7 @@ struct LearningLibraryView: View {
                 ContentUnavailableView(
                     l10n(L10n.Learn.couldNotLoadRecords),
                     systemImage: "exclamationmark.triangle",
-                    description: Text(verbatim: errorMessage)
+                    description: Text(verbatim: errorMessage.text(l10n))
                 )
             } else if records.isEmpty {
                 ContentUnavailableView.search(text: query)
@@ -215,7 +215,7 @@ struct LearningLibraryView: View {
             }.value
             errorMessage = nil
         } catch {
-            errorMessage = String(describing: error)
+            errorMessage = UserFacingError(error)
         }
     }
 }
@@ -226,7 +226,7 @@ struct CCPDStudyView: View {
     let recordID: String
     @State private var record: CCPDRecord?
     @State private var ply = 0
-    @State private var errorMessage: String?
+    @State private var errorMessage: UserFacingError?
     @State private var isBookmarked = false
     @State private var recordedCompletion = false
 
@@ -288,7 +288,7 @@ struct CCPDStudyView: View {
                 ContentUnavailableView(
                     l10n(L10n.Study.couldNotOpen),
                     systemImage: "exclamationmark.triangle",
-                    description: Text(verbatim: errorMessage)
+                    description: Text(verbatim: errorMessage.text(l10n))
                 )
             } else {
                 ProgressView(l10n(L10n.Study.opening))
@@ -353,10 +353,10 @@ struct CCPDStudyView: View {
                 isBookmarked = progress.isBookmarked
                 try await app.learningProgress.recordOpened(id, lastPly: ply)
             } else {
-                errorMessage = l10n(L10n.Study.recordMissing)
+                errorMessage = UserFacingError(L10n.Study.recordMissing)
             }
         } catch {
-            errorMessage = String(describing: error)
+            errorMessage = UserFacingError(error)
         }
     }
 
@@ -364,7 +364,7 @@ struct CCPDStudyView: View {
         do {
             isBookmarked = try await app.learningProgress.toggleBookmark(for: recordID).isBookmarked
         } catch {
-            errorMessage = String(describing: error)
+            errorMessage = UserFacingError(error)
         }
     }
 }
@@ -399,7 +399,7 @@ struct CCPDPuzzleView: View {
     @State private var puzzle: CCPDPuzzleSession?
     @State private var selectedSquare: Square?
     @State private var feedback: PuzzleFeedback = .findBestMove
-    @State private var errorMessage: String?
+    @State private var errorMessage: UserFacingError?
     @State private var recordedCompletion = false
 
     private var legalDestinations: Set<Square> {
@@ -453,7 +453,7 @@ struct CCPDPuzzleView: View {
                 ContentUnavailableView(
                     l10n(L10n.Practice.couldNotOpen),
                     systemImage: "exclamationmark.triangle",
-                    description: Text(verbatim: errorMessage)
+                    description: Text(verbatim: errorMessage.text(l10n))
                 )
             } else {
                 ProgressView(l10n(L10n.Practice.opening))
@@ -489,7 +489,7 @@ struct CCPDPuzzleView: View {
                 }
                 Task { try? await app.learningProgress.updateLastPly(current.currentPly, for: recordID) }
             } catch {
-                errorMessage = String(describing: error)
+                errorMessage = UserFacingError(error)
             }
             return
         }
@@ -520,7 +520,7 @@ struct CCPDPuzzleView: View {
             feedback = .findBestMove
             Task { try? await app.learningProgress.recordOpened(recordID) }
         } catch {
-            errorMessage = String(describing: error)
+            errorMessage = UserFacingError(error)
         }
     }
 
@@ -529,14 +529,14 @@ struct CCPDPuzzleView: View {
             let library = try BundledCCPDLibrary.load()
             let id = recordID
             guard let loaded = try await Task.detached(operation: { try library.record(id: id) }).value else {
-                errorMessage = l10n(L10n.Study.recordMissing)
+                errorMessage = UserFacingError(L10n.Study.recordMissing)
                 return
             }
             record = loaded
             puzzle = try CCPDPuzzleSession(record: loaded)
             try await app.learningProgress.recordOpened(id)
         } catch {
-            errorMessage = String(describing: error)
+            errorMessage = UserFacingError(error)
         }
     }
 }
