@@ -914,7 +914,14 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					IS_64BIT,
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=arm64*]" = (
+					"$(inherited)",
 					"USE_NEON=8",
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=x86_64*]" = (
+					"$(inherited)",
+					ZSTD_DISABLE_ASM,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -962,7 +969,14 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					IS_64BIT,
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=arm64*]" = (
+					"$(inherited)",
 					"USE_NEON=8",
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=x86_64*]" = (
+					"$(inherited)",
+					ZSTD_DISABLE_ASM,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (

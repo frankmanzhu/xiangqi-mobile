@@ -66,6 +66,14 @@ struct SettingsView: View {
                 LabeledContent(l10n(L10n.Settings.version), value: "1.0")
                 LabeledContent(l10n(L10n.Settings.computer), value: "Pikafish")
                 NavigationLink(l10n(L10n.Settings.licenses)) { LicensesView() }
+                Link(
+                    l10n(L10n.Settings.sourceCode),
+                    destination: URL(string: "https://github.com/frankmanzhu/xiangqi-mobile")!
+                )
+                Link(
+                    l10n(L10n.Settings.reportIssue),
+                    destination: URL(string: "https://github.com/frankmanzhu/xiangqi-mobile/issues")!
+                )
                 Text(L10n.Settings.engineNote, l10n)
                     .font(.footnote).foregroundStyle(.secondary)
             }

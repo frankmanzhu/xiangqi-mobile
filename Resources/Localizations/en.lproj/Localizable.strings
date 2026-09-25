@@ -444,6 +444,8 @@
 
 "settings.pieceLabelsOption.traditional" = "Traditional Chinese";
 
+"settings.reportIssue" = "Report an issue on GitHub";
+
 "settings.rulesPolicy" = "Rules policy";
 
 "settings.section.about" = "About";
@@ -459,6 +461,8 @@
 "settings.sounds" = "Sound effects";
 
 "settings.soundsPreviewHint" = "Turning this on plays a sample.";
+
+"settings.sourceCode" = "Source code on GitHub";
 
 "settings.theme" = "Theme";
 

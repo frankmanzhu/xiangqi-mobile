@@ -607,6 +607,8 @@ public enum L10n {
             public static let traditional = LocalizedKey("settings.pieceLabelsOption.traditional", en: "Traditional Chinese")
         }
 
+        /// English: "Report an issue on GitHub"
+        public static let reportIssue = LocalizedKey("settings.reportIssue", en: "Report an issue on GitHub")
         /// English: "Rules policy"
         public static let rulesPolicy = LocalizedKey("settings.rulesPolicy", en: "Rules policy")
         public enum Section {
@@ -626,6 +628,8 @@ public enum L10n {
         public static let sounds = LocalizedKey("settings.sounds", en: "Sound effects")
         /// English: "Turning this on plays a sample."
         public static let soundsPreviewHint = LocalizedKey("settings.soundsPreviewHint", en: "Turning this on plays a sample.")
+        /// English: "Source code on GitHub"
+        public static let sourceCode = LocalizedKey("settings.sourceCode", en: "Source code on GitHub")
         /// English: "Theme"
         public static let theme = LocalizedKey("settings.theme", en: "Theme")
         /// English: "Settings"

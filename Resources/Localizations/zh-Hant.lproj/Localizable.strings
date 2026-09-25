@@ -444,6 +444,8 @@
 
 "settings.pieceLabelsOption.traditional" = "繁體中文";
 
+"settings.reportIssue" = "在 GitHub 回報問題";
+
 "settings.rulesPolicy" = "規則版本";
 
 "settings.section.about" = "關於";
@@ -459,6 +461,8 @@
 "settings.sounds" = "音效";
 
 "settings.soundsPreviewHint" = "開啟時會播放範例音效。";
+
+"settings.sourceCode" = "GitHub 原始碼";
 
 "settings.theme" = "主題";
 
