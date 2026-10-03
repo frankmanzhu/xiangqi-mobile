@@ -28,9 +28,12 @@ Version 1.0, build 1 is a tested release candidate. It is **not yet certified re
 | Release archive | Unsigned generic-iOS Release archive succeeds with Xcode 27 / iOS 27 SDK |
 | Free development signing | Release build succeeds with the configured Personal Team; provisioning profile permits development only and lasts 7 days |
 | iOS memory patch regression | Computer reply and staged-hint UI tests both pass; final archive executable has no `lstat` reference |
-| Physical installation | Final development-signed Release build installed successfully on the connected Frank17 ProMax. Remote launch was denied because the phone was locked; unlock it and open Xiangqi Mobile for manual acceptance |
+| Physical installation | Final development-signed Release build installed and launched successfully on Frank 17 Pro Max, iOS 27.0.1 |
+| Physical interaction smoke | Through Apple's Device Hub: existing four-ply game resumes, level-5 Pikafish replies to `i0h0` with `i9h9`, hint source/destination reveal, undo returns to four plies, save survives process termination/relaunch, learning collection and practice board open, bundled Chinese privacy policy renders |
 
 The UI checks cover game creation, real computer reply and staged hint, two-player moves, save/relaunch, learning navigation, privacy-policy access, and screenshot capture. They run on iOS/iPadOS 27 simulators and do not establish behavior on physical iOS 18 hardware. The differential run does **not** meet the original specification's 10,000 complete playout target.
+
+The additional physical interaction smoke used the real iPhone 17 Pro Max through Device Hub. XCTest's separate QA app/runner could not install because the phone already occupies all three free-profile application slots; this is a provisioning limit, not a test assertion failure. The manual physical smoke is distinct from the seven-test simulator suite. Wi-Fi remained connected for Device Hub, so this did not establish airplane-mode behavior. Original Application Support game/progress files were backed up locally before move testing and restored afterward.
 
 Local evidence is retained under `/tmp/xiangqi-release-*.log` and corresponding `.xcresult` bundles. The archive is `/tmp/xiangqi-release-tested.xcarchive`. These paths are local build artifacts, not durable published release evidence.
 
