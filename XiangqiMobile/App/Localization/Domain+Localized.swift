@@ -55,6 +55,7 @@ extension GameResultReason {
         case .resignation: L10n.Reason.resignation
         case .timeLoss: L10n.Reason.timeLoss
         case .repetition: L10n.Reason.repetition
+        case .rulesAdjudication: L10n.Reason.rulesAdjudication
         }
     }
 }

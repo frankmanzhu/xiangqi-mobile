@@ -16,6 +16,17 @@ typedef struct PFEngineError {
     char message[512];
 } PFEngineError;
 
+// outcome: 0 ongoing, 1 draw, 2 red wins, 3 black wins.
+// reason: 0 ongoing, 1 checkmate, 2 stalemate, 3 computer-rule adjudication.
+typedef struct PFRuleResult {
+    int32_t outcome;
+    int32_t reason;
+} PFRuleResult;
+
+// Replays full history without loading NNUE or starting an engine search.
+bool pf_rules_result(const char *fen, const char *const *moves, size_t move_count,
+                     PFRuleResult *result, PFEngineError *error);
+
 PFPikafishSession *pf_engine_create(const char *network_path, PFEngineError *error);
 void pf_engine_destroy(PFPikafishSession *session);
 

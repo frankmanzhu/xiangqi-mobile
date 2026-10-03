@@ -371,8 +371,16 @@ public enum L10n {
         }
 
         public enum Engine {
+            /// English: "Engine authors"
+            public static let authors = LocalizedKey("licenses.engine.authors", en: "Engine authors")
+            /// English: "The neural-network weights have separate terms: lawful noncommercial use; commercial use requires permission."
+            public static let nnue = LocalizedKey("licenses.engine.nnue", en: "The neural-network weights have separate terms: lawful noncommercial use; commercial use requires permission.")
+            /// English: "Pikafish NNUE terms"
+            public static let nnueTerms = LocalizedKey("licenses.engine.nnueTerms", en: "Pikafish NNUE terms")
             /// English: "Pikafish is distributed under GNU GPL version 3. The bundled notice and authors list are included with the application."
             public static let note = LocalizedKey("licenses.engine.note", en: "Pikafish is distributed under GNU GPL version 3. The bundled notice and authors list are included with the application.")
+            /// English: "Exact engine source revision"
+            public static let source = LocalizedKey("licenses.engine.source", en: "Exact engine source revision")
         }
 
         /// English: "GNU GPL v3"
@@ -480,8 +488,8 @@ public enum L10n {
         public static let correct = LocalizedKey("practice.correct", en: "Correct. The recorded reply has been played.")
         /// English: "Could not open practice"
         public static let couldNotOpen = LocalizedKey("practice.couldNotOpen", en: "Could not open practice")
-        /// English: "Find the best move."
-        public static let findBestMove = LocalizedKey("practice.findBestMove", en: "Find the best move.")
+        /// English: "Find the next move in the recorded line."
+        public static let findRecordedMove = LocalizedKey("practice.findRecordedMove", en: "Find the next move in the recorded line.")
         /// English: "Hint: %@"
         public static let hintFormat = LocalizedKey("practice.hintFormat", en: "Hint: %@", arguments: 1)
         /// English: "Not the recorded move. Try again."
@@ -498,6 +506,34 @@ public enum L10n {
         public static let title = LocalizedKey("practice.title", en: "Practice")
     }
 
+    public enum Privacy {
+        /// English: "For privacy questions, contact Frank Zhu through the linked GitHub issue tracker. Apple may process App Store, device-backup, and crash information under its own privacy settings and policies."
+        public static let contact = LocalizedKey("privacy.contact", en: "For privacy questions, contact Frank Zhu through the linked GitHub issue tracker. Apple may process App Store, device-backup, and crash information under its own privacy settings and policies.")
+        /// English: "Local data remains until it is replaced or you delete the app using Delete App in iOS Settings. Offloading the app preserves its data. Backups and copies you have shared must be managed separately with their respective services. The developer holds no server copy of your games or settings."
+        public static let retention = LocalizedKey("privacy.retention", en: "Local data remains until it is replaced or you delete the app using Delete App in iOS Settings. Offloading the app preserves its data. Backups and copies you have shared must be managed separately with their respective services. The developer holds no server copy of your games or settings.")
+        public enum Section {
+            /// English: "Contact"
+            public static let contact = LocalizedKey("privacy.section.contact", en: "Contact")
+            /// English: "Retention and deletion"
+            public static let retention = LocalizedKey("privacy.section.retention", en: "Retention and deletion")
+            /// English: "Sharing and external links"
+            public static let sharing = LocalizedKey("privacy.section.sharing", en: "Sharing and external links")
+            /// English: "Data on your device"
+            public static let storage = LocalizedKey("privacy.section.storage", en: "Data on your device")
+        }
+
+        /// English: "When you choose Share, the game record is passed to the recipient or service you select. Opening source-code or support links takes you to GitHub, which applies its own privacy policy. Information you submit in a GitHub issue may be public; avoid including private information."
+        public static let sharing = LocalizedKey("privacy.sharing", en: "When you choose Share, the game record is passed to the recipient or service you select. Opening source-code or support links takes you to GitHub, which applies its own privacy policy. Information you submit in a GitHub issue may be public; avoid including private information.")
+        /// English: "Saved games, learning progress, and settings stay in the app’s storage on your device. The bundled computer engine processes positions locally. Your operating system may include app data in device backups according to your backup settings."
+        public static let storage = LocalizedKey("privacy.storage", en: "Saved games, learning progress, and settings stay in the app’s storage on your device. The bundled computer engine processes positions locally. Your operating system may include app data in device backups according to your backup settings.")
+        /// English: "Xiangqi is developed by Frank Zhu. The app works offline and does not collect or transmit personal data to the developer. It has no accounts, advertising, tracking, analytics, or automatic diagnostic uploads."
+        public static let summary = LocalizedKey("privacy.summary", en: "Xiangqi is developed by Frank Zhu. The app works offline and does not collect or transmit personal data to the developer. It has no accounts, advertising, tracking, analytics, or automatic diagnostic uploads.")
+        /// English: "Privacy policy"
+        public static let title = LocalizedKey("privacy.title", en: "Privacy policy")
+        /// English: "Updated 4 October 2026"
+        public static let updated = LocalizedKey("privacy.updated", en: "Updated 4 October 2026")
+    }
+
     public enum Reason {
         /// English: "Checkmate"
         public static let checkmate = LocalizedKey("reason.checkmate", en: "Checkmate")
@@ -505,6 +541,8 @@ public enum L10n {
         public static let repetition = LocalizedKey("reason.repetition", en: "Repetition")
         /// English: "Resignation"
         public static let resignation = LocalizedKey("reason.resignation", en: "Resignation")
+        /// English: "Rules adjudication"
+        public static let rulesAdjudication = LocalizedKey("reason.rulesAdjudication", en: "Rules adjudication")
         /// English: "Stalemate"
         public static let stalemate = LocalizedKey("reason.stalemate", en: "Stalemate")
         /// English: "Time loss"
@@ -611,6 +649,10 @@ public enum L10n {
         public static let reportIssue = LocalizedKey("settings.reportIssue", en: "Report an issue on GitHub")
         /// English: "Rules policy"
         public static let rulesPolicy = LocalizedKey("settings.rulesPolicy", en: "Rules policy")
+        /// English: "New games use Pikafish’s rules for repetition, perpetual checking and chasing, the 60-move rule, and insufficient material. Perpetual checking or chasing can result in a loss rather than a draw. Earlier saved games keep their recorded rules."
+        public static let rulesPolicyExplanation = LocalizedKey("settings.rulesPolicyExplanation", en: "New games use Pikafish’s rules for repetition, perpetual checking and chasing, the 60-move rule, and insufficient material. Perpetual checking or chasing can result in a loss rather than a draw. Earlier saved games keep their recorded rules.")
+        /// English: "Pikafish Computer Rule"
+        public static let rulesPolicyName = LocalizedKey("settings.rulesPolicyName", en: "Pikafish Computer Rule")
         public enum Section {
             /// English: "About"
             public static let about = LocalizedKey("settings.section.about", en: "About")

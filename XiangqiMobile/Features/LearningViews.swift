@@ -134,6 +134,7 @@ struct LearningHomeView: View {
                                 Spacer()
                                 Image(systemName: "chevron.right").foregroundStyle(.tertiary)
                             }
+                            .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
                     }
@@ -242,6 +243,8 @@ struct LearningLibraryView: View {
                                     }
                                     .font(.caption).foregroundStyle(.tertiary)
                                 }
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .contentShape(Rectangle())
                                 .padding(.vertical, 4)
                             }
                             .buttonStyle(.plain)
@@ -335,6 +338,7 @@ struct CCPDStudyView: View {
                                         Text(verbatim: move.uci)
                                             .font(.caption.monospaced()).foregroundStyle(.secondary)
                                     }
+                                    .contentShape(Rectangle())
                                 }
                                 .buttonStyle(.plain)
                                 .listRowBackground(ply == move.ply ? Color.accentColor.opacity(0.12) : nil)
@@ -437,7 +441,7 @@ struct CCPDStudyView: View {
 /// What the puzzle's coaching line should say, held as a value so it can be
 /// rendered in whichever language is selected when the view draws.
 private enum PuzzleFeedback: Equatable {
-    case findBestMove
+    case findRecordedMove
     case chooseDestination
     case incorrect
     case correct
@@ -446,7 +450,7 @@ private enum PuzzleFeedback: Equatable {
 
     func text(_ l10n: Localizer) -> String {
         switch self {
-        case .findBestMove: l10n(L10n.Practice.findBestMove)
+        case .findRecordedMove: l10n(L10n.Practice.findRecordedMove)
         case .chooseDestination: l10n(L10n.Practice.chooseDestination)
         case .incorrect: l10n(L10n.Practice.incorrect)
         case .correct: l10n(L10n.Practice.correct)
@@ -463,7 +467,7 @@ struct CCPDPuzzleView: View {
     @State private var record: CCPDRecord?
     @State private var puzzle: CCPDPuzzleSession?
     @State private var selectedSquare: Square?
-    @State private var feedback: PuzzleFeedback = .findBestMove
+    @State private var feedback: PuzzleFeedback = .findRecordedMove
     @State private var errorMessage: UserFacingError?
     @State private var recordedCompletion = false
 
@@ -583,7 +587,7 @@ struct CCPDPuzzleView: View {
             puzzle = current
             selectedSquare = nil
             recordedCompletion = false
-            feedback = .findBestMove
+            feedback = .findRecordedMove
             Task { try? await app.learningProgress.recordOpened(recordID) }
         } catch {
             errorMessage = UserFacingError(error)

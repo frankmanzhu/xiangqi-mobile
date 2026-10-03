@@ -31,6 +31,7 @@
 		313ECD790594E94D3DC933CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D01E487DA92271D781F7925 /* HomeView.swift */; };
 		3600315DED976F6FDC59DE51 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B443E5FFC9E0BE4021A3CADC /* position.cpp */; };
 		36117CA96AE76A24A11DBEAF /* zstd_decompress_block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30BC5FA9BECA80ED3B7BF8C7 /* zstd_decompress_block.cpp */; };
+		38192534E3781F59A8827CDD /* Pikafish-NNUE-NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A552ACD34F1301657804344 /* Pikafish-NNUE-NOTICE.txt */; };
 		3C534458B0C882DA9A71C27D /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA25765874A65AEEEE3E35 /* Tournament.swift */; };
 		47531D2021A6EB52D8C0477E /* zstd_ddict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0FCCC6908AF654C7FB33A /* zstd_ddict.cpp */; };
 		4DD84F2C2AF85DA4C054F54E /* nnue_misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D75A52248BABC4F76B0FBC2F /* nnue_misc.cpp */; };
@@ -132,13 +133,13 @@
 		29B5227CC933C68961DF824D /* UserFacingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserFacingError.swift; sourceTree = "<group>"; };
 		30BC5FA9BECA80ED3B7BF8C7 /* zstd_decompress_block.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_decompress_block.cpp; sourceTree = "<group>"; };
 		33F277B9AD5C0ECBE5BCAB3E /* Localization+SwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Localization+SwiftUI.swift"; sourceTree = "<group>"; };
-		38286E2DED2B34847885C658 /* ccpd.sqlite3 */ = {isa = PBXFileReference; includeInIndex = 1; path = ccpd.sqlite3; sourceTree = "<group>"; };
+		38286E2DED2B34847885C658 /* ccpd.sqlite3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = ccpd.sqlite3; sourceTree = "<group>"; };
 		38557797476C7B657535677B /* Strings+Generated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		390C9A54F2960C2B4FDE2933 /* LocalizedKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalizedKey.swift; sourceTree = "<group>"; };
 		3983A52DFCD7A71F3B6C9E06 /* score.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = score.cpp; sourceTree = "<group>"; };
 		39D2E0517DEE8DA5274BEC9E /* XiangqiPGN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiPGN.swift; sourceTree = "<group>"; };
 		3A205064A6C6BEB69BC86A49 /* ucioption.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ucioption.cpp; sourceTree = "<group>"; };
-		3AB54B56472BD173941E7BC9 /* CCPD-source.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-source.json"; sourceTree = "<group>"; };
+		3AB54B56472BD173941E7BC9 /* CCPD-source.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "CCPD-source.json"; sourceTree = "<group>"; };
 		3B5C846417F026BD0EE50EDD /* Rules.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		3C2EC7E713906EDF0B58A720 /* fse_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = fse_decompress.cpp; sourceTree = "<group>"; };
 		3FE36075DC1F5257C95270FD /* attacks.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = attacks.cpp; sourceTree = "<group>"; };
@@ -150,12 +151,12 @@
 		510EE948D79746CC57A7A7B6 /* PikafishComputerClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PikafishComputerClient.swift; sourceTree = "<group>"; };
 		563BF3198E4A49E3B996CE8C /* memory.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = memory.cpp; sourceTree = "<group>"; };
 		5A8D33CDDFDEC217A05078F6 /* XiangqiMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XiangqiMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B9319AC340071628CE6A7A1 /* ccpd-audit.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-audit.json"; sourceTree = "<group>"; };
-		6130F6D8FE13FA4F68D81D04 /* pikafish.nnue */ = {isa = PBXFileReference; includeInIndex = 1; path = pikafish.nnue; sourceTree = "<group>"; };
+		5B9319AC340071628CE6A7A1 /* ccpd-audit.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "ccpd-audit.json"; sourceTree = "<group>"; };
+		6130F6D8FE13FA4F68D81D04 /* pikafish.nnue */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = pikafish.nnue; sourceTree = "<group>"; };
 		63ACD54333AAD3992F28AA5C /* GameSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		63BA244FE9D86B1670F6BC10 /* CCPDPuzzle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CCPDPuzzle.swift; sourceTree = "<group>"; };
 		6FC0EC2088D574F3D7642C35 /* Feedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
-		70CF70D010A8F561F00DF834 /* ccpd-quarantine.jsonl */ = {isa = PBXFileReference; includeInIndex = 1; path = "ccpd-quarantine.jsonl"; sourceTree = "<group>"; };
+		70CF70D010A8F561F00DF834 /* ccpd-quarantine.jsonl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "ccpd-quarantine.jsonl"; sourceTree = "<group>"; };
 		755FE2B1103039BF700EDB31 /* nnue_accumulator.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = nnue_accumulator.cpp; sourceTree = "<group>"; };
 		77F7AA9B7A016C714173AFAE /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7883C33D71177753E090D7E7 /* movepick.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movepick.cpp; sourceTree = "<group>"; };
@@ -165,7 +166,7 @@
 		7CE4F95876917703A1F4C138 /* XiangqiMobileApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XiangqiMobileApp.swift; sourceTree = "<group>"; };
 		7E346A3C3ACCD4B03C9101C6 /* Preferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		81F61A17AB1A5BB67D2ED68C /* Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
-		82101E85C8D162D2DA6AFE2C /* CCPD-CC-BY-4.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "CCPD-CC-BY-4.0.txt"; sourceTree = "<group>"; };
+		82101E85C8D162D2DA6AFE2C /* CCPD-CC-BY-4.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "CCPD-CC-BY-4.0.txt"; sourceTree = "<group>"; };
 		8E962614C5DBAD56A0C3DAC7 /* XiangqiMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiangqiMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		906D4FD5F721D4966A055C70 /* ResultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		926E1ACAE69626F3F501CDF9 /* en */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -173,7 +174,8 @@
 		960D3B811DD51EBDD26F8186 /* search.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = search.cpp; sourceTree = "<group>"; };
 		9687C2BD797AF4C44B72FE2E /* CCPDLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CCPDLibrary.swift; sourceTree = "<group>"; };
 		981CDA8537EDBC9D1B9B1AA5 /* movegen.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = movegen.cpp; sourceTree = "<group>"; };
-		9AE7CB703E79278E9E875842 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		9A552ACD34F1301657804344 /* Pikafish-NNUE-NOTICE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-NNUE-NOTICE.txt"; sourceTree = "<group>"; };
+		9AE7CB703E79278E9E875842 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		9BB6C0799292D4A21808B135 /* uci.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = uci.cpp; sourceTree = "<group>"; };
 		9E48EA48DA085D8284B7ABCF /* zh-Hans */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9EE0FCCC6908AF654C7FB33A /* zstd_ddict.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_ddict.cpp; sourceTree = "<group>"; };
@@ -183,7 +185,7 @@
 		A5D7B3880E1BDF3FF25D2A48 /* tt.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tt.cpp; sourceTree = "<group>"; };
 		A7705245C4ADE3588C1C6857 /* entropy_common.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = entropy_common.cpp; sourceTree = "<group>"; };
 		A843746DD051AAD61A3DD2D6 /* LearningViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearningViews.swift; sourceTree = "<group>"; };
-		AE9EEC10858990944384E219 /* Pikafish-GPL-3.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-GPL-3.0.txt"; sourceTree = "<group>"; };
+		AE9EEC10858990944384E219 /* Pikafish-GPL-3.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pikafish-GPL-3.0.txt"; sourceTree = "<group>"; };
 		B12E499F70F6944B110CC20B /* GameMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
 		B443E5FFC9E0BE4021A3CADC /* position.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
 		C05EE768F7A4027CF9A9F0A5 /* engine.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = engine.cpp; sourceTree = "<group>"; };
@@ -192,7 +194,7 @@
 		C4E2B6ADBFBC3E9D1DCE4E19 /* huf_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = huf_decompress.cpp; sourceTree = "<group>"; };
 		C53191F9306A3EA09C8F1C69 /* xxhash.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = xxhash.cpp; sourceTree = "<group>"; };
 		C725AF7D0563C700714FF415 /* Theme+SwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Theme+SwiftUI.swift"; sourceTree = "<group>"; };
-		CA6CFF55396C5E2D0C5999ED /* Pikafish-AUTHORS.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pikafish-AUTHORS.txt"; sourceTree = "<group>"; };
+		CA6CFF55396C5E2D0C5999ED /* Pikafish-AUTHORS.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pikafish-AUTHORS.txt"; sourceTree = "<group>"; };
 		CCB7EF2FC31984D8373EF944 /* zstd_decompress.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = zstd_decompress.cpp; sourceTree = "<group>"; };
 		CD4C527A9B17293B7DBBF49F /* network.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = network.cpp; sourceTree = "<group>"; };
 		D345472C3BE78191DFE43988 /* GameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -237,7 +239,6 @@
 				0568FF064E7A575B443C8A9F /* full_threats.cpp */,
 				A27992F963BE18327019B472 /* half_ka_v2_hm.cpp */,
 			);
-			name = features;
 			path = features;
 			sourceTree = "<group>";
 		};
@@ -249,7 +250,6 @@
 				CCB7EF2FC31984D8373EF944 /* zstd_decompress.cpp */,
 				30BC5FA9BECA80ED3B7BF8C7 /* zstd_decompress_block.cpp */,
 			);
-			name = decompress;
 			path = decompress;
 			sourceTree = "<group>";
 		};
@@ -266,7 +266,6 @@
 				906D4FD5F721D4966A055C70 /* ResultView.swift */,
 				77F7AA9B7A016C714173AFAE /* SettingsView.swift */,
 			);
-			name = Features;
 			path = Features;
 			sourceTree = "<group>";
 		};
@@ -284,7 +283,6 @@
 				D7D6AB4E145257489B944ED1 /* SoundSynthesis.swift */,
 				39D2E0517DEE8DA5274BEC9E /* XiangqiPGN.swift */,
 			);
-			name = Core;
 			path = Core;
 			sourceTree = "<group>";
 		};
@@ -295,7 +293,6 @@
 				26D3E4F693FC7494862ED1A1 /* Core */,
 				1EFB843856A4B7979D44E127 /* Features */,
 			);
-			name = XiangqiMobile;
 			path = XiangqiMobile;
 			sourceTree = "<group>";
 		};
@@ -312,7 +309,6 @@
 			children = (
 				6130F6D8FE13FA4F68D81D04 /* pikafish.nnue */,
 			);
-			name = Engine;
 			path = Engine;
 			sourceTree = "<group>";
 		};
@@ -322,8 +318,8 @@
 				AE9EEC10858990944384E219 /* Pikafish-GPL-3.0.txt */,
 				CA6CFF55396C5E2D0C5999ED /* Pikafish-AUTHORS.txt */,
 				82101E85C8D162D2DA6AFE2C /* CCPD-CC-BY-4.0.txt */,
+				9A552ACD34F1301657804344 /* Pikafish-NNUE-NOTICE.txt */,
 			);
-			name = Licenses;
 			path = Licenses;
 			sourceTree = "<group>";
 		};
@@ -350,7 +346,6 @@
 				D839B8433B2502A18B057A2E /* Learning */,
 				AD067F6AC69B26BDE397333E /* Localizations */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -360,7 +355,6 @@
 				B2AA49574F7DA8ABCF4548B1 /* common */,
 				08F1F098C57E6C070EA5BDA9 /* decompress */,
 			);
-			name = external;
 			path = external;
 			sourceTree = "<group>";
 		};
@@ -402,7 +396,6 @@
 				38557797476C7B657535677B /* Strings+Generated.swift */,
 				29B5227CC933C68961DF824D /* UserFacingError.swift */,
 			);
-			name = Localization;
 			path = Localization;
 			sourceTree = "<group>";
 		};
@@ -421,7 +414,6 @@
 				202B8984A4219B534AA5FCB0 /* PikafishBridge.h */,
 				A16BEC9D8D476F5EAB83B7EE /* XiangqiMobile-Bridging-Header.h */,
 			);
-			name = EngineBridge;
 			path = EngineBridge;
 			sourceTree = "<group>";
 		};
@@ -450,7 +442,6 @@
 				96BB731CF048606A75123CC2 /* Theming */,
 				7CE4F95876917703A1F4C138 /* XiangqiMobileApp.swift */,
 			);
-			name = App;
 			path = App;
 			sourceTree = "<group>";
 		};
@@ -465,7 +456,6 @@
 				1814F8509544F4C6D214A197 /* ThemeRegistry.swift */,
 				41FA25765874A65AEEEE3E35 /* Tournament.swift */,
 			);
-			name = Theming;
 			path = Theming;
 			sourceTree = "<group>";
 		};
@@ -474,7 +464,6 @@
 			children = (
 				D6750E24F30240C736EFD8F5 /* Localizable.strings */,
 			);
-			name = Localizations;
 			path = Localizations;
 			sourceTree = "<group>";
 		};
@@ -490,7 +479,6 @@
 				C53191F9306A3EA09C8F1C69 /* xxhash.cpp */,
 				22AF2F23ACEACF3AF7FA3AEE /* zstd_common.cpp */,
 			);
-			name = common;
 			path = common;
 			sourceTree = "<group>";
 		};
@@ -502,7 +490,6 @@
 				755FE2B1103039BF700EDB31 /* nnue_accumulator.cpp */,
 				D75A52248BABC4F76B0FBC2F /* nnue_misc.cpp */,
 			);
-			name = nnue;
 			path = nnue;
 			sourceTree = "<group>";
 		};
@@ -514,7 +501,6 @@
 				5B9319AC340071628CE6A7A1 /* ccpd-audit.json */,
 				70CF70D010A8F561F00DF834 /* ccpd-quarantine.jsonl */,
 			);
-			name = Learning;
 			path = Learning;
 			sourceTree = "<group>";
 		};
@@ -523,7 +509,6 @@
 			children = (
 				FDAB597869833DC58D7D97FD /* XiangqiMobileUITests */,
 			);
-			name = Tests;
 			path = Tests;
 			sourceTree = "<group>";
 		};
@@ -532,7 +517,6 @@
 			children = (
 				217D1CE58BBE565B160166CF /* SmokeTests.swift */,
 			);
-			name = XiangqiMobileUITests;
 			path = XiangqiMobileUITests;
 			sourceTree = "<group>";
 		};
@@ -582,6 +566,15 @@
 			attributes = {
 				LastSwiftUpdateCheck = 2700;
 				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					8DB008401595AC91E2432922 = {
+						ProvisioningStyle = Automatic;
+					};
+					E9A21FD8C97C5E7D8B11D3AC = {
+						DevelopmentTeam = 9PMA523YY4;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 077FE70D59720B32B8662EA4 /* Build configuration list for PBXProject "XiangqiMobile" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -594,8 +587,6 @@
 				"zh-Hant",
 			);
 			mainGroup = 42614072B6CFC1006ED00A72;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 100;
 			productRefGroup = 8105A3620F5764FB287CF540 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -622,6 +613,7 @@
 				A863CA3EF7747A762828188D /* ccpd-audit.json in Resources */,
 				F44DC5234D818EF244657514 /* ccpd-quarantine.jsonl in Resources */,
 				7FE07899276287C154264EB4 /* Localizable.strings in Resources */,
+				38192534E3781F59A8827CDD /* Pikafish-NNUE-NOTICE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,8 +870,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -909,7 +900,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9PMA523YY4;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -964,7 +955,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9PMA523YY4;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",

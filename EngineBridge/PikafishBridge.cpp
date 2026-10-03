@@ -15,6 +15,8 @@
 #include "engine.h"
 #include "position.h"
 #include "tune.h"
+#include "movegen.h"
+#include "uci.h"
 
 namespace {
 
@@ -51,6 +53,67 @@ void set_option(Stockfish::OptionsMap& options,
 }
 
 }  // namespace
+
+bool pf_rules_result(const char *fen, const char *const *moves, size_t move_count,
+                     PFRuleResult *result, PFEngineError *error) {
+    clear_error(error);
+    if (fen == nullptr || result == nullptr || (move_count && moves == nullptr))
+    {
+        set_error(error, 11, "Rules position or output is missing.");
+        return false;
+    }
+    *result = {0, 0};
+    try
+    {
+        initialize_pikafish();
+        Stockfish::Position position;
+        std::deque<Stockfish::StateInfo> states(1);
+        if (auto failure = position.set(fen, &states.back()))
+        {
+            set_error(error, 12, failure->what());
+            return false;
+        }
+        for (size_t index = 0; index < move_count; ++index)
+        {
+            if (moves[index] == nullptr)
+            {
+                set_error(error, 13, "Rules history contains an empty move.");
+                return false;
+            }
+            auto move = Stockfish::UCIEngine::to_move(position, moves[index]);
+            if (move == Stockfish::Move::none())
+            {
+                set_error(error, 14, std::string("Illegal rules move: ") + moves[index]);
+                return false;
+            }
+            states.emplace_back();
+            position.do_move(move, states.back());
+        }
+
+        const bool redToMove = position.side_to_move() == Stockfish::WHITE;
+        if (Stockfish::MoveList<Stockfish::LEGAL>(position).size() == 0)
+        {
+            result->outcome = redToMove ? 3 : 2;
+            result->reason = position.checkers() ? 1 : 2;
+        }
+        else
+        {
+            Stockfish::Value value;
+            if (position.rule_judge(value))
+            {
+                result->outcome = value == Stockfish::VALUE_DRAW ? 1
+                    : ((value > 0) == redToMove ? 2 : 3);
+                result->reason = 3;
+            }
+        }
+        return true;
+    }
+    catch (const std::exception& exception)
+    {
+        set_error(error, 15, std::string("Rules adjudication failed: ") + exception.what());
+        return false;
+    }
+}
 
 struct PFPikafishSession {
     std::unique_ptr<Stockfish::Engine> engine;

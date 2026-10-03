@@ -60,12 +60,15 @@ struct SettingsView: View {
             Section(l10n(L10n.Settings.Section.rules)) {
                 NavigationLink(l10n(L10n.Settings.howToPlay)) { RulesHelpView() }
                 LabeledContent(l10n(L10n.Settings.moveRecord), value: "UCI")
-                LabeledContent(l10n(L10n.Settings.rulesPolicy), value: GameRecord.rulesPolicyID)
+                LabeledContent(l10n(L10n.Settings.rulesPolicy), value: l10n(L10n.Settings.rulesPolicyName))
+                Text(L10n.Settings.rulesPolicyExplanation, l10n)
+                    .font(.footnote).foregroundStyle(.secondary)
             }
             Section(l10n(L10n.Settings.Section.about)) {
                 LabeledContent(l10n(L10n.Settings.version), value: "1.0")
                 LabeledContent(l10n(L10n.Settings.computer), value: "Pikafish")
                 NavigationLink(l10n(L10n.Settings.licenses)) { LicensesView() }
+                NavigationLink(l10n(L10n.Privacy.title)) { PrivacyPolicyView() }
                 Link(
                     l10n(L10n.Settings.sourceCode),
                     destination: URL(string: "https://github.com/frankmanzhu/xiangqi-mobile")!
@@ -80,6 +83,36 @@ struct SettingsView: View {
         }
         .readableContentWidth()
         .navigationTitle(l10n(L10n.Settings.title))
+    }
+}
+
+/// Bundled policy remains readable without opening a browser or going online.
+private struct PrivacyPolicyView: View {
+    @Environment(\.l10n) private var l10n
+
+    var body: some View {
+        List {
+            Section {
+                Text(L10n.Privacy.summary, l10n)
+                Text(L10n.Privacy.updated, l10n).font(.footnote).foregroundStyle(.secondary)
+            }
+            Section(l10n(L10n.Privacy.Section.storage)) {
+                Text(L10n.Privacy.storage, l10n)
+            }
+            Section(l10n(L10n.Privacy.Section.sharing)) {
+                Text(L10n.Privacy.sharing, l10n)
+            }
+            Section(l10n(L10n.Privacy.Section.retention)) {
+                Text(L10n.Privacy.retention, l10n)
+            }
+            Section(l10n(L10n.Privacy.Section.contact)) {
+                Text(L10n.Privacy.contact, l10n)
+                Link(l10n(L10n.Settings.reportIssue), destination: URL(string: "https://github.com/frankmanzhu/xiangqi-mobile/issues")!)
+            }
+        }
+        .readableContentWidth()
+        .navigationTitle(l10n(L10n.Privacy.title))
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -114,6 +147,20 @@ private struct LicensesView: View {
             Section(l10n(L10n.Licenses.Section.engine)) {
                 Text(L10n.Licenses.Engine.note, l10n)
                     .font(.footnote).foregroundStyle(.secondary)
+                Link(l10n(L10n.Licenses.Engine.source), destination: URL(string: "https://github.com/official-pikafish/Pikafish/tree/\(PikafishComputerClient.revision)")!)
+                Text(L10n.Licenses.Engine.nnue, l10n)
+                    .font(.footnote).foregroundStyle(.secondary)
+                Link(l10n(L10n.Licenses.Engine.nnueTerms), destination: URL(string: "https://www.pikafish.com/list.html?lang=zh-CN")!)
+                if let authors = bundledText(named: "Pikafish-AUTHORS") {
+                    DisclosureGroup(l10n(L10n.Licenses.Engine.authors)) {
+                        Text(verbatim: authors).font(.caption).textSelection(.enabled)
+                    }
+                }
+                if let notice = bundledText(named: "Pikafish-NNUE-NOTICE") {
+                    DisclosureGroup(l10n(L10n.Licenses.bundledNotice)) {
+                        Text(verbatim: notice).font(.caption).textSelection(.enabled)
+                    }
+                }
                 if let license = bundledText(named: "Pikafish-GPL-3.0") {
                     DisclosureGroup(l10n(L10n.Licenses.gpl)) {
                         Text(verbatim: license).font(.caption.monospaced()).textSelection(.enabled)

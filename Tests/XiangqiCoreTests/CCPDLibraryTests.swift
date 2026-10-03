@@ -88,6 +88,7 @@ final class CCPDLibraryTests: XCTestCase {
         try library.validate()
         XCTAssertEqual(try library.metadata()["source_revision"], "368a47a947773dd8692c026e286dd19b6277b993")
         XCTAssertEqual(try library.categories().reduce(0) { $0 + $1.recordCount }, 145_065)
+        XCTAssertEqual(try library.metadata()["license"], "Mixed sources; see source manifests")
         XCTAssertFalse(try library.records(matching: "刘").isEmpty)
 
         let summary = try XCTUnwrap(library.records(category: "殺局_殺法_練習題", limit: 1).first)

@@ -140,7 +140,7 @@ public struct ThemeID: RawRepresentable, Codable, Hashable, Sendable {
 }
 
 public enum GameResultReason: String, Codable, Sendable {
-    case checkmate, stalemate, resignation, timeLoss, repetition
+    case checkmate, stalemate, resignation, timeLoss, repetition, rulesAdjudication
 }
 
 public struct GameResult: Codable, Equatable, Sendable {
@@ -187,7 +187,8 @@ public struct RecordedMove: Codable, Equatable, Identifiable, Sendable {
 public struct GameRecord: Codable, Identifiable, Sendable {
     public static let schemaVersion = 1
     public static let standardFEN = "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w - - 0 1"
-    public static let rulesPolicyID = "xiangqi-standard-legal@1"
+    public static let legacyRulesPolicyID = "xiangqi-standard-legal@1"
+    public static let rulesPolicyID = "pikafish-computer-rule@6a59ee2f7b105bff64d9efc2692591107787e2b1"
 
     public let id: UUID
     public let schemaVersion: Int

@@ -63,6 +63,7 @@ target.resources_build_phase.add_file_reference(privacy_manifest)
   ["Engine", "pikafish.nnue"],
   ["Licenses", "Pikafish-GPL-3.0.txt"],
   ["Licenses", "Pikafish-AUTHORS.txt"],
+  ["Licenses", "Pikafish-NNUE-NOTICE.txt"],
   ["Licenses", "CCPD-CC-BY-4.0.txt"],
   ["Learning", "CCPD-source.json"],
   ["Learning", "ccpd.sqlite3"],

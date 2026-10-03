@@ -1,0 +1,20 @@
+Pikafish neural-network weights
+
+Bundled file: pikafish.nnue
+SHA-256: 7d13d73569a9b571ba0eb20cf1596247bc2a42738967e61afef6482b231e900e
+Engine revision: 6a59ee2f7b105bff64d9efc2692591107787e2b1
+
+Pikafish's engine source is licensed under GNU GPL version 3. The upstream
+project publishes separate usage terms for its NNUE weights and derived
+weights. Those terms restrict use to lawful purposes and require permission
+for commercial use. The planned Xiangqi release is free, without ads or
+in-app purchases. Any change to monetization requires a fresh licensing review
+and, where required, permission from the weight rights holders.
+
+Published terms and permission information (checked 4 October 2026):
+https://www.pikafish.com/list.html?lang=zh-CN
+Official project: https://github.com/official-pikafish/Pikafish
+
+This notice summarizes the published terms; it does not grant additional
+rights or replace the upstream license. A checksum identifies the bundled
+artifact but does not establish its original download provenance.

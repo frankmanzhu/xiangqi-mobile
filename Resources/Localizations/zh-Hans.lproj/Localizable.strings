@@ -212,11 +212,9 @@
 
 "learn.subcategory.ccpdMasterMatches" = "CCPD · 大师对局";
 
-"learn.subcategory.dongpingMatches" = "Dongping ICCS 对局";
 
 "learn.subcategory.title" = "对局资料库";
 
-"learn.subcategory.wxfMatches" = "WXF ICCS 对局";
 
 "learn.couldNotLoadRecords" = "无法载入棋谱";
 
@@ -344,7 +342,7 @@
 
 "practice.couldNotOpen" = "无法打开练习";
 
-"practice.findBestMove" = "找出最佳着法。";
+"practice.findRecordedMove" = "找出棋谱中的下一步。";
 
 "practice.hintFormat" = "提示：%@";
 
@@ -508,3 +506,45 @@
 "timeControl.fifteenMinutes" = "15 分钟";
 
 "timeControl.tenMinutes" = "10 分钟";
+
+// Offline privacy policy
+"privacy.title" = "隐私政策";
+
+"privacy.summary" = "象棋由 Frank Zhu 开发。本应用离线运行，不向开发者收集或传输个人数据。应用没有账户、广告、跟踪、分析或自动诊断上传。";
+
+"privacy.updated" = "更新于 2026 年 10 月 4 日";
+
+"privacy.section.storage" = "设备上的数据";
+
+"privacy.storage" = "保存的棋局、学习进度和设置保存在设备上的应用存储空间中。内置引擎在本地处理棋局。操作系统可能根据您的备份设置将应用数据纳入设备备份。";
+
+"privacy.section.sharing" = "分享与外部链接";
+
+"privacy.sharing" = "当您选择分享时，棋谱将传给您选择的接收者或服务。打开源代码或支持链接会前往 GitHub，其隐私政策适用。GitHub 问题中提交的信息可能公开，请勿包含私人信息。";
+
+"privacy.section.retention" = "保留与删除";
+
+"privacy.retention" = "本地数据会保留，直到被替换或您在 iOS 设置中选择“删除 App”。“卸载 App”会保留数据。备份和已分享的副本须在相应服务中单独管理。开发者不保存您的棋局或设置的服务器副本。";
+
+"privacy.section.contact" = "联系";
+
+"privacy.contact" = "如有隐私问题，请通过链接的 GitHub 问题跟踪页面联系 Frank Zhu。Apple 可能根据其隐私设置和政策处理 App Store、设备备份及崩溃信息。";
+
+"reason.rulesAdjudication" = "规则裁定";
+
+"settings.rulesPolicyName" = "皮卡鱼电脑象棋规则";
+
+"settings.rulesPolicyExplanation" = "新棋局使用皮卡鱼规则处理重复局面、长将和长捉、六十回合规则及子力不足。长将或长捉可能判负，而非和棋。此前保存的棋局保留其记录的规则。";
+
+"licenses.engine.nnue" = "神经网络权重有单独条款：仅限合法非商业用途；商业用途须获得许可。";
+
+"licenses.engine.nnueTerms" = "皮卡鱼 NNUE 条款";
+
+"licenses.engine.authors" = "引擎作者";
+
+"licenses.engine.source" = "本版本引擎源代码";
+
+
+"learn.subcategory.dongpingMatches" = "Dongping ICCS 对局";
+
+"learn.subcategory.wxfMatches" = "WXF ICCS 对局";

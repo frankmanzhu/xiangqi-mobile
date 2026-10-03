@@ -1,6 +1,34 @@
 import CryptoKit
 import Foundation
 
+enum PikafishRules {
+    static func result(startingFEN: String, moves: [String]) throws -> GameResult? {
+        var result = PFRuleResult()
+        var error = PFEngineError()
+        let allocatedMoves = moves.map { strdup($0) }
+        defer { allocatedMoves.forEach { free($0) } }
+        let pointers: [UnsafePointer<CChar>?] = allocatedMoves.map { pointer in
+            pointer.map { UnsafePointer($0) }
+        }
+        let succeeded = startingFEN.withCString { fen in
+            pointers.withUnsafeBufferPointer { buffer in
+                pf_rules_result(fen, buffer.baseAddress, buffer.count, &result, &error)
+            }
+        }
+        guard succeeded else {
+            let message = withUnsafePointer(to: &error.message) { pointer in
+                pointer.withMemoryRebound(to: CChar.self, capacity: 512) { String(cString: $0) }
+            }
+            throw PikafishError.position(message)
+        }
+        guard result.outcome != 0 else { return nil }
+        let winner: Side? = result.outcome == 2 ? .red : result.outcome == 3 ? .black : nil
+        let reason: GameResultReason = result.reason == 1 ? .checkmate
+            : result.reason == 2 ? .stalemate : .rulesAdjudication
+        return GameResult(winner: winner, reason: reason)
+    }
+}
+
 enum PikafishError: LocalizedError {
     case networkMissing
     case networkInvalid

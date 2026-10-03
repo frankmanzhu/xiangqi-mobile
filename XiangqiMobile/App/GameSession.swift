@@ -249,10 +249,20 @@ final class GameSession: ObservableObject {
         record.updatedAt = Date()
         clearTransientState()
 
-        let repetitions = repetitionCount(of: normalizedPositionKey(position))
-        if let result = position.result(repetitionCount: repetitions) {
-            record.result = result
-            showResult = true
+        do {
+            let result: GameResult?
+            if record.rulesPolicyID == GameRecord.legacyRulesPolicyID {
+                // Preserve the rules explicitly recorded by pre-release saves.
+                result = position.result(repetitionCount: repetitionCount(of: normalizedPositionKey(position)))
+            } else {
+                result = try PikafishRules.result(startingFEN: record.startingFEN, moves: record.uciMoves)
+            }
+            if let result {
+                record.result = result
+                showResult = true
+            }
+        } catch {
+            message = .failure(UserFacingError(error))
         }
         // One cue per move, so a capture that gives check does not fire twice.
         if record.result != nil {

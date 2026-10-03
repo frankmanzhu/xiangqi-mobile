@@ -3,6 +3,7 @@ import Foundation
 actor GameRepository {
     enum RepositoryError: Error {
         case unsupportedSchema(Int)
+        case unsupportedRulesPolicy(String)
     }
 
     private let fileURL: URL
@@ -25,6 +26,9 @@ actor GameRepository {
         let record = try decoder.decode(GameRecord.self, from: data)
         guard record.schemaVersion == GameRecord.schemaVersion else {
             throw RepositoryError.unsupportedSchema(record.schemaVersion)
+        }
+        guard [GameRecord.rulesPolicyID, GameRecord.legacyRulesPolicyID].contains(record.rulesPolicyID) else {
+            throw RepositoryError.unsupportedRulesPolicy(record.rulesPolicyID)
         }
         _ = try Position(fen: record.startingFEN).replaying(record.uciMoves)
         return record

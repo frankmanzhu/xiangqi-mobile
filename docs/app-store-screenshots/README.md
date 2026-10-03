@@ -1,5 +1,9 @@
 # App Store screenshots
 
+The three primary captures in each folder were regenerated on 4 October 2026
+from the tested Release build on iOS/iPadOS 27 simulators. The iPhone folder
+also retains an earlier dark-theme game capture as an optional fourth image.
+
 Captured from the Simulator (not a physical device — Apple explicitly allows
 and expects this) at the two device-size classes App Store Connect requires:
 

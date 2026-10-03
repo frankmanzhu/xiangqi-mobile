@@ -145,7 +145,7 @@ The app performs no network requests and has no account or online-play code. Com
 
 Copyright (c) 2026 Frank Zhu
 
-Xiangqi Mobile is licensed under the GNU General Public License, version 3 or any later version (GPL-3.0-or-later). The app embeds Pikafish in-process, so the distributed application and its corresponding source are provided under GPL-compatible terms. The root [`LICENSE`](LICENSE) file identifies the project license; the complete GPL text, Pikafish attribution, and authors list are bundled under `Resources/Licenses`.
+Xiangqi Mobile is licensed under the GNU General Public License, version 3 or any later version (GPL-3.0-or-later). The app embeds Pikafish in-process, so the Swift application and linked engine source are provided under GPL-3.0-or-later. Bundled learning data and NNUE weights retain their separate terms; the software license does not relicense those resources. The root [`LICENSE`](LICENSE) file identifies the project license; the complete GPL text, Pikafish attribution, and authors list are bundled under `Resources/Licenses`.
 
 For every distributed version, the complete corresponding source is available from the matching release tag or commit in the [Xiangqi Mobile repository](https://github.com/frankmanzhu/xiangqi-mobile). This includes the Swift application and GUI source, the Pikafish submodule at the exact revision used for the build, the C/C++ bridge, the Xcode project, build scripts, and required resources. Users may rebuild, modify, and sign the app with their own Apple Developer account. They do not need this project's signing credentials, and submitting a pull request is not required to exercise those rights.
 
@@ -163,6 +163,7 @@ The following procedure is the supported path for building a modified copy on a 
    cd xiangqi-mobile
    git checkout <release-tag-or-commit>
    git submodule update --init --recursive
+   git -C Vendor/Pikafish apply ../../EngineBridge/Patches/pikafish-ios-local-memory.patch
    ```
 
 3. Open `XiangqiMobile.xcodeproj` in Xcode and select the `XiangqiMobile` scheme.
@@ -171,6 +172,8 @@ The following procedure is the supported path for building a modified copy on a 
 6. Build and run. Xcode signs the modified app with the user's own account; no Xiangqi Mobile signing certificate or private key is required.
 
 The source checkout must retain the bundled NNUE network, CCPD learning resources, license notices, and the Pikafish submodule revision used by the release. A modified build can use a different bundle identifier and can be installed separately from the App Store build.
+
+The tracked iOS patch disables Pikafish's system-wide shared-memory backend on iOS and uses its existing process-local allocation fallback. It prevents unnecessary probes outside the app container, including `lstat`, an Apple required-reason API. Apply it once after initializing the submodule; macOS engine tools retain the upstream backend. The engine revision identifies the upstream base, with this patch included in corresponding source.
 
 Pikafish's GPL license cannot be removed by changing this README, changing the link mode, or changing the project's license label. Avoiding GPL obligations would require replacing Pikafish or obtaining relicensing permission from the relevant Pikafish copyright holders.
 
@@ -183,3 +186,9 @@ The product direction is documented in the [specification index](docs/README.md)
 - [Technical specification](docs/technical-spec.md)
 
 The implementation order and decision hierarchy are defined in the specification index. Do not add online controllers, services, schemas, dependencies, permissions, remote configuration, or placeholder UI to the 1.0 target.
+
+## Release preparation
+
+The in-app privacy policy is available offline in all three languages; its public source is [docs/privacy-policy.md](docs/privacy-policy.md). Support and listing drafts are in [docs/support.md](docs/support.md) and [docs/app-store-submission.md](docs/app-store-submission.md). Run `python3 scripts/check_release.py` for resource integrity checks and `bash scripts/test_rules_differential.sh` to compare Swift legal moves with the pinned engine. Read [docs/release-readiness.md](docs/release-readiness.md) for the evidence and remaining gates before paying for developer enrollment.
+
+New games use the pinned Pikafish Computer Rule, including checking/chasing adjudication, the 60-move rule, and insufficient material. Saved games with `xiangqi-standard-legal@1` retain their original simple repetition policy. Pikafish’s NNUE weights have separate published terms, summarized in the bundled `Pikafish-NNUE-NOTICE.txt`; the intended release is free without ads or purchases.
